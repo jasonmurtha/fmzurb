@@ -1,3 +1,4 @@
+<title>Styleguide: Reveal Modals</title>
 
 # Modals
 

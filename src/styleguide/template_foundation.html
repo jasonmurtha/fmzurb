@@ -5,7 +5,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Style Guide</title>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@FreddieMac" />
     <meta property="og:title" content="Style Guide: Freddie Mac" />
@@ -21,141 +20,7 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp.css">
-
-    <!-- Style guide-specific CSS goes here. -->
-    <style>
-    #top {
-      width:100%;
-      position:fixed;
-      top: 0;   
-      padding: 0.5rem 0 0; 
-      z-index: 1001;      
-    }
-    form.form {
-      margin-bottom: 0;
-    }
-    /* This styles individual sections of the style guide */
-    .ss-section:not(:last-child) {
-      padding-bottom: 3rem;
-      clear: both;
-    }
-    .ss-section + .ss-section  {
-      padding-top: 4rem;    
-    }
-    .markup-wrapper > h1 {
-      padding: 1.5rem;
-      color: #ff6c00;
-      background: rgba(255,108,0,0.15);
-    }
-    #code-content {
-      padding-top: 1rem;
-    }
-    
-    .two-column-layout > .two-column-row {
-      padding-left: 0;
-      padding-right: 0; 
-      margin-bottom: 1rem;      
-    }
-
-    .two-column-row > main,
-    .two-column-row > aside    {
-      padding-top: 10px; 
-    } 
-
-    /* This styles the color blocks used in the color documentation. */
-    .color-block {
-      border-radius: 2px;
-      display: block;
-      padding: 8px 8px 6px;
-      color: #333;
-      text-transform: uppercase;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-      .color-block code {
-        text-transform: none;
-      }
-      .color-block span {
-        display: block;
-        width: 100%;
-        height: 100px;
-        margin-bottom: 0.42857rem;
-        padding: 1rem;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      }
-    
-    /* This styles code blocks used for examples. */
-    .ss-code {
-        margin-bottom: 1rem; 
-      }
-      .ss-code code {
-        max-height: 900px;
-        overflow: scroll;
-        display: block;
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-        opacity: 1;
-      }
-    
-    .ss-code-live::before,
-    .ss-code-live::after {
-      content: ' ';
-      display: table;
-    }
-    .ss-code-live::after {
-      clear: both;
-    }  
-    .docs-code-toggle {
-        display: inline-block;
-        margin-bottom: 1rem;
-        font-weight: bold; 
-        color: #2199e8;
-    }
-    code { 
-      font-size: 0.875rem;
-      opacity: 0.6;
-    }
-    
-    @media screen and (max-width: 35em) {
-      #top h1 { float: left; font-size: 20px; }
-      #top select { font-size: 14px; }
-    }    
-    .callout.secondary {
-        background-color: #eaeaea;
-        color: #0a0a0a;
-        border: 1px solid rgba(10, 10, 10, 0.25);
-    }    
-    .row.display {
-      background: #eee;
-      font-size: 11px;
-      margin-bottom: 10px;
-      line-height: 2rem;
-      border: solid 1px #c6c6c6;
-      margin-left: 0 !important;
-      margin-right: 0 !important; }
-      .row.display .column:nth-child(2), .row.display .column.small-centered, .row.display .column.large-centered {
-        background: #e1e1e1; }
-      .row.display .column.color-end {
-        background: #d5d5d5; }
-
-    .row.display-end {
-      background: #fff;
-      font-size: 11px;
-      margin-bottom: 10px;
-      line-height: 2rem;
-      border: solid 1px #c6c6c6;
-      margin-left: 0 !important;
-      margin-right: 0 !important; }
-      .row.display-end .column {
-        background: #e1e1e1;
-        border-left: 1px solid #c6c6c6; }
-        .row.display-end .column.color-end {
-          background: #d5d5d5; }
-
-     /* from href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" */
-    .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.hljs-comment,.diff .hljs-header{color:#998;font-style:italic}.hljs-keyword,.css .rule .hljs-keyword,.hljs-winutils,.nginx .hljs-title,.hljs-subst,.hljs-request,.hljs-status{color:#333;font-weight:bold}.hljs-number,.hljs-hexcolor,.ruby .hljs-constant{color:#008080}.hljs-string,.hljs-tag .hljs-value,.hljs-doctag,.tex .hljs-formula{color:#d14}.hljs-title,.hljs-id,.scss .hljs-preprocessor{color:#900;font-weight:bold}.hljs-list .hljs-keyword,.hljs-subst{font-weight:normal}.hljs-class .hljs-title,.hljs-type,.vhdl .hljs-literal,.tex .hljs-command{color:#458;font-weight:bold}.hljs-tag,.hljs-tag .hljs-title,.hljs-rule .hljs-property,.django .hljs-tag .hljs-keyword{color:#000080;font-weight:normal}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.hljs-name{color:#008080}.hljs-regexp{color:#009926}.hljs-symbol,.ruby .hljs-symbol .hljs-string,.lisp .hljs-keyword,.clojure .hljs-keyword,.scheme .hljs-keyword,.tex .hljs-special,.hljs-prompt{color:#990073}.hljs-built_in{color:#0086b3}.hljs-preprocessor,.hljs-pragma,.hljs-pi,.hljs-doctype,.hljs-shebang,.hljs-cdata{color:#999;font-weight:bold}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}
-    </style>
+    <link rel="stylesheet" href="files/styleguide.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>    
   </head>
   <body>
@@ -192,6 +57,7 @@
     </div> 
     
     <script src="/js/vendor/jquery-3.2.1.min.js"> </script>
+    <script src="/js/vendor/somni_code.js"></script>
     <script src="/js/app_corp.js"></script>
     <script>
     // suppress the code view blocks by default and hide them under a toggle.

@@ -1,5 +1,6 @@
+<title>Styleguide: Orbit Carousels</title>
 
-# Carousel Basics
+# Orbit Carousel Basics
 
 <p class="lead">Each carousel is made up of a wrapper, a slide container, slides, and slide navigation including bullets and prev/next buttons.</p>
 
@@ -41,35 +42,38 @@
 
 ## Plain Jane Carousel
 
-Example set on `.background-concrete` to show the edges of the orbit wrapper, and how the default bullet nav is held to the bottom of the wrapper, regardless of the height of each slide.
-- **Omit** class `.background-concrete` to have a transparent background, or if you intend to add background colors to individual slides.
+Example set inside a `.background-concrete` container to show the edges of the orbit wrapper, and how the default bullet nav is held to the bottom of the wrapper, regardless of the height of each slide.
+- **Omit**  `.background-concrete` outer container.
 - Layout Hint: If you wrap each slide's contents in a `div` with classes `.callout` and `.large`, the slide's content wills avoid overlapping the navigation buttons and bullets.
 
 ```html_example
-<div class="orbit background-concrete" role="region" aria-label="This is my slideshow" data-orbit>
-  <ul class="orbit-container">
-    <li class="orbit-slide">
-      <div class="callout large">
-        <h3>Slide One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div class="text-center"><img src="files/plant1-thumb.jpg" /></div>
-      </div>
-    </li>
-    <li class="orbit-slide">
-      <div class="callout large">
-        <h3>Slide Two</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><a class="button">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide">
-      <div class="callout large">
-        <h3>Slide Three</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button large">Button Link</a></p>
-      </div>
-    </li>
-  </ul>
+<div class="background-concrete">
+  <!-- omit outer callout div when copying this code -->
+  <div class="orbit" role="region" aria-label="This is my slideshow" data-orbit>
+    <ul class="orbit-container">
+      <li class="orbit-slide">
+        <div class="callout large">
+          <h3>Slide One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="text-center"><img src="files/plant1-thumb.jpg" /></div>
+        </div>
+      </li>
+      <li class="orbit-slide">
+        <div class="callout large">
+          <h3>Slide Two</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text-center"><a class="button">Button Link</a></p>
+        </div>
+      </li>
+      <li class="orbit-slide">
+        <div class="callout large">
+          <h3>Slide Three</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text-right"><a class="button large">Button Link</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 ```
 
@@ -106,6 +110,8 @@ Example with `data-auto-play="false"` and `data-nav-buttons="false"`, and each s
   </ul>
 </div>
 ```
+
+---
 
 ## White Overlay Navigation with Buttons and Bullets
 
@@ -169,84 +175,88 @@ Notice that the number of slides does not change between large and small widths 
 This example also defines `data-nav-parent-class` to vertically align the buttons to the slide height instead of the full orbit height.
 
 ```html_example
-<div class="orbit" role="region" aria-label="This is my slideshow" data-orbit data-nav-parent-class="orbit-container">
-  <ul class="orbit-container">
-    <li class="orbit-slide background-concrete">
-      <div class="callout large">
-        <h3 class="text-center">Slide One With Columns</h3>
-        <div class="row">
-          <div class="column medium-4">
-            <p class="text-center"><img src="files/orbit/01.jpg" /></p>
-          </div>
-          <div class="column medium-4">
-            <div class="callout small">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit labore.</p>
+<div class="background-concrete">
+  <!-- omit outer callout div when copying this code -->
+  <div class="orbit" role="region" aria-label="This is my slideshow" data-orbit data-nav-parent-class="orbit-container">
+    <ul class="orbit-container">
+      <li class="orbit-slide">
+        <div class="callout large">
+          <h3 class="text-center">Slide One With Columns</h3>
+          <div class="row">
+            <div class="column medium-4">
+              <p class="text-center"><img src="files/orbit/01.jpg" /></p>
+            </div>
+            <div class="column medium-4">
+              <div class="callout small">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit labore.</p>
+              </div>
+            </div>
+            <div class="column medium-4">
+              <p class="text-center"><img src="files/orbit/02.jpg" /></p>
             </div>
           </div>
-          <div class="column medium-4">
-            <p class="text-center"><img src="files/orbit/02.jpg" /></p>
-          </div>
         </div>
-      </div>
-    </li>
-    <li class="orbit-slide background-concrete">
-      <div class="callout large">
-        <h3 class="text-center">Slide Two With Columns</h3>
-        <div class="row">
-          <div class="column medium-4">
-            <p class="text-center"><img src="files/orbit/03.jpg" /></p>
-          </div>
-          <div class="column medium-4">
-            <div class="callout small">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit labore.</p>
+      </li>
+      <li class="orbit-slide">
+        <div class="callout large">
+          <h3 class="text-center">Slide Two With Columns</h3>
+          <div class="row">
+            <div class="column medium-4">
+              <p class="text-center"><img src="files/orbit/03.jpg" /></p>
+            </div>
+            <div class="column medium-4">
+              <div class="callout small">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit labore.</p>
+              </div>
+            </div>
+            <div class="column medium-4">
+              <p class="text-center"><img src="files/orbit/04.jpg" /></p>
             </div>
           </div>
-          <div class="column medium-4">
-            <p class="text-center"><img src="files/orbit/04.jpg" /></p>
-          </div>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 ```
 
 ---
 
-## Carousel with Large Images
+## Content Carousel with Large Images
 
-In this example, images **do not** stretch to fill as they do in [image carousels](#image-carousels), and captions will effect the vertically centered positioning of the prev/next buttons. (To prevent the bullet nav from further affecting the positioning, include attribute `data-nav-parent-class="orbit-container"` on the wrapper.)
-- To force an image to stretch to the full width of the slide, add class `.orbit-image` and/or include the iamge in a `figure` tag.  
-- **Omit** class `.background-concrete` to have a transparent background, or if you intend to add background colors to individual slides.
+In this example, **images do not stretch** to fill as they do in [image carousels](#image-carousels), and captions will effect the vertically centered positioning of the prev/next buttons. (To prevent the bullet nav from further affecting the positioning, include attribute `data-nav-parent-class="orbit-container"` on the wrapper.)
+- To force an image to stretch to the full width of the slide, add class `.orbit-image` and/or include the image in a `figure` tag.  
 
 ```html_example
 <div class="row">
   <div class="column large-11 xlarge-10 large-centered">
-    <div class="orbit background-concrete" role="region" aria-label="Favorite Space Pictures" data-orbit data-nav-parent-class="orbit-container" data-auto-play="false">
+    <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-nav-parent-class="orbit-container" data-auto-play="false">
       <ul class="orbit-container">
         <li class="orbit-slide">
-          <div class="text-center">
-              <img src="files/plant1.jpg" alt="flower">
-              <p>Lovely Flower.</p>
+          <div class="text-center clearfix">
+            <img src="files/plant1.jpg" alt="flower">
+            <p>Lovely Flower.</p>
           </div>
         </li>
         <li class="orbit-slide">
-          <div class="text-center">
-              <img src="files/plant2.jpg" alt="flower">
-              <p>So pretty.</p>
-              <p>So. so pretty.</p>
+          <div class="text-center clearfix">
+            <img src="files/plant2.jpg" alt="flower">
+            <p>So pretty.</p>
+            <p>Quite pretty.</p>
+            <p>Totally pretty.</p>
           </div>
         </li>
         <li class="orbit-slide is-active">
-          <div class="text-center">
-              <img src="files/plant3.jpg" alt="flower">
-              <p>I love to garden. Do you love to garden? Do you know anyone whoe likes to garden? I'd love to meet them!</p>
+          <div class="text-center clearfix">
+            <img src="files/plant3.jpg" alt="flower">
+            <p>I love to garden. Do you love to garden?</p>
+            <p>Do you know anyone whoe likes to garden? I'd love to meet them!</p>
           </div>
         </li>
         <li class="orbit-slide">
-          <div class="text-center">
-              <img src="files/plant4.jpg" alt="flower">
-              <p>Springtime.</p>
+          <div class="text-center clearfix">
+            <img src="files/plant4.jpg" alt="flower">
+            <p>Springtime.</p>
           </div>
         </li>
       </ul>
@@ -263,7 +273,7 @@ In this example, images **do not** stretch to fill as they do in [image carousel
 
 - Any `image` and `figcaption` inside a `figure` element will **always** stretch to the full width of the figure.
 - To force an image outside of a `figure` element to stretch to the full width of the slide, add class `.orbit-image`.
-- To override the 1px border on the images, either add class `.orbit-image` or class `.no-border` to each image.
+- To override the 1px border on the images, add class `.no-border` to each image.
 
 Regardless of which option you choose: 
 - Try to make sure your images are all similar in size and proportion.  
@@ -276,6 +286,7 @@ Regardless of which option you choose:
 ## Image Carousel with Non-Overlay Caption
 
 In this example, each caption is decorated differently using the design options for [callouts](styleguide_fm.html#callouts) and the images include class `no-border`.
+- Non-overlay captions work best when all captions are similar in length. In this example, the last caption requires three lines, while others require just one, so the navigation appears disconnected. 
 
 ```html_example
 <div class="row">
@@ -303,7 +314,7 @@ In this example, each caption is decorated differently using the design options 
         <li class="orbit-slide">
           <figure>
             <img class="no-border" src="files/plant4.jpg" alt="plant 4">
-            <figcaption class="callout hollow">This is a caption with a <a href="#">hyperlink</a>.</figcaption>
+            <figcaption class="callout hollow">Avoid having a caption with more<br>rows of text than the others.<br>It affects the navigation positioning.</figcaption>
           </figure>
         </li>
       </ul>
@@ -317,6 +328,7 @@ In this example, each caption is decorated differently using the design options 
 ## Image Carousel with Bottom Overlay Caption
 
 In this example, the images use class `.orbit-image` and the caption overlays the bottom of the image due to the use of the `.orbit-caption` class, thus preventing the caption from affecting the slide height. 
+- In this design, one caption can be longer than the rest, without affecting the navigation position, but it will affect how much of the image is covered by the caption.
 
 ```html_example
 <div class="row">
@@ -325,21 +337,22 @@ In this example, the images use class `.orbit-image` and the caption overlays th
       <ul class="orbit-container">
         <li class="orbit-slide">
           <figure>
-            <img class="orbit-image" src="files/plant1.jpg" alt="plant 1">
+            <img class="orbit-image no-border" src="files/plant1.jpg" alt="plant 1">
             <figcaption class="orbit-caption">Default - center aligned caption.</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="orbit-image" src="files/plant2.jpg" alt="plant 2">
-            <figcaption class="orbit-caption"><p class="text-left">Left-aligned caption.</p><p class="text-left">With more than one paragraph.</p></figcaption>
+            <img class="orbit-image no-border" src="files/plant2.jpg" alt="plant 2">
+            <figcaption class="orbit-caption"><p class="text-left">Left-aligned caption.</p>
+            <p class="text-left">With more than one paragraph.</p></figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="orbit-image" src="files/plant3.jpg" alt="plant 3">
+            <img class="orbit-image no-border" src="files/plant3.jpg" alt="plant 3">
             <figcaption class="orbit-caption">
-              <p class="text-left show-for-medium">(example below is how a blockquote would appear - borrowed the idea from My Home.) </p>
+              <p class="text-left show-for-medium">(example below is how a blockquote would appear, and shows how a multiline caption looks) </p>
               <blockquote>
                 <p>"The lights burn blue. It is now dead midnight."</p>
                 <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
@@ -349,7 +362,7 @@ In this example, the images use class `.orbit-image` and the caption overlays th
         </li>
         <li class="orbit-slide">
           <figure>
-            <img class="orbit-image" src="files/plant4.jpg" alt="plant 4">
+            <img class="orbit-image no-border" src="files/plant4.jpg" alt="plant 4">
             <figcaption class="orbit-caption">This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
           </figure>
         </li>
@@ -392,6 +405,58 @@ In this example, the caption overlays the top of the image due to the use of the
           <figure>
             <img class="no-border" src="files/plant4.jpg" alt="plant 4">
             <figcaption class="orbit-title">This title is longer than the others to show how things look when the title is long enough to wrap across multiple lines. </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Image Carousel with Bottom AND Top Captions
+
+Be careful combining these -- at smaller screen sizes, long text can mostly cover the image.   
+
+```html_example
+<div class="row">
+  <div class="medium-8 column medium-centered">
+    <div class="orbit" role="region" aria-label="Favorite Flower Pictures" data-orbit data-nav-parent-class="orbit-container" data-auto-play="false">
+      <ul class="orbit-container  background-gray">
+        <li class="orbit-slide">
+          <figure>
+            <img class="no-border" src="files/plant1.jpg" alt="plant 1">
+            <figcaption class="orbit-title">Default - center aligned top caption.</figcaption>
+            <figcaption class="orbit-caption">Default - center aligned caption.</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure>
+            <img class="no-border" src="files/plant2.jpg" alt="plant 2">
+            <figcaption class="orbit-title">Title of Slide</figcaption>
+            <figcaption class="orbit-caption"><p class="text-left">Left-aligned caption.</p>
+            <p class="text-left">With more than one paragraph.</p></figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure>
+            <img class="no-border" src="files/plant3.jpg" alt="plant 3">
+            <figcaption class="orbit-title">"The lights burn blue. It is now dead midnight."</figcaption>
+            <figcaption class="orbit-caption">
+              <p class="text-left show-for-medium">(example below is how a blockquote would appear, and shows how a multiline caption looks) </p>
+              <blockquote>
+                <p>"The lights burn blue. It is now dead midnight."</p>
+                <footer><cite>William Shakespeare</cite> in <cite>King Henry the Sixth</cite></footer>
+              </blockquote>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure>
+            <img class="no-border" src="files/plant4.jpg" alt="plant 4">
+            <figcaption class="orbit-title">This title is longer than the others to show how things look when the title is long enough to wrap across multiple lines. </figcaption>
+            <figcaption class="orbit-caption">This caption is longer than the others to show how things look when the caption is very long, and it contains a <a href="#">hyperlink</a> and formatting such as  <em>emphasis</em> and <strong>strong</strong>, so we can see how they look in a caption. </figcaption>
           </figure>
         </li>
       </ul>
@@ -449,7 +514,7 @@ The combination controls and bullets option used for carousels with `.bullets-ov
 
 <p class="lead">You can choose to omit or customize the slide controls and bullets.</p> 
 
-## Omit Bullets
+## Omit Slide Navigation Bullets
 
 - Set attribute `data-bullets` to "false" to omit the bullets. 
 
@@ -459,12 +524,12 @@ The combination controls and bullets option used for carousels with `.bullets-ov
     <div class="orbit" role="region" aria-label="My slides" data-orbit data-bullets="false">
       <ul class="orbit-container">
         <li class="orbit-slide">
-          <p><img class="orbit-image" src="files/plant3.jpg" alt="flower"></p>
-          <p class="text-center">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><img class="orbit-image no-border" src="files/plant3.jpg" alt="flower"></p>
+          <figcaption class="orbit-caption">Nullam id dolor id nibh ultricies vehicula ut id elit.</figcaption>
         </li>
         <li class="orbit-slide">
-          <p><img class="orbit-image" src="files/plant1.jpg" alt="flower"></p>
-          <p class="text-center">Aenean lacinia bibendum nulla sed consectetur. </p>
+          <p><img class="orbit-image no-border" src="files/plant1.jpg" alt="flower"></p>
+          <figcaption class="orbit-caption">Aenean lacinia bibendum nulla sed consectetur. </figcaption>
         </li>
       </ul>
     </div>
@@ -474,7 +539,7 @@ The combination controls and bullets option used for carousels with `.bullets-ov
 
 ---
 
-## Omit Controls <span id="omit-controls"></span>
+## Omit Previous/Next Controls <span id="omit-controls"></span>
 
 Set attribute `data-nav-buttons` to "false" to omit the prev/next buttons and their event handlers.  
 
@@ -485,7 +550,7 @@ Set attribute `data-nav-buttons` to "false" to omit the prev/next buttons and th
       <ul class="orbit-container">
         <li class="orbit-slide background-gray">
           <figure>
-            <img alt="Keeping Rent Low" src="http://www.freddiemac.com/about/images/KeepingRentsLow.png" />
+            <img class="no-border" alt="Keeping Rent Low" src="http://www.freddiemac.com/about/images/KeepingRentsLow.png" />
             <figcaption class="orbit-caption">
               <p class="text-right"><a href="https://www.multihousingnews.com/post/greystone-provides-221m-loan-for-ca-affordable-housing/">Learn More<span class="show-for-sr"> about keeping rents low</span></a></p>
             </figcaption>
@@ -515,7 +580,7 @@ Set attribute `data-nav-buttons` to "false" to omit the prev/next buttons and th
 
 ---
 
-## Shift Controls Outside of Slide Container
+## Shift Previous/Next Controls Outside of Slide Container
 
 In this example, the wrapper has an extra class of `.orbit-controls-outside` to shift the position of the controls outside of the orbit container and make them larger.
 - Do not combine this option with `data-nav-parent-class="orbit-container"` which shifts controls inward.
@@ -545,36 +610,79 @@ In this example, the wrapper has an extra class of `.orbit-controls-outside` to 
 
 ---
 
-## Customize Style of Controls <span id="custom-controls"></span>
+## Customize Previous/Next Controls <span id="custom-controls"></span>
 
 You can opt to not use the automated controls at all, and build your own, or you can simply modify the style of the eixsting controls.
 
 Step One: Define your new button styles using custom css classes:
 
 ```css
+.button-prev-custom {
+  font-size: 3em;
+  float: left;
+}
 .button-next-custom {
-  color: #FF0000;
+  font-size: 3em;
   float: right;
 }
-.button-prev-custom {
-  color: #FF0000;
-  float: left;
+.button-next-custom svg,
+.button-prev-custom svg {
+  fill: #999;
+  stroke-width: 1px;
+  stroke: #990000;
 }
 ```
 
+<style>
+.button-prev-custom {
+  font-size: 3em;
+  float: left;
+}
+.button-next-custom {
+  font-size: 3em;
+  float: right;
+}
+.button-next-custom svg,
+.button-prev-custom svg {
+  fill: #999;
+  stroke-width: 1px;
+  stroke: #990000;
+}
+</style>
+
 Step Two: On the wrapper, set attributes `data-next-class` and `data-prev-class` to the custom button classes you created:
 
-```html
+```html_example
 <div class="orbit orbit-controls-outside" role="region" aria-label="My slides" data-orbit data-next-class="button-next-custom" data-prev-class="button-prev-custom">
-  <!-- slide content -->
+  <ul class="orbit-container">
+    <li class="orbit-slide background-teal">
+      <div class="callout">
+        <h3>Slide One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="text-center"><img src="files/plant1-thumb.jpg" /></div>
+      </div>
+    </li>
+    <li class="orbit-slide  background-teal">
+      <div class="callout">
+        <h3>Slide Two</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-center"><a class="button hollow">Button Link</a></p>
+      </div>
+    </li>
+    <li class="orbit-slide  background-teal">
+      <div class="callout">
+        <h3>Slide Three</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-right"><a class="button hollow large">Button Link</a></p>
+      </div>
+    </li>
+  </ul>
 </div>
 ```
 
 ---
 
----
-
-## Customize Style of Bullets <span id="custom-bullets"></span>
+## Customize Navigation Bullets <span id="custom-bullets"></span>
 
 Step One: Define your new bullets container style using custom css classes, and style buttons inside that container:
 

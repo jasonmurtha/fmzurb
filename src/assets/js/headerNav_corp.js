@@ -9,7 +9,7 @@ function navHoverOn(pNav){
   if($('#'+pNav).children('a:first').hasClass('active')) {
     navHoverOff();
   }
-  else if ($('#'+pNav).is(':hover') || $('#'+sNav).is(':hover')){
+  else if ($('#'+pNav).filter(':hover') || $('#'+sNav).filter(':hover')){
     $('.primary-nav').not('#'+pNav).find('.current-hover').removeClass('current-hover');  
     $('.secondary-nav').not('#'+sNav).removeClass('highlight').find('.current-hover').removeClass('current-hover').addClass('hide');
     $('#'+pNav).not('.current-hover').addClass('current-hover');

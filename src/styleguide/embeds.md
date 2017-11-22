@@ -1,4 +1,5 @@
-﻿
+﻿<title>Styleguide: Embeds</title>
+
 # Embed Basics
 
 To make sure embedded content maintains its aspect ratio as the width of the screen changes, wrap the `iframe`, `object`, `embed`, or `video` in a container with the `.responsive-embed` class.  Add the attribute `allowfullscreen` to the iframe.

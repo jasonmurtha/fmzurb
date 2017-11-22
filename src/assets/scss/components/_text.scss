@@ -703,7 +703,7 @@ sup, sub {
   font-size: 1.125em;
 }
 .initial-color {
-  color: initial;
+  color: $body-font-color;
 }
 .weight-light { 
   font-weight: $global-weight-light; 

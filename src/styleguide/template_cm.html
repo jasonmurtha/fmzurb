@@ -20,37 +20,45 @@
     <meta name="theme-color" content="#88BD45">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/ss/app_cm.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+    <link rel="stylesheet" href="files/styleguide.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>    
   </head>
   <body>
-    <div class="column row">
-    
-    </div>
 
-    <div class="column row">
-      <div class="row collapse">
-        <div class="large-3 medium-4 column" data-sticky-container>
-          <ul class="vertical menu">
+    <div id="top" class="page-title">
+      <div class="row column">
+        <form class="form float-right">
+          <select id="ssnav">
+            <option value="">Select Component</option>
             {{#each pages}}
-              <li><a href="#{{ anchor }}">{{ title }}</a></li>
+              <option value="#{{ anchor }}">{{ title }}</option>
             {{/each}}
-          </ul>
-        </div>
-
-        <div class="large-9 medium-8 column" id="code-content">
-          {{#each pages}}
-            <div class="ss-section" id="{{ anchor }}">
-              {{ body }}
-            </div>
-          {{/each}}
-        </div>
-
+          </select>
+        </form>
+        <h1 class="subtitle">Corporate Style Guide</h1>
       </div>
     </div>
-   
-    <script src="/js/vendor/jquery-3.2.1.min.js"> </script>
+    
+    <div class="content-band">
+      <div class="row column" id="code-content">
+      <p></p>
+          {{#each pages}}
+          <div class="ss-section" id="{{ anchor }}">
+            <div class="row">
+              <div class="column markup-wrapper">
+              {{ body }}
+              </div>
+            </div>
+          </div>
+          {{/each}}
+       
+        <p class="text-center"><a class="button small" href="index.html">Back to Style Guides</a></p>
+      </div>
+    </div> 
+    
+    <script src="/js/vendor/jquery-3.2.1.min.js"> </script>    
+    <script src="/js/vendor/somni_code.js"></script>
     <script src="/js/app_cm.js"></script>
     <script>
     // suppress the code view blocks by default and hide them under a toggle.

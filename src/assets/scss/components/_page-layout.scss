@@ -1,3 +1,16 @@
+.nav-global {
+  max-width: rem-calc(1500);
+  margin: 0 auto;
+  @include breakpoint(xlarge) {
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(30);      
+  }
+  @include breakpoint(xxlarge) {
+    padding-left: rem-calc(70);
+    padding-right: rem-calc(50); 
+  }
+}
+
 @media screen {
   .ribbon,
   .primary-nav,
@@ -8,7 +21,7 @@
   .footer-promo,
   .pre-footer-promo,
   .footer,
-  .hero-blended,
+  .hero-blended
   .hero {  
     > .row  {
       padding-left: rem-calc(20);

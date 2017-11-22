@@ -1,4 +1,5 @@
-﻿
+﻿<title>Styleguide: Fluid Typography</title>
+
 # Fluid Typography
 
 This is a very quick overview of fluid typography. Read [this Smashing Magazine article](https://www.smashingmagazine.com/2016/05/fluid-typography/) if you want more in-depth details.

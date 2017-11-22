@@ -1,4 +1,5 @@
-﻿
+﻿<title>Styleguide: Foundation Grid</title>
+
 # Basics of Foundation Grid
 
 ## Before You Begin ##
@@ -268,14 +269,14 @@ There are times when you won't want each media query to be collapsed or uncollap
 
 <div class="row medium-uncollapse large-collapse">
   <div class="small-6 column">
-    <div class="callout secondary">
+    <div class="callout hollow">
       <p class="show-for-small-only">On a small screen, I have gutters!</p>
       <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
       <p class="show-for-large">On a large screen, I have no gutters!</p>
     </div>
   </div>
   <div class="small-6 column">
-    <div class="callout secondary">
+    <div class="callout hollow">
       <p class="show-for-small-only">On a small screen, I have gutters!</p>
       <p class="show-for-medium-only">On a medium screen, I have gutters!</p>
       <p class="show-for-large">On a large screen, I have no gutters!</p>

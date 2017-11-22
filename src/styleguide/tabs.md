@@ -1,3 +1,4 @@
+<title>Styleguide: Tabs</title>
 
 # Tab Elements
 
@@ -479,6 +480,7 @@ Step One, define the custom css for each custom class you create. If you need to
   float: left;
   width: 33.3333%;
   text-align: center;
+  margin: 0;
 }
 .tabs-title-primary > a {
   display: block;
@@ -532,6 +534,7 @@ Step One, define the custom css for each custom class you create. If you need to
   float: left;
   width: 33.3333%;
   text-align: center;
+  margin: 0;
 }
 .tabs-title-primary > a {
   display: block;

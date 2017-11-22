@@ -1,0 +1,433 @@
+.no-js {
+  #menu-toggle {
+    display: none;
+  }
+}
+header {
+  position: relative;
+  &.header-extend {
+    @include breakpoint (xlarge) {
+      margin-bottom: rem-calc(76);
+    }
+  }
+  li {
+    margin: 0;
+  }
+}
+#subnav-perspectives-list {
+  @include breakpoint(xlarge){
+    visibility: hidden;   // for some reason, setting display: none; dorks up something if you start at desktop view and reduce to mobile width
+    height: 0;
+  }
+}
+.logo-corp { 
+  padding: $gutter $gutter/2 0 $gutter * 1.5;
+  display: inline-block;
+  transition: display 0.35s ease;
+  img {
+    width: rem-calc(116);
+    height: rem-calc(41);
+  }
+  @include breakpoint (xlarge) {
+    padding: 1.3125rem 0 1rem;
+    img {
+      width: rem-calc(190);
+      height: rem-calc(67.13);
+    }
+  }
+}
+.is-mobile-expanded .logo-corp {
+  @include breakpoint (large down) {
+    display: none;
+  }
+}
+.toggle-icon,
+.search-icon,
+.search-button {
+  height: 2.5rem;
+  width: 1.875rem;
+  margin: $titlebar-icon-spacing;
+  padding: 0.4375rem 0;
+  transition: background 0.3s ease;
+  border-width: 0;
+  border-radius: 0; 
+  display: inline;
+}
+.button.toggle-icon {
+  background: transparent icon(menu, $primary-color, 28, 24, 0, 0, 28, 24) no-repeat center center;       
+  margin-right: $gutter * 1.5; 
+}
+.is-mobile-expanded .button.toggle-icon {
+  background: transparent icon(menu-close, $white, 24, 24) no-repeat center center;          
+}
+.button.search-icon {
+  background: transparent;
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke-color: $primary-color;
+  }
+}
+.is-mobile-expanded .search-icon {
+  visibility: hidden;
+}
+.nav-global {
+  font-weight: $global-weight-medium;
+  line-height: 1;
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(17); 
+    .show-for-xlarge.hide {
+      display: block !important;
+    }
+  }
+  .is-mobile-expanded & {
+    bottom: 100vh;
+  }
+  .menu > li > a { // overriding the ribbon default
+    @include breakpoint(large down) {
+      padding: rem-calc(30 30 28);
+    }
+  }
+  .nav-bus-section > .menu  > li > a {
+    @include breakpoint(xlarge) {
+      padding: rem-calc(50 20 44 22); 
+    }
+  }
+  h4 {
+    font-size: inherit;
+  }
+  .top-bar {
+    @include breakpoint(xlarge) {
+      float: left;
+    }
+  }
+}
+
+.title-bar {
+  transition: background 0.4s ease, border-color 0.4s ease; 
+  padding: $titlebar-padding;
+  z-index: 401;
+  height: 5rem;
+  border-bottom: 1px solid $white;
+  @include breakpoint(large down) {
+    position: relative;
+  }
+  @include breakpoint (xlarge) {
+    height: auto;
+  }
+  .mobile-home-text {
+    color: $primary-color;
+    font-size: 1.375rem;
+    padding: $gutter * 1.4 0 0 $gutter * 1.5;
+    text-transform: none;
+    display: none;
+    transition: color 0.6s ease; 
+  }
+  .is-mobile-expanded & {
+    background: $primary-color; 
+    border-bottom: 1px solid rgba($white, 0.5);
+    .mobile-home-text {
+      color: $titlebar-color;
+      @include breakpoint (large down) {
+        display: inline-block;
+      }
+    }  
+  }    
+}
+.nav-section {
+  text-transform: uppercase;
+  @include breakpoint(xlarge) {
+    display: table-cell; 
+    vertical-align: middle;
+    padding: rem-calc(0 28 0);
+    z-index: 496;  
+  } 
+  &.nav-bus-section {
+    padding: 0;
+  } 
+  > a { 
+    @include breakpoint(xlarge) {
+      letter-spacing: 1px;
+      padding: rem-calc(50 0 38); 
+      border-bottom: rem-calc(6) solid $white;       
+      display: block;
+      @include nav-desktop-link();
+    } 
+  }
+  .nav-bus-toggle {
+    @include breakpoint(xlarge) {
+      letter-spacing: 1px;
+      display: block; 
+      transition: color 0.2s ease 0s;
+      border-bottom-width: 0; 
+      z-index: 497;
+      background: $white;
+      &:active,
+      &:focus,
+      &:hover  {
+        color: $fm-orange;  
+      } 
+    } 
+  }    
+}
+.nav-main {  
+  @include breakpoint(xlarge) {
+  //  position: relative;
+    display: block;
+    float: right;    
+    &[aria-expanded="false"] {
+      display: block !important;
+    }
+  }
+  .nav-global & {
+    @include breakpoint(large down) { 
+      position: absolute;
+      margin-top: 5rem;
+      top: 0;
+      width: 100%;
+      z-index: 399;
+    }
+  }
+  &[aria-expanded="false"]:not(.slide-in-down):not(.slide-out-up) {
+    @include breakpoint(large down) { 
+      display: none;
+    }
+  }  
+  .nav-bus-section {   
+    > li {
+      @include breakpoint(xlarge) {
+        padding: rem-calc(0 28);  
+      } 
+    }
+  }
+  a {
+    position: relative;
+    color: $fm-gray;
+    @include breakpoint(large down) { 
+      background: $light-gray;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid darken($light-gray, 10%);  
+    }
+    &.mobile-nav-accordion-parent {
+      @include breakpoint(large down) { 
+        color: $white;    
+        background: $fm-green;
+        border-bottom: 1px solid rgba($white, 0.5);
+        border-top-width: 0;
+        transition: background 0.4s ease, color 0.4s ease, padding-bottom 0.2s ease;
+        &::after {
+          content: ' ';      
+          height: rem-calc(26);   
+          width: rem-calc(26); 
+          display: block;
+          background: transparent icon(chevron-down, rgba($white, 0.5), 16, 16) no-repeat center center / cover;
+          position: absolute;
+          top: 50%;
+          margin-top: rem-calc(-13);
+          right: $gutter * 1.5;
+          transition: background 0.3s ease 0s;
+        }
+      }
+    }
+  }
+  li[aria-expanded='true'] {
+    .mobile-nav-accordion-parent {
+      @include breakpoint(large down) {
+        color: $fm-green;    
+        background: $light-gray; 
+        border-width: 0;  
+        padding-bottom: $gutter * 1.25; 
+        transition: background 0.2s ease, color 0.2s ease, padding-bottom 0.1s ease;
+        &::after { 
+          background: transparent icon(chevron-up, $fm-green, 16, 16) no-repeat center center / cover;
+        }
+      }
+      @include breakpoint(xlarge) {
+        display: none;
+      }
+    }
+  }
+  .nested {
+    @include breakpoint (large down){
+      padding-bottom: $gutter * 0.75;
+      background: $light-gray; 
+      font-size: rem-calc(16); 
+      a {
+        text-transform: none;
+        font-weight: $global-weight-normal;
+        border-width: 0;      
+      }
+      > li {
+        > a {
+          padding: $gutter * 0.75 0 $gutter * 0.7 $gutter * 1.5;
+        }
+        &:first-child > a {
+          padding-top: $gutter * 0.5;
+        }
+      }               
+    }
+  }
+  .no-bullet.vertical.expand-desktop {
+    @include breakpoint(xlarge) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      display: block !important;  
+      z-index: 490; 
+      background: $light-gray;  
+      text-transform: none;
+      border-top: 1px solid darken($light-gray, 9.8039);    
+    }
+    > .subnav-item {
+      @include breakpoint(xlarge) {
+        position: relative;
+        z-index: 491; 
+        display: block !important;
+        text-align: right;
+        max-width: rem-calc(1500);
+        margin: 0 auto;
+        @include breakpoint(xlarge) {
+          padding-left: rem-calc(50);
+          padding-right: rem-calc(30);      
+        }
+        @include breakpoint(xxlarge) {
+          padding-left: rem-calc(70);
+          padding-right: rem-calc(50); 
+        }
+      }
+      > ul {
+        @include breakpoint(xlarge) {
+          position: relative;
+          display: block !important;
+          float: right;
+          z-index: 492; 
+          > li {
+            > a {
+              @include nav-desktop-link();  
+              padding: rem-calc(30 20 28);
+              color: $fm-gray;
+            } 
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-bus-container {
+  position: relative;
+  .nav-bus-item[aria-expanded="true"] {
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.37);
+  }
+  .menu {
+    @include breakpoint(xlarge) {      
+      letter-spacing: normal;
+      position: absolute;
+      top: rem-calc(111);
+      right: 0;
+      width: rem-calc(250);
+      background: $white;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.37);
+      z-index: 493;
+      text-transform: none;
+      > li {
+        > a {
+          padding: 1.8rem 2rem 1rem;
+        }
+      }
+    }
+    h4 {
+      font-size: 1.125rem;
+      font-weight: $global-weight-normal;
+    }
+    p {
+      font-size: rem-calc(16);
+      line-height: 1.3;
+      font-weight: $global-weight-light;
+    }
+  }
+}
+.mobile-nav-topic {
+  background: $fm-gray;
+  color: $white;
+  position: relative;
+  padding: $gutter * 0.65 0 $gutter * 0.5 $gutter * 1.5;
+  border-bottom: 1px solid darken($light-gray, 10%); 
+}  
+
+
+   
+/// ---------------------------------------------------------------------------
+
+    
+.nav-search  {
+  include breakpoint(xlarge) {
+    display: none;
+    position: relative;
+  }
+  .nav-global & {
+    position: absolute;
+    margin-top: 5rem;
+    top: 0rem;
+    width: 100%;
+    z-index: 399;
+  }
+  padding: rem-calc(16 $gutter/2); 
+  border-top: 1px solid darken($light-gray, 9.8039);
+  border-bottom: 1px solid $fm-yellow;
+  background-color: $fm-yellow;
+  max-height: 6rem;
+  &[aria-expanded="false"]:not(.slide-in-down):not(.slide-out-up) {
+    display: none;
+  }
+  @media screen and (min-width: 400px) {
+    padding: rem-calc($gutter/2 $gutter * 1.5 $gutter/2 $gutter * 1.5);
+  }
+  form {
+    width: 100%;
+    margin: 0;
+  }
+  input[type="search"] {
+    background: $white;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    height: ($gutter * 2.5);
+  }
+  button[type="submit"] {
+    color: $white;
+    font-size: rem-calc(14);
+    width: auto;
+    height: ($gutter * 2.5);
+    margin: 0;
+    padding: $gutter/1.25 0 $gutter/1.25 $gutter/2;
+  }
+  [type="submit"] {
+    background: transparent;
+  }
+  &.has-transition {
+    transition: margin-top 0.35s ease; 
+  }
+  &.is-expanded {
+    margin-top: 0rem;
+    transition: margin-top 0.4s ease; 
+  }
+}
+
+/// ribbon tweaks
+
+.ribbon {    
+  a {
+    color: $fm-gray;
+  }
+  .nav-accordion-parent li:not(:last-child) {
+    border-bottom: 1px solid #dcdddb;
+  }
+  h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  }
+}
+   
+

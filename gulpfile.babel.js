@@ -107,7 +107,7 @@ function styleGuideCorp(done) {
 function styleGuideScripts(done) {
   return sherpa('src/styleguide/scripts_corp.md', {
     output: PATHS.dist + '/styleguide/styleguide_scripts_corp.html',
-    template: 'src/styleguide/template_corp.html'
+    template: 'src/styleguide/template_foundation.html'
   }, styleGuideGrid(done)); 
 }
 function styleGuideGrid(done) {
@@ -196,6 +196,15 @@ function javascript(done) {
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_corp.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/js'));
+  gulp.src(PATHS.javascriptcorpalt)
+    .pipe($.sourcemaps.init())
+    .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.concat('app_corp_alt.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))

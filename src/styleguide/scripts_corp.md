@@ -1,4 +1,5 @@
-﻿
+﻿<title>Styleguide: Scripts</title>
+
 # Scripts
 
 This page provides details on existing JavaScript functions and variables that are part of the responsive template.  In addition to the code detailed below, Foundation includes numerous [javascript utilities](http://foundation.zurb.com/sites/docs/javascript-utilities.html) that you should become familiar with.

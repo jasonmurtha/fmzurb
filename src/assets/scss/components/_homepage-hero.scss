@@ -51,23 +51,18 @@
     @include breakpoint(xxlarge) {
       background-position: center bottom;
     }
-  }
-	
-  // overrides for financials
+	}
+  
+  // overrides for Q3 financials promotion
   &.hero-financials {
-    @media screen {   
       background-image: url("/images/hero/homepage_hero5.jpg");
-      background-position: center center;
-    }
+      background-position: 50% center;
     @include breakpoint(xxlarge) {
       background-position: center bottom;
+    } 
+    .hero-title {
+      @include breakpoint(xxlarge) {
+        font-weight: 700;
+      }
     }
-	  .hero-title {
-		  @include breakpoint(xxlarge) {
-    	  font-weight: 700;
   }
-	  }
-  }
-  
-}
-

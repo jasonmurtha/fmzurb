@@ -1,0 +1,55 @@
+﻿{{!-- This is the base layout for corporate pages --}}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="abstract" content="{{ abstract }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FreddieMac" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="Description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ image }}" />
+    <meta name="twitter:image" content="{{ image }}" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta name="theme-color" content="#88BD45">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp_alt.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+  </head>  
+{{#if bodyclass}}
+  <body class="{{ bodyclass }}">
+{{else}}
+  <body>
+{{/if}} 
+    <div class="show-for-print">FreddieMac.com</div>
+    <!--googleoff: all-->
+    <header id="header-nav" class="hide-for-print" data-toggler=".is-mobile-expanded" aria-expanded="false">  
+      {{> ribbon}}
+      {{> nav-mobile-corp}}
+    </header> 
+    <!--googleon: all-->
+    <div id="content">  
+      {{> body}}
+      {{> footer-corp}}
+    </div>
+    <!-- temporarily running on local copy -->
+    <script src="/js/vendor/jquery-3.2.1.min.js"> </script>    
+    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
+    <script src="/js/vendor/somni_code.js"></script>
+    <script src="/js/app_corp_alt.js"></script>
+  </body>
+</html>

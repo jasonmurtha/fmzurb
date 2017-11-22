@@ -49,7 +49,7 @@
 $global-font-size: 16px;
 $global-width: rem-calc(1500); 
 $global-lineheight: 1.4;
-$light-gray: #f4f4f4;
+$light-gray: #f4f4f4;  // note: darken($light-gray, 10%) = #dbdbdb;
 $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
