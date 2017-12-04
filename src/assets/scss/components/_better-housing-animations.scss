@@ -23,7 +23,7 @@
     padding: 0.24em 0 0.2em;
   }
 }
-.odometer-building7, .odometer-house5, .odometer-house0, .odometer-building0 {
+.odometer-building7, .odometer-house5, .odometer-house6, .odometer-house0, .odometer-building0 {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 1em;
@@ -49,8 +49,8 @@
     transition: background 1.6s linear 0.7s;
   }
 }
-.odometer-house5 {
-  background-image: url("/corporate/better-housing-finance/images/house-5-sprite.png");
+.odometer-house6 {
+  background-image: url("/corporate/better-housing-finance/images/house-6-sprite.png");
   &.odometer-animate {
     transition: background 1.6s linear 0.6s;
   }
