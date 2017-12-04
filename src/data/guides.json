@@ -1,22 +1,22 @@
 ﻿{ "page": [
    {
-      "name": "Freddie Mac Global",
+      "name": "Freddie Mac Styles",
       "url" : "styleguide_fm.html"
    },
    {
-      "name": "Corporate Site",
-      "url" : "styleguide_corp.html"
-   },
-   {
-      "name": "Multifamily Site",
-      "url" : "styleguide_mf.html"
-   },
-   {
-      "name": "Freddie Mac Global Scripts",
+      "name": "Freddie Mac Scripts",
       "url" : "styleguide_scripts_corp.html"
    },
    {
-      "name": "Foundation Grid",
+      "name": "Corporate Styles",
+      "url" : "styleguide_corp.html"
+   },
+   {
+      "name": "Multifamily Styles",
+      "url" : "styleguide_mf.html"
+   },
+   {
+      "name": "Foundation Grid (Layout)",
       "url" : "styleguide_grid.html"
    },
    {
@@ -42,10 +42,6 @@
    {
       "name": "Fluid Type",
       "url" : "styleguide_fluid.html"
-   },
-   {
-      "name": "My Home by Freddie Mac",
-      "url" : "http://myhome.freddiemac.com/style_guide/"
    }
   ]
 }

@@ -1,6 +1,6 @@
 ﻿---
 title: Style Guides and Tools
-layout: default
+layout: corporate
 image: files/styleguide.jpg
 description: Style guides and web tools for managing FreddieMac.com websites.
 ---
@@ -13,68 +13,89 @@ description: Style guides and web tools for managing FreddieMac.com websites.
 <div class="content-band"> 
   <div class="row">
     <div class="column medium-5">
-      <h2>Responsive Style Guides</h2>
+      <h2>Responsive FM Style Guides</h2>
         {{#if guides}}    
          <ul>
           {{#each guides.page}}
-            <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+            <li><a href="{{url}}">{{name}}</a></li> 
           {{/each}}
         </ul>
         {{/if}}
         
-        <h2>Style Guides for Older Sites</h2>
+        <h3>Style Guides for Other Sites</h3>
         <ul>
-          <li class="item-name"><a href="http://www.freddiemac.com/special/style_guide/mf/">Multifamily Site</a></li> 
-          <li class="item-name"><a href="http://www.freddiemac.com/special/style_guide/fm/">Single-family and Capital Markets</a></li> 
-          <li class="item-name"><a href="http://www.freddiemac.com/terms/brand_standards/">Web Based Applications Template</a></li> 
-        </ul>
-        
-        <h2>Responsive Page Viewers</h2>
+          <li><a href="http://myhome.freddiemac.com/style_guide/">My Home by Freddie Mac</a></li> 
+          <li><a href="http://www.freddiemac.com/special/style_guide/mf/">Multifamily Site</a></li> 
+          <li><a href="http://www.freddiemac.com/special/style_guide/fm/">Single-family and Capital Markets</a></li> 
+          <li><a href="http://www.freddiemac.com/special/style_guide/fm/Creating_custom_LAS_pages_inside_V2.docx">Custom LAS pages</a></li>
+          <li><a href="http://www.freddiemac.com/terms/brand_standards/">Web Based Applications Template</a></li> 
+        </ul>       
+        <h2>Responsive Tools</h2>
         <ul>
-          <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:8090/blog">FM Staging</a></li>
-          <li><a href="http://www.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://www.freddiemac.com/blog">FM Production</a></li>
-          <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:9030/">My Home Staging</a></li>
-          <li><a href="http://myhome.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://myhome.freddiemac.com/">My Home Production</a></li>
-          <li>Responsive Snapshot Tool (get a snapshot of a responsive webpage on multiple devices)
+          <li><strong>-ISH Viewer</strong> - test a responsive page across small<i>ish</i>, medium<i>ish</i>, and larg<i>ish</i> breakpoints
             <ul>
-            <li><a href="http://www.freddiemac.com/special/styleguide/responsive.html">Prod Snapshot tool</a></li>
-            <li><a href="http://extcstage.fhlmc.com:8090/special/styleguide/responsive.html">Staging Snapshot tool</a></li>
+              <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:8090/blog">FM Stage</a> / <a href="http://www.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://www.freddiemac.com/blog">FM Prod</a></li>
+              <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/ish/viewer.cgi?url=http://extcstage.fhlmc.com:9030/">My Home Stage</a> / <a href="http://myhome.freddiemac.com/cgi-bin/ish/viewer.cgi?url=http://myhome.freddiemac.com/">My Home Prod</a></li>
+            </ul>
+          </li>
+          <li><strong>Snapshot Creator</strong> - take a screenshot of a page shown across multiple devices
+            <ul>
+            <li><a href="http://www.freddiemac.com/special/styleguide/responsive.html">FM Prod</a> / <a href="http://extcstage.fhlmc.com:8090/special/styleguide/responsive.html">Stage (FM or My Home)</a></li>
             </ul>
           </li>
         </ul>
     </div>
     
     <div class="column medium-7">        
-      <h2>Analytics</h2>
+      <h2>Developer Resources</h2>
       <ul>
-        <li><a href="https://my.omniture.com/login/">Adobe Site Catalyst Login</a></li>
-        <li>View <a href="files/navigation-links-naming-scheme.docx">Navigation Link Tracking Map</a></li>
-        <li>View <a href="files/webform-tracking.docx">How to track Web Forms</a></li>
-      </ul>
-      <h2>Web Infrastructure</h2>
-      <em>These links will only work if you are behind our firewall.</em>
-      <ul>
-      <li><a href="http://wiki.fhlmc.com/display/WIO/Diagrams">Server Diagrams</a></li>
-      <li><a href="http://wiki.fhlmc.com/display/WIO/">WIO (Web Infrastructure &amp; Operations)</a></li>
-      </ul>        
-      <h3>Tools for FreddieMac.com</h3>
-      <ul>
-      <li>View a <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/dir_crawl.cgi">Directory Listing</a> with time/date stamp</li>
-      <li>View a <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/filelist.cgi">File list</a> for a particular directory/site</li>
-      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/sitemapper.cgi">Sitemapper</a> top 2 directory levels on FM</li>
-      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/string_crawl.cgi">String Search</a> - locate all files that contain a string of text in their content.</li>
-      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/file_find.cgi">File Finder</a> - locate all files with a particular string in their file name.</li>
-      <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/meta_crawl.cgi">Metadata Reporter</a> - view title and meta description for html files in a particular directory/site</li>
-      <li>View a list of all <a href="http://extcstage.fhlmc.com:8090/cgi-bin/expand_symlinks.cgi">symbolic links</a> and the server path they represent</li>
-      <li>View <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/logfile.cgi">recent errors in FM logfile</a></li>
-      </ul>
-      <h3>Tools for MyHome.FreddieMac.com</h3>
-      <ul>
-      <li>View a <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/dir_crawl.cgi">Directory Listing</a> with time/date stamp</li>
-      <li>View a <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/filelist.cgi">File list</a> for a particular directory/site</li>
-      <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/string_crawl.cgi">String Search</a> - locate all files that contain a string of text in their content.</li>
-      <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/file_find.cgi">File Finder</a> - locate all files with a particular string in their file name.</li>
-      <li>View <a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/logfile.cgi">recent errors in My Home logfile</a></li>
+        <li><strong>Hiding Content Guide</strong> - learn how to <a href="files/hide-web-content-from-search-engines.docx">hide web content from search engines</a></li>
+        <li><strong>Web Analytics</strong>
+          <ul>
+            <li>Guide on <a href="files/navigation-links-naming-scheme.docx">Navigation Link Tracking</a></li>
+            <li>Guide on <a href="files/webform-tracking.docx">Tracking Web Forms</a></li>
+            <li>Login to <a href="https://my.omniture.com/login/">Adobe Site Catalyst</a></li>
+          </ul>
+        </li>
+        <li><strong>File Lister</strong> - view a list of files in a directory
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/filelist.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/filelist.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>Rot Analysis</strong> tool - view time/date stamps for <strong>all</strong> files in a directory
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/dir_crawl.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/dir_crawl.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>Metadata Reviewer</strong> - review metadata (title, description) for pages in a directory
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/meta_crawl.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/meta_crawl.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>String Search</strong> - locate web files that contain a string of text in their <strong>content</strong>
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/string_crawl.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/string_crawl.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>File Finder</strong> - locate web files that contain a string of text in their <strong>file name</strong>
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/file_find.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/file_find.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>Error Log</strong> - view recent server errors
+          <ul>
+            <li><a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/logfile.cgi">FM Stage</a></li>
+            <li><a href="http://extcstage.fhlmc.com:9030/cgi-bin/crawl/logfile.cgi">My Home Stage</a></li>
+          </ul>
+        </li>
+        <li><strong>Sitemapper</strong> - view  top 2 directory levels on <a href="http://extcstage.fhlmc.com:8090/cgi-bin/crawl/sitemapper.cgi">FM Stage</a></li>
+        <li><strong>Symlink Checker</strong> - view a list of all symbolic links on <a href="http://extcstage.fhlmc.com:8090/cgi-bin/expand_symlinks.cgi">FM Stage</a></li>
+        <li><strong>WIO</strong> - <a href="http://wiki.fhlmc.com/display/WIO/">Web Infrastructure &amp; Operations</a></li>
       </ul>
     </div>
   </div>
