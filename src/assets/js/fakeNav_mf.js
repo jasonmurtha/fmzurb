@@ -11,6 +11,7 @@ function fakeNav(){
     else if (p.match(/purchase/)) {$('#subnav-seller-servicers-purchase').addClass('active');}
     else if (p.match(/reporting/)) {$('#subnav-seller-servicers-reporting').addClass('active');}
     else if (p.match(/asset/)) {$('#subnav-seller-servicers-asset').addClass('active');}
+    else if (p.match(/tech/)) {$('#subnav-seller-servicers-tech').addClass('active');}
     else if (p.match(/guide/)) {$('#subnav-seller-servicers-guide').addClass('active');}
     else if (p.match(/legal/)) {$('#subnav-seller-servicers-legal').addClass('active');}
   }
