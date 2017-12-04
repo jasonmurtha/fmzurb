@@ -430,6 +430,8 @@
   padding: 0.0625em 0.125em 0.125em;
   vertical-align: 20%;
   font-weight: $global-weight-light;
+  font-style: normal;
+  font-family: $body-font-family;
   .button & {
     line-height: 0.9; 
     font-size: 80%; 
