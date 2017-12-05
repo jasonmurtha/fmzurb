@@ -6,13 +6,13 @@
   }    
 }
 
-.mosaic-icons {
-  @for $i from 1 through 4 {
-    li:nth-child(#{$i}) svg {
-      fill: color-shift(desaturate(adjust-hue($pear, 1.5), 6), $fm-green, 4, $i);
-    }
-  }    
-}
+//.mosaic-icons {
+//  @for $i from 1 through 4 {
+//    li:nth-child(#{$i}) svg {
+//      fill: color-shift(desaturate(adjust-hue($pear, 1.5), 6), $fm-green, 4, $i);
+//    }
+//  }    
+//}
 
 .mosaic-4 {
   @for $i from 1 through 4 {

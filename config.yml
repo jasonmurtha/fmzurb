@@ -168,7 +168,7 @@ PATHS:
     - "src/assets/js/prepRotators.js" 
     - "src/assets/js/prepAccFilters.js" 
     # comment for prod code. this is just for local site
-    - "src/assets/js/fakeNav_mf.js"  
+    # "src/assets/js/fakeNav_mf.js"  
     - "src/assets/js/mwNewsFeed_mf.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appMf.js"

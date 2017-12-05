@@ -824,53 +824,11 @@ The month and date shown in the calendar icon are `<text>` elements inside the `
 
 ---
 
-## Events in the Multifamily Homepage
+## Events in the Content Area
 
-By default, the calendar icons are all blue. On the Multifamily homepage, add class `.mosaic-icons` to the `<ul>` tag to color a maximum of <strong>four</strong> icons in mosaic green shades.
+- On the Multifamily Homepage, the event categories are omitted, and the date and location are on the same line.
+- When events are displayed in a sidebar, they should be in a `.background-concrete` container.
 
-```html_example
-<ul class="no-bullet list-divided mosaic-icons">
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-    </div>
-    <div class="media-object-section main-section">
-      <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-      <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-      <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-    </div>
-  </li>
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">16-18</text></svg></p>
-    </div>
-    <div class="media-object-section main-section">
-      <h3 class="sidebar-headline">2017 Customer Conference</h3>
-      <p class="article-date-lg weight-light">October 16-18, 2017<br>Phoenix, AZ</p>
-      <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="2017 Customer Conference">Event Details</a></p>
-    </div>
-  </li>
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-    </div>
-    <div class="media-object-section  main-section">
-      <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-      <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO</p>
-    </div>
-  </li>
-</ul> 
-```
-
----
-
-## Events in the Multifamily Event Page 
-
-On the Events page, the calendar icons get color coded to match the type of event listed.  
-
-- Industry Events are in purple: add class `.industry` to the calendar `<svg>`
-- Conference Events in primary: add class `.conference` to the calendar `<svg>`
-- Education Events in green: add class `.education` to the calendar `<svg>`
 
 ```html_example
 <ul class="no-bullet list-divided gutter-top">
@@ -930,108 +888,6 @@ On the Events page, the calendar icons get color coded to match the type of even
   </li>
 </ul>  
 ```
-
----
-
-## Events in the News and Research Sidebar 
-
-On the News and Research Sidebar, the formatting is slightly different, and the icons are not color-coded by event type, instead they default to blue.
-
-```html
-<section class="sidebar background-concrete events">
-  <div class="row">
-    <div class="column">
-      <h2 class="sidebar-title">Events and Education</h2>
-      <ul class="no-bullet list-divided">
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-          </div>
-          <div class="media-object-section main-section">
-            <div class="article-category">Industry Event</div>
-            <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-            <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-            <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-          </div>
-        </li>
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-          </div>
-          <div class="media-object-section  main-section">
-            <div class="article-category">Conference</div>
-            <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-            <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO </p>
-          </div>
-        </li>
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Nov</text><text class="text2" x="270" y="465">13</text></svg></p>
-          </div>
-          <div class="media-object-section main-section">
-            <div class="article-category">Education</div>
-            <h3 class="sidebar-headline">Multifamily Asset Management Training</h3>
-            <p class="article-date-lg weight-light">November 13, 2017 <br>Mclean, VA </p>
-            <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="Multifamily Asset Management Training">Event Details</a></p>
-          </div>
-        </li>
-        <li class="uppercase"><a href="/multifamily/events/" class="weight-normal icon-chevron-right">View All Events &amp; Education</a></li>            
-      </ul> 
-    </div>
-  </div>
-</section> 
-```
-
-<div class="two-column-layout content-band no-margin">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-concrete events">
-        <div class="row">
-          <div class="column">
-            <h2 class="sidebar-title">Events and Education</h2>
-            <ul class="no-bullet list-divided">
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-                </div>
-                <div class="media-object-section main-section">
-                  <div class="article-category">Industry Event</div>
-                  <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-                  <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-                  <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-                </div>
-              </li>
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-                </div>
-                <div class="media-object-section  main-section">
-                  <div class="article-category">Conference</div>
-                  <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-                  <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO </p>
-                </div>
-              </li>
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Nov</text><text class="text2" x="270" y="465">13</text></svg></p>
-                </div>
-                <div class="media-object-section main-section">
-                  <div class="article-category">Education</div>
-                  <h3 class="sidebar-headline">Multifamily Asset Management Training</h3>
-                  <p class="article-date-lg weight-light">November 13, 2017 <br>Mclean, VA </p>
-                  <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="Multifamily Asset Management Training">Event Details</a></p>
-                </div>
-              </li>
-              <li class="uppercase">
-                <a href="/multifamily/events/" class="weight-normal icon-chevron-right">View All Events &amp; Education</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </aside>
-  </div>
-</div>
 
 
 
