@@ -52,6 +52,11 @@ thead a {
   }
 }
 
+a {
+  .background-white {
+    color: inherit;
+  }
+}
 .video-modal {
   position: relative;
   display: inline-block;  
