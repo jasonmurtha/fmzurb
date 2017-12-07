@@ -52,66 +52,66 @@ $hero-blend-color: $primary-color;
   }
   &.seller-servicers-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_sellerservicers.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_sellerservicers.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   } 
   &.investors-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_investors.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_investors.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   }
   &.borrowers-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_borrowers.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_borrowers.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   }
   &.products-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_products.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_products.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   }
   &.news-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_news.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_news.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   }
   &.about-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_about.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/multifamily/images/hero_about.jpg');
       height: rem-calc(345);
       text-align: center;
     }

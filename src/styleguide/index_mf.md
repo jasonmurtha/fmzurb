@@ -375,12 +375,12 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 ```
 
 <div class="row column">
-  <div class="gutter-bottom" data-equalizer="upper" data-equalize-on="medium">
+  <div class="gutter-bottom" data-equalizer="upper1" data-equalize-on="medium">
     <div class="row medium-up-2 large-up-4" data-equalizer="lower"  data-equalize-by-row="true">
       <div class="column">
         <a class="block background-sheer mf-bg1" href="#">
           <div class="text-center background-blue">
-            <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+            <div class="callout no-margin background-primary" data-equalizer-watch="upper1">
               <h2>Originate &amp; <br class="show-for-medium"/>Underwrite</h2>
             </div>
             <div class="callout chevron-base" data-equalizer-watch="lower">
@@ -393,7 +393,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
       <div class="column">
         <a class="block background-sheer mf-bg2" href="#">
           <div class="text-center background-blue">
-            <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+            <div class="callout no-margin background-primary" data-equalizer-watch="upper1">
               <h2>Purchase &amp; <br class="show-for-medium"/>Deliver</h2>
             </div>
             <div class="callout chevron-base" data-equalizer-watch="lower">
@@ -406,7 +406,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
       <div class="column">
         <a class="block background-sheer mf-bg3" href="#">
           <div class="text-center background-blue">
-            <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+            <div class="callout no-margin background-primary" data-equalizer-watch="upper1">
               <h2>Investor <br class="show-for-medium"/>Reporting</h2>
             </div>
             <div class="callout  chevron-base" data-equalizer-watch="lower">
@@ -419,7 +419,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
       <div class="column">
         <a class="block background-sheer mf-bg7" href="#">
           <div class="text-center background-blue">
-            <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+            <div class="callout no-margin background-primary" data-equalizer-watch="upper1">
               <h2>Asset  <br class="show-for-medium"/>Management</h2>
             </div>
             <div class="callout chevron-base" data-equalizer-watch="lower">
@@ -454,12 +454,12 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 </div>
 ```
 
-<div class="gutter-bottom" data-equalizer="upper" data-equalize-on="medium">
+<div class="gutter-bottom" data-equalizer="upper2" data-equalize-on="medium">
   <div class="row medium-up-2 large-up-4" data-equalizer="lower">
     <div class="column">
       <a class="block background-sheer mf-bg1" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper2">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.6231;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M6.1 5.4h11.8v14.5H6.1z"/><path class="st1" d="M11 17.2h2.1v2.7H11z"/><path class="st1" d="M11 13.7h2.1v2.1H11z"/><path class="st1" d="M14.4 13.7h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 13.7h2.1v2.1H7.5z"/><path class="st1" d="M11 10.3h2.1v2.1H11z"/><path class="st1" d="M14.4 10.3h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 10.3h2.1v2.1H7.5z"/><path class="st1" d="M11 6.8h2.1v2.1H11z"/><path class="st1" d="M14.4 6.8h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 6.8h2.1v2.1H7.5z"/><path class="st1" d="M16.5 4h-9L6.1 5.4h11.8z"/></g></svg></p>
             <h3>Conventional<br><span class="weight-light">Lenders</span></h3>
           </div>
@@ -473,7 +473,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg2" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper2">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M13.5 18.7H5.3V5.3h13.4v9.9"/><path class="st1" d="M12.3 7.6c0-.6-.5-1.2-1.2-1.2S10 7 10 7.6v2.9h2.3V7.6z"/><path class="st1" d="M12.3 13.5c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3v-2.9z"/><path class="st1" d="M17.6 11.7c0-.6-.5-1.2-1.2-1.2h-.6c-.6 0-1.2.5-1.2 1.2v3.5h3v-3.5z"/><circle class="st1" cx="16.1" cy="7.9" r="1.2"/><path class="st1" d="M13.5 15.2h5.2v3.5h-5.2z"/><path class="st1" d="M13.5 16.4h5.2"/><path class="st1" d="M13.5 17.6h5.2"/><path class="st1" d="M13.5 5.3v9.9"/></g><path class="st1" d="M8.7 13.5c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3v-2.9z"/><path class="st1" d="M8.7 7.6c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3V7.6z"/></svg></p>
             <h3>Small Balance Loan<br><span class="weight-light">Lenders</span></h3>
           </div>
@@ -487,9 +487,9 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg3" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper2">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M5.3 18.7h13.4"/><path class="st1" d="M7 6h10v12.7H7z"/><path class="st1" d="M17.7 5.4l-5.7-2-5.7 2V6h11.4z"/><path class="st1" d="M11 15.4h2v3.3h-2z"/><path class="st1" d="M8.3 7.4h1.3v1.3H8.3z"/><path class="st1" d="M11 7.4h2v1.3h-2z"/><path class="st1" d="M14.3 7.4h1.3v1.3h-1.3z"/><path class="st1" d="M8.3 10h1.3v1.3H8.3z"/><path class="st1" d="M11 10h2v1.3h-2z"/><path class="st1" d="M14.3 10h1.3v1.3h-1.3z"/><path class="st1" d="M8.3 12.7h1.3V14H8.3z"/><path class="st1" d="M11 12.7h2V14h-2z"/><path class="st1" d="M14.3 12.7h1.3V14h-1.3z"/><path class="st1" d="M8.3 15.4h1.3v1.3H8.3z"/><path class="st1" d="M14.3 15.4h1.3v1.3h-1.3z"/></g></svg></p>
-            <h3>Targeted Affordable<br><span class="weight-light">Lenders</span></h3>
+            <h3>Targeted Affordable Housing<br><span class="weight-light">Lenders</span></h3>
           </div>
           <div class="callout chevron-base" data-equalizer-watch="lower">
             <p class="enlarge">Lorem ipsum sed ut perspiciatis unde omnis enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquip ex ea commodo consequat. Proin sociis natoque. </p>
@@ -501,7 +501,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg4" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper2">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st2{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M3.4 17.5h17.2"/><path class="st1" d="M3.6 11.4l7.3-1.2"/><path class="st2" d="M4.9 11.2v6.3"/><path class="st1" d="M9.8 7.3L15 4.1l5.2 3.2"/><path class="st2" d="M19.1 6.6v10.9"/><path class="st1" d="M12.4 14.5h5.2v3h-5.2z"/><path class="st1" d="M15.3 14.5v3"/><path class="st1" d="M6.4 13.2h3v4.3h-3z"/><path class="st1" d="M6.4 12h3"/><path class="st2" d="M10.9 6.7v10.8"/><path class="st1" d="M12.4 11.2h5.2v1.9h-5.2z"/><path class="st1" d="M12.4 7.7h5.2v1.9h-5.2z"/></g></svg></p>
             <h3>Seniors Housing<br><span class="weight-light">Lenders</span></h3>
           </div>
@@ -536,12 +536,12 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 </div>
 ```
 
-<div class="gutter-bottom" data-equalizer="upper" data-equalize-on="medium">
+<div class="gutter-bottom" data-equalizer="upper3" data-equalize-on="medium">
   <div class="row medium-up-2 large-up-4" data-equalizer="lower">
     <div class="column">
       <a class="block background-sheer mf-bg5" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper3">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.6231;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M6.1 5.4h11.8v14.5H6.1z"/><path class="st1" d="M11 17.2h2.1v2.7H11z"/><path class="st1" d="M11 13.7h2.1v2.1H11z"/><path class="st1" d="M14.4 13.7h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 13.7h2.1v2.1H7.5z"/><path class="st1" d="M11 10.3h2.1v2.1H11z"/><path class="st1" d="M14.4 10.3h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 10.3h2.1v2.1H7.5z"/><path class="st1" d="M11 6.8h2.1v2.1H11z"/><path class="st1" d="M14.4 6.8h2.1v2.1h-2.1z"/><path class="st1" d="M7.5 6.8h2.1v2.1H7.5z"/><path class="st1" d="M16.5 4h-9L6.1 5.4h11.8z"/></g></svg></p>
             <h3>Conventional</h3>
           </div>
@@ -555,7 +555,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg2" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper3">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M13.5 18.7H5.3V5.3h13.4v9.9"/><path class="st1" d="M12.3 7.6c0-.6-.5-1.2-1.2-1.2S10 7 10 7.6v2.9h2.3V7.6z"/><path class="st1" d="M12.3 13.5c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3v-2.9z"/><path class="st1" d="M17.6 11.7c0-.6-.5-1.2-1.2-1.2h-.6c-.6 0-1.2.5-1.2 1.2v3.5h3v-3.5z"/><circle class="st1" cx="16.1" cy="7.9" r="1.2"/><path class="st1" d="M13.5 15.2h5.2v3.5h-5.2z"/><path class="st1" d="M13.5 16.4h5.2"/><path class="st1" d="M13.5 17.6h5.2"/><path class="st1" d="M13.5 5.3v9.9"/></g><path class="st1" d="M8.7 13.5c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3v-2.9z"/><path class="st1" d="M8.7 7.6c0-.6-.5-1.2-1.2-1.2s-1.1.5-1.1 1.2v2.9h2.3V7.6z"/></svg></p>
             <h3>Small Balance Loan</h3>
           </div>
@@ -569,9 +569,9 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg3" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper3">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M5.3 18.7h13.4"/><path class="st1" d="M7 6h10v12.7H7z"/><path class="st1" d="M17.7 5.4l-5.7-2-5.7 2V6h11.4z"/><path class="st1" d="M11 15.4h2v3.3h-2z"/><path class="st1" d="M8.3 7.4h1.3v1.3H8.3z"/><path class="st1" d="M11 7.4h2v1.3h-2z"/><path class="st1" d="M14.3 7.4h1.3v1.3h-1.3z"/><path class="st1" d="M8.3 10h1.3v1.3H8.3z"/><path class="st1" d="M11 10h2v1.3h-2z"/><path class="st1" d="M14.3 10h1.3v1.3h-1.3z"/><path class="st1" d="M8.3 12.7h1.3V14H8.3z"/><path class="st1" d="M11 12.7h2V14h-2z"/><path class="st1" d="M14.3 12.7h1.3V14h-1.3z"/><path class="st1" d="M8.3 15.4h1.3v1.3H8.3z"/><path class="st1" d="M14.3 15.4h1.3v1.3h-1.3z"/></g></svg></p>
-            <h3>Targeted Affordable</h3>
+            <h3>Targeted Affordable Housing</h3>
           </div>
           <div class="callout chevron-base" data-equalizer-watch="lower">
             <p class="enlarge">Lorem ipsum sed ut perspiciatis unde omnis enim ad minim veniam, quis nostrud exercitation ullamco laboris  nisi ut aliquip ex ea commodo consequat. Proin sociis natoque. </p>
@@ -583,7 +583,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
     <div class="column">
       <a class="block background-sheer mf-bg4" href="#">
         <div class="text-center background-blue">
-          <div class="callout no-margin background-primary" data-equalizer-watch="upper">
+          <div class="callout no-margin background-primary" data-equalizer-watch="upper3">
             <p><svg aria-hidden="true" width="75px" height="75px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.st0{fill:#447BBD;stroke:#FFFFFF;stroke-width:0.6229;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st2{fill:none;stroke:#FFFFFF;stroke-width:0.623;stroke-linejoin:round;stroke-miterlimit:10;}</style><g id="Outline_Icons"><circle class="st0" cx="12" cy="12" r="11.5"/><path class="st1" d="M3.4 17.5h17.2"/><path class="st1" d="M3.6 11.4l7.3-1.2"/><path class="st2" d="M4.9 11.2v6.3"/><path class="st1" d="M9.8 7.3L15 4.1l5.2 3.2"/><path class="st2" d="M19.1 6.6v10.9"/><path class="st1" d="M12.4 14.5h5.2v3h-5.2z"/><path class="st1" d="M15.3 14.5v3"/><path class="st1" d="M6.4 13.2h3v4.3h-3z"/><path class="st1" d="M6.4 12h3"/><path class="st2" d="M10.9 6.7v10.8"/><path class="st1" d="M12.4 11.2h5.2v1.9h-5.2z"/><path class="st1" d="M12.4 7.7h5.2v1.9h-5.2z"/></g></svg></p>
             <h3>Seniors Housing</h3>
           </div>
@@ -824,53 +824,11 @@ The month and date shown in the calendar icon are `<text>` elements inside the `
 
 ---
 
-## Events in the Multifamily Homepage
+## Events in the Content Area
 
-By default, the calendar icons are all blue. On the Multifamily homepage, add class `.mosaic-icons` to the `<ul>` tag to color a maximum of <strong>four</strong> icons in mosaic green shades.
+- On the Multifamily Homepage, the event categories are omitted, and the date and location are on the same line.
+- When events are displayed in a sidebar, they should be in a `.background-concrete` container.
 
-```html_example
-<ul class="no-bullet list-divided mosaic-icons">
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-    </div>
-    <div class="media-object-section main-section">
-      <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-      <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-      <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-    </div>
-  </li>
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">16-18</text></svg></p>
-    </div>
-    <div class="media-object-section main-section">
-      <h3 class="sidebar-headline">2017 Customer Conference</h3>
-      <p class="article-date-lg weight-light">October 16-18, 2017<br>Phoenix, AZ</p>
-      <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="2017 Customer Conference">Event Details</a></p>
-    </div>
-  </li>
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-    </div>
-    <div class="media-object-section  main-section">
-      <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-      <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO</p>
-    </div>
-  </li>
-</ul> 
-```
-
----
-
-## Events in the Multifamily Event Page 
-
-On the Events page, the calendar icons get color coded to match the type of event listed.  
-
-- Industry Events are in purple: add class `.industry` to the calendar `<svg>`
-- Conference Events in primary: add class `.conference` to the calendar `<svg>`
-- Education Events in green: add class `.education` to the calendar `<svg>`
 
 ```html_example
 <ul class="no-bullet list-divided gutter-top">
@@ -930,108 +888,6 @@ On the Events page, the calendar icons get color coded to match the type of even
   </li>
 </ul>  
 ```
-
----
-
-## Events in the News and Research Sidebar 
-
-On the News and Research Sidebar, the formatting is slightly different, and the icons are not color-coded by event type, instead they default to blue.
-
-```html
-<section class="sidebar background-concrete events">
-  <div class="row">
-    <div class="column">
-      <h2 class="sidebar-title">Events and Education</h2>
-      <ul class="no-bullet list-divided">
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-          </div>
-          <div class="media-object-section main-section">
-            <div class="article-category">Industry Event</div>
-            <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-            <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-            <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-          </div>
-        </li>
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-          </div>
-          <div class="media-object-section  main-section">
-            <div class="article-category">Conference</div>
-            <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-            <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO </p>
-          </div>
-        </li>
-        <li class="media-object">
-          <div class="media-object-section">  
-            <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Nov</text><text class="text2" x="270" y="465">13</text></svg></p>
-          </div>
-          <div class="media-object-section main-section">
-            <div class="article-category">Education</div>
-            <h3 class="sidebar-headline">Multifamily Asset Management Training</h3>
-            <p class="article-date-lg weight-light">November 13, 2017 <br>Mclean, VA </p>
-            <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="Multifamily Asset Management Training">Event Details</a></p>
-          </div>
-        </li>
-        <li class="uppercase"><a href="/multifamily/events/" class="weight-normal icon-chevron-right">View All Events &amp; Education</a></li>            
-      </ul> 
-    </div>
-  </div>
-</section> 
-```
-
-<div class="two-column-layout content-band no-margin">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-concrete events">
-        <div class="row">
-          <div class="column">
-            <h2 class="sidebar-title">Events and Education</h2>
-            <ul class="no-bullet list-divided">
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
-                </div>
-                <div class="media-object-section main-section">
-                  <div class="article-category">Industry Event</div>
-                  <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
-                  <p class="article-date-lg weight-light">September 25, 2017<br>Tampa, FL</p>
-                  <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
-                </div>
-              </li>
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z" transform="translate(0 0)"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
-                </div>
-                <div class="media-object-section  main-section">
-                  <div class="article-category">Conference</div>
-                  <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
-                  <p class="article-date-lg weight-light">October 14, 2017<br>Denver, CO </p>
-                </div>
-              </li>
-              <li class="media-object">
-                <div class="media-object-section">
-                  <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Nov</text><text class="text2" x="270" y="465">13</text></svg></p>
-                </div>
-                <div class="media-object-section main-section">
-                  <div class="article-category">Education</div>
-                  <h3 class="sidebar-headline">Multifamily Asset Management Training</h3>
-                  <p class="article-date-lg weight-light">November 13, 2017 <br>Mclean, VA </p>
-                  <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="Multifamily Asset Management Training">Event Details</a></p>
-                </div>
-              </li>
-              <li class="uppercase">
-                <a href="/multifamily/events/" class="weight-normal icon-chevron-right">View All Events &amp; Education</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </aside>
-  </div>
-</div>
 
 
 

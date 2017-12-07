@@ -368,23 +368,7 @@
 .icon-calendar {   // class for svgs
   width: rem-calc(72);
   height: rem-calc(72);
-  fill: $fm-blue;
-  &.legend {
-    width: rem-calc(28);
-    height: rem-calc(28);
-    display: relative;
-    margin-top: -5px;
-    padding: 1px 4px;
-  }
-  &.industry {
-    fill: $fm-purple;
-  }
-  &.conference {
-    fill: $primary-color;
-  }
-  &.education {
-    fill: $fm-green;
-  }
+  fill: $fm-green;
   text {
     text-transform: uppercase;
     text-anchor: middle;
@@ -430,6 +414,8 @@
   padding: 0.0625em 0.125em 0.125em;
   vertical-align: 20%;
   font-weight: $global-weight-light;
+  font-style: normal;
+  font-family: $body-font-family;
   .button & {
     line-height: 0.9; 
     font-size: 80%; 
