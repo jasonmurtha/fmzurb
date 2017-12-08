@@ -30,6 +30,10 @@
    {  
        "name":"Style Guides",
        "url":"/styleguide/"
+   },
+   {
+        "name":"Alt Nav Dev Page",
+        "url":"/corporate/altnav/about.html"
    }
   ] 
 } 

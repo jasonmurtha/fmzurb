@@ -7,7 +7,7 @@ header {
   position: relative;
   &.header-extend {
     @include breakpoint (xlarge) {
-      margin-bottom: rem-calc(76);
+      margin-bottom: rem-calc(75);
     }
   }
   li {
@@ -91,6 +91,9 @@ header {
   .nav-bus-section > .menu  > li > a {
     @include breakpoint(xlarge) {
       padding: rem-calc(50 20 44 22); 
+      letter-spacing: 1px;
+      background: $white;
+      z-index: 495;
     }
   }
   h4 {
@@ -134,6 +137,7 @@ header {
     }  
   }    
 }
+
 .nav-section {
   text-transform: uppercase;
   @include breakpoint(xlarge) {
@@ -153,26 +157,34 @@ header {
       display: block;
       @include nav-desktop-link();
     } 
-  }
-  .nav-bus-toggle {
-    @include breakpoint(xlarge) {
-      letter-spacing: 1px;
-      display: block; 
-      transition: color 0.2s ease 0s;
-      border-bottom-width: 0; 
-      z-index: 497;
-      background: $white;
-      &:active,
-      &:focus,
-      &:hover  {
-        color: $fm-orange;  
+    .nav-bus-toggle & {
+      @include breakpoint(xlarge) {        
+        transition: color 0.2s ease 0s;
+        border-bottom-width: 0; 
+        z-index: 497;
+        background: $white;
+        &:active,
+        &:focus,
+        &:hover  {
+          color: $fm-orange;  
+        } 
       } 
-    } 
-  }    
+    }     
+  }
+  &.active {
+    color: $fm-green;
+    > a {
+      @include breakpoint(xlarge){
+        transition: color 0.2s ease 0s, border-bottom-color 0.2s ease 0s;   
+        border-bottom-color: darken(saturate(adjust-hue($pear,-1.73485), 12.69119), 1.96078);        
+        color: inherit;
+      }
+    }
+  }  
 }
 .nav-main {  
   @include breakpoint(xlarge) {
-  //  position: relative;
+  //  position: relative;   
     display: block;
     float: right;    
     &[aria-expanded="false"] {
@@ -267,23 +279,24 @@ header {
       }               
     }
   }
-  .no-bullet.vertical.expand-desktop {
+  
+  .no-bullet.vertical {
     @include breakpoint(xlarge) {
+      font-size: rem-calc(16); 
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      display: block !important;  
+      float: right;
       z-index: 490; 
       background: $light-gray;  
       text-transform: none;
-      border-top: 1px solid darken($light-gray, 9.8039);    
+      border-top: 1px solid darken($light-gray, 9.8039);
     }
     > .subnav-item {
       @include breakpoint(xlarge) {
         position: relative;
         z-index: 491; 
-        display: block !important;
         text-align: right;
         max-width: rem-calc(1500);
         margin: 0 auto;
@@ -299,25 +312,76 @@ header {
       > ul {
         @include breakpoint(xlarge) {
           position: relative;
-          display: block !important;
-          float: right;
-          z-index: 492; 
+          float: right;     
           > li {
             > a {
               @include nav-desktop-link();  
               padding: rem-calc(30 20 28);
               color: $fm-gray;
             } 
-          }
+          }    
         }
       }
     }
+    &.expand-desktop {
+      @include breakpoint(xlarge) {
+        display: block !important;  
+      } 
+      > .subnav-item {
+        @include breakpoint(xlarge) {
+          display: block !important;
+        } 
+        > ul {
+          @include breakpoint(xlarge) {
+            position: relative;
+            display: block !important;
+            z-index: 492;    
+          }
+        }        
+      }
+    }
+  }
+  
+  .current-hover {  
+    > a {
+      border-bottom-color: $fm-green;
+    }  
+    .no-bullet.vertical  { 
+      display: block !important;   
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%; 
+      background: $fm-green; 
+      &:not(.hide-for-xlarge){
+        border-top: 1px solid $fm-green; 
+      }
+      z-index: 497;
+      > .subnav-item {      
+          display: block !important;  
+          position: relative;
+          z-index: 498; 
+          max-width: rem-calc(1500);
+          margin: 0 auto;
+        > ul {
+          @include breakpoint(xlarge) {
+            display: block !important;
+            z-index: 499; 
+            > li {
+              > a {
+                color: $white;
+              } 
+            }    
+          }
+        }        
+      }
+    } 
   }
 }
 
 .nav-bus-container {
   position: relative;
-  .nav-bus-item[aria-expanded="true"] {
+  .nav-bus-toggle[aria-expanded="true"] {
     box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.37);
   }
   .menu {
@@ -355,8 +419,7 @@ header {
   padding: $gutter * 0.65 0 $gutter * 0.5 $gutter * 1.5;
   border-bottom: 1px solid darken($light-gray, 10%); 
 }  
-
-
+  
    
 /// ---------------------------------------------------------------------------
 
@@ -415,6 +478,14 @@ header {
   }
 }
 
+.subnav-edge {   
+  @include breakpoint(xlarge) {
+    position: relative;
+    @include mosaic-fill;
+    height: 8px;
+  }
+}
+  
 /// ribbon tweaks
 
 .ribbon {    
