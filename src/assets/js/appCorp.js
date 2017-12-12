@@ -4,10 +4,14 @@ function getWidth(){
 } 
 Foundation.Accordion.defaults.multiExpand = true;
 Foundation.Accordion.defaults.allowAllClosed = true;
-Foundation.Reveal.deepLink = true;
-Foundation.Reveal.fullScreen = true;
-Foundation.Reveal.resetOnClose = true;
-Foundation.Reveal.vOffset = 0;
+Foundation.Accordion.defaults.deepLink = true;
+Foundation.Accordion.defaults.updateHistory = true;
+Foundation.Accordion.defaults.deepLinkSmudge = true;
+Foundation.Reveal.defaults.deepLink = true;
+Foundation.Reveal.defaults.fullScreen = true;
+Foundation.Reveal.defaults.resetOnClose = true;
+Foundation.Reveal.defaults.updateHistory = true;
+// Foundation.Reveal.defaults.vOffset = 0;
 // Reveal closeOnEsc and closeOnClick are both true 
 Foundation.Tabs.defaults.deepLink = true;
 Foundation.Tabs.defaults.updateHistory = true;
