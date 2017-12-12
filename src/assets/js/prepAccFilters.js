@@ -52,7 +52,8 @@
         if(
            (str.length && patt.test(text) && !topic.length) || 
            (str.length && patt.test(text) && topic.length && $(this).attr('data-topic').match(topic)) || 
-           (!str.length && $frm.find('[name="filterTopic"]:checked').length && $(this).attr('data-topic').match(topic))
+           (!str.length && $frm.find('[name="filterTopic"]:checked').length && $(this).attr('data-topic').match(topic))  ||
+           (!str.length && !topic.length)
           ){ 
           $(this).removeClass('hide');
         }
