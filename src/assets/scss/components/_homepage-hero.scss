@@ -11,7 +11,7 @@
   position: relative;
   padding: rem-calc(30 0 30);
   @media screen { 
-    background: $fm-gray url('/images/hero/homepage_hero2_mobile.jpg') no-repeat left bottom / cover;  
+    background: $fm-gray url('/images/hero/homepage_hero5_mobile.jpg') no-repeat left bottom / cover;  
   }
   @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
     padding: rem-calc(35 0 30);
@@ -29,6 +29,7 @@
     padding: rem-calc(145 0 110);
     background-position: top left;
   }
+}
   .hero-text {
     @include breakpoint(medium) {
       text-align: left;
@@ -51,7 +52,7 @@
     @include breakpoint(xxlarge) {
       background-position: center bottom;
     }
-  } 
+	}
   
   // overrides for Q3 financials promotion
   &.hero-financials {
@@ -65,5 +66,4 @@
         font-weight: 700;
       }
     }
-  } 
-}
+  }
