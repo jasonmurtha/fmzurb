@@ -25,6 +25,7 @@
 
 **Slide Transition**
 - By default, slides transition every 5 seconds (5000 milliseconds).  
+- Add [modifier](#modifier-classes) class `.ease` to make the default linear transition ease so that it is less jerky.
 - You can customize the timing of the delay by defining it on the wrapper using the `data-timer-delay` attribute and providing a value that is the number of milliseconds to dalay.
 - You can prevent the auto-play functionality by adding the attribute `data-auto-play="false"`.
 
@@ -49,7 +50,7 @@ Example set inside a `.background-concrete` container to show the edges of the o
 ```html_example
 <div class="background-concrete">
   <!-- omit outer callout div when copying this code -->
-  <div class="orbit" role="region" aria-label="This is my slideshow" data-orbit>
+  <div class="orbit ease" role="region" aria-label="This is my slideshow" data-orbit>
     <ul class="orbit-container">
       <li class="orbit-slide">
         <div class="callout large">
@@ -84,7 +85,7 @@ Example set inside a `.background-concrete` container to show the edges of the o
 Example with `data-auto-play="false"` and `data-nav-buttons="false"`, and each slide using a different background color.
 
 ```html_example
-<div class="orbit" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false" data-nav-buttons="false">
+<div class="orbit ease" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false" data-nav-buttons="false">
   <ul class="orbit-container">
     <li class="orbit-slide background-yellow">
       <div class="callout">
@@ -118,7 +119,7 @@ Example with `data-auto-play="false"` and `data-nav-buttons="false"`, and each s
 Example with `.bullets-overlay` class, `data-auto-play="false"`, and slides using background colors.
 
 ```html_example
-<div class="orbit bullets-overlay" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false">
+<div class="orbit ease bullets-overlay" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false">
   <ul class="orbit-container">
     <li class="orbit-slide background-red">
       <div class="callout">
@@ -507,6 +508,33 @@ The combination controls and bullets option used for carousels with `.bullets-ov
   <button class="orbit-next"><span class="show-for-sr">next slide</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="14 14 22 22" width="1em" height="1em"><path d="M 22.7 34.7 l -1.4 -1.4 l 8.3 -8.3 l -8.3 -8.3 l 1.4 -1.4 l 9.7 9.7 Z" /></svg></button>
 </div>
 ```
+
+
+
+# Modifier Classes
+
+The default transitions all use these defaults:
+
+- **Speed:** 500ms
+- **Timing:** Linear
+- **Delay:** 0s
+
+These defaults can be overridden by adding any of the following modifier classes.
+
+- **Speed:**
+  - `.slow` (750ms)
+  - `.fast` (250ms)
+- **Timing:**
+  - `.ease`
+  - `.ease-in`
+  - `.ease-out`
+  - `.ease-in-out`
+  - `.bounce-in`
+  - `.bounce-out`
+  - `.bounce-in-out`
+- **Delay:**
+  - `.short-delay` (300ms)
+  - `.long-delay` (700ms)
 
 
 
@@ -917,7 +945,7 @@ There are four plugin options you can set to change the default effects:
 Since those option names are pretty *long*, you can also set them all in one HTML attribute, using `data-options`.
 
 By default, slides transition every 5 seconds (5000 milliseconds). 
-- You can customize the timing of the delay by defining it on the wrapper using the `data-timer-delay` attribute and providing a value that is the number of milliseconds to dalay.
+- You can customize the amount of time each slide is displayed by defining a custom value using the `data-timer-delay` attribute.
 
 ---
 

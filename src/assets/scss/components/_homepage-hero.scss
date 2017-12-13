@@ -3,9 +3,9 @@
      padding: 0.5em 1.25em;       
   }
 }
-.hero-text {
-  text-align: center;
-}
+//.hero-text {
+//  text-align: center;
+//}
 
 .hero {  // default hero style, family with arms held up to make house outline
   position: relative;
@@ -16,9 +16,9 @@
   @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
     padding: rem-calc(35 0 30);
   }    
-  @include breakpoint(medium) {
-    background: transparent url('/images/hero/homepage_hero4.jpg') no-repeat center center / cover;
-  }
+//  @include breakpoint(medium) {
+//    background: transparent url('/images/hero/homepage_hero4.jpg') no-repeat center center / cover;
+//  }
   @media (min-width: -zf-bp-to-em(map-get($breakpoints, large) - 155px)) {
     padding: rem-calc(70 0 60);
   }
@@ -27,43 +27,60 @@
   }
   @media (min-width: -zf-bp-to-em(map-get($breakpoints, xxlarge) + 180px)) {      
     padding: rem-calc(145 0 110);
-    background-position: top left;
+//    background-position: top left;
   }
-}
-  .hero-text {
-    @include breakpoint(medium) {
-      text-align: left;
-      padding-left: 34%;
-    } 
-    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 330px)) {
-      span { display: block;}  
-    }
-    @include breakpoint(large) {
-      margin-bottom: 3rem;      
-    }
-  }
+
+//  .hero-text {
+//    @include breakpoint(medium) {
+//      text-align: left;
+//      padding-left: 34%;
+//    } 
+//    @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) + 330px)) {
+//      span { display: block;}  
+//    }
+//    @include breakpoint(large) {
+//      margin-bottom: 3rem;      
+//    }
+//  }
   
-  // overrides for better housing finance promotion
-  &.hero-better-housing {
-    @media screen {   
-      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/images/hero/homepage_hero_bhf.jpg");
-      background-position: center center;
-    }
-    @include breakpoint(xxlarge) {
-      background-position: center bottom;
-    }
-	}
+// overrides for better housing finance promotion
+//  &.hero-better-housing {
+//    @media screen {   
+//      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/images/hero/homepage_hero_bhf.jpg");
+//      background-position: center center;
+//    }
+//    @include breakpoint(xxlarge) {
+//      background-position: center bottom;
+//    }
+//	}
   
   // overrides for Q3 financials promotion
   &.hero-financials {
-      background-image: url("/images/hero/homepage_hero5.jpg");
+      background-image: url("/images/hero/homepage_hero5_mobile.jpg");
       background-position: 50% center;
-    @include breakpoint(xxlarge) {
-      background-position: center bottom;
-    } 
-    .hero-title {
+    @include breakpoint(medium) {
+      background-image: url("/images/hero/homepage_hero5.jpg");    
+    }
+    .flex-weight-up {
+      font-weight: 300;
       @include breakpoint(xxlarge) {
         font-weight: 700;
       }
     }
   }
+  // overrides for duty-to-serve
+  &.hero-duty {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/hero/homepage_hero_dts_mobile.jpg");
+    background-position: center 25%;
+    @include breakpoint(medium) {
+      background-position: 50% center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/hero/homepage_hero_dts.jpg");    
+    }
+  }
+}
+
+.orbit {
+  &.bullets-overlay .orbit-controls {
+   padding-bottom: $gutter/2;
+  }
+}

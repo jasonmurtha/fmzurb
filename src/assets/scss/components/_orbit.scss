@@ -53,12 +53,16 @@
 .orbit-image { 
   border-width: 0;
 }
+.orbit-container {
+  .orbit-slide {  // increasing specificity
+    margin-bottom: 0;
+    margin-top: 0; 
+  }
+}
 .orbit-slide {
   min-height: 100%;
   font-size: rem-calc(15); 
   font-size: calc(15px +  4 * (100vw - 320px)/1180);
-  margin-bottom: 0;
-  margin-top: 0;
   @include breakpoint(xxlarge) {
     font-size: rem-calc(19); 
   } 
