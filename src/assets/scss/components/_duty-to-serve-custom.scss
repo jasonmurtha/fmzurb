@@ -118,16 +118,28 @@ body {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
-    @include breakpoint(xlarge) {
+	@media print, screen and (min-width: 34.375em) {
+    min-height: rem-calc(150px); }
+  @media screen and (min-width: 67.5em) {
+    min-height: rem-calc(400px); }
+  @media screen and (min-width: 83.75em) {
+    min-height: rem-calc(500px); } }
+
+	/*@include breakpoint(xlarge) {
       min-height: rem-calc(500px);
 	}
-	@include breakpoint(small) {
+    @include breakpoint(large) {
+      min-height: rem-calc(500px);
+	}
+	@include breakpoint(medium) {
       min-height: rem-calc(400px);
 	}
-    @include breakpoint(xsmall) {
+	@include breakpoint(small) {
       min-height: rem-calc(150px);
 	}
-}
+} */
+
+
   
 .dts-landing-hero > div {
     width: 90%;
@@ -139,12 +151,9 @@ body {
 	  padding-top: 100px; 
 	  padding-bottom: 75px;
 	}
-	/*@media screen and (min-width: 67.5em) {
-	  padding-top: 100px;
-	} */
 	@media screen and (min-width: 83.75em) {
 	  padding-top: 150px;
-	  padding-left: 350px;
+	  padding-left: 400px;
 	  text-align: left;
 	}
 }
@@ -342,8 +351,24 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
   @include breakpoint(xxlarge) {
     font-size: 2.25rem;
 	}
-  @include breakpoint(large) {
+	@include breakpoint(large) {
 	padding-right: 125px;
+}
+}
+
+.quote-small {
+  font-size: 1.5rem;
+  font-size: calc(24px + 4 * (100vw - 320px)/1180);
+  font-weight: 300;
+  line-height: 1.33; 
+  @include breakpoint(xxlarge) {
+    font-size: 1.75rem;
+	}
+}
+
+.identifier {
+	@include breakpoint(xxlarge) {
+    max-width: 155px;
 	}
 }
 
@@ -476,6 +501,7 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
   font-size: calc(18px + 10 * (100vw - 320px)/1180);
   font-weight: 400;
   color: #33333f;
+
   line-height: 1.4; 
   @include breakpoint(xxlarge) {
     font-size: 1.75rem; 
@@ -679,6 +705,27 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
 	background-color: transparent;
 }
 
+.share-wrapper-dts {
+	background: #009BD3;
+	padding-top: 1rem;
+	padding-bottom: 1rem
+}
+
+.share-wrapper {
+  background: $fm-blue;
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+  .hero-blended > &,
+  .page-title > &  {
+    background: none; 
+    padding: 0;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: 0;  
+    text-align: left;
+  }
+}
 
 /*.banner-better {
   position: relative;
