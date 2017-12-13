@@ -27,9 +27,17 @@
        "name":"Borrower of the Future",
        "url":"/singlefamily/borrower/"
    },
+	{  
+       "name":"Duty to Serve",
+       "url":"/corporate/duty-to-serve/"
+   },
    {  
        "name":"Style Guides",
        "url":"/styleguide/"
+   },
+   {
+        "name":"Alt Nav Dev Page",
+        "url":"/corporate/altnav/about.html"
    }
   ] 
 } 

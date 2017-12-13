@@ -3,7 +3,9 @@
 */
 (function($) {
   $.fn.filterAccContent = function (options){
-	 var defaults = {
+	 var accRefresh,
+       defaults = {
+       refreshRate: 50,
        dataF: '.filterform',
 			 dataGP:'.accordion-pointer',
        dataE: '.accordion-item',
@@ -18,15 +20,28 @@
       $acc = $(this).find(params.dataGP);        
 	  postFilter = function (){            
 		  $acc.find(params.dataE).each(function(){
-				var sections = $(this).find(params.dataP), 
-            matches = $(this).find(params.dataP).find(params.dataC).not(".hide").length;
-				if(matches >0) { 
+				var item = $(this),
+            sections = item.find(params.dataP), 
+            matches = sections.find(params.dataC).not(".hide").length;
+        if(matches >0) { 
+          item.removeClass('hide');
           $acc.foundation('down', sections, true);
 				}
 				else {
-          $acc.foundation('up', sections, true);
+          $acc.foundation('up', sections, false);
+          item.addClass('hide'); 
 				}
 		  }); 
+      return;
+		},      
+	  postReset = function (){
+      $acc.find(params.dataE).each(function(){
+        var item = $(this),
+            sections = item.find(params.dataP);				
+          item.removeClass('hide');
+          $acc.foundation('up', sections, false);
+		  }); 
+      return;
 		},
 		applyFilter = function(){ 
       var topic = $frm.find('[name="filterTopic"]:checked').length ? $frm.find('[name="filterTopic"]:checked').val() : '',
@@ -34,50 +49,39 @@
           patt = new RegExp(str, "i");
       $acc.find(params.dataP).find(params.dataC).each(function(){
         var text = $(this).text();
-        if(str.length && topic.length){ 
-          patt.test(text) && $(this).attr('data-topic').match(topic) ? $(this).removeClass('hide') : $(this).addClass('hide'); 
-          postFilter();
-        }
-        else if (str.length){
-          patt.test(text) ? $(this).removeClass('hide'): $(this).addClass('hide'); 
-          postFilter();
-        }
-        else if (topic.length){
-          $(this).attr('data-topic').match(topic) ? $(this).removeClass('hide') : $(this).addClass('hide'); 
-          postFilter();
-        } 
-        else {
+        if(
+           (str.length && patt.test(text) && !topic.length) || 
+           (str.length && patt.test(text) && topic.length && $(this).attr('data-topic').match(topic)) || 
+           (!str.length && $frm.find('[name="filterTopic"]:checked').length && $(this).attr('data-topic').match(topic))  ||
+           (!str.length && !topic.length)
+          ){ 
           $(this).removeClass('hide');
-          $acc.find(params.dataE).each(function(){
-            var sections = $(this).find(params.dataP);
-            $acc.foundation('down', sections, true);
-          });
-        } 
-      }); 
+        }
+        else {
+          $(this).addClass('hide');
+        }  
+      });
+      if(str.length || $frm.find('[name="filterTopic"]:checked').length){
+        postFilter();
+      }
+      else {
+        postReset();
+      }
 		}; 
     $frm.find(".filterReset").on("click", function(){
+      clearTimeout(accRefresh);
       $frm.find('.filterField').val("");
-      applyFilter();
+      accRefresh = setTimeout(applyFilter(), 0);
     });
-    $frm.find('.filterField').on("keyup change", function(event){	
-      if (event.keyCode == 27) { $(this).val(""); } 
-      applyFilter();
+    $frm.find('.filterField').on("keyup", function(event){
+      if (event.keyCode == 27) { return; } 	
+      clearTimeout(accRefresh);
+      accRefresh = setTimeout(applyFilter(), params.refreshRate);
     }); 
     $frm.find('[name="filterTopic"]').on("change", function(){
-      applyFilter();
-    });
-    $acc.find(params.dataE).each(function(){	
-      var $this = $(this);
-      $this.find('.accordion-title').on("click", function(){ 
-        $acc.find(params.dataC).filter('.hide').removeClass('hide');
-        if($frm.find('.filterField').length){ 
-          $frm.find('.filterField').val("");
-        }
-        if($frm.find('[name="filterTopic"]').length){          
-          $('[name="filterTopic"]').prop('checked', false);
-        }
-      });				  
-    });    
+      clearTimeout(accRefresh);
+      accRefresh = setTimeout(applyFilter(), 0);
+    });        
     return this;            
   };   
 })(jQuery);  

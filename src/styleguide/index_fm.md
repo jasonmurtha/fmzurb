@@ -1166,7 +1166,7 @@ To add dividers between the entries, add class `.description-block` to the `<dl>
 
 ## Rounded Corners
 
-<p>Add class `.rounded` to give a `.callout` rounded corners.  Rounded corners can be combined with any of the color or size variations.
+<p>Add class `.rounded` to give a `.callout` rounded corners.  Rounded corners can be combined with any of the color or size variations.</p>
 
 ```html_example
 <div class="callout background-blue rounded">
@@ -1249,6 +1249,65 @@ Pair the callout with the [close button](#close-button) component and `data-clos
       <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
         <span aria-hidden="true">&times;</span>
       </button>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Making Callouts the Same Height
+
+<p class="intro">Whenever you need to make containers the same height, utilize the Foundation <a href="https://foundation.zurb.com/sites/docs/equalizer.html">Equalizer</a> plug-in.</p>
+
+To set up an Equalizer group, you need a container, which gets the attribute `data-equalizer`, and then a series of child elements, which get the attribute `data-equalizer-watch`. The child elements will all be resized to have the same height.
+- By default, Equalizer works across all breakpoints. You can add an attribute of `data-equalize-on` set to medium, large, or xlarge if you only want the containers to equalize at large screen widths.
+
+```html_example
+<p>In this example, the blue callouts stretch to match the height of the taller callout, at breakpoints medium and above.</p>
+<div class="row" data-equalizer data-equalize-on="medium">
+  <div class="medium-4 columns">
+    <div class="callout background-primary" data-equalizer-watch>
+      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
+      
+    </div>
+  </div>
+  <div class="medium-4 columns">
+    <div class="callout hollow" data-equalizer-watch>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+    </div>
+  </div>
+  <div class="medium-4 columns">
+    <div class="callout background-primary" data-equalizer-watch>
+      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## Making Callout Contents Vertically and Horizontally Center
+
+This example uses the Foundation <a href="https://foundation.zurb.com/sites/docs/equalizer.html">Equalizer</a> plug-in mentioned above, and combines it with vertical and horizontal centering. 
+- To center horizontally, add class `.text-center` to the container.
+- To center vertically, add class `.table` to the callouts, and add class `.table-cell` and `.vertical-middle` to a `<div>` around the contents; and add class `.gutter-all` to compensate for the missing padding between the text and the callout.
+
+```html_example
+<div class="row gutter-bottom" data-equalizer data-equalize-on="medium">
+  <div class="column medium-4">
+    <div class="callout background-green text-center table" data-equalizer-watch>
+      <div class="grid-block-text table-cell vertical-middle gutter-all">Pellentesque <div class="stat-med">100,000</div> habitant morbi tristique senectus</div>
+    </div>
+  </div>
+  <div class="column medium-4">
+    <div class="callout background-green text-center table" data-equalizer-watch>
+      <div class="grid-block-text table-cell vertical-middle gutter-all">Ut enim ad <div class="stat-med">6,040</div> minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    </div>
+  </div>
+  <div class="column medium-4">
+    <div class="callout background-green text-center table" data-equalizer-watch>
+      <div class="grid-block-text table-cell vertical-middle gutter-all">Lorem <div class="stat-med">30%</div> ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
     </div>
   </div>
 </div>
@@ -1936,7 +1995,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 <div class="row medium-up-2 large-up-3" data-equalizer data-equalize-by-row="true">
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=QcthGnwJRsk" data-src="//www.youtube-nocookie.com/embed/QcthGnwJRsk?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">2:11</span><img src="files/video-1.jpg" alt="description of video"></a>
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=QcthGnwJRsk" data-src="//www.youtube-nocookie.com/embed/QcthGnwJRsk?rel=0&amp;wmode=transparent"><span class="video-length" aria-label="video length in minutes">2:11</span><img src="files/video-1.jpg" alt="description of video"></a>
       <div class="card-section">
         <p class="card-title">Why Freddie Mac</p>
         <p class="card-subtitle">Early reports are showing first-time homebuyers coming back into the market.</p>
@@ -1945,7 +2004,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=vNPl4CS4nnQ" data-src="//www.youtube-nocookie.com/embed/vNPl4CS4nnQ?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">4:48</span><img src="files/video-2.jpg" alt="description of video"></a>
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=vNPl4CS4nnQ" data-src="//www.youtube-nocookie.com/embed/vNPl4CS4nnQ?rel=0&amp;wmode=transparent"><span class="video-length" aria-label="video length in minutes">4:48</span><img src="files/video-2.jpg" alt="description of video"></a>
       <div class="card-section">
         <h4 class="card-title">Freddie Mac and Your Mortgage</h4>
         <p class="card-subtitle">During National Volunteer Week we celebrate all volunteers who give back to make our communities better and improve the lives of others</p>
@@ -1954,7 +2013,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   </div>
   <div class="column">
     <div class="card"  data-equalizer-watch>
-      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=kkHyUX40NxE" data-src="//www.youtube-nocookie.com/embed/kkHyUX40NxE?rel=0&amp;wmode=transparent"><span class="video-length" area-label="video length in minutes">3:45</span><img src="files/video-3.jpg" alt="description of video"></a>    
+      <a class="overlay video-modal widescreen-video" href="https://www.youtube.com/watch?v=kkHyUX40NxE" data-src="//www.youtube-nocookie.com/embed/kkHyUX40NxE?rel=0&amp;wmode=transparent"><span class="video-length" aria-label="video length in minutes">3:45</span><img src="files/video-3.jpg" alt="description of video"></a>    
       <div class="card-section">
         <h4 class="card-title">Avoiding Mortgage Fraud</h4>
         <p class="card-subtitle">McLean ,VA</p>

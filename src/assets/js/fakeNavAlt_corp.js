@@ -5,10 +5,12 @@ function fakeNav(){
   // this will be automated on the backend, faking it for now to show different highlighting/subnavs
   var p = location.pathname;
   if (p.match(/perspectives/)) { 
-    $('#nav-perspectives').addClass('active');
+    $('#section-perspectives').addClass('active');
+    $('#subnav-perspectives').addClass('expand-desktop');
+    
   }
   else if (p.match(/blog/) && !p.match(/hr/)) { 
-    $('#nav-blog').addClass('active');
+    $('#section-blog').addClass('active');
     $('#subnav-blog').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
     if (p.match(/detail|homeownership/)) {$('#subnav-blog-homeownership').addClass('active');}
@@ -18,7 +20,7 @@ function fakeNav(){
     else if (p.match(/archive|harp/)) {$('#subnav-blog-archive').addClass('active');}
   }
   else if (p.match(/about/) || p.match(/hr-blog/)) {
-    $('#nav-about').addClass('active');
+    $('#section-about').addClass('active');
     $('#subnav-about').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
     if (p.match(/leaders/)) {$('#subnav-about-leaders').addClass('active');}
@@ -29,14 +31,14 @@ function fakeNav(){
     else if (p.match(/investor/)) {$('#subnav-about-investors').addClass('active');}
   }
   else if (p.match(/media-/)) {
-    $('#nav-mediaroom').addClass('active');
+    $('#section-mediaroom').addClass('active');
     $('#subnav-mediaroom').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
     if (p.match(/detail|archive/)) {$('#subnav-mediaroom-archive').addClass('active');}   
     else if (p.match(/press/)) {$('#subnav-mediaroom-resources').addClass('active');} 
   }
   else if (p.match(/research/)) {
-    $('#nav-research').addClass('active');
+    $('#section-research').addClass('active');
     $('#subnav-research').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
     if(p.match(/pmms/)) {$('#subnav-research-mortgage').addClass('active');} 
