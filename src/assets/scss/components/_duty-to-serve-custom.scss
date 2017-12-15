@@ -76,6 +76,7 @@
     height: rem-calc(67.13);
   }
 } */
+
 .triangle_out {
   position: absolute;
   width: 100%;
@@ -120,9 +121,9 @@ body {
   background-size: cover;
 	@media print, screen and (min-width: 34.375em) {
     min-height: rem-calc(150px); }
-  @media screen and (min-width: 67.5em) {
+    @media screen and (min-width: 67.5em) {
     min-height: rem-calc(400px); }
-  @media screen and (min-width: 83.75em) {
+    @media screen and (min-width: 83.75em) {
     min-height: rem-calc(500px); } }
 
 	/*@include breakpoint(xlarge) {
@@ -139,8 +140,6 @@ body {
 	}
 } */
 
-
-  
 .dts-landing-hero > div {
     width: 90%;
     max-width: 1000px; 
@@ -352,7 +351,7 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
     font-size: 2.25rem;
 	}
 	@include breakpoint(large) {
-	padding-right: 125px;
+	  padding-right: 125px;
 }
 }
 
@@ -368,7 +367,8 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
 
 .identifier {
 	@include breakpoint(xxlarge) {
-    max-width: 155px;
+      max-width: 165px;
+	  padding-right: 1rem;
 	}
 }
 
@@ -705,27 +705,47 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
 	background-color: transparent;
 }
 
-.share-wrapper-dts {
-	background: #009BD3;
-	padding-top: 1rem;
-	padding-bottom: 1rem
-}
+.band-yellow {
 
-.share-wrapper {
-  background: $fm-blue;
-  padding-top: $global-padding;
-  padding-bottom: $global-padding;
-  .hero-blended > &,
-  .page-title > &  {
-    background: none; 
-    padding: 0;
+	min-height: 1rem;
+	max-height: 1rem;
+	background-color: #ffb718;
+}
+	  
+.notch-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.notch-top-v {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  min-height: 1rem;
+  + .notch-top-v {
+    bottom: -10px;
+  }
+  &::before, &::after {
+    background-color: inherit;
+    bottom: 97%;
+    content: "";
     position: absolute;
-    bottom: -17px;
-    left: 0;
-    right: 0;  
-    text-align: left;
+    width: 50%;
+    min-height: 2.5rem;
+  }
+
+  &::before {
+    right: 50%;
+    transform: skewX(65deg);
+    transform-origin: 100% 100%;
+  }
+
+  &::after {
+    left: 50%;
+    transform: skewX(-65deg);
+    transform-origin: 0 100%;
   }
 }
+
 
 /*.banner-better {
   position: relative;
@@ -802,9 +822,7 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
   color: #fff;
   line-height: 1;
 }
-
-
-	  
+ 
 .box-orange {
   position: relative; 
 }
@@ -825,7 +843,6 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
   }  
 }
 
-
 .box-teal {
   position: relative; 
 }
@@ -845,9 +862,6 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
       height: rem-calc(250px); 
   }  
 }
-
-
-
 	  
 .box-light-blue {
   position: relative;
@@ -869,9 +883,6 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
   } 
 }
 
-
-
-	
 .box-green {
   max-width: rem-calc(360px);
   margin: auto;
@@ -895,51 +906,8 @@ h1 {
 .image-circle {
   max-height: rem-calc(290px);
   width: 65%;
-} */
-	  
-.band-yellow {
+} 
 
-	min-height: 1rem;
-	max-height: 1rem;
-	background-color: #ffb718;
-}
-	  
-.notch-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-.notch-top-v {
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-  min-height: 1rem;
-  + .notch-top-v {
-    bottom: -10px;
-  }
-  &::before, &::after {
-    background-color: inherit;
-    bottom: 97%;
-    content: "";
-    position: absolute;
-    width: 50%;
-    min-height: 2.5rem;
-  }
-
-  &::before {
-    right: 50%;
-    transform: skewX(65deg);
-    transform-origin: 100% 100%;
-  }
-
-  &::after {
-    left: 50%;
-    transform: skewX(-65deg);
-    transform-origin: 0 100%;
-  }
-}
-	  
-
-	  
 .blurb {
   font-size: 1rem;
   font-size: calc(16px + 8 * (100vw - 320px)/1180);
@@ -957,14 +925,7 @@ h1 {
     padding-top: 5px; 
 	}
 }
-
-
-	  
-
-	  
-
-
-	  
+ 
 .header-banner-large {
   font-size: 2.25rem;
   font-size: calc(36px + 24 * (100vw - 320px)/1180);
@@ -979,7 +940,7 @@ h1 {
     @include breakpoint(small) {
       padding-top: 25px;
 	}
-}
+} */
 
 .video-modal {
 	display: inline;
