@@ -114,6 +114,74 @@ h1 {
 		font-weight: $global-weight-bold;
 	}
 }
+
+	
+.stat-nhm {
+  font-size: 1.125rem;
+  font-size: calc(18px +  12 * (100vw - 320px)/1180);
+  line-height: 1.1;
+  width: 100%;
+  font-weight: 400; }
+  @media screen and (min-width: 87.5em) {
+    .stat-nhm {
+      font-size: 1.875rem; } }
+	  
+.stat-nhm-green {
+  font-size: 2.25rem;
+  font-size: calc(36px +  6 * (100vw - 320px)/1180);
+  color: #88BD45;
+  font-weight: 700; }
+  @media screen and (min-width: 87.5em) {
+    .stat-nhm-green {
+      font-size: 2.625rem; } }
+	  
+.nhm-text-box {
+  font-size: 1rem;
+  font-size: calc(16px + 2 * (100vw - 320px)/1180);
+  color: #464646;
+  font-weight: 500; }
+  @media screen and (min-width: 87.5em) {
+    .nhm-text-box {
+      font-size: 1.125rem; } }
+
+.nhm-neighborhood-blurb {
+  font-size: 1rem;
+  font-size: calc(16px +  2 * (100vw - 320px)/1180);
+  font-weight: 400; }
+  @media screen and (min-width: 87.5em) {
+    .nhm-neighborhood-blurb {
+      font-size: 1.125rem; } }
+	 
+.nhm-blog-title {
+  font-size: 1.5rem;
+  font-size: calc(24px + 4 * (100vw - 320px)/1180);
+  color: #464645;
+  font-weight: 400; }
+  @media screen and (min-width: 87.5em) {
+    .nhm-blog-title {
+      font-size: 1.75rem; } }
+	   
+.nhm-blog-blurb {
+  font-size: 1rem;
+  font-size: calc(16px + 2 * (100vw - 320px)/1180);
+  color: #777874;
+  font-weight: 400;
+  padding-right:52px; }
+  @media screen and (min-width: 87.5em) {
+    .nhm-blog-blurb {
+      font-size: 1.125rem; } }
+	  
+  .nhm-rotator-quote {
+  font-size: 1rem;
+  font-size: calc(16px + 4 * (100vw - 320px)/1180);
+  font-weight: 600;
+  /* padding-top:15px; */
+  /* min-height: 14em; */
+  line-height: 1.4; }
+  @media screen and (min-width: 87.5em) {
+    .nhm-rotator-quote {
+      font-size: 1.25rem; } }
+	
 .product-card { 
   padding: 0 10px;
   margin: 0 auto;
@@ -154,7 +222,7 @@ h1 {
   position: relative;
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/multifamily/images/sbl_hero-apartments.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/corporate/national-homeownership-month/images/hero-apartments.jpg");
   background-repeat: no-repeat;
   background-color: #502020;
   background-position: top center;
@@ -178,12 +246,14 @@ h1 {
 .fastEasy-landing-hero{
   position: relative;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/multifamily/images/sbl_hero_shackinghands.jpg");
-  background-repeat: no-repeat;    
-  background-position: top center;   
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/corporate/national-homeownership-month/images/neighborhood.png");
+  background-repeat: no-repeat;
+  background-position: top center;
   border-bottom: none;
-  background-size: cover;
-  color: #fff;  
+  background-size: auto;
+  min-height: 480px;
+  border-top: solid 47px;
+  color: #00a6e2;  
 }
 .financeNeeds{
   max-width: 360px;
@@ -255,6 +325,12 @@ h1 {
   padding: $gutter/5;
   @include breakpoint(xlarge) {
     padding: $gutter;
+  }
+}
+.nhm-callout-at-large {
+  padding-top: 17px; 
+  @include breakpoint(xlarge) {
+    padding-top: 20px;  
   }
 }
 .footer {

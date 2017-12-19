@@ -61,8 +61,7 @@
           $(this).addClass('hide');
         }  
       });
-      if($frm.find('[name="filterTopic"]:checked').length){console.log($frm.find('[name="filterTopic"]:checked').val())}
-      if(str.length || topic.length){
+      if(str.length || $frm.find('[name="filterTopic"]:checked').length){
         postFilter();
       }
       else {
