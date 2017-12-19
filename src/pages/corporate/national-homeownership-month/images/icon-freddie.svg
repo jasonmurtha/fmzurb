@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NHM-Landing" transform="translate(-1111.000000, -2178.000000)">
+            <g id="Section-3---Illustration" transform="translate(0.000000, 1681.000000)">
+                <g id="Labels">
+                    <g id="4" transform="translate(1030.000000, 497.000000)">
+                        <g id="icon_freddie" transform="translate(81.000000, 0.000000)">
+                            <circle id="Oval" fill-opacity="0.899999976" fill="#00A6E1" cx="60" cy="60" r="60"></circle>
+                            <g id="certificate-2" transform="translate(30.000000, 35.000000)">
+                                <g id="Outline_Icons_1_" stroke-width="2.25" stroke="#FFFFFF" stroke-linejoin="round">
+                                    <g id="Outline_Icons">
+                                        <g id="Group">
+                                            <polyline id="Shape" stroke-linecap="round" points="30 41.25 1.25 41.25 1.25 1.25 58.75 1.25 58.75 22.5"></polyline>
+                                            <polyline id="Shape" points="53.75 42.5 53.75 58.75 46.25 52.5 38.75 58.75 38.75 42.5"></polyline>
+                                            <circle id="Oval" stroke-linecap="round" cx="46.25" cy="35" r="3.75"></circle>
+                                            <path d="M55.5525,35 C56.8075,33.4375 57.0575,31.215 55.995,29.375 C54.9325,27.5375 52.88,26.6375 50.9025,26.9425 C50.175,25.0775 48.3725,23.75 46.25,23.75 C44.125,23.75 42.325,25.0775 41.6,26.945 C39.62,26.64 37.57,27.535 36.51,29.375 C35.4475,31.215 35.6975,33.44 36.95,35 C35.6975,36.5625 35.4475,38.7875 36.51,40.625 C37.57,42.465 39.6225,43.3625 41.6025,43.0575 C42.3275,44.9225 44.13,46.25 46.25,46.25 C48.375,46.25 50.175,44.9225 50.9025,43.055 C52.88,43.36 54.93,42.465 55.9925,40.625 C57.055,38.7875 56.8075,36.56 55.5525,35 Z" id="Shape" stroke-linecap="round"></path>
+                                            <path d="M53.75,20 L53.75,13.75 C49.6075,13.75 46.25,10.3925 46.25,6.25 L13.75,6.25 C13.75,10.3925 10.39,13.75 6.25,13.75 L6.25,28.75 C10.39,28.75 13.75,32.1075 13.75,36.25 L30,36.25" id="Shape" stroke-linecap="round"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="Invisible_Shape">
+                                    <rect id="Rectangle-path" x="0" y="0" width="60" height="60"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

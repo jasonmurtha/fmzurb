@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NHM-Landing" transform="translate(-511.000000, -2178.000000)">
+            <g id="Section-3---Illustration" transform="translate(0.000000, 1681.000000)">
+                <g id="Labels">
+                    <g id="2" transform="translate(430.000000, 497.000000)">
+                        <g id="icon_realtor" transform="translate(81.000000, 0.000000)">
+                            <circle id="Oval" fill-opacity="0.899999976" fill="#00A6E1" cx="60" cy="60" r="60"></circle>
+                            <g id="house-sold" transform="translate(29.000000, 27.000000)">
+                                <g id="Outline_Icons" transform="translate(0.000000, 2.500000)" stroke-linecap="round" stroke-width="2.5" stroke="#FFFFFF" stroke-linejoin="round">
+                                    <g id="Group">
+                                        <g>
+                                            <polyline id="Shape" points="8.75 28.75 8.75 56.25 51.25 56.25"></polyline>
+                                            <polyline id="Shape" points="1.25 27.5 30 1.25 58.75 27.5"></polyline>
+                                            <polyline id="Shape" points="40 3.75 48.75 3.75 48.75 12.5"></polyline>
+                                            <rect id="Rectangle-path" x="26.25" y="13.75" width="7.5" height="7.5"></rect>
+                                        </g>
+                                        <path d="M48.645,47.3925 L48.645,37.6075 L50.41,37.6075 C52.585,37.6075 53.7475,39.8 53.7475,42.5 C53.7475,45.2 52.585,47.3925 50.41,47.3925 L48.645,47.3925 Z" id="Shape"></path>
+                                        <polyline id="Shape" points="45 47.285 41.25 47.285 41.25 37.5"></polyline>
+                                        <path d="M37.4425,42.5 C37.4425,45.26 37.0325,47.495 34.68,47.495 C32.3225,47.495 31.915,45.26 31.915,42.5 C31.915,39.7375 32.3225,37.5 34.68,37.5 C37.0325,37.5 37.4425,39.7375 37.4425,42.5 Z" id="Shape"></path>
+                                        <path d="M22.5,45.1575 C22.575,46.465 23.59,47.5 24.835,47.5 C26.1275,47.5 27.18,46.38 27.18,44.9975 C27.18,42.96 25.2525,42.6175 24.8375,42.5 C24.43,42.38 22.5,42.035 22.5,40 C22.5,38.6175 23.5475,37.5 24.84,37.5 C26.085,37.5 27.1025,38.5325 27.1825,39.84" id="Shape"></path>
+                                    </g>
+                                </g>
+                                <g id="invisible_shape">
+                                    <rect id="Rectangle-path" x="0" y="0" width="60" height="60"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

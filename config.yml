@@ -76,7 +76,7 @@ PATHS:
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
     # comment for prod code. this is just for local site
-    # "src/assets/js/fakeNav_corp.js"  
+    - "src/assets/js/fakeNav_corp.js"  
     - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
@@ -219,8 +219,8 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    # "bower_components/foundation-sites/js/foundation.abide.js"
-    # "bower_components/foundation-sites/js/foundation.accordion.js"
+    - "bower_components/foundation-sites/js/foundation.abide.js"
+    - "bower_components/foundation-sites/js/foundation.accordion.js"
     # "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # "bower_components/foundation-sites/js/foundation.drilldown.js"
     # "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
@@ -236,7 +236,7 @@ PATHS:
     # "bower_components/foundation-sites/js/foundation.sticky.js"
     - "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
-    # "bower_components/foundation-sites/js/foundation.tooltip.js"
+    - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # "bower_components/foundation-sites/js/foundation.dropdown.js"
     # Paths to your own project code are here   
