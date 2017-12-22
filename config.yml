@@ -22,7 +22,7 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "dist"  
-  # Paths to static assets that aren't images, CSS, or JavaScript
+  # Paths to static asset folders that should just be copied as is to destination
   assets:
     # "src/assets/**/**/*"
     - "src/assets/**/vendor/*"
@@ -31,8 +31,8 @@ PATHS:
     - "src/pages/**/files/**/*" 
   # Paths to inner image folders to be copied into dist
   images:
-    - "src/pages/**/images/*"
-    - "src/pages/**/**/images/*"    
+  #  - "src/pages/**/images/*"
+  #  - "src/pages/**/**/images/*"    
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
@@ -238,7 +238,7 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
-    # "bower_components/foundation-sites/js/foundation.dropdown.js"
+    - "bower_components/foundation-sites/js/foundation.dropdown.js"
     # Paths to your own project code are here   
     - "src/assets/js/fmGlobals.js"
     - "src/assets/js/prepModals.js"

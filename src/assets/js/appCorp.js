@@ -8,10 +8,10 @@ Foundation.Accordion.defaults.allowAllClosed = true;
 //Foundation.Accordion.defaults.updateHistory = true;
 //Foundation.Accordion.defaults.deepLinkSmudge = true;
 Foundation.Reveal.defaults.deepLink = true;
-Foundation.Reveal.defaults.fullScreen = true;
+Foundation.Reveal.defaults.fullScreen = false;
 Foundation.Reveal.defaults.resetOnClose = true;
 Foundation.Reveal.defaults.updateHistory = true;
-// Foundation.Reveal.defaults.vOffset = 0;
+Foundation.Reveal.defaults.vOffset = 0;
 // Reveal closeOnEsc and closeOnClick are both true 
 Foundation.Tabs.defaults.deepLink = true;
 Foundation.Tabs.defaults.updateHistory = true;

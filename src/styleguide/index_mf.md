@@ -223,7 +223,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
   <div class="card gutter-bottom">
     <div class="background-concrete" data-equalizer-watch>
       <a class="overlay mask block" href="#">
-        <img src="/images/multifamily/cn_optimistic.jpg" alt="Img" />
+        <img src="files/cn_optimistic.jpg" alt="Img" />
       </a>
       <div class="card-divider">
         <p class="article-date">September 06, 2017</p>
@@ -244,7 +244,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
             <div class="card gutter-bottom">
               <div class="background-concrete" data-equalizer-watch>
                 <a class="overlay mask block" href="#">
-                  <img src="/images/multifamily/cn_optimistic.jpg" alt="Img" />
+                  <img src="files/cn_optimistic.jpg" alt="Img" />
                 </a>
                 <div class="card-divider">
                   <p class="article-date">September 06, 2017</p>
@@ -258,7 +258,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
             <div class="card gutter-bottom">
               <div class="background-concrete" data-equalizer-watch>
                 <a class="overlay mask block" href="#">
-                  <img src="/images/multifamily/cn_sky_deal.jpg" alt="Img" />
+                  <img src="files/cn_sky_deal.jpg" alt="Img" />
                 </a>
                 <div class="card-divider">
                   <p class="article-date">August 30, 2017</p>
@@ -272,7 +272,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
             <div class="card gutter-bottom">
               <div class="background-concrete" data-equalizer-watch>
                 <a class="overlay mask block" href="#">
-                  <img src="/images/multifamily/news_placeholder.jpg" alt="Img" />
+                  <img src="files/news_placeholder.jpg" alt="Img" />
                 </a>
                 <div class="card-divider">
                   <p class="article-date">August 30, 2017</p>
@@ -694,7 +694,7 @@ On the News landing page and the Customer News page, the first entry is featured
         <p><a href="#" class="button hollow">Read More</a></p>
       </div>
       <div class="media-object-section">
-        <a class="block" href="#"><img alt="" src="/images/multifamily/cn_optimistic.jpg"></a>
+        <a class="block" href="#"><img alt="" src="files/cn_optimistic.jpg"></a>
       </div>
     </div>
   </div>   
@@ -713,7 +713,7 @@ On the News landing page and the Customer News page, the first entry is featured
             <p><a href="#" class="button hollow">Read More</a></p>
           </div>
           <div class="media-object-section">
-            <a class="block" href="#"><img alt="" src="/images/multifamily/cn_optimistic.jpg"></a>
+            <a class="block" href="#"><img alt="" src="files/cn_optimistic.jpg"></a>
           </div>
         </div>
       </div> 

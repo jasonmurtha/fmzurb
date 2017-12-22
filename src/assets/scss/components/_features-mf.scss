@@ -18,20 +18,20 @@
 }
  
 .news-featured { 
-  background-image: linear-gradient(rgba($fm-green, 0.85), rgba($fm-green, 0.85)), url('/images/multifamily/mf-bg1.jpg');
+  background-image: linear-gradient(rgba($fm-green, 0.85), rgba($fm-green, 0.85)), url('/multifamily/images/mf-bg1.jpg');
 }
 .release-featured { 
-  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/images/multifamily/mf-bg2.jpg');
+  background-image: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), url('/multifamily/images/mf-bg2.jpg');
 }
 .research-featured { 
-  background-image: linear-gradient(rgba($fm-purple, 0.85), rgba($fm-purple, 0.85)), url('/images/multifamily/mf-bg6.jpg');
+  background-image: linear-gradient(rgba($fm-purple, 0.85), rgba($fm-purple, 0.85)), url('/multifamily/images/mf-bg6.jpg');
 }
 .people-featured { 
-  background-image: linear-gradient(rgba($fm-gray, 0.45), rgba($fm-gray, 0.45)), url('/images/about/diversitybanner.jpg');
+  background-image: linear-gradient(rgba($fm-gray, 0.45), rgba($fm-gray, 0.45)), url('/about/images/diversitybanner.jpg');
   background-position: center bottom;
 }
 .about-featured {
-  background-image: linear-gradient(rgba($fm-purple, 0.6), rgba($fm-purple, 0.6)), url('/images/multifamily/about-mission-background.jpg');
+  background-image: linear-gradient(rgba($fm-purple, 0.6), rgba($fm-purple, 0.6)), url('/multifamily/images/about-mission-background.jpg');
   background-position: top center;
 }
 
@@ -49,23 +49,23 @@
 } 
 
 .mf-bg1 {
-  background-image: url('/images/multifamily/card_bg_01.jpg');
+  background-image: url('/multifamily/images/card_bg_01.jpg');
 }  
 .mf-bg2 {
-  background-image: url('/images/multifamily/card_bg_02.jpg');
+  background-image: url('/multifamily/images/card_bg_02.jpg');
 }  
 .mf-bg3 {
-  background-image: url('/images/multifamily/card_bg_03.jpg');
+  background-image: url('/multifamily/images/card_bg_03.jpg');
 }  
 .mf-bg4 {
-  background-image: url('/images/multifamily/card_bg_04.jpg');
+  background-image: url('/multifamily/images/card_bg_04.jpg');
 }  
 .mf-bg5 {
-  background-image: url('/images/multifamily/card_bg_05.jpg');
+  background-image: url('/multifamily/images/card_bg_05.jpg');
 }  
 .mf-bg6 {
-  background-image: url('/images/multifamily/card_bg_06.jpg');
+  background-image: url('/multifamily/images/card_bg_06.jpg');
 }  
 .mf-bg7 {
-  background-image: url('/images/multifamily/card_bg_07.jpg');
+  background-image: url('/multifamily/images/card_bg_07.jpg');
 } 

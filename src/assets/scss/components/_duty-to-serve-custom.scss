@@ -747,72 +747,7 @@ a:not(.background-sheer):focus .background-gradient-blue-reverse,a:not(.backgrou
 }
 
 
-/*.banner-better {
-  position: relative;
-  text-align: center;
-  color: white;
-  background-image: url("/corporate/better-housing-finance/images/bhf-sound-housing.jpg");
-  background-color: #939393;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover; 
-  	@include breakpoint(large) {
-      min-height: rem-calc(325px);
-	}
-    @include breakpoint(small) {
-      min-height: rem-calc(200px);
-	}
-}
-  
-.banner-better > div {
-    width: 90%;
-    max-width: 1000px; 
-}
-
-.banner-opportunities {
-  position: relative;
-  text-align: center;
-  color: white;
-  background-image: url("/corporate/better-housing-finance/images/bhf_creating_opportunities.jpg");
-  background-color: #939393;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-    @include breakpoint(large) {
-      min-height: rem-calc(325px);
-	}
-    @include breakpoint(small) {
-      min-height: rem-calc(200px);
-	}
-}
-  
-.banner-opprtunities > div {
-    width: 90%;
-    max-width: 1000px; 
-}
-
-.banner-partners {
-  position: relative;
-  text-align: center;
-  color: white;
-  background-image: url("/corporate/better-housing-finance/images/bhf-industry-partners.jpg");
-  background-color: #939393;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-    @include breakpoint(large) {
-      min-height: rem-calc(325px);
-	}
-    @include breakpoint(small) {
-      min-height: rem-calc(200px);
-	} 
-}
-  
-.banner-partners > div {
-    width: 90%;
-    max-width: 1000px; 
-}
-
+/*
 .banner-overlay-header {
   position: absolute;
   top: 30%;
