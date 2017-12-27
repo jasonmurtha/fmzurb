@@ -1,10 +1,8 @@
 # ZURB Template for FM Responsive Redesign
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)  
+[![devDependency Status](https://david-dm.org/SCarrero/fmzurb.svg)](https://david-dm.org/SCarrero/fmzurb#info=devDependencies)  
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
-
-This is based on the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). It has a Gulp-powered build system with these features:
+This is based on version 6.3.0 the official ZURB Template for use with [Foundation for Sites](https://foundation.zurb.com/sites.html). It has a Gulp-powered build system with these features:
 
 - Handlebars HTML templates with Panini
 - Sass compilation and prefixing
