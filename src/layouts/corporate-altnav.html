@@ -27,6 +27,9 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp_alt.css" />
+    {{#if stylesheet}}    
+    <link rel="stylesheet" href="{{ stylesheet }}" />
+    {{/if}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
 {{#if bodyclass}}
@@ -39,7 +42,7 @@
     <header id="header-nav" class="hide-for-print" data-toggler=".is-mobile-expanded" aria-expanded="false">  
       {{> ribbon}}
       {{> nav-mobile-corp}}
-    </header><div class="subnav-edge"></div> 
+    </header>
     <!--googleon: all-->
     <div id="content">  
       {{> body}}
@@ -51,5 +54,8 @@
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
     <script src="/js/vendor/somni_code.js"></script>
     <script src="/js/app_corp_alt.js"></script>
+    {{#if javascript}}    
+    <script src="{{ javascript }}"></script>
+    {{/if}}
   </body>
 </html>

@@ -27,6 +27,9 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp.css" />
+    {{#if stylesheet}}    
+    <link rel="stylesheet" href="{{ stylesheet }}" />
+    {{/if}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
 {{#if bodyclass}}
@@ -46,5 +49,8 @@
     {{> body}}
     {{> footer-corp}}
     {{> footer-js-corp}}
+    {{#if javascript}}    
+    <script src="{{ javascript }}"></script>
+    {{/if}}
   </body>
 </html>

@@ -1,3 +1,10 @@
+// if needed to override the pale gray line above the hero on hover of perspectives
+//.nav-main .no-bullet.vertical {
+// @include breakpoint (xlarge) {
+//   border-top-width: 0;
+// }
+//}
+
 .button.hero-button { 
   @include breakpoint (small only) {
      padding: 0.5em 1.25em;       

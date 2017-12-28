@@ -4,6 +4,10 @@
 function fakeNav(){
   // this will be automated on the backend, faking it for now to show different highlighting/subnavs
   var p = location.pathname;
+  if (p.match(/perspectives/)) { 
+    $('#nav-perspectives').children('a').addClass('active');
+  //  $('#subnav-perspectives').addClass('on').find('.no-bullet').removeClass('hide');    
+  }
   if (p.match(/blog/) && !p.match(/careers/)) { 
     $('#nav-blog').children('a').addClass('active');
     $('#subnav-blog').addClass('on').find('.no-bullet').removeClass('hide');

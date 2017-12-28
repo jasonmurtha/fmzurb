@@ -14,29 +14,39 @@ header {
     margin: 0;
   }
 }
+.nested {
+  display: none;
+}
 #subnav-perspectives-list {
   @include breakpoint(xlarge){
     visibility: hidden;   // for some reason, setting display: none; dorks up something if you start at desktop view and reduce to mobile width
     height: 0;
   }
 }
+.is-mobile-expanded + #content { 
+  display: none; 
+  transition: display 0.5s ease;
+}
 .logo-corp { 
   padding: rem-calc($gutter $gutter/2 0 $gutter * 1.5);
   display: inline-block;
-  transition: display 0.35s ease;
+  @include breakpoint (large down) {
+    transition: display 0.35s ease;
+  }
   img {
     width: rem-calc(116);
     height: rem-calc(41);
   }
   @include breakpoint (xlarge) {
     padding: rem-calc(21 0 16);  // 1.3125rem 0 1rem;
+    transition: none;
     img {
       width: rem-calc(190);
       height: rem-calc(67.13);
     }
   }
 }
-.is-mobile-expanded .logo-corp {
+.is-mobile-expanded[aria-expanded="true"] .logo-corp {
   @include breakpoint (large down) {
     display: none;
   }
@@ -57,7 +67,7 @@ header {
   background: transparent icon(menu, $primary-color, 28, 24, 0, 0, 28, 24) no-repeat center center;       
   margin-right: rem-calc($gutter * 1.5); 
 }
-.is-mobile-expanded .button.toggle-icon {
+.is-mobile-expanded[aria-expanded="true"] .button.toggle-icon {
   background: transparent icon(menu-close, $white, 24, 24) no-repeat center center;          
 }
 .button.search-icon {
@@ -68,7 +78,7 @@ header {
     stroke-color: $primary-color;
   }
 }
-.is-mobile-expanded .search-icon {
+.is-mobile-expanded[aria-expanded="true"] .search-icon {
   visibility: hidden;
 }
 .nav-global {
@@ -80,7 +90,7 @@ header {
       display: block !important;
     }
   }
-  .is-mobile-expanded & {
+  .is-mobile-expanded[aria-expanded="true"] & {
     bottom: 100vh;
   }
   .menu > li > a { // overriding the ribbon default
@@ -106,14 +116,14 @@ header {
   }
 }
 
-.title-bar {
-  transition: background 0.4s ease, border-color 0.4s ease; 
+.title-bar {  
   padding: rem-calc($titlebar-padding);
   z-index: 401;
   height: rem-calc(80); //5rem;
   border-bottom: 1px solid $white;
   @include breakpoint(large down) {
     position: relative;
+    transition: background 0.4s ease, border-color 0.4s ease; 
   }
   @include breakpoint (xlarge) {
     height: auto;
@@ -243,6 +253,7 @@ header {
     }
   }
   li[aria-expanded='true'] {
+    position: relative;
     .mobile-nav-accordion-parent {
       @include breakpoint(large down) {
         color: $fm-green;    
@@ -257,13 +268,33 @@ header {
       @include breakpoint(xlarge) {
         display: none;
       }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: rem-calc(7);
+        background: linear-gradient(to bottom, rgba(darken($light-gray, 10),.95) 0%,rgba($white,0) 100%);
+      }
     }
   }
   .nested {
     @include breakpoint (large down){
       padding-bottom: rem-calc($gutter * 0.75);
       background: $light-gray; 
-      font-size: rem-calc(16); 
+      font-size: rem-calc(16);           
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: rem-calc(7);
+        background: linear-gradient(to bottom, rgba($white,0) 0%,rgba(darken($light-gray, 10),.95) 100%);
+      }
       a {
         text-transform: none;
         font-weight: $global-weight-normal;
@@ -344,9 +375,24 @@ header {
           @include breakpoint(xlarge) {
             position: relative;
             display: block !important;
-            z-index: 492;    
+            z-index: 492; 
           }
         }        
+      }
+      &:not(.hide-for-xlarge) {
+        &::after  {
+          @include breakpoint(xlarge) {
+            position: absolute;
+            content: "";
+            display: block;
+            height: rem-calc(8);
+            bottom: rem-calc(-8);
+            width: 100%;
+            left: 0;
+            @include mosaic-fill;
+            z-index: 494;
+          }
+        }   
       }
     }
   }
@@ -363,8 +409,19 @@ header {
       width: 100%; 
       background: $fm-green; 
       &:not(.hide-for-xlarge){
-        border-top: 1px solid $fm-green; 
-      }
+        border-top: 1px solid $fm-green;
+        &::after  {
+          position: absolute;
+          content: "";
+          display: block;
+          height: rem-calc(8);
+          bottom: rem-calc(-8);
+          width: 100%;
+          left: 0;
+          @include mosaic-fill;
+          z-index: 99999999999;
+        }   
+      } 
       z-index: 497;
       > .subnav-item {      
           display: block !important;  
@@ -380,7 +437,7 @@ header {
               > a {
                 color: $white;
               } 
-            }    
+            } 
           }
         }        
       }
