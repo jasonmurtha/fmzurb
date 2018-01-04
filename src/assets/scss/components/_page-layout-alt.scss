@@ -1,0 +1,130 @@
+@media screen {
+  .ribbon,
+  .breadcrumb-wrapper,
+  .page-title,
+  .content-band,
+  .share-wrapper,
+  .footer-promo,
+  .pre-footer-promo,
+  .footer,
+  .hero-blended,
+  .hero,
+  .two-column-layout {
+    padding-right: rem-calc($gutter);
+    padding-left: rem-calc($gutter);  
+    @include breakpoint(xlarge) {
+      padding-right: rem-calc($gutter * 2);
+      padding-left: rem-calc($gutter * 2); 
+    }
+  }
+  .nav-global,
+  .expand-desktop {
+    > .row > .column {
+      @include breakpoint(large down) {
+        padding: 0;
+      }
+    }
+    @include breakpoint(xlarge) {
+      padding-right: rem-calc($gutter * 2);
+      padding-left: rem-calc($gutter * 2);
+    }   
+  }
+  .content-band {
+    padding-top: rem-calc(32);
+    padding-bottom: rem-calc(30); 
+    @include breakpoint(large) {
+      padding-bottom: rem-calc(64); 
+    }
+    @include breakpoint(xlarge) {
+      padding-top: rem-calc(54.4);
+      padding-bottom: rem-calc(100); 
+    }
+    .content-band {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.even {
+      padding-top: rem-calc($gutter);
+      padding-bottom: rem-calc($gutter);  
+      @include breakpoint(large) {
+        padding-top: rem-calc($gutter*2);
+        padding-bottom: rem-calc($gutter*2); 
+      }
+      @include breakpoint(xlarge) {
+        padding-top: rem-calc($gutter*3);
+        padding-bottom: rem-calc($gutter*3); 
+      }      
+    }
+  }
+
+  .content-band {
+    > .row {
+      > .large-7 {
+        position: relative;
+        z-index: 3;
+        > .jut {
+          margin-bottom: rem-calc(24);
+          @include breakpoint(large) { 
+            width: 106%; 
+          }
+          @include breakpoint(xlarge) { 
+            width: 112%; 
+          }
+        }
+      }
+      > .large-5 {
+        position: relative;
+        z-index: 4;
+        @include breakpoint (medium down) {
+          padding: 0;
+          clear: both;
+          float: none;          
+          margin-right: rem-calc(-$gutter);
+          margin-left: rem-calc(-$gutter);
+          width: calc(100% + 40px);
+        }
+        @include breakpoint(large) {
+          padding-left: 5%;
+        }
+        @include breakpoint(xlarge) {
+          padding-left: 9%;
+        }
+        section {    
+          margin: 0;
+          padding: $gutter * 1.5;      
+          @include breakpoint(large) {
+            padding: $gutter;
+          }  
+          @include breakpoint(xlarge) {
+            padding: $global-padding * 1.9 $global-padding * 2;
+          }
+        }
+      } 
+    }
+  }
+}
+
+body.none {
+   min-width: rem-calc(150);
+   background: none;
+}
+body.none .half-col p { 
+  margin-bottom: 0.2rem; 
+}
+body.none .half-col label { 
+  font-weight: 400; font-size: 0.875rem; 
+}
+@media screen and (max-width: 28em) {
+  body.none hr { margin: 4px auto;}
+}
+@media screen and (min-width: 28em) { 
+  body.none .half-col { float: left; width: 50%; }
+  body.none .half-col p { margin-bottom: 0.9rem; }
+  body.none .half-col label { font-weight: 500; font-size: 1rem; }
+  body.none [type="email"] { width: 50%; }
+}
+@media print {
+  .large-5[style] {
+   margin-top: 0 !important;
+  }
+}

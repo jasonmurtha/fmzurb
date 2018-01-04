@@ -1320,18 +1320,24 @@ This example uses the Foundation <a href="https://foundation.zurb.com/sites/docs
 <p>Links are very standard, and the color is preset to $primary-color. </p>
 <p>Links inside <a href="#sidebar-modules">sidebar modules</a> and links inside <a href="#cards">Cards</a> inherit the existing text color to blend in better.  Use class `.primary` on the card eletement to override this default.</p>
 <p>Refer to <a href="styleguide_reveal.html">Modals</a> if you are looking for information on how to make a link launch a video, image, or content block inside a modal.</p>
-<div class="callout background-concrete">
-  <p>To make links screen reader-friendly, avoid using vague words like "here" or "read more" within link text. The text of the link itself should adequately describe where the link goes.</p>
+<div class="callout background-yellow">
+  <div class="callout background-white">
+    <h3>Tagging Links for Analytics, Screen Readers and Search Engines </h3>
+    <ul>
+      <li>Avoid using vague link text like "click here" or "read more". The text of each link itself should adequately describe where the link goes and should differentiate it from all other links on the page.</li>
+      <li>When the client insists that all links use the same visible text, you should still add the additional text necessary to make the link text unique, and hide the parts that the client doesn't want to SEE by wrapping it with class `.show-for-sr`. </li>
+    </ul>
+  </div>
 </div>
 
 ```html_example
-<div class="callout">
-  <div class="callout hollow">
-  <p>This sentence contains <a href="#">linked text</a>.</p>
-  </div>
-  <div class="callout background-gray">
-    <p>This sentence contains <a href="#">linked text</a> on a dark background.</p>
-  </div>
+<div class="callout hollow">
+  <p>This sentence contains <a href="#">linked inline text</a>.</p>
+  <p>The following 3 links utilize class <code>.show-for-sr</code> so that they will each be unique for screen readers, analytics, and search engines.</p>
+  <p><a class="button" href="#">Learn More<span class="show-for-sr"> about our offerings</span></a> 
+     <a class="button" href="#">Learn More<span class="show-for-sr"> about our mission</span></a> 
+     <a class="button" href="#">Learn More<span class="show-for-sr"> about our lines of business</span></a> 
+  </p>
 </div>
 ```
 

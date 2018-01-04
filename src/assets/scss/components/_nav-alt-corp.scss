@@ -7,7 +7,7 @@ header {
   position: relative;
   &.header-extend {
     @include breakpoint (xlarge) {
-      margin-bottom: rem-calc(75);
+      margin-bottom: rem-calc(83); // 75 + 8
     }
   }
   li {
@@ -23,12 +23,14 @@ header {
     height: 0;
   }
 }
-.is-mobile-expanded + #content { 
+.is-mobile-expanded + div,
+.is-mobile-expanded + div + div,
+.is-mobile-expanded + div + div + div { 
   display: none; 
   transition: display 0.5s ease;
 }
 .logo-corp { 
-  padding: rem-calc($gutter $gutter/2 0 $gutter * 1.5);
+  padding: rem-calc($gutter $gutter/2 0 $gutter *1.5);
   display: inline-block;
   @include breakpoint (large down) {
     transition: display 0.35s ease;
@@ -65,7 +67,6 @@ header {
 }
 .button.toggle-icon {
   background: transparent icon(menu, $primary-color, 28, 24, 0, 0, 28, 24) no-repeat center center;       
-  margin-right: rem-calc($gutter * 1.5); 
 }
 .is-mobile-expanded[aria-expanded="true"] .button.toggle-icon {
   background: transparent icon(menu-close, $white, 24, 24) no-repeat center center;          
@@ -89,9 +90,6 @@ header {
     .show-for-xlarge.hide {
       display: block !important;
     }
-  }
-  .is-mobile-expanded[aria-expanded="true"] & {
-    bottom: 100vh;
   }
   .menu > li > a { // overriding the ribbon default
     @include breakpoint(large down) {
@@ -153,9 +151,12 @@ header {
   @include breakpoint(xlarge) {
     display: table-cell; 
     vertical-align: middle;
-    padding: rem-calc(0 28 0);
+    padding: rem-calc(0 23 0);
     z-index: 496;  
   } 
+  @include breakpoint(xxlarge) {
+    padding: rem-calc(0 28 0);
+  }
   &.nav-bus-section {
     padding: 0;
   } 
@@ -192,9 +193,9 @@ header {
     }
   }  
 }
-.nav-main {  
+.nav-main {      
   @include breakpoint(xlarge) {
-  //  position: relative;   
+    margin-right: rem-calc(-20);
     display: block;
     float: right;    
     &[aria-expanded="false"] {
@@ -329,16 +330,8 @@ header {
         position: relative;
         z-index: 491; 
         text-align: right;
-        max-width: rem-calc(1500);
+        max-width: rem-calc(1380);
         margin: 0 auto;
-        @include breakpoint(xlarge) {
-          padding-left: rem-calc(50);
-          padding-right: rem-calc(30);      
-        }
-        @include breakpoint(xxlarge) {
-          padding-left: rem-calc(70);
-          padding-right: rem-calc(50); 
-        }
       }
       > ul {
         @include breakpoint(xlarge) {
@@ -349,7 +342,7 @@ header {
           > a {
             @include breakpoint(xlarge) {
               @include nav-desktop-link();  
-              padding: rem-calc(2 20 0 10);
+              padding: rem-calc(2 16 0);  // L/R value overridden below for first visible and last entry
               height: rem-calc(74);
               color: $fm-gray;
               text-align: center;
@@ -357,9 +350,27 @@ header {
               vertical-align: middle;
             } 
             @include breakpoint(xxlarge) { 
-              padding: rem-calc(2 20 0);
+              padding: rem-calc(2 $gutter 0);  // L/R value overridden below for first visible and last entry
             }
-          }    
+          } 
+          &:first-child,
+          &.hide-for-xlarge + li {
+            > a {    // halve padding left for first visible entry
+              @include breakpoint(xlarge) {
+                padding-left: rem-calc(16/2);
+              }
+              @include breakpoint(xxlarge) {
+                padding-left: rem-calc($gutter/2);
+              }
+            }
+          }
+          &:last-child {
+            > a {    // set to 10 to keep right edge lined up
+              @include breakpoint(xlarge) {
+                padding-right: rem-calc($gutter/2);
+              }
+            }
+          }
         }
       }
     }
@@ -427,7 +438,7 @@ header {
           display: block !important;  
           position: relative;
           z-index: 498; 
-          max-width: rem-calc(1500);
+          max-width: rem-calc(1380);
           margin: 0 auto;
         > ul {
           @include breakpoint(xlarge) {
@@ -551,20 +562,4 @@ header {
     height: rem-calc(8);
   }
 }
-  
-/// ribbon tweaks
-
-.ribbon {    
-  a {
-    color: $fm-gray;
-  }
-  .nav-accordion-parent li:not(:last-child) {
-    border-bottom: 1px solid lighten($fm-gray, 40%);
-  }
-  h4 {
-  font-size: rem-calc(18);
-  font-weight: 400;
-  }
-}
-   
 

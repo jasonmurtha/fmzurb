@@ -114,7 +114,7 @@ PATHS:
     # Paths to your own project code are here   
     - "src/assets/js/fmGlobals.js"
     - "src/assets/js/headerNavAlt_corp.js"
-    - "src/assets/js/adjustSidebar.js"
+    - "src/assets/js/adjustSidebar-alt.js"
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
     # comment for prod code. this is just for local site

@@ -41,13 +41,15 @@ $hero-blend-color: $primary-color;
       @include breakpoint(xxlarge) {
         font-size: rem-calc(28);
       }
-    }
-    .grid-2col-blog & {    
-      text-align: left;
-      margin-left: 0;
-      @include breakpoint(large) {
-        @include grid-column(7 of 12);
-      }
+    }    
+  }
+  
+  .perspectives-detail-hero .hero-blended-content,
+  .blog-detail-hero .hero-blended-content {    
+    text-align: left;
+    margin-left: 0;
+    @include breakpoint(large) {
+      @include grid-column(7 of 12);
     }
   }
    // breaking our the hero details by their purpose, since we have several that are tall, short, blue or left.
@@ -171,7 +173,11 @@ $hero-blend-color: $primary-color;
       text-align: center;
     }
   }
-  &.hr-blog-detail-hero {
+  &.blog-careers-hero-benefits,
+  &.blog-careers-hero-community,
+  &.blog-careers-hero-diversity,
+  &.blog-careers-hero-employees,
+  &.blog-careers-hero-notable {
     @include breakpoint(small only) {
       background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
       height: rem-calc(389);

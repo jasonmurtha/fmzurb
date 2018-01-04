@@ -2,10 +2,11 @@
   background: $light-gray;
   padding-top: $global-padding;
   padding-bottom: $global-padding;
-  .hero-blended > &,
-  .page-title > &  {
+  .hero-blended > &, 
+  .page-title > & {
     background: none; 
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     position: absolute;
     bottom: -17px;  // half of height of .share-widget
     left: 0;

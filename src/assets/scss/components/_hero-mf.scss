@@ -42,7 +42,7 @@ $hero-blend-color: $primary-color;
         font-size: rem-calc(28);
       }
     }
-    .grid-2col-blog & {    
+    .blog-detail-hero & {    
       text-align: left;
       margin-left: 0;
       @include breakpoint(large) {

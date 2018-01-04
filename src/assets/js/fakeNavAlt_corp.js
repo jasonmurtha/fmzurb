@@ -9,7 +9,7 @@ function fakeNav(){
     $('#subnav-perspectives').addClass('expand-desktop');
   //  $('#header-nav').addClass('header-extend');    
   }
-  else if (p.match(/blog/) && !p.match(/hr/)) { 
+  else if (p.match(/blog/) && !p.match(/careers/)) { 
     $('#section-blog').addClass('active');
     $('#subnav-blog').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
@@ -19,14 +19,14 @@ function fakeNav(){
     else if (p.match(/notable/)) {$('#subnav-blog-notable').addClass('active');}
     else if (p.match(/archive|harp/)) {$('#subnav-blog-archive').addClass('active');}
   }
-  else if (p.match(/about|governance|investor|careers/)) {
+  else if (p.match(/about|governance|investor|careers|altnav/)) {
     $('#section-about').addClass('active');
     $('#subnav-about').addClass('expand-desktop');
     $('#header-nav').addClass('header-extend');
     if (p.match(/leaders/)) {$('#subnav-about-leaders').addClass('active');}
     else if (p.match(/business/)) {$('#subnav-about-business').addClass('active');}
-    else if (p.match(/people|employee|supplier|careers/)) {$('#subnav-about-people').addClass('active');}
-    else if (p.match(/communities/)) {$('#subnav-about-communities').addClass('active');}
+    else if (p.match(/people|employee|supplier|careers|kamara/)) {$('#subnav-about-people').addClass('active');}
+    else if (p.match(/communit/)) {$('#subnav-about-communities').addClass('active');}
     else if (p.match(/governance/)) {$('#subnav-about-governance').addClass('active');}
     else if (p.match(/investor/)) {$('#subnav-about-investors').addClass('active');}
   }

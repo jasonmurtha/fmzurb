@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import 'settings_corp';
+@import 'settings_corp_alt';
 @import 'foundation';
 @import 'motion-ui';
 @import 'components/breakpoint';
@@ -57,7 +57,8 @@
 @import 'mixins';
 @import 'components/icons';
 @import 'components/globals';
-@import 'components/page-layout';
+@import 'components/page-layout-alt';
+@import 'components/breadcrumbs';
 @import 'components/shims';
 @import 'components/reveal';
 @import 'components/text';
@@ -77,13 +78,13 @@
 @import 'components/grid-blocks';
 @import 'components/tabs';
 @import 'components/data-table';
-@import 'components/nav-ribbon';
-@import 'components/nav-footer';
+@import 'components/nav-ribbon-alt';
+@import 'components/nav-footer-alt';
 @import 'components/nav-alt-corp';
 @import 'components/nav-search-mobile';
 @import 'components/nav-tertiary';
 @import 'components/share-widget';
-@import 'components/footer-promos';
+@import 'components/footer-promos-alt';
 @import 'components/sidebars';
 @import 'components/anchors';
 @import 'components/orbit';

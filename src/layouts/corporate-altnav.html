@@ -32,21 +32,39 @@
     {{/if}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
-{{#if bodyclass}}
-  <body class="{{ bodyclass }}">
-{{else}}
   <body>
-{{/if}} 
     <div class="show-for-print">FreddieMac.com</div>
     <!--googleoff: all-->
-    <header id="header-nav" class="hide-for-print" data-toggler=".is-mobile-expanded" aria-expanded="false">  
-      {{> ribbon}}
+    <header id="header-nav" class="header-nav hide-for-print" data-toggler=".is-mobile-expanded" aria-expanded="false">  
+      {{> ribbon-corp}}
       {{> nav-mobile-corp}}
     </header>
-    <!--googleon: all-->
-    <div id="content">  
+    <!--googleon: all--> 
+    <div>
+      <div class="breadcrumb-wrapper hide-for-print">
+        <div class="row">
+          <div class="column">
+            <nav class="gutter-top gutter-bottom">
+              <ol class="no-bullet" vocab="http://schema.org/" typeof="BreadcrumbList">
+            {{#each breadcrumb}}
+              {{#unless @first}}
+                <li property="itemListElement" typeof="ListItem">
+                {{#if url}}
+                  <a property="item" typeof="WebPage" href="{{ url }}"><span property="name">{{ name }}</span></a>
+                  {{else}}
+                  <span property="name">{{ name }}</span>
+                  {{/if}}
+                  <meta property="position" content="{{@index}}">
+                </li>
+              {{/unless}}
+            {{/each}}
+              </ol>
+            </nav>
+          </div>        
+        </div>
+      </div>
       {{> body}}
-      {{> footer-corp}}
+      {{> footer-corp-alt}}
     </div>
     <!-- temporarily running on local copy -->
     <script src="/js/vendor/jquery-3.2.1.min.js"> </script>    
