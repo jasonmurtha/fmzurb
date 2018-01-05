@@ -11,16 +11,16 @@
           <a href="/corporate/" class="logo-corp">
             <img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo">
           </a>
-          <a href="/corporate/" class="mobile-home-text">Freddie Mac Home</a>
+          <a href="/corporate/" class="mobile-home-text hide-for-xlarge">Freddie Mac Home</a>
         </div>
       </div> 
       <nav class="nav-main ease-in-out" id="nav-main" role="navigation" data-toggler aria-expanded="false" data-animate="slide-in-down slide-out-up">      
         <div class="nav-section" id="section-perspectives">
           <a id="nav-perspectives" class="show-for-xlarge" href="/perspectives/">Perspectives</a>
-          <ul class="no-bullet vertical menu hide-for-xlarge" id="subnav-perspectives" data-accordion-menu data-slide-speed="200">
+          <ul class="no-bullet vertical menu hide-for-xlarge" id="subnav-perspectives" data-accordion-menu>
             <li class="subnav-item" id="subnav-perspectives-item">
               <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-perspectives-toggle" data-toggle="subnav-perspectives-list" aria-controls="subnav-perspectives-list">Perspectives</a>
-              <ul class="menu vertical nested xlarge-horizontal" id="subnav-perspectives-list">
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-perspectives-list">
                 <li class="hide-for-xlarge"><a id="subnav-perspectives-overview" href="/perspectives/">Overview</a></li>
               </ul>
             </li>
@@ -31,7 +31,7 @@
           <ul class="no-bullet vertical menu" id="subnav-research" data-accordion-menu>
             <li class="subnav-item ease" id="subnav-research-item">
               <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-research-toggle" data-toggle="subnav-research-list" aria-controls="subnav-research-list">Research</a>
-              <ul class="menu vertical nested xlarge-horizontal" id="subnav-research-list">
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-research-list">
                 <li class="hide-for-xlarge"><a id="subnav-research-overview" href="/research/">Overview</a></li>
                 <li><a id="subnav-research-mortgage" href="/pmms/">Mortgage Rates</a></li>
                 <li><a id="subnav-research-insight" href="/research/insight/">Insight</a></li>
@@ -48,7 +48,7 @@
           <ul class="no-bullet vertical menu" id="subnav-blog" data-accordion-menu>
             <li class="subnav-item" id="subnav-blog-item">
               <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-blog-toggle" data-toggle="subnav-blog-list" aria-controls="subnav-blog-list">Blog</a>
-              <ul class="menu vertical nested xlarge-horizontal" id="subnav-blog-list">
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-blog-list">
                 <li class="hide-for-xlarge"><a id="subnav-blog-overview" href="/blog/">Overview</a></li>
                 <li><a id="subnav-blog-homeownership" href="/blog/homeownership/">Homeownership</a></li>
                 <li><a id="subnav-blog-rental" href="/blog/rental_housing/">Rental Housing</a></li>
@@ -64,7 +64,7 @@
           <ul class="no-bullet vertical menu" id="subnav-mediaroom" data-accordion-menu>
             <li class="subnav-item" id="subnav-mediaroom-item">
               <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-mediaroom-toggle" data-toggle="subnav-mediaroom-list" aria-controls="subnav-mediaroom-list">Media Room</a>
-              <ul class="menu vertical nested xlarge-horizontal" id="subnav-mediaroom-list">
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-mediaroom-list">
                 <li class="hide-for-xlarge"><a id="subnav-mediaroom-overview" href="/media-room/">Overview</a></li>
                 <li><a id="subnav-mediaroom-archive" href="http://freddiemac.mwnewsroom.com/">Press Release Archive</a></li>
                 <li><a id="subnav-mediaroom-resources" href="/media-room/resources.html">Media Resources</a></li>
@@ -77,7 +77,7 @@
           <ul class="no-bullet vertical menu" id="subnav-about" data-accordion-menu>
             <li class="subnav-item" id="subnav-about-item">
               <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-about-toggle" data-toggle="subnav-about-list" aria-controls="subnav-about-list">About</a>            
-              <ul class="menu vertical nested xlarge-horizontal" id="subnav-about-list">
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-about-list">
                 <li class="hide-for-xlarge"><a id="subnav-about-overview" href="/about/">Overview</a></li>
                 <li><a id="subnav-about-leaders" href="/about/leaders/">Our Leaders</a></li>
                 <li><a id="subnav-about-business" href="/about/business/">Our Business</a></li>
@@ -130,12 +130,14 @@
           <input type="hidden" name="proxystylesheet" value="default_frontend">
           <input type="hidden" name="getfields" value="description">
           <input type="hidden" name="site" value="default_collection">
-          <div class="row">
-            <div class="column small-9 medium-10 large-11">
-            <label for="mobile-search" class="show-for-sr">Site Search</label>
-              <input id="mobile-search" name="q" type="search" placeholder="Site Search" required maxlength="100">	   
+          <div class="row collapse medium-uncollapse">
+            <div class="column small-10 medium-10 large-11">
+              <div class="gutter-right-small-only">
+                <label for="mobile-search" class="show-for-sr">Site Search</label>
+                <input id="mobile-search" name="q" type="search" placeholder="Site Search" required maxlength="100">
+              </div>              
             </div>
-            <div class="column small-3 medium-2 large-1">
+            <div class="column small-2 medium-2 large-1">
               <button type="submit" class="float-right button search-button">Search</button>
             </div>
           </div>

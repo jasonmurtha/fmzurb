@@ -1,4 +1,7 @@
 @media screen {
+  .whatinput-types-mouse {
+    overflow-y: scroll;   //prevent right scroll bar from disappearing when mobile nav is toggled on and off.
+  }
   .ribbon,
   .breadcrumb-wrapper,
   .page-title,
