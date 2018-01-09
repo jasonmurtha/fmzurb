@@ -2453,28 +2453,95 @@ Each pane has 2 parts: a **title** and a **content area**.
   </li>
 ```
 
-Once you put it all together, here's what you get!
+<div class="row">
+  <div class="column large-6">
+    <ul class="accordion-pointer" data-accordion>
+      <li class="accordion-item is-active" data-accordion-item>
+        <a class="accordion-title" href="#">Panel One Title</a>
+        <div class="accordion-content" data-tab-content>
+          Panel 1. Lorem ipsum dolor.
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title" href="#">Panel Two Title</a>
+        <div class="accordion-content" data-tab-content>
+          Panel 2. Lorem ipsum dolor.
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title" href="#">Panel Three Title</a>
+        <div class="accordion-content" data-tab-content>
+          Panel 3. Lorem ipsum dolor.
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title" href="#">Panel Four Title</a>
+        <div class="accordion-content" data-tab-content>
+          Panel 4. Lorem ipsum dolor.
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="column large-6">
+    <ul class="accordion-pointer" data-accordion>
+      <li class="accordion-item is-active" data-accordion-item>
+        <a class="accordion-title" href="#">Panel 1 With Links</a>
+        <div class="accordion-content" data-tab-content>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor, porta sem malesuada magna mollis euismo</a></li>
+            <li><a href="#">Fusce dapibus, tellus ac cursus commodo</a></li>
+            <li><a href="#">Aenean lacinia bibendum nulla sed consectetur</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title" href="#">Panel 2 With Links</a>
+        <div class="accordion-content" data-tab-content>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor, porta sem malesuada magna mollis euismo</a></li>
+            <li><a href="#">Fusce dapibus, tellus ac cursus commodo</a></li>
+            <li><a href="#">Aenean lacinia bibendum nulla sed consectetur</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a class="accordion-title" href="#">Panel 3 With Links</a>
+        <div class="accordion-content" data-tab-content>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor, porta sem malesuada magna mollis euismo</a></li>
+            <li><a href="#">Fusce dapibus, tellus ac cursus commodo</a></li>
+            <li><a href="#">Aenean lacinia bibendum nulla sed consectetur</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
-```html_example
-<ul class="accordion-pointer" data-accordion>
-  <li class="accordion-item is-active" data-accordion-item>
-    <a class="accordion-title" href="#">Panel One Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 1. Lorem ipsum dolor.
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#">Panel Two Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 2. Lorem ipsum dolor.
-    </div>
-  </li>
-  <li class="accordion-item" data-accordion-item>
-    <a class="accordion-title" href="#">Panel Three Title</a>
-    <div class="accordion-content" data-tab-content>
-      Panel 3. Lorem ipsum dolor.
-    </div>
-  </li>
+---
+
+## Advanced Options
+
+For FM sites, our default settings allow all panes of an accordion to be closed or multiple panes be opened.  
+
+- To prevent all panes from being closed, set the 'data-allow-all-closed' attribute to false. (Clicking the expanded section header will do nothing if it is the only open section.)
+- To prevent multiple panes from being opened, set the `data-multi-expand` attribute to false.
+- To deep link into a horizontal accordion and shift the viewport so that the accordion is at the top of the viewport, set the attribute `data-deep-link` to true, `data-update-history` to true, and `data-deep-link-smudge` to true. You can also set a delay before the smudge by setting `data-deep-link-smudge-delay` to the number of milliseconds desired.
+  - When the data-deep-link option is set to true, the current state of the accordion is recorded by adding a hash with the accordion panel ID to the browser URL when a accordion opens.
+  - If a user navigations multiple panes, their browser back button will track each click that opens an accordion panel.
+ 
+```html
+<ul class="accordion-pointer" data-accordion data-allow-all-closed="false">
+  <!-- one pane must stay open at all times. If you haven't marked up one pane as active, the first pane will be forced open -->
+</ul>
+<ul class="accordion-pointer" data-accordion data-multi-expand="false">
+  <!-- Only one pane can be open at any time -->
+</ul>
+<ul class="accordion-pointer" data-accordion data-allow-all-closed="false" data-multi-expand="false">
+  <!-- Only one pane can be open at any time, and the only way to close the open pane is to open a different pane -->
+</ul>
+<ul class="accordion" data-accordion data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500">
+  <!-- best used when each pane is somewhat exclusive to different audiences. this can have frustrating consequences for users wanting to navigate through multiple accordion sections -->
 </ul>
 ```
 
@@ -2483,8 +2550,9 @@ Once you put it all together, here's what you get!
 # FAQs
 
 Lists of Frequently Asked Questions (FAQs) use a variation of the accordion markup that includes numbering of questions, and omits the +/- type markers.  
-- Use class `.accordion-faq` on hte container for the questions.
+- Use class `.accordion-faq` on the container for the questions.
 - Do not add a class to initially expand one FAQ.
+- FAQ lists also support the advanced options listed under accordions.
 
 ```html_example
  <ol class="accordion-faq" data-accordion>

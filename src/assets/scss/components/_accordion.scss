@@ -1,20 +1,33 @@
 /// styles for the accordion title when active/expanded
-@mixin accordion-pointers-active($color: $primary-color, $background: $accordion-content-background) {
+@mixin accordion-pointers-active($color: $accordion-item-color, $background: $accordion-content-background, $icon-color: $anchor-color) {
   background:$background;
   color: $color;
   &::before { 
-    background-image: icon(chevron-down, $color, 14, 14);
+    background-image: icon(chevron-up, $icon-color,  14px, 14px); 
   }
 }
 // the standard  non-active state of the item
-@mixin accordion-pointers-title($color: $dark-gray, $background-hover: $accordion-item-background-hover, $transform: true) {
-  @include accordion-title($accordion-item-padding, $global-font-size, $color, $accordion-content-border, $background-hover);     
+@mixin accordion-pointers-title($color: $accordion-item-color, $background-hover: $accordion-item-background-hover, $transform: true) {
+  position: relative;
+  display: block;
+  padding: $accordion-item-padding;
+  font-size: $accordion-title-font-size;
+  font-weight: $global-weight-medium;
+  line-height: 1;
+  color: $color;
+  transition: background 0.2s ease;
+  &:hover,
+  &:focus {
+    background-color: $background-hover;
+    color: scale-color($color, $lightness: -10%);
+  }
   @if $transform {  
     text-transform: uppercase;
   }  
   &::before {
     content: ' ';  
-    background: transparent icon(chevron-right, "none", 14px, 14px, 0, 0, 30, 30, $color, 3) no-repeat right center / cover;    
+    background: transparent icon(chevron-down, $color, 14px, 14px) no-repeat right center;    
+    transition: background 0.25s ease;
     width: 1rem;
     height: 1rem;
     margin-left: -0.15rem;
@@ -22,42 +35,57 @@
     top: 50%;
     #{$global-right}: 1rem;
     margin-top: -0.5rem;  
-  }  
-  :last-child:not(.is-active) > & {
-    border-bottom: 0;
-  }
-  &:hover,
-  &:focus {
-    color: scale-color($color, $lightness: -20%);
+  } 
+  &[aria-expanded="true"] {   
+    @include accordion-pointers-active;
   }
 }
 
 /// Change +/- to up down carets item. 
 @mixin accordion-pointers {  
-  box-shadow: 0px 1px 3px scale-color($accordion-background, $lightness: -5%);
-  @include accordion-container;
+  box-shadow: 0px 1px 4px 1px rgba($black, 0.1);
+  margin-left: 0;
+  background: $accordion-background;
+  list-style-type: none;
   .accordion-title {
     @include accordion-pointers-title;
   }
   .accordion-item {
-    margin: 0;
+    margin: 0;    
+    border-top: 1px solid $white; 
+    border-bottom: 1px solid $white; 
     &.is-active {
-      .accordion-title {
-        @include accordion-pointers-active;
-      }       
-    }    
+       + .accordion-item.is-active {
+        border-top-color: $accordion-background; 
+        border-top-width: 2px;
+      }
+    }
+    &:first-child {
+      border-top-width: 0;
+      &.is-active {
+        border-top-color: $accordion-background; 
+        border-top-width: 1px;
+      }
+    } 
+    &:last-child {
+      border-bottom-width: 0;
+    }  
   }
-  .accordion-title {
-    font-weight: $global-weight-medium;
-  }
-  .accordion-content {
-    @include accordion-content;
-    border-top: 0;
-    
+  .accordion-content {    
+    display: none;
+    padding: $accordion-content-padding;
+    background-color: $accordion-content-background;
+    color: $accordion-content-color;
+    ul:first-child {
+      margin-top: 0;
+      li:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
 
-/// Change +/- to up down carets item. 
+/// Drop +/- and carets 
 @mixin accordion-faq {
   @include accordion-container($white);
   counter-reset: section;

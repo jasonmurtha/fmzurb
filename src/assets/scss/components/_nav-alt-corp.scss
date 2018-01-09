@@ -246,6 +246,7 @@
         background: $fm-green;
         border-bottom: 1px solid rgba($white, 0.5);
         border-top-width: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         transition: background 0.25s ease 0.05s, color 0.25s ease 0.05s;
         &::after {
           content: ' ';      
