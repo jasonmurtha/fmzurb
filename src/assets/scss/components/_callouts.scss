@@ -70,6 +70,27 @@
     font-weight: $global-weight-medium;
   }
 }
+
+.callout-module-wrapper {
+  border: 2px solid darken($light-gray, 3.7%);
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  margin-bottom: $gutter;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-gray;
+    height: rem-calc(9px);
+    border-radius: 5px 5px 0 0;
+  }
+  .callout {
+    margin: rem-calc(5px 0 0);
+  }
+}
 .rounded {
   border-radius: 0.35rem;
   &.large {

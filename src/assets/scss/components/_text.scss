@@ -430,6 +430,13 @@ sup, sub {
     font-weight: $global-weight-bold; 
   }
 }
+.flex-down {  
+  font-size: rem-calc(14);
+  font-size: calc(14px +  2 * (100vw - 320px)/1180);
+	@include breakpoint(xxlarge) {
+		font-size: rem-calc(16);
+	}
+}
 .article-blurb {
   @include show-for(medium);
   font-size: rem-calc(13);

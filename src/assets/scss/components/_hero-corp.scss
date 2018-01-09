@@ -45,7 +45,11 @@ $hero-blend-color: $primary-color;
   }
   
   .perspectives-detail-hero .hero-blended-content,
-  .blog-detail-hero .hero-blended-content {    
+  .blog-detail-hero .hero-blended-content,
+  .blog-detail-hero-homeownership .hero-blended-content, 
+  .blog-detail-hero-rental .hero-blended-content,
+  .blog-detail-hero-notable .hero-blended-content,
+  .blog-detail-hero-research .hero-blended-content, {    
     text-align: left;
     margin-left: 0;
     @include breakpoint(large) {

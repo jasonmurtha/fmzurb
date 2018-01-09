@@ -45,7 +45,7 @@
 		},
 		applyFilter = function(){ 
       var topic = $frm.find('[name="filterTopic"]:checked').length ? $frm.find('[name="filterTopic"]:checked').val() : '',
-          str = $frm.find('.filterField').length ? $.trim($frm.find('.filterField').val()).replace(/\s+/g, '|') : '',
+          str = $frm.find('.filter-field').length ? $.trim($frm.find('.filter-field').val()).replace(/\s+/g, '|') : '',
           patt = new RegExp(str, "i");
       $acc.find(params.dataP).find(params.dataC).each(function(){
         var text = $(this).text();
@@ -68,12 +68,12 @@
         postReset();
       }
 		}; 
-    $frm.find(".filterReset").on("click", function(){
+    $frm.find(".reset-filter").on("click", function(){
       clearTimeout(accRefresh);
-      $frm.find('.filterField').val("");
+      $frm.find('.filter-field').val("");
       accRefresh = setTimeout(applyFilter(), 0);
     });
-    $frm.find('.filterField').on("keyup", function(event){
+    $frm.find('.filter-field').on("keyup", function(event){
       if (event.keyCode == 27) { return; } 	
       clearTimeout(accRefresh);
       accRefresh = setTimeout(applyFilter(), params.refreshRate);

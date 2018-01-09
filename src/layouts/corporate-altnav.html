@@ -33,15 +33,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
   <body>
-    <div class="show-for-print">FreddieMac.com</div>
+    <div class="show-for-print">FreddieMac.com</div>   
     <!--googleoff: all-->
-    <header id="header-nav" class="header-nav hide-for-print" data-toggler=".is-mobile-expanded" aria-expanded="false">  
+    <header id="header-nav" class="header-nav hide-for-print" data-toggler=".is-mobile-expanded">  
+      <a class="show-on-focus reduce" href="#skipper">Skip to Content</a>
       {{> ribbon-corp}}
       {{> nav-mobile-corp}}
     </header>
     <!--googleon: all--> 
     <div>
-      <div class="breadcrumb-wrapper hide-for-print">
+      <div class="breadcrumb-wrapper hide-for-print" id="breadcrumb-wrapper">
         <div class="row">
           <div class="column">
             <nav class="gutter-top gutter-bottom">
@@ -63,6 +64,7 @@
           </div>        
         </div>
       </div>
+      <div id="skipper"></div>
       {{> body}}
       {{> footer-corp-alt}}
     </div>

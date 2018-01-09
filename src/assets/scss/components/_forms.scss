@@ -1,3 +1,6 @@
+label {
+  padding-bottom: rem-calc(3px);
+}
 select {
   box-shadow: $input-shadow;
   position: relative;  
@@ -65,6 +68,8 @@ fieldset {
   @include element-invisible;
   + label {
     margin-left: 0;
+    padding-top: rem-calc(3px);
+    line-height: 1.6;
   }    
   + label::before {    
     background: $white;
@@ -192,8 +197,28 @@ label.is-invalid-label,
   color: $form-label-color-invalid;
 }
 // hide the X inserted by IE
-.filterField {
+.filter-field {
+  display: inline;
+  max-width: rem-calc(450px);
   &::-ms-clear {
      display: none;
+  }
+  + .reset-filter {
+    display: inline;
+    background: transparent;
+    color: lighten($fm-gray, 10%);
+    padding: rem-calc(2 4 0);
+    border-radius: 0;
+    margin-left: -2em;
+    width:1.5em;
+    font-weight: $global-weight-bold;
+    outline: 0;
+    &:-moz-focusring {
+      outline: 0 dotted ButtonText;
+    }
+    &:hover,
+    &:focus {
+      color: darken($fm-gray, 10%);
+    }
   }
 }
