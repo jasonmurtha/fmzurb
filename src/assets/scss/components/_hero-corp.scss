@@ -177,7 +177,8 @@ $hero-blend-color: $primary-color;
   &.blog-careers-hero-community,
   &.blog-careers-hero-diversity,
   &.blog-careers-hero-employees,
-  &.blog-careers-hero-notable {
+  &.blog-careers-hero-notable,
+  &.blog-careers-hero-innovation {
     @include breakpoint(small only) {
       background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
       height: rem-calc(389);
