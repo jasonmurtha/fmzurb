@@ -41,7 +41,6 @@ fieldset {
   aside & {
     padding-top: $global-padding;
   }
-  
   .input-group {
     > :first-child {
       border-radius: $input-radius 0 0 $input-radius;
@@ -196,12 +195,12 @@ label.is-invalid-label,
 .is-invalid-input + .help-text {
   color: $form-label-color-invalid;
 }
-// hide the X inserted by IE
+
 .filter-field {
   display: inline;
   max-width: rem-calc(450px);
   &::-ms-clear {
-     display: none;
+     display: none;  // hide the X inserted by IE
   }
   + .reset-filter {
     display: inline;
@@ -219,6 +218,62 @@ label.is-invalid-label,
     &:hover,
     &:focus {
       color: darken($fm-gray, 10%);
+    }
+  }
+}
+
+.module-form {
+  border: 2px solid darken($light-gray, 3.7%);
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  margin-bottom: $gutter;
+  padding-top: rem-calc(9 0 0);
+  @include breakpoint(xlarge) {
+    padding: rem-calc(17 0 0 10);
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-gray;
+    height: rem-calc(9);
+    border-radius: 5px 5px 0 0;
+  }
+  .module-control {
+    display: inline-block;
+    .button-expand,
+    .button-collapse  {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      padding: rem-calc(10);
+      @include breakpoint(medium) {
+        padding: rem-calc(10 20);
+      }
+      color: $fm-green;
+      background: $light-gray;
+      text-transform: uppercase;
+      font-weight: $global-weight-medium;
+      font-family: inherit;
+      &::after {
+        content: ' ';  
+        background: transparent icon(chevron-dbl-down, $fm-green, 13px, 13px, 0, 0, 14, 14) no-repeat center center / cover;    
+        width: 0.85em;
+        height: 0.85em;
+        display: inline-block;
+        position: relative;
+        margin-left: 0.5em;
+      }
+      &:hover,
+      &:focus {
+        background: scale-color($light-gray, $lightness: -5%);        
+      }
+    }
+    .button-collapse::after {
+      transform: rotate(180deg);
     }
   }
 }

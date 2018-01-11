@@ -112,27 +112,30 @@ keywords:
       </div>
       <h2 class="gutter-top">Resources</h2>
       <div class="data-filterable">
-        <div class="callout-module-wrapper">
-          <div class="callout large">
-            <h5>Quick Find</h5> 
-            <form method="get" enctype="application/x-www-form-urlencoded" class="form filterform">        
-              <label class="flex-up" for="filter-field">Filter through the resources by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
+        <form class="form module-form" onSubmit="return false;">  
+          <div class="gutter-left gutter-right gutter-top">
+            <h5>Quick Find</h5>       
+            <label class="flex-up" for="filter-field">Filter through the resources below by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
+            <div class="gutter-left-medium">
+              <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
+              <button class="reset-filter" type="button" aria-label="remove filter">X</button>
+            </div> 
+            <fieldset>
+              <legend class="flex-up no-margin"><strong>And/Or</strong> only show resources for:</legend>
               <div class="gutter-left-medium">
-                <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
-                <button class="reset-filter" type="button" aria-label="reset filter">X</button>
-              </div> 
-              <fieldset>
-                <legend class="flex-up no-margin"><strong>And/Or</strong> only show resources for:</legend>
-                <div class="gutter-left-medium">
-                  <input type="radio" name="filterTopic" value="" id="AllToggle"><label class="weight-medium flex-down" for="AllToggle">Show All</label><br>
-                  <input type="radio" name="filterTopic" value="CAS" id="CASToggle"><label class="weight-medium flex-down" for="CASToggle">Conventional and Seniors Housing</label><br>
-                  <input type="radio" name="filterTopic" value="TAH" id="TAHToggle"><label class="weight-medium flex-down" for="TAHToggle">Targeted Affordable Housing</label><br>
-                  <input type="radio" name="filterTopic" value="SBL" id="SBLToggle"><label class="weight-medium flex-down" for="SBLToggle">Small Balance Loan</label>
-                </div>
-              </fieldset>
-            </form>
+                <input type="radio" name="filterTopic" value="CAS" id="CASToggle"><label class="weight-medium flex-down" for="CASToggle">Conventional and Seniors Housing</label><br>
+                <input type="radio" name="filterTopic" value="TAH" id="TAHToggle"><label class="weight-medium flex-down" for="TAHToggle">Targeted Affordable Housing</label><br>
+                <input type="radio" name="filterTopic" value="SBL" id="SBLToggle"><label class="weight-medium flex-down" for="SBLToggle">Small Balance Loan</label>
+              </div>
+            </fieldset>
           </div>
-        </div>
+          <div class="text-right">
+            <div class="module-control flex-down">
+              <button type="reset" class="button-expand">Expand All Categories</button>
+              <button type="reset" class="button-collapse hide">Collapse All Categories</button>
+            </div>
+          </div>
+        </form>
         <ul class="accordion-pointer" data-accordion role="tablist">
           <li class="accordion-item" data-accordion-item>
             <a class="accordion-title" href="#panel1" id="panel1-heading" aria-controls="panel1" role="tab">Checklists</a>

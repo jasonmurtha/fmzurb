@@ -868,24 +868,6 @@ The month and date shown in the calendar icon are `<text>` elements inside the `
       <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="2017 Customer Conference">Event Details</a></p>
     </div>
   </li>
-  <li class="media-object">
-    <div class="media-object-section">  
-      <p>
-        <svg class="icon-calendar education" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560">
-        <rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/>
-        <rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/>
-        <text class="text1" x="270" y="245">Nov</text>
-        <text class="text2" x="270" y="465">13</text>
-        </svg>
-      </p>
-    </div>
-    <div class="media-object-section  main-section">
-      <div class="article-category">Education</div>
-      <h3 class="sidebar-headline">Multifamily Asset Management Training</h3>
-      <p class="article-date-lg weight-light">November 13, 2017 <br>Mclean, VA </p>
-      <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="Multifamily Asset Management Training">Event Details</a></p>
-    </div>
-  </li>
 </ul>  
 ```
 

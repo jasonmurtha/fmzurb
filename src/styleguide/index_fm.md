@@ -807,7 +807,6 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
 <div class="callout hollow">
   <ul>
     <li>List item</li>
-    <li>List item</li>
     <li>List item
       <ul>
         <li>Nested list item      
@@ -820,12 +819,9 @@ Use an unordered list to... *list things*, if the order of the items doesn't mat
             </li>
           </ul>
         </li>
-        <li>Nested list item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
         <li>Nested list item</li>
       </ul>
     </li>
-    <li>List item</li>
-    <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
     <li>List item</li>
   </ul>
 </div>
@@ -840,17 +836,15 @@ Add class `.no-bullet` to remove the bullets from that list.  Nested lists will 
 ```html_example
 <div class="callout hollow">
   <ul class="no-bullet">
-    <li>List item with a much longer description or more content.</li>
+    <li>List item</li>
     <li>List item</li>
     <li>List item
       <ul>
         <li>Nested list item</li>
         <li>Nested list item</li>
-        <li>Nested list item</li>
       </ul>
     </li>
     <li>List item</li>
-    <li>List item. This is a list item with a much longer content.  Sometimes a list item is long enough that it will span multiple lines.  This is an example of such an item, to show the line height, padding, and margin that are applied to this list element when it is long enough to wrap to a new line.</li>
     <li>List item</li>
   </ul>
 </div>
@@ -918,25 +912,27 @@ To add dividers between items in a list, add the class `.list-divided` (for ligh
 For more space between items, add class `.clipping-block` instead of `.list-divided`.
 
 ```html_example
-<div class="callout hollow">       
-  <ul class="no-bullet clipping-block">
-    <li><div class="article-date-lg">January 18, 2017</div>
-      <h3 class="article-headline"><a href="#">Freddie Mac Forgoes Issuing a Reference Notes Security on its January 18, 2017 Announcement Date</a></h3>
-      <p>Freddie Mac announced today that it will forgo issuing a Reference Notes security on its Jan. 18, 2017 announcement... <a href="#">More</a></p>
-    </li>
-    <li><div class="article-date-lg">January 18, 2017</div>
-      <h3 class="article-headline"><a href="#">Freddie Mac to Delist from Luxembourg Stock Exchange </a></h3>
-      <p>Freddie Mac  announced that its request to delist its debt and mortgage securities from the Luxembourg Stock Exchange was granted... <a href="#">More</a></p>
-    </li>
-    <li><div class="article-date-lg">January 18, 2017</div>
-      <h3 class="article-headline"><a href="#">Mortgage Rates Lower for Third Consecutive Week </a></h3>
-      <p>Freddie Mac  today released the results of its Primary Mortgage Market Survey&reg; (PMMS&reg;), showing average mortgage rates moving... <a href="#">More</a></p>
-    </li>
-    <li><div class="article-date-lg">January 17, 2017</div>
-      <h3 class="article-headline"><a href="#">Freddie Mac Announces Pricing of $198.5 Million Multifamily Small Balance Loan Securitization </a></h3>
-      <p>Freddie Mac  announces the pricing of the SB26 offering, a multifamily mortgage-backed securitization backed by small balance... <a href="#">More</a></p>
-    </li>
-  </ul>
+<div class="row">
+  <div class="column medium-8 medium-centered">
+    <ul class="no-bullet clipping-block">
+      <li><div class="article-date-lg">January 18, 2017</div>
+        <h3 class="article-headline"><a href="#">Freddie Mac Forgoes Issuing a Reference Notes Security on its January 18, 2017 Announcement Date</a></h3>
+        <p>Freddie Mac announced today that it will forgo issuing a Reference Notes security on its Jan. 18, 2017 announcement... <a href="#">More</a></p>
+      </li>
+      <li><div class="article-date-lg">January 18, 2017</div>
+        <h3 class="article-headline"><a href="#">Freddie Mac to Delist from Luxembourg Stock Exchange </a></h3>
+        <p>Freddie Mac  announced that its request to delist its debt and mortgage securities from the Luxembourg Stock Exchange was granted... <a href="#">More</a></p>
+      </li>
+      <li><div class="article-date-lg">January 18, 2017</div>
+        <h3 class="article-headline"><a href="#">Mortgage Rates Lower for Third Consecutive Week </a></h3>
+        <p>Freddie Mac  today released the results of its Primary Mortgage Market Survey&reg; (PMMS&reg;), showing average mortgage rates moving... <a href="#">More</a></p>
+      </li>
+      <li><div class="article-date-lg">January 17, 2017</div>
+        <h3 class="article-headline"><a href="#">Freddie Mac Announces Pricing of $198.5 Million Multifamily Small Balance Loan Securitization </a></h3>
+        <p>Freddie Mac  announces the pricing of the SB26 offering, a multifamily mortgage-backed securitization backed by small balance... <a href="#">More</a></p>
+      </li>
+    </ul>
+  </div>
 </div> 
 ```
 
@@ -947,26 +943,183 @@ For more space between items, add class `.clipping-block` instead of `.list-divi
 Add class `list-rss` to the `ul` tag to include an rss icon for each list item.
 
 ```html_example
-<div class="callout background-gray">
-  <h2>RSS Feeds</h2>
-  <ul class="list-divided-white flex-up no-bullet">
-    <li>
-      <ul class="no-bullet list-rss">
-        <li><a href="#">Housing and Economic Research</a></li>
-        <li><a href="#">Perspectives</a></li>
+<div class="row">
+  <div class="column medium-8 large-5 medium-centered">
+    <div class="callout background-gray">
+    <h2>RSS Feeds</h2>
+      <ul class="list-divided-white flex-up no-bullet">
+        <li>
+          <ul class="no-bullet list-rss">
+            <li><a href="#">Housing and Economic Research</a></li>
+            <li><a href="#">Perspectives</a></li>
+          </ul>
+        </li>
+        <li><span class="uppercase weight-bold">Freddie Mac Blog</span>
+          <ul class="no-bullet list-rss">
+            <li><a href="#">All Posts</a></li>
+            <li><a href="#">Homeownership</a></li>
+            <li><a href="#">Rental Housing</a></li>
+            <li><a href="#">Research &amp; Analysis</a></li>
+            <li><a href="#">Notable</a></li>
+          </ul>            
+        </li>
       </ul>
-    </li>
-    <li><span class="uppercase weight-bold">Freddie Mac Blog</span>
-      <ul class="no-bullet list-rss">
-        <li><a href="#">All Posts</a></li>
-        <li><a href="#">Homeownership</a></li>
-        <li><a href="#">Rental Housing</a></li>
-        <li><a href="#">Research &amp; Analysis</a></li>
-        <li><a href="#">Notable</a></li>
-      </ul>            
-    </li>
-  </ul>
+    </div>
+  </div>
 </div> 
+```
+
+---
+
+## Lists With Icons
+
+You can combine an unordered list or divided list with (Media Objects)[#media-objects] to add small image to a list.
+
+- Use the (visibility classes)[#visibility-classes] like `.show-for-medium` to hide images at small screen and display above a specific breakpoint.
+
+```html_example
+<div class="row">
+  <div class="column large-6 large-push-2 end">
+    <ul class="no-bullet list-divided gutter-top">
+      <li class="media-object">
+        <div class="media-object-section">  
+          <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
+        </div>
+        <div class="media-object-section main-section">
+          <div class="article-category">Industry Event</div>
+          <h3 class="sidebar-headline">NMHC Student Housing Conference & Expo</h3>
+          <p class="article-date-lg weight-light">September 25, 2017 <br>Tampa, FL</p>
+          <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="NMHC Student Housing Conference">Event Details</a></p>
+        </div>
+      </li>
+      <li class="media-object">
+        <div class="media-object-section">  
+          <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">16-18</text></svg></p>
+        </div>
+        <div class="media-object-section main-section">
+          <div class="article-category">Conference</div>
+          <h3 class="sidebar-headline">2017 Customer Conference</h3>
+          <p class="article-date-lg weight-light">October 16-18, 2017 <br>Phoenix, AZ</p>
+          <p class="weight-normal"><a class="icon-chevron-right" href="#" aria-label="2017 Customer Conference">Event Details</a></p>
+        </div>
+      </li>
+      <li class="media-object">
+        <div class="media-object-section">  
+          <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Oct</text><text class="text2" x="270" y="465">14</text></svg></p>
+        </div>
+        <div class="media-object-section  main-section">
+          <div class="article-category">Conference</div>
+          <h3 class="sidebar-headline">NCSHA Annual Conference</h3>
+          <p class="article-date-lg weight-light">October 14, 2017 <br>Denver, CO </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="column large-8 large-push-2 end">
+    <h3 class="gutter-top">Decorative images hidden at smallest breakpoint</h3>
+    <ul class="no-bullet">
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
+        </div>
+        <div class="media-object-section">
+          <h2 class="weight-normal">It Takes a Sound Credit Philosophy</h2>
+          <p>We strictly adhere to a core set of credit principles when deciding whether to buy mortgages. And, importantly, we follow a prior-approval model. This means that we underwrite each multifamily mortgage loan in-house before agreeing to buy it; we do not delegate our due diligence or credit analysis. Because <span class="weight-normal">each transaction is unique</span>, we craft each mortgage loan to fit the borrower, the property, and the market, while managing credit risk appropriately.</p>
+        </div>
+      </li>
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
+        </div>
+        <div class="media-object-section">
+          <h2 class="weight-normal">It Takes a Top-notch In-house Team</h2>
+          <p>Our in-house team has the business and industry expertise, local-market understanding, flexibility, and creativity needed to address the complexities of designing mortgage solutions for multifamily rental properties. </p>
+        </div>
+      </li>
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
+        </div>
+        <div class="media-object-section">
+          <h2 class="weight-normal">It Takes Trusting Relationships</h2>
+          <p>We buy loans through select national seller/servicers with local presence who have  <span class="weight-normal">years of multifamily lending expertise</span> and proven track records of success. We collaborate with them and well-qualified borrowers (property owners and developers) to identify and craft funding solutions that achieve positive, meaningful results.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="column large-8 large-push-2 end">
+    <h3 class="gutter-top">Reverse the sections to shift the image to the right.</h3>
+    <ul class="no-bullet">
+      <li class="media-object gutter-bottom">
+        <div class="media-object-section  main-section">
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+        <div class="media-object-section">  
+          <img src="files/layton-sm.jpg" alt="Layton">
+        </div>
+      </li>
+      <li class="media-object gutter-bottom">
+        <div class="media-object-section  main-section">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+        <div class="media-object-section">  
+          <img src="files/brickman-sm.jpg" alt="David Brickman">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+```
+
+---
+
+### Nested Lists
+
+You can nest a `.media-object` inside of a `.media-object-section` if that section is the `.main-section`.
+
+For nested items, include `.stack-for-small` on each `.media-object`, and add class `.width-auto` to the images if you don't want them to stretch to the available width once stacked.
+
+```html_example
+<div class="row">
+  <div class="column large-10 large-centered">
+    <ul class="no-bullet no-margin">
+      <li class="media-object gutter-bottom">
+        <div class="media-object-section">  
+          <img src="files/brickman-sm.jpg" alt="David Brickman">
+        </div>
+        <div class="media-object-section  main-section">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          <ul class="no-bullet no-margin">
+            <li class="media-object gutter-bottom stack-for-small">
+              <div class="media-object-section">  
+                <img class="width-auto" src="files/layton-sm.jpg" alt="Layton">
+              </div>
+              <div class="media-object-section  main-section">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+              </div>
+            </li>
+            <li class="media-object stack-for-small">
+              <div class="media-object-section">  
+                <img class="width-auto" src="files/brickman-sm.jpg" alt="David Brickman">
+              </div>
+              <div class="media-object-section  main-section">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img src="files/layton-sm.jpg" alt="Layton">
+        </div>
+        <div class="media-object-section  main-section">
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 ```
 
 

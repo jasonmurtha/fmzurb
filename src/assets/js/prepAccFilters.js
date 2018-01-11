@@ -6,7 +6,6 @@
 	 var accRefresh,
        defaults = {
        refreshRate: 50,
-       dataF: '.filterform',
 			 dataGP:'.accordion-pointer',
        dataE: '.accordion-item',
        dataL: '.accordion-title',
@@ -16,14 +15,14 @@
 		params = $.extend({}, defaults, options);
 		params = $.metadata ? $.extend({}, params, this.metadata()) : params; 
     var 
-      $frm = $(this).find(params.dataF),
+      $frm = $(this).find('form'),
       $acc = $(this).find(params.dataGP);        
 	  postFilter = function (){            
 		  $acc.find(params.dataE).each(function(){
 				var item = $(this),
             sections = item.find(params.dataP), 
             matches = sections.find(params.dataC).not(".hide").length;
-        if(matches >0) { 
+        if(matches > 0) { 
           item.removeClass('hide');
           $acc.foundation('down', sections, true);
 				}
@@ -31,7 +30,8 @@
           $acc.foundation('up', sections, false);
           item.addClass('hide'); 
 				}
-		  }); 
+		  });
+      toggleExpand();
       return;
 		},      
 	  postReset = function (){
@@ -43,6 +43,16 @@
 		  }); 
       return;
 		},
+    toggleExpand = function(){     
+      if($acc.find(params.dataC).filter('.hide').length || $acc.find(params.dataE).not('.is-active').length) {
+        $frm.find('.button-collapse').addClass('hide'); 
+        $frm.find('.button-expand').removeClass('hide');
+      }
+      else {
+        $frm.find('.button-expand').addClass('hide');
+        $frm.find('.button-collapse').removeClass('hide');                 
+      }
+    },
 		applyFilter = function(){ 
       var topic = $frm.find('[name="filterTopic"]:checked').length ? $frm.find('[name="filterTopic"]:checked').val() : '',
           str = $frm.find('.filter-field').length ? $.trim($frm.find('.filter-field').val()).replace(/\s+/g, '|') : '',
@@ -65,9 +75,17 @@
         postFilter();
       }
       else {
-        postReset();
+        toggleExpand();
       }
 		}; 
+    $acc.on("up.zf.accordion", function(){
+      console.log("up triggered");
+      toggleExpand();
+    }); 
+    $acc.on("down.zf.accordion", function(){
+      console.log("down triggered");
+      toggleExpand();
+    }); 
     $frm.find(".reset-filter").on("click", function(){
       clearTimeout(accRefresh);
       $frm.find('.filter-field').val("");
@@ -81,14 +99,29 @@
     $frm.find('[name="filterTopic"]').on("change", function(){
       clearTimeout(accRefresh);
       accRefresh = setTimeout(applyFilter(), 0);
-    });        
+    });
+    $frm.find('.button-expand').on("click", function(){
+      clearTimeout(accRefresh);   
+      $acc.find(params.dataP).find(params.dataC).filter('.hide').removeClass('hide'); 
+      $acc.find(params.dataP).filter('.hide').removeClass('hide'); 
+      postFilter();
+    });  
+    $frm.find('.button-collapse').on("click", function(){
+      clearTimeout(accRefresh); 
+      $acc.find(params.dataE).each(function(){
+        $(this).find(params.dataC).filter('.hide').removeClass('hide'); 
+        $(this).filter('.hide').removeClass('hide'); 
+        $acc.foundation('up', $(this).find(params.dataP), false);        
+		  });
+      toggleExpand();
+    });
     return this;            
   };   
 })(jQuery);  
 
 
-if($('.data-filterable').length) {  
-  if($('.data-filterable').find('.accordion-pointer').length == $('.data-filterable').find('.filterform').length) { 
+if($('.data-filterable').length) {
+  if($('.data-filterable').find('.accordion-pointer').length == $('.data-filterable').find('form').length) { 
     $('.data-filterable').filterAccContent();
   }
 }

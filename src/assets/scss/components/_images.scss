@@ -1,8 +1,12 @@
 
-img:not([src$=svg]):not(.no-border) {
-  border: 1px solid darken($light-gray, 5%);
-  &.full {
-    width: 100%;
+img {
+  &:not([src$=svg]):not(.no-border) {
+    border: 1px solid darken($light-gray, 5%);
   }
 }
-
+.full {
+  width: 100%;
+}
+.width-auto {
+  width: auto !important;
+}
