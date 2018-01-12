@@ -976,11 +976,57 @@ Add class `list-rss` to the `ul` tag to include an rss icon for each list item.
 You can combine an unordered list or divided list with (Media Objects)[#media-objects] to add small image to a list.
 
 - Use the (visibility classes)[#visibility-classes] like `.show-for-medium` to hide images at small screen and display above a specific breakpoint.
+- Be sure to include an `aria-hidden="false"` attribute to hide decorative SVG images from screen readers.
 
 ```html_example
 <div class="row">
-  <div class="column large-6 large-push-2 end">
-    <ul class="no-bullet list-divided gutter-top">
+  <div class="column large-8 large-centered">
+    <ul class="no-bullet gutter-top">
+     <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" width="28px" height="28px">
+          <path fill="#00a6e2" d="M 26.4 47.4 l -2.8 -2.8 L 36.2 32 L 23.6 19.4 l 2.8 -2.8 L 41.8 32" />
+          <circle fill="none" stroke="#00a6e2" stroke-width="5" cx="32" cy="32" r="29" />
+          </svg>
+        </div>
+        <div class="media-object-section">
+          <p><strong>Duis aute irure dolor in reprehenderit</strong><br>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+      </li>
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">
+          <svg aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" width="28px" height="28px">
+          <path class="fill-anchor" d="M 26.4 47.4 l -2.8 -2.8 L 36.2 32 L 23.6 19.4 l 2.8 -2.8 L 41.8 32" />
+          <circle class="stroke-anchor" stroke-width="5" cx="32" cy="32" r="29" />
+          </svg>
+        </div>
+        <div class="media-object-section">
+          <p><strong>Ut enim ad minim veniam</strong><br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.  </p>
+        </div>
+      </li>
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
+        </div>
+        <div class="media-object-section">
+          <h2 class="weight-normal">Quis nostrud exercitation ullamco laboris</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+      </li>
+      <li class="media-object collapse medium-uncollapse gutter-bottom">
+        <div class="media-object-section">  
+          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
+        </div>
+        <div class="media-object-section">
+          <h2 class="weight-normal">Duis aute irure dolor in reprehenderit</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam.  </p>
+        </div>
+      </li>
+    </ul>
+    <h4 class="gutter-top">With Dividers</h4>
+    <ul class="no-bullet list-divided">
       <li class="media-object">
         <div class="media-object-section">  
           <p><svg class="icon-calendar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 560"><rect x="119" width="48" height="139" rx="12.97" ry="12.97"/><rect x="382" width="48" height="139" rx="12.97" ry="12.97"/><rect x="178" y="62" width="192" height="42"/><path d="M467.86,62H441v42.77c30,3.86,53,29.73,53,61.14V262H46V165.9c0-34.07,27.22-61.9,61.29-61.9H108V62H72.14C32.07,62,0,94.67,0,134.73V487.46A72.2,72.2,0,0,0,72.14,560H467.86A72.2,72.2,0,0,0,540,487.46V134.73C540,94.67,507.93,62,467.86,62Z"/><text class="text1" x="270" y="245">Sept</text><text class="text2" x="270" y="465">25</text></svg></p>
@@ -1014,41 +1060,7 @@ You can combine an unordered list or divided list with (Media Objects)[#media-ob
         </div>
       </li>
     </ul>
-  </div>
-  <div class="column large-8 large-push-2 end">
-    <h3 class="gutter-top">Decorative images hidden at smallest breakpoint</h3>
-    <ul class="no-bullet">
-      <li class="media-object collapse medium-uncollapse gutter-bottom">
-        <div class="media-object-section">  
-          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
-        </div>
-        <div class="media-object-section">
-          <h2 class="weight-normal">It Takes a Sound Credit Philosophy</h2>
-          <p>We strictly adhere to a core set of credit principles when deciding whether to buy mortgages. And, importantly, we follow a prior-approval model. This means that we underwrite each multifamily mortgage loan in-house before agreeing to buy it; we do not delegate our due diligence or credit analysis. Because <span class="weight-normal">each transaction is unique</span>, we craft each mortgage loan to fit the borrower, the property, and the market, while managing credit risk appropriately.</p>
-        </div>
-      </li>
-      <li class="media-object collapse medium-uncollapse gutter-bottom">
-        <div class="media-object-section">  
-          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
-        </div>
-        <div class="media-object-section">
-          <h2 class="weight-normal">It Takes a Top-notch In-house Team</h2>
-          <p>Our in-house team has the business and industry expertise, local-market understanding, flexibility, and creativity needed to address the complexities of designing mortgage solutions for multifamily rental properties. </p>
-        </div>
-      </li>
-      <li class="media-object collapse medium-uncollapse gutter-bottom">
-        <div class="media-object-section">  
-          <h2 class="icon show-for-medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#88bd45" d="M 4.9 8.8 c 0.2 -0.2 0.3 -0.5 0.5 -0.7 c 0.1 -0.2 0.3 -0.5 0.4 -0.7 c 0.8 0.3 1.8 0.8 2.8 1.3 c 1.2 0.6 2.2 1.3 3 2 c 1.6 -1.8 3.5 -3.8 5.8 -5.8 c 1.7 -1.5 3.4 -2.8 5 -3.8 c 0.2 0.5 0.4 1 0.6 1.6 c -1.6 1.5 -3.2 3.3 -4.9 5.4 c -2.6 3.2 -4.4 6.4 -5.7 9.1 c -1.4 -1.6 -2.8 -3.1 -4.2 -4.7 C 7.1 11.1 6 10 4.9 8.8 Z m 15 -0.9 c 0.4 0.8 0.8 2.1 0.7 3.5 c -0.2 4 -3.5 9.2 -9.2 9.2 c -5.1 0 -9.2 -4.1 -9.2 -9.2 s 4.1 -9.2 9.2 -9.2 c 0.9 0 1.8 0.2 1.8 0.2 c 1.6 0.3 2.8 1 3.4 1.5 c 0.3 -0.2 0.5 -0.4 0.8 -0.6 c 0.3 -0.3 0.6 -0.5 0.8 -0.8 c -0.7 -0.6 -2.2 -1.5 -4.2 -2 c 0 0 -1.3 -0.3 -2.6 -0.3 C 5.2 0.2 0.2 5.2 0.2 11.4 s 5 11.2 11.2 11.2 s 11.2 -5 11.2 -11.2 c 0 -0.5 -0.1 -1.1 -0.1 -1.1 c -0.2 -1.8 -0.7 -3.2 -1.2 -4.1 c -0.3 0.3 -0.6 0.5 -0.9 0.9 c -0.1 0.2 -0.3 0.5 -0.5 0.8 Z" /></svg></h2>
-        </div>
-        <div class="media-object-section">
-          <h2 class="weight-normal">It Takes Trusting Relationships</h2>
-          <p>We buy loans through select national seller/servicers with local presence who have  <span class="weight-normal">years of multifamily lending expertise</span> and proven track records of success. We collaborate with them and well-qualified borrowers (property owners and developers) to identify and craft funding solutions that achieve positive, meaningful results.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="column large-8 large-push-2 end">
-    <h3 class="gutter-top">Reverse the sections to shift the image to the right.</h3>
+    <h4 class="gutter-top">Image Last instead of First</h4>
     <ul class="no-bullet">
       <li class="media-object gutter-bottom">
         <div class="media-object-section  main-section">
@@ -3007,6 +3019,60 @@ When the form appears on a darker [background color](#colors), add the class `.o
     </div>
   </div>
 </div>
+
+---
+
+### Interactive Module Forms
+
+These are intended for interactive forms that sort/filter content within a single page, not for forms meant to submit data.
+
+```html_example
+<div class="row">
+  <div class="column large-7 end">
+    <form class="form module-form" onSubmit="return false;">  
+      <div class="gutter-left gutter-right gutter-top">
+        <h5>Quick Find</h5>       
+        <label class="flex-up" for="filter-field">Filter through the resources below by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
+        <div class="gutter-left-medium">
+          <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
+          <button class="reset-filter" type="button" aria-label="remove filter">X</button>
+        </div>
+      </div>
+      <div class="text-right">
+        <div class="module-control flex-down">
+          <button type="reset" class="button-expand">Expand All Categories</button>
+          <button type="reset" class="button-collapse hide">Collapse All Categories</button>
+        </div>
+      </div>
+    </form>
+    <p class="gutter-top"></p>
+    <form class="form module-form" onSubmit="return false;">  
+      <div class="gutter-left gutter-right gutter-top">
+        <h5>Quick Find</h5>       
+        <label class="flex-up" for="filter-field">Filter through the resources below by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
+        <div class="gutter-left-medium">
+          <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
+          <button class="reset-filter" type="button" aria-label="remove filter">X</button>
+        </div> 
+        <fieldset>
+          <legend class="flex-up no-margin"><strong>And/Or</strong> only show resources for:</legend>
+          <div class="gutter-left-medium">
+            <input type="radio" name="filterTopic" value="CAS" id="CASToggle"><label class="weight-medium flex-down" for="CASToggle">Conventional and Seniors Housing</label><br>
+            <input type="radio" name="filterTopic" value="TAH" id="TAHToggle"><label class="weight-medium flex-down" for="TAHToggle">Targeted Affordable Housing</label><br>
+            <input type="radio" name="filterTopic" value="SBL" id="SBLToggle"><label class="weight-medium flex-down" for="SBLToggle">Small Balance Loan</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="text-right">
+        <div class="module-control flex-down">
+          <button type="reset" class="button-expand">Expand All Categories</button>
+          <button type="reset" class="button-collapse hide">Collapse All Categories</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+```
 
 
 
