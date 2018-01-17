@@ -16,40 +16,14 @@ Components in use:	C:\IWTemp\fmzurb\src\assets\scss\app_mf_customer_appreciation
 Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.scss
 -->
 
-  <!--<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You for an Amazing 2017!</title>
-    <meta name="keywords" content="" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@FreddieMac" />
-    <meta property="og:title" content="Thank You for an Amazing 2017!" />
-    <meta name="twitter:title" content="Thank You for an Amazing 2017!"/>
-    <meta name="Description" content="Thank You for an Amazing 2017!" />
-    <meta property="og:description" content="Thank You for an Amazing 2017!" />
-    <meta name="twitter:description" content="Thank You for an Amazing 2017!" />
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/corporate/better-housing-finance/images/better_better_meta_social_share.jpg" />
-    <meta name="twitter:image" content="/corporate/better-housing-finance/images/better_better_meta_social_share.jpg" />
-    <meta property="og:url" content="http://www.freddiemac.com/multifamily/customer-appreciation/" />
-    <meta name="theme-color" content="#88BD45">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="css/app_mf_customer_appreciation.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
-  </head> -->
-
 
 <!-- // LOGO -->
 <div class="hide-for-print"> 
   <div class="hide-for-xlarge text-center">
-      <a href="/" class="logo-mobile"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_rgb.svg" class="no-border"></a>
+      <a href="/multifamily" class="logo-mobile-large"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_rgb.svg" class="no-border"></a>
   </div>
   <div class="show-for-xlarge text-center">
-    <a href="/" class="logo-desktop"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_rgb.svg" class="no-border"></a>
+    <a href="/multifamily" class="logo-desktop"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_rgb.svg" class="no-border"></a>
   </div>
 </div>
 <!-- // END LOGO -->
@@ -59,7 +33,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
   <div class="ca-landing-hero content-inner-band">
     <div class="row">
       <div class="column large-10 large-centered">
-		  <div class="header-orange">Thank You for an Amazing 2017!</div>
+		  <div class="header-orange">Thank You for An Amazing 2017!</div>
 		  <div class="header-large">$XX Billion</div>
           <div class="subtitle-light gutter-top-large">To all our customers &ndash; Seller/Servicers, Investors and Borrowers &ndash; <br />we appreciate your partnership and look forward to making 2018 another great year.</div>
       </div>
@@ -96,17 +70,21 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
   </div>
   </div>
 </div>
-  <div class="border-green-thin"></div>
+  
   <div class="content-band"> 
     <div class="row text-center">
       <div class="column large-12 large-centered">
+       <div class="border-green-thin"></div>
         <p class="subtitle-italic gutter-bottom-large">Top Sellers by Category</p>
 	  </div>
 	</div>
 	  <div class="row text-center">
-	    <div class="column large-3 medium-6 small-12">
-			<a data-open="conventionalModal" aria-controls="conventionalModal"><img class="icon grow" src="images/icon_conventional.svg"></a>
-			<div class="subtitle-icon icon-padding">Conventional by Region</div>
+	    <div class="column large-3 medium-6 small-6">
+			<a data-open="conventionalModal" aria-controls="conventionalModal">
+			<div class="grow">
+			  <img class="icon" src="images/icon_conventional.svg">
+			  <div class="subtitle-icon icon-padding">Conventional by Region</div></a>
+			</div>
 			<div class="reveal full background-primary" id="conventionalModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -114,16 +92,16 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="conventionalModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Conventional</div>
                    </div>
                    <div class="callout xlarge background-white">
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
-                         <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_conventional.jpg"></p>
-				        </div>
+                         <div class="column large-5 small-12">
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_conventional.jpg"></p>
+							 </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
 					     <div class="name-modal">Mitchell Schultz</div>
@@ -142,9 +120,12 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
            </div>
         </div>
 	  </div>
-		<div class="column large-3 medium-6 small-12">
-	      <a data-open="TAHModal" aria-controls="TAHModal"><img class="icon grow" src="images/icon_TAH.svg"></a>
-			<div class="subtitle-icon icon-padding">Targeted Affordable Housing</div>
+		<div class="column large-3 medium-6 small-6">
+	      <a data-open="TAHModal" aria-controls="TAHModal">
+	      <div class="grow">
+	      <img class="icon" src="images/icon_TAH.svg">
+			  <div class="subtitle-icon icon-padding">Targeted Affordable Housing</div></a>
+		  </div>
 			<div class="reveal full background-primary" id="TAHModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -152,7 +133,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="TAHModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Targeted Affordable Housing</div>
                    </div>
@@ -160,7 +141,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_TAH.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_TAH.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -178,9 +159,12 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
            </div>
         </div>
 		</div>
-		<div class="column large-3 medium-6 small-12">
-	      <a data-open="SBLModal" aria-controls="SBLModal"><img class="icon grow" src="images/icon_SBL.svg"></a>
-			<div class="subtitle-icon icon-padding">Small Balance Loans</div>
+		<div class="column large-3 medium-6 small-6">
+	      <a data-open="SBLModal" aria-controls="SBLModal">
+	      <div class="grow">
+	        <img class="icon" src="images/icon_SBL.svg">
+			  <div class="subtitle-icon icon-padding">Small Balance Loans</div></a>
+		  </div>
 			<div class="reveal full background-primary" id="SBLModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -188,7 +172,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="SBLModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Small Balance Loans</div>
                    </div>
@@ -196,7 +180,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_SBL.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_SBL.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -214,9 +198,12 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
            </div>
         </div>
 	  </div>
-		<div class="column large-3 medium-6 small-12">
-	      <a data-open="SeniorsHousingModal" aria-controls="SeniorsHousingModal"><img class="icon grow" src="images/icon_seniors_housing.svg"></a>
-			<div class="subtitle-icon icon-padding">Seniors Housing</div>
+		<div class="column large-3 medium-6 small-6">
+	      <a data-open="SeniorsHousingModal" aria-controls="SeniorsHousingModal">
+	      <div class="grow">
+	      <img class="icon" src="images/icon_seniors_housing.svg">
+			  <div class="subtitle-icon icon-padding">Seniors Housing</div></a>
+		  </div>
 			<div class="reveal full background-primary" id="SeniorsHousingModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -224,7 +211,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="SeniorsHousingModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Seniors Housing</div>
                    </div>
@@ -232,7 +219,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_seniors.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_seniors.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -253,9 +240,12 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
 	  </div>
 	  <div class="row text-center gutter-bottom-large">
     <div class="column large-9 medium-12 small-12 large-centered">
-	    <div class="column large-4 medium-6 small-12">
-	      <a data-open="ConventionalStructuredModal" aria-controls="ConventionalStructuredModal"><img class="icon grow" src="images/icon_conventional_structured.svg"></a>
-			<div class="subtitle-icon icon-padding">Conventional Structured</div>
+	    <div class="column large-4 medium-6 small-6">
+	      <a data-open="ConventionalStructuredModal" aria-controls="ConventionalStructuredModal">
+	      <div class="grow">
+	      <img class="icon" src="images/icon_conventional_structured.svg">
+			  <div class="subtitle-icon icon-padding">Conventional Structured</div></a>
+		  </div>
 			<div class="reveal full background-primary" id="ConventionalStructuredModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -263,7 +253,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="ConventionalStructuredModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Conventional Structured</div>
                    </div>
@@ -271,7 +261,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_conventionalstructured.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_conventionalstructured.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -285,9 +275,12 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
            </div>
         </div>
 	  </div>
-		<div class="column large-4 medium-6 small-12">
-	      <a data-open="ManufacturedModal" aria-controls="ManufacturedModal"><img class="icon grow" src="images/icon_manufactured.svg"></a>
-			<div class="subtitle-icon icon-padding">Manufactured Housing Communities</div>
+		<div class="column large-4 medium-6 small-6">
+	      <a data-open="ManufacturedModal" aria-controls="ManufacturedModal">
+	      <div class="grow">
+	      <img class="icon" src="images/icon_manufactured.svg">
+			  <div class="subtitle-icon icon-padding">Manufactured Housing Communities</div></a>
+	      </div>
 			<div class="reveal full background-primary" id="ManufacturedModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -295,7 +288,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="ManufacturedModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Manufactured Housing Communities</div>
                    </div>
@@ -303,7 +296,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12 ">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_manufactured.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_manufactured.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -318,8 +311,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
         </div>
 	</div>
 		<div class="column large-4 medium-6 small-12">
-	      <a data-open="StudentHousingModal" aria-controls="StudentHousingModal"><img class="icon grow" src="images/icon_student_housing.svg"></a>
-			<div class="subtitle-icon icon-padding">Student Housing</div>
+	      <a data-open="StudentHousingModal" aria-controls="StudentHousingModal">
+	      <div class="grow">
+	      <img class="icon" src="images/icon_student_housing.svg">
+			  <div class="subtitle-icon icon-padding">Student Housing</div></a>
+		  </div>
 			<div class="reveal full background-primary" id="StudentHousingModal" data-reveal>
               <div class="modal-content">
                 <div class="row">
@@ -327,7 +323,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                     <div class="modal-header">
                       <h2 id="StudentHousingModal-label"></h2>
                    </div>
-                   <div class="modal-page-header">
+                   <div class="modal-page-header-mfca">
 				     <div class="title-modal">&ndash; 2017 Top Seller Offices &ndash;</div>
 				     <div class="header-modal">Student Housing</div>
                    </div>
@@ -335,7 +331,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
                      <div class="row text-center">
                        <div class="column large-10 small-12 large-centered">
                          <div class="column large-5 small-12">
-                           <p class="align-right-large"><img src="images/MF_CREF_award_lenders.jpg"></p>
+                           <p class="align-right-large"><img class="image-trophy" src="images/MF_CREF_award_lenders.jpg"></p>
 				        </div>
 				        <div class="column large-5 large-offset-1 small-12 end">
 					     <div class="subtitle-modal uppercase">Northeast Region</div>
@@ -366,9 +362,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="column large-11 large-centered">
         <p class="title-large">Together, we continue to make home possible for every corner of the market.</p>
 		</div>
+	  </div>
+      <div class="row text-center">
        <div class="column large-8 medium-10 small-12 large-centered">
         <p>
-          <a tabindex="0" aria-haspopup="true" aria-controls="videomodal-duty-to-serve" data-open="videomodal-duty-to-serve" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=3pup3cB4ArQ" data-src="//www.youtube-nocookie.com/embed/3pup3cB4ArQ?rel=0&amp;wmode=transparent">
+          <a tabindex="0" aria-haspopup="true" aria-controls="videomodal-customer-appreciation" data-open="videomodal-customer-appreciation" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=3pup3cB4ArQ" data-src="//www.youtube-nocookie.com/embed/3pup3cB4ArQ?rel=0&amp;wmode=transparent">
             <img class="image-shadow" alt="Video: A Shared Passion" src="images/video.jpg">
           </a>
         </p>
@@ -378,7 +376,8 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
 <!-- // END VIDEO SECTION -->
   
   
-  <!-- // IN OUR OWN WORDS SECTION -->
+  
+  <!-- // IN OUR OWN WORDS SECTION --> 
   <div class="content-band">
     <div class="row">
       <div class="column large-11 text-center large-centered">
@@ -391,7 +390,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.jpg"></p>
 			<p class="subtitle-name"><strong>John Cannon</strong><br />SVP, Production &amp; Sales</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
@@ -404,11 +403,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/steve_johnson.jpg"></p>
 			<p class="subtitle-name"><strong>Steve Johnson</strong><br />VP, Small Balance Loans</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -417,11 +416,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/david_leopold.jpg"></p>
 			<p class="subtitle-name"><strong>David Leopold</strong><br />VP, Targeted Affordable Sales &amp; Investments</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -430,7 +429,7 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/lauren_garren.jpg"></p>
 			<p class="subtitle-name"><strong>Lauren Garren</strong><br />VP, Structured Conventional</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
@@ -443,11 +442,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/peter_giles.jpg"></p>
 			<p class="subtitle-name"><strong>Peter Giles</strong><br />VP, Production &amp; Sales, WE region</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -456,11 +455,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/richard_martinez.jpg"></p>
 			<p class="subtitle-name"><strong>Rich Martinez</strong><br />VP, Production &amp; Sales, NE and SE regions</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -469,11 +468,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/kelli_carhart.jpg"></p>
 			<p class="subtitle-name"><strong>Kelli Carhart</strong><br />VP, Production &amp; Sales, CE region</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -482,11 +481,11 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
       <div class="callout">
        <div class="row">
         <div class="column large-3 small-12">
-			<p class="align-right-large"><img class="image-rotator" src="images/john_cannon.png"></p>
+			<p class="align-right-large"><img class="image-rotator" src="images/steve_schmidt.jpg"></p>
 			<p class="subtitle-name"><strong>Steve Schmidt</strong><br />Director, Seniors Housing</p>
 		</div>
         <div class="column large-8 large-offset-1 small-12">
-			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&rdquo;</p>
+			<p class="quote">&ldquo;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&rdquo;</p>
 		</div>
 	   </div>
      </div>
@@ -502,21 +501,22 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
   <!-- // FOOTER -->
 <footer class="footer hide-for-print">
   <div class="row">
-    <div class="column large-4">
-      <ul class="no-bullet text-left gutter-top">
+    <div class="column small-12 medium-4 large-3 xlarge-4">
+      <ul class="no-bullet align-left-large text-center gutter-top">
         <li><a href="/multifamily/terms/">Terms of Use</a></li>
         <li><a href="/multifamily/terms/privacy.html">Privacy Policy</a></li>
         <li><a href="/multifamily/contact.html">Contact Us</a></li>
+		<li></li>
       </ul>      
     </div>
-    <div class="column large-4 text-center">
+    <div class="column small-12 medium-4 large-6 xlarge-4 text-center">
       <div class="hide-for-print"> 
-        <a href="/" class="hide-for-xlarge logo-mobile"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_white.svg" class="no-border"></a>
-        <a href="/" class="show-for-xlarge logo-desktop"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_white.svg" class="no-border"></a>
+        <a href="/multifamily" class="hide-for-xlarge logo-mobile-small"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_white.svg" class="no-border"></a>
+        <a href="/multifamily" class="show-for-xlarge logo-desktop"><img alt="Freddie Mac logo" src="images/FM Multifamily New Logo_white.svg" class="no-border"></a>
       </div>
     </div>
-    <div class="column large-4">
-      <ul class="no-bullet text-right gutter-top">
+    <div class="column small-12 medium-4 large-3 xlarge-4">
+      <ul class="no-bullet align-right-large text-center gutter-top">
         <li>&copy; Freddie Mac 2018</li>
       </ul>      
     </div>
@@ -524,4 +524,3 @@ Settings:			C:\IWTemp\fmzurb\src\assets\scss\_settings_mf_customerappreciation.s
 </footer>
 <div class="footer-bottom-edge"> </div>
 <!-- // END FOOTER -->
-   
