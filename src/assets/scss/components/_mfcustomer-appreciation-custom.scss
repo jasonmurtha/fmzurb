@@ -154,11 +154,25 @@
 }
 
 .gutter-bottom-large {
-	padding-bottom: 0;
+	padding-bottom: 20;
   @include breakpoint(small) {
-    padding-bottom: 50px;       
+    padding-bottom: 30px;       
   } 
 }
+
+.gutter-bottom-xlarge {
+	padding-bottom: 20px;
+  @include breakpoint(medium) {
+    padding-bottom: 60px;       
+  } 
+}
+
+.gutter-bottom-small {
+	padding-bottom: .5rem;
+  @media screen and (min-width: 67.5em) {
+    padding-bottom: 1rem; }      
+  }
+
 
 .title-large {
   font-size: 2.25rem;
@@ -289,10 +303,11 @@
 }
 
 .border-green-thin {
-	height: .25rem;
+	height: .18rem;
 	background: #A4C745;
 	opacity: .5;
-	
+	margin-top: 60px;
+	margin-bottom: 50px;
 }
 
 .title-modal {
@@ -334,16 +349,20 @@
   font-weight: 700;
   color: #4A4A4A;
   line-height: 1.19;
-  padding-bottom: 10px;
-  @include breakpoint(xxlarge) {
+	@include breakpoint(xxlarge) {
     font-size: 2rem;
   }
-	@media print, screen and (min-width: 34.375em) {
-    padding-bottom: 30px; }
-    @media screen and (min-width: 67.5em) {
-    padding-bottom: 50px; }
-    @media screen and (min-width: 83.75em) {
-    padding-bottom: 80px; }
+}
+
+.office-subtitle {
+  font-size: 1.125rem;
+  font-size: calc(18px + 6 * (100vw - 320px)/1180);
+  font-weight: 400;
+  color: #4A4A4A;
+  line-height: 1.19;
+	@include breakpoint(xxlarge) {
+    font-size: 1.5rem;
+  }
 }
 
 .background-evergreen {
@@ -449,15 +468,16 @@ body {
   }
 
   &::before {
-    right: 52%;
-    transform: skewX(80deg);
-    transform-origin: 80% 80%;
+    right: 50%;
+    transform: skewX(75deg);
+    transform-origin: 100% 100%;
   }
 
   &::after {
-    left: 52%;
-    transform: skewX(-80deg);
-    transform-origin: 20% 100%;
+    left: 50%;
+    transform: skewX(-75deg);
+    transform-origin: 0 100%;
   }
 }
+
 
