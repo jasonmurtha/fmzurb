@@ -197,28 +197,39 @@ label.is-invalid-label,
 }
 
 .filter-field {
-  display: inline;
-  max-width: rem-calc(450px);
   &::-ms-clear {
      display: none;  // hide the X inserted by IE
   }
   + .reset-filter {
-    display: inline;
+    display: block;
+    position: absolute;
     background: transparent;
-    color: lighten($fm-gray, 10%);
-    padding: rem-calc(2 4 0);
     border-radius: 0;
-    margin-left: -2em;
-    width:1.5em;
-    font-weight: $global-weight-bold;
+    width:2em;
+    height: 2em;
+    top: 0.25em;
+    right: 0.75em;    
     outline: 0;
     &:-moz-focusring {
       outline: 0 dotted ButtonText;
+    }    
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0.5em;
+      right: 0.5em;
+      background: transparent icon(reset-field, none, 32px, 32px, 0, 0, 24, 24, lighten($fm-gray, 10%), 2, "stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;") no-repeat center center;
+      height: 1em; 
+      width: 1em;
+      transition: background 0.25s ease-out;
     }
     &:hover,
     &:focus {
-      color: darken($fm-gray, 10%);
-    }
+      &::after {      
+        background: transparent icon(reset-field, none, 32px, 32px, 0, 0, 24, 24, darken($fm-gray, 5%), 2, "stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;") no-repeat center center;  
+      }
+    } 
   }
 }
 

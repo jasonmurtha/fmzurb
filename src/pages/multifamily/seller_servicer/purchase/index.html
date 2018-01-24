@@ -80,8 +80,12 @@ keywords:
             <h5>Quick Find</h5>       
             <label class="flex-up" for="filter-field">Filter through the resources below by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
             <div class="gutter-left-medium">
-              <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
-              <button class="reset-filter" type="button" aria-label="remove filter">X</button>
+              <div class="row">
+                <div class="column medium-10 xlarge-9 end" style="position: relative;">
+                  <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
+                  <button class="reset-filter" type="button"><span class="show-for-sr">clear filter</span></button>              
+                </div>
+              </div>
             </div> 
           </div>
           <div class="text-right">

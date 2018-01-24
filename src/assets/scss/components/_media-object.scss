@@ -38,9 +38,7 @@
     display: block;
     flex: 0 1 auto;
     &.main-section {
-      @include breakpoint(medium){
-        flex: 1 1 0px; // sass-lint:disable-line zero-unit
-      }
+      flex: 1 1 0px; // sass-lint:disable-line zero-unit
     }
   }
   &.collapse {
