@@ -166,29 +166,74 @@ $hero-blend-color: $primary-color;
       height: rem-calc(468);
     }
   }
-  &.hr-blog-landing-hero {
+  &.blog-careers-landing-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero_about_mobile.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero_about.jpg');
       height: rem-calc(345);
       text-align: center;
     }
   }
-  &.blog-careers-hero-benefits,
-  &.blog-careers-hero-community,
-  &.blog-careers-hero-diversity,
-  &.blog-careers-hero-employees,
-  &.blog-careers-hero-notable,
-  &.blog-careers-hero-innovation {
+  &.blog-careers-hero-benefits {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_benefits_mobile.jpg');
       height: rem-calc(389);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url(none);
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_benefits.jpg');
+      height: rem-calc(468);
+    }
+  }
+  &.blog-careers-hero-community {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_community_mobile.jpg');
+      height: rem-calc(389);
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_community2.jpg');
+      height: rem-calc(468);
+    }
+  }
+  &.blog-careers-hero-diversity {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_diversity_mobile.jpg');
+      height: rem-calc(389);
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_diversity.jpg');
+      height: rem-calc(468);
+    }
+  }
+  &.blog-careers-hero-employees {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_employees_mobile.jpg');
+      height: rem-calc(389);
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_employees.jpg');
+      height: rem-calc(468);
+    }
+  }
+  &.blog-careers-hero-notable {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_notable_mobile.jpg');
+      height: rem-calc(389);
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_notable.jpg');
+      height: rem-calc(468);
+    }
+  }
+  &.blog-careers-hero-innovation {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_innovation_mobile.jpg');
+      height: rem-calc(389);
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_innovations.jpg');
       height: rem-calc(468);
     }
   }
