@@ -168,11 +168,11 @@ $hero-blend-color: $primary-color;
   }
   &.blog-careers-landing-hero {
     @include breakpoint(small only) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero_careersblog_home_mobile.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_home_mobile.jpg');
       height: rem-calc(219);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero_careersblog_home.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_home.jpg');
       height: rem-calc(345);
       text-align: center;
     }
@@ -193,7 +193,7 @@ $hero-blend-color: $primary-color;
       height: rem-calc(389);
     }
     @include breakpoint(medium) {
-      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_community2.jpg');
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/careers-blog/images/hero_careersblog_community.jpg');
       height: rem-calc(468);
     }
   }
