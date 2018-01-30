@@ -27,11 +27,11 @@
   background-image: linear-gradient(rgba($fm-purple, 0.85), rgba($fm-purple, 0.85)), url('/multifamily/images/mf-bg6.jpg');
 }
 .people-featured { 
-  background-image: linear-gradient(rgba($fm-gray, 0.45), rgba($fm-gray, 0.45)), url('/about/images/diversitybanner.jpg');
+  background-image: url('/images/about/about-ourpeople-bg.jpg');
   background-position: center bottom;
 }
 .about-featured {
-  background-image: linear-gradient(rgba($fm-purple, 0.6), rgba($fm-purple, 0.6)), url('/multifamily/images/about-mission-background.jpg');
+  background-image: url('/images/about/about-mission-background2.jpg');
   background-position: top center;
 }
 
