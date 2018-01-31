@@ -48,6 +48,7 @@
     }
   }
   &.seller-servicers-hero {
+    background-position: top left;
     @include breakpoint(small only) {
       background-image: url('/multifamily/images/heroes/hero_sellerservicers_mobile.jpg');
       height: rem-calc(219);
