@@ -74,6 +74,7 @@ s_somni.busUnit={
   speeches:"corporate",  
   blog:"corporate",
   corporate:"corporate",
+  'careers-blog':"corporate",
   perspectives:"corporate",
   about:"corporate",
   research:"corporate",
@@ -175,9 +176,6 @@ s_somni.usePlugins=true
  else if(s_wlp.match(/singlefamily:doingbusiness:checklist/)){s_somni.eVar27="sf new customer"}
  else if(s_wlp.match(/purchasemarket/)){s_somni.eVar27="sf pmrc user"}
  else if(s_wlp.match(/community_lenders/)){s_somni.eVar27="sf clrc user"}
- else if(s_wlp.match(/multifamily:investors:securities/)){s_somni.eVar27="mf securities investors"}
- else if(s_wlp.match(/multifamily:investors:kcerts/)){s_somni.eVar27="mf securities investors"}
- else if(s_wlp.match(/multifamily:news_research:market_commentary/)){s_somni.eVar27="mf market commentary user"}
  s_somni.eVar71= s_tm.split(':')[0]+" "+s_tm.split(' ')[1]
  s_somni.eVar72=s_dt.split('|')[1]
  s_somni.eVar74=navigator.userAgent
