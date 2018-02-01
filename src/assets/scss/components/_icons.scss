@@ -206,7 +206,26 @@
     }
   } 
 }
-
+.secured-white {
+  position: relative;
+  overflow: visible;
+  &::after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    margin-left: 0.3em;
+    background: transparent icon(padlock, $white, 32px, 32px) no-repeat center center / contain;
+    width: 1em;
+    height: 1em; 
+    transition: background 0.25s ease-out;
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      background: transparent icon(padlock, $white, 32px, 32px) no-repeat center center / contain;  
+    }
+  }
+}
 .icon-chevron-right-circle-blue {
   position: relative;
   overflow: visible;
