@@ -1,9 +1,18 @@
+<style>
+/* temporarily increasing hero-title max size to 5rem */
+.hero-title {
+  font-size: calc(24px +  56 * (100vw - 320px)/1180);
+ }
+@media screen and (min-width: 93.75em) {
+  .hero-title { font-size: 5rem; } 
+}
+</style>
+
 <div class="hero background-gray">
   <div class="row column">
     <div class="hero-text">
-      <h1 class="hero-title weight-light">We bring <span class="weight-bold">liquidity, stability</span> and 
-      <span class="weight-bold">affordability</span> <br class="show-for-large">to U.S. rental housing</h1>
-      <a href="#" class="primary button hero-button">See How</a>
+      <h1 class="hero-title">Leading <span class="weight-light">with</span> Innovation</h1>
+      <a href="#" class="tertiary button hero-button">See How</a>
     </div>
   </div>
 </div>
