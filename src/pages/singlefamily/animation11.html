@@ -1,0 +1,72 @@
+---
+title: "Animation Example: shake"
+layout: corporate
+description:
+image: 
+keywords:
+url:
+bodyclass: 
+javascript: /js/app_corp.js
+stylesheet: /ss/app_corp.css
+---
+
+<div class="background-primary gutter-bottom">
+  <div class="row animation-row medium-up-2 large-up-4">
+    <div class="column gutter-top">
+      <div class="animate-1 text-center">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-top">
+      <div class="animate-2 text-center">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-top">
+      <div class="animate-3 text-center">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-top">
+      <div class="animate-4 text-center">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function isElementInViewport(item) {
+  var el = item[0];
+  if (el.getBoundingClientRect) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.bottom >= 0 &&
+      rect.right >= 0 &&
+      rect.top <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  } else {
+    return true;
+  }
+}
+// only run shake on initial view -- it's too annoying to repeat each time items come into view
+function runSeries() {
+  var timerAnim1 = setTimeout(function(){$('.animate-1').addClass('shake')}, 100);
+  var timerAnim2 = setTimeout(function(){$('.animate-2').addClass('shake')}, 400);
+  var timerAnim3 = setTimeout(function(){$('.animate-3').addClass('shake')}, 700);
+  var timerAnim4 = setTimeout(function(){$('.animate-4').addClass('shake')}, 1000);
+}
+
+function setDelayTimer() {
+  var container = $('.animation-row');
+  $(window).on("load scroll resize orientationchange", function() {
+    if (isElementInViewport(container) && container.find('.shake').length<1) {
+      var timerAnim = setTimeout(runSeries(), 300);
+    }
+  });
+}
+// using window.onload because this code loads prior to jQuery
+window.onload = setDelayTimer;
+</script>

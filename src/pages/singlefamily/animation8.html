@@ -1,0 +1,90 @@
+---
+title: "Animation Example: slide-in-down"
+layout: corporate
+description:
+image: 
+keywords:
+url:
+bodyclass: 
+javascript: /js/app_corp.js
+stylesheet: /ss/app_corp.css
+---
+
+<style>
+.animation-row  {
+  overflow: hidden;
+}
+.animate-1 {
+  transition-delay: 200ms;
+}
+.animate-2 {
+  transition-delay: 400ms;
+}  
+.animate-3 {
+  transition-delay: 600ms;
+}  
+.animate-4 {
+  transition-delay: 800ms;
+}
+</style>
+
+<div class="background-primary gutter-top">
+  <div class="row animation-row medium-up-2 large-up-4">
+    <div class="column gutter-bottom">
+      <div class="animate-1 text-center slide-in-down mui-enter">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-bottom">
+      <div class="animate-2 text-center slide-in-down mui-enter">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-bottom">
+      <div class="animate-3 text-center slide-in-down mui-enter">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+    <div class="column gutter-bottom">
+      <div class="animate-4 text-center slide-in-down mui-enter">
+        <img class="no-border" src="/images/us-hollow.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function isElementInViewport(item) {
+  var el = item[0];
+  if (el.getBoundingClientRect) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.bottom >= 0 &&
+      rect.right >= 0 &&
+      rect.top <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  } else {
+    return true;
+  }
+}
+
+function animTriggers(elem) {
+  if (isElementInViewport(elem)) {
+    elem.find('.mui-enter').addClass('mui-enter-active');
+  } 
+  else {
+    elem.find('.mui-enter-active').removeClass('mui-enter-active');
+  }
+}
+
+function setDelayTimer() {
+  var container = $('.animation-row');
+  $(window).on("load scroll resize orientationchange", function() {
+    var timerAnim1 = setTimeout(animTriggers(container), 300);
+  });
+}
+// using window.onload because this code loads prior to jQuery
+window.onload = setDelayTimer;
+</script>
