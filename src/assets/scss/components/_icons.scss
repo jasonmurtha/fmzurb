@@ -309,7 +309,7 @@
 }
 .icon-download {
   position: relative;
-  padding-right: 1.5em;
+  padding-right: 0.5em;
   display: inline-block;
   &::after {
     content: '';
@@ -319,6 +319,20 @@
     height: 1em;
     margin-left: 0.375em;
     background: transparent icon(download, 'none', 24px, 24px, 0, 0, 24, 24.5, $fm-gray, 1.5) no-repeat right center /contain;
+  }
+}
+.icon-download-white {
+  position: relative;
+  display: inline-block;
+  color: $white;
+  &::after {
+    content: '';
+    display: inline-block; 
+    position: relative;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.375em;
+    background: transparent icon(download, 'none', 24px, 24px, 0, 0, 24, 24.5, $white, 1.5) no-repeat right center /contain;
   }
 }
 .icon-required {
