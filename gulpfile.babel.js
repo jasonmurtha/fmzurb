@@ -158,18 +158,6 @@ function styleGuideMF(done) {
     template: 'src/styleguide/template_mf.html'
   }, done);
 }
-function styleGuideSF(done) {
-  sherpa('src/styleguide/index_sf.md', {
-    output: PATHS.dist + '/styleguide/styleguide_sf.html',
-    template: 'src/styleguide/template_sf.html'
-  }, done);
-}
-function styleGuideCM(done) {
-  sherpa('src/styleguide/index_cm.md', {
-    output: PATHS.dist + '/styleguide/styleguide_cm.html',
-    template: 'src/styleguide/template_cm.html'
-  }, done);
-}
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
@@ -210,28 +198,10 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptsf)
-    .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_sf.js'))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/js'));
   gulp.src(PATHS.javascriptmf)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_mf.js'))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptcm)
-    .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_cm.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
@@ -252,17 +222,6 @@ function javascript(done) {
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app_bhf.js'))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/js'));
-  landing = PATHS.javascriptLanding;
-  landing.push("src/assets/js/appBof.js");
-  gulp.src(landing)
-    .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('appBof.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))

@@ -125,13 +125,6 @@ PATHS:
     #uncomment for prod if desired 
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
-  javascriptsf:
-    # Libraries requried by Foundation
-    #- "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/dist/what-input.js"
-    # Core Foundation files
-    - "bower_components/foundation-sites/js/foundation.core.js"
-    - "bower_components/foundation-sites/js/foundation.util.*.js"
   javascriptmf:
     # Libraries requried by Foundation
     - "bower_components/what-input/dist/what-input.js"
@@ -245,11 +238,4 @@ PATHS:
     - "src/assets/js/prepRotators.js" 
     - "src/assets/js/shareWidget.js"  
     # Individual Foundation components
-  javascriptcm:
-    # Libraries requried by Foundation
-    # "bower_components/jquery/dist/jquery.js"
-    - "bower_components/what-input/dist/what-input.js"
-    # Core Foundation files
-    - "bower_components/foundation-sites/js/foundation.core.js"
-    - "bower_components/foundation-sites/js/foundation.util.*.js"
 
