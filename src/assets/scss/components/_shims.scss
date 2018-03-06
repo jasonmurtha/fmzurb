@@ -1,3 +1,40 @@
+// shims to override some defaults
+.no-border { border-width: 0 !important; }
+.no-margin { margin: 0 !important; }
+.no-margin-top { margin-top: 0 !important; }
+.no-margin-bottom { margin-bottom: 0 !important; }
+.no-padding { padding: 0 !important; }
+.no-wrap { white-space: nowrap; }
+//use these classes to create variable padding on elements like cards and callouts
+.column {
+  .small-to-default {
+    padding: $callout-padding * 0.5;
+    @include breakpoint(medium) {  
+      padding: $callout-padding * 0.75;
+    }  
+    @include breakpoint(large) {  
+      padding: $callout-padding;
+    }  
+    + .small-to-default {
+      padding-top: 0;
+    }
+  }
+  .small-to-large {
+    padding: $callout-padding * 0.5;
+    @include breakpoint(medium) {  
+      padding: $callout-padding;
+    }
+    @include breakpoint(large) {  
+      padding: $callout-padding * 1.25;
+    }
+    @include breakpoint(xlarge) {  
+      padding: $callout-padding * 1.5;
+    }
+    + .small-to-large {
+      padding-top: 0;
+    }  
+  }
+}
 // content classes to add paddings, margins, gutters etc as needed.
 // for variable padding by breakpoint, look in overrides
 .gutter-top {
@@ -15,7 +52,6 @@
 .gutter-all {
   padding: $gutter;
 }
-
 // Allow gutters to be added only at or below a certain breakpoint.
 @each $size in $breakpoint-classes {  
   @include breakpoint(#{$size} only) {

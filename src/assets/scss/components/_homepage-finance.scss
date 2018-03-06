@@ -50,6 +50,7 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
 	}  
 }
 .finance-pmms-rates {
+  overflow: hidden;
   @include breakpoint(small only) {  // 
     background: linear-gradient(to right, color-shift($finance-bg2, $finance-bg3, 5, 2) 0%,color-shift($finance-bg2, $finance-bg3, 5, 2) 33.333%, color-shift($finance-bg2, $finance-bg3, 5, 3) 33.333%, color-shift($finance-bg2, $finance-bg3, 5, 3) 66.6667%, color-shift($finance-bg2, $finance-bg3, 5, 4) 66.6667%, color-shift($finance-bg2, $finance-bg3, 5, 4) 100%);	
   }

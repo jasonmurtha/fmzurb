@@ -75,7 +75,7 @@ a {
     content: "";
     position: absolute;
     display: block;
-    background: transparent icon(play, 'none', 28px, 28px, 0, 0, 200, 200, '#fff', '14') no-repeat top left / contain;
+    background: transparent icon(play, 'none', 28px, 28px, 0, 0, 200, 200, $white, '14') no-repeat top left / contain;
     width: 1.35em;
     height: 1.35em;
     left: rem-calc(9);
@@ -154,21 +154,29 @@ a {
     }
     img {
       opacity: 1;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.2s ease;
       width: 100%;
+    }
+    &.mask-gray {
+      background: $fm-gray; 
+      display: block; 
+      overflow: hidden;      
+      img { 
+        opacity: 0.35;
+      }
     }
     &:hover,
     &:focus,
     .card:hover &  {
       color: $white;
+      background: $primary-color;
       img {
         opacity: 0.22; 
       }
       &.mask::after {
         background-color: transparent;
       }
-    }
-    
+    } 
   }
 
   .modal-launch {
@@ -273,8 +281,6 @@ a {
     } 
   }
 }
-
-
 @media print { 
   .overlay-gradient > img { padding-right: 50%; }
   .video-length { display: none; }  

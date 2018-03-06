@@ -209,6 +209,7 @@
 .secured-white {
   position: relative;
   overflow: visible;
+  color: $white;
   &::after {
     content: '';
     position: relative;
@@ -345,6 +346,9 @@
     height: 1em;
     color: $fm-red;
     text-align: right;
+  }
+  .outline &:not(.is-invalid-label)::after {    
+    color: $white;
   }
 }
 

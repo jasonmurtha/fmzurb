@@ -2,6 +2,14 @@
 .orbit-controls-outside {
   margin-left: 1rem;
   margin-right: 1rem;
+  @include breakpoint(medium){
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include breakpoint(large){
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }  
   .orbit-previous, 
   .orbit-next {
     background: none;
@@ -9,8 +17,11 @@
     font-size: 1.5rem;
     @include breakpoint(medium){
       font-size: 2rem;
-    }    
-    @include breakpoint(large){
+    }
+    @include breakpoint(medium){
+      font-size: 2.5rem;
+    }
+    @include breakpoint(xlarge){
       font-size: 3rem;
     }    
     svg { 
@@ -145,5 +156,15 @@
         stroke-width: 2px;
       }
     } 
+  }
+}
+
+.orbit-controls-raised {
+  .orbit-previous,
+  .orbit-next { 
+    top: 40%;
+    @include breakpoint(large) {
+      top: 28%; 
+    }
   }
 }

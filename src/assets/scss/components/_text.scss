@@ -244,14 +244,8 @@ sup, sub {
   font-weight: $global-weight-bold;
   margin: 0.25em 0 0.375em;     
   @include breakpoint(medium) {		
-  font-size: calc(20px +  26 * (100vw - 320px)/1180); 
+  font-size: calc(20px +  10 * (100vw - 320px)/1180); 
 	}
-  main & {
-    @include breakpoint(xlarge only) {
-      font-size: rem-calc(26);
-      font-size: calc(26px +  4 * (100vw - 1270px)/230); 
-    }
-  }
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(30);
 	}
@@ -749,6 +743,9 @@ sup, sub {
 }
 .accent-gray {
   color: $fm-gray;
+}
+.accent-dark-gray {
+  color: $dark-gray;
 }
 .file-flag {
   color: $fm-red;

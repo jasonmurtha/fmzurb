@@ -125,7 +125,9 @@ fieldset {
     background: $fm-green;
 }  
 .outline { 
-  select:not(:active):not(:focus) {
+  select:not(:active):not(:focus),
+  input:not(:active):not(:focus),
+  textarea:not(:active):not(:focus)  {
    color: $white;
   }
   [type="text"], 
