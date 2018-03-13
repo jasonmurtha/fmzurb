@@ -150,13 +150,7 @@ function styleGuideReveal(done) {
   return sherpa('src/styleguide/reveal.md', {
     output: PATHS.dist + '/styleguide/styleguide_reveal.html',
     template: 'src/styleguide/template_foundation.html'
-  }, styleGuideMF(done)); 
-}
-function styleGuideMF(done) {
-  sherpa('src/styleguide/index_mf.md', {
-    output: PATHS.dist + '/styleguide/styleguide_mf.html',
-    template: 'src/styleguide/template_mf.html'
-  }, done);
+  }, done); 
 }
 // Compile Sass into CSS
 // In production, the CSS is compressed
@@ -198,24 +192,6 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptmf)
-    .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_mf.js'))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/js'));
-  gulp.src(PATHS.javascriptmfsbl)
-    .pipe($.sourcemaps.init())
-    .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_mf_sbl.js'))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/multifamily/new_standard/sbl/'));
   landing = PATHS.javascriptLanding;
   landing.push("src/assets/js/appBetterHousing.js");
   gulp.src(landing)
