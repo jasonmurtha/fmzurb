@@ -20,14 +20,14 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 
 # Standard Content Modals
 
-- All standard content modals should include 3 extra classes on the `.reveal` element: `.full` to enforce that the modal should always cover the full screen, and a dark [background color class](#colors).
+- All standard content modals should include an extra class on the `.reveal` element to specify a dark [background color](#colors).
 - The close button is automatically attached to the `.modal-header`, so for this style of modal, it is required.
 - Modals by default are accessible through the use of various ARIA attributes.  To make a modal even more accessible, designate a label to the modal by adding an `id` attribute on the elment you want to designate as the label (such as a heading inside the modal) and then adding the same value into an `aria-labelledby` attribute on the modal container.
 
 ```html_example
 <p class="gutter-bottom flex-up">View a modal <a data-open="fullModal1" aria-controls="fullModal1">on green</a>.</p>
 
-<div class="reveal full background-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
+<div class="reveal background-green" id="fullModal1" data-reveal aria-labelledby="Modal1-label">
   <div class="modal-content">
     <div class="row">
       <div class="column xlarge-offset-1 xlarge-10 end">
@@ -48,7 +48,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 ```html_example
 <p class="gutter-bottom flex-up">View a modal <a data-open="fullModal2" aria-controls="fullModal2">on orange</a>.</p>
 
-<div class="reveal full background-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
+<div class="reveal background-orange" id="fullModal2" data-reveal aria-labelledby="Modal2-label">
   <div class="modal-content">
     <div class="row">
       <div class="column xlarge-offset-1 xlarge-10 end">
@@ -68,7 +68,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 ```html_example
 <p class="gutter-bottom flex-up">View a modal <a data-open="fullModal3" aria-controls="fullModal3">in a white frame on blue</a> with <strong>additional modal header</strong>.<p>
 
-<div class="reveal full background-blue" id="fullModal3" data-reveal>
+<div class="reveal background-blue" id="fullModal3" data-reveal>
   <div class="modal-content">
     <div class="row">
       <div class="column xlarge-offset-1 xlarge-10 end">
@@ -95,7 +95,7 @@ A standard modal dialog is just an empty container, so you can put any kind of c
 ```html_example
 <p class="gutter-bottom flex-up">View a modal <a data-open="fullModal4" aria-controls="fullModal4">in a white frame on teal</a>.</p>
 
-<div class="reveal full background-teal" id="fullModal4" data-reveal>
+<div class="reveal background-teal" id="fullModal4" data-reveal>
   <div class="modal-content">
     <div class="row">
       <div class="column xlarge-offset-1 xlarge-10 end">
@@ -125,7 +125,7 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 </ul>
 
 <!-- This is the first modal -->
-<div class="reveal full background-purple" id="exampleModalA" data-reveal>
+<div class="reveal background-purple" id="exampleModalA" data-reveal>
   <div class="modal-content">
     <div class="modal-header">
       <h2 id="exampleModalB-label">Modal Label</h2>
@@ -170,7 +170,7 @@ It's possible for modals to open other modals. Create a second modal with a uniq
 </div>
 
 <!-- This is the nested modal -->
-<div class="reveal full background-orange" id="exampleModalB" data-reveal>
+<div class="reveal background-orange" id="exampleModalB" data-reveal>
   <div class="modal-content">
     <div class="modal-header">
       <h2 id="exampleModalB-label">Modal Label</h2>

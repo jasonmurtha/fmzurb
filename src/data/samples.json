@@ -19,14 +19,6 @@
       "name":"Loan LookUp Form",
       "url":"/loanlookup/index.html"
    },
-   {  
-       "name":"MF SBL",
-       "url":"/multifamily/new_standard/sbl/"
-   },
-   {  
-      "name":"Multifamily",
-      "url":"/multifamily/"
-   },
    {
        "name": "National Homeownership Month",
        "url": "/corporate/national-homeownership-month/"
@@ -46,10 +38,6 @@
    {
         "name":"Alt Nav Dev Page",
         "url":"/corporate/altnav/about.html"
-   },
-   {  
-       "name":"MF Customer Appreciation",
-       "url":"/multifamily/customer-appreciation/"
    }
   ] 
 } 
