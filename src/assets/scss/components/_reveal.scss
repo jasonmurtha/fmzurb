@@ -18,7 +18,7 @@ left: 0 !important;
       padding-top: rem-calc(40);
       padding-top: calc(40px +  54 * (100vw - 320px)/1180); 
       @include breakpoint(xxlarge) {
-        padding-top: rem-cal(94);
+        padding-top: rem-calc(94);
       }
       > div { 
         position: relative;
