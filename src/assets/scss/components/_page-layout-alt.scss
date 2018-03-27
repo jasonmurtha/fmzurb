@@ -1,108 +1,156 @@
+.row {
+  max-width: rem-calc(1380);
+  margin-left: auto;
+  margin-right: auto; 
+  &.iw_stretch  {
+    max-width: none;
+    > .large-12 {
+      @include grid-col-collapse; 
+    }
+  }
+}
+
+.row:not(.expanded) .row {
+  max-width: rem-calc(1380);
+}
+.row:not(.expanded) {
+  .page-title,
+  .footer-promo,
+  .pre-footer-promo,
+  .hero-blended,
+  .row-wrapper {  
+    > .row { 
+      @include constrained-row;      
+    }
+  }
+  .nav-global {  
+    > .row { 
+      @include constrained-row; 
+      @include breakpoint(large down) {
+        padding-left: 0;
+        padding-right: 0;
+      }  
+      > .column {
+        @include breakpoint(large down) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }    
+}
+.iw_viewport-wrapper > div:nth-child(3) {
+  // 1-col layout
+  > .iw_container {
+    @include breakpoint(large) {
+      @include constrained-row;
+    }
+     > .large-12 {      
+      @include breakpoint(medium down) {
+        padding-left: rem-calc($gutter * 1.5);
+        padding-right: rem-calc($gutter * 1.5);
+      }
+    } 
+  }
+  
+  // 2 col layout
+  > .iw_stretch > .large-12 > .iw_row {
+    @include breakpoint(medium down) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include breakpoint(large) {
+      @include constrained-row;
+    }  
+    > .iw_columns.large-7 {      
+      @include breakpoint(medium down) {
+        padding-left: rem-calc($gutter * 1.5);
+        padding-right: rem-calc($gutter * 1.5);
+      }
+    }
+    > .iw_columns.large-5 {    
+      @include breakpoint(medium down) {
+        padding: 0;  
+        > :last-child {
+          padding-bottom: 0;
+        }
+      }
+      @include breakpoint(large) {
+        padding-left: 5%;
+      }
+      @include breakpoint(xlarge) {
+        padding-left: 9%;
+      }
+    }
+  }
+  > .iw_stretch > .large-12,
+  > .iw_container > .large-12  {
+    position: relative;
+    > :first-child {
+      padding-top: rem-calc(32);   // this value is needed in the adjustSidebar script
+      @include breakpoint(xlarge) {
+        padding-top: rem-calc(58);   // this value is needed in the adjustSidebar script
+      }
+    }
+    > :last-child {
+      padding-bottom: rem-calc(30); 
+      @include breakpoint(large) {
+        padding-bottom: rem-calc(64); 
+      }
+      @include breakpoint(xlarge) {
+        padding-bottom: rem-calc(100); 
+      }
+    }
+  }
+}
+.tertiary-nav {  
+  .large-5 & { 
+    @include breakpoint(large) {
+      margin-top: rem-calc(-133);
+    }
+    @include breakpoint(xlarge) {
+      margin-top: rem-calc(-133);
+    }
+  }
+}
+section {   
+  .large-5 & {  
+    margin: 0;
+    padding: $gutter * 1.5;      
+    @include breakpoint(large) {
+      padding: $gutter;
+    }  
+    @include breakpoint(xlarge) {
+      padding: $global-padding * 1.9 $global-padding * 2;
+    }
+  }
+}
 @media screen {
   .whatinput-types-mouse {
     overflow-y: scroll;   //prevent right scroll bar from disappearing when mobile nav is toggled on and off.
   }
-  .ribbon,
-  .breadcrumb-wrapper,
-  .page-title,
-  .content-band,
-  .share-wrapper,
-  .footer-promo,
-  .pre-footer-promo,
-  .footer,
-  .hero-blended,
-  .hero,
-  .two-column-layout {
-    padding-right: rem-calc($gutter);
-    padding-left: rem-calc($gutter);  
-    @include breakpoint(xlarge) {
-      padding-right: rem-calc($gutter * 2);
-      padding-left: rem-calc($gutter * 2); 
-    }
-  }
-  .nav-global,
-  .expand-desktop {
-    > .row > .column {
-      @include breakpoint(large down) {
-        padding: 0;
-      }
-    }
-    @include breakpoint(xlarge) {
-      padding-right: rem-calc($gutter * 2);
-      padding-left: rem-calc($gutter * 2);
-    }   
-  }
   .content-band {
-    padding-top: rem-calc(32);
-    padding-bottom: rem-calc(30); 
+    margin-top: 2rem;
+    margin-bottom: $gutter * 1.5; 
     @include breakpoint(large) {
-      padding-bottom: rem-calc(64); 
+      margin-bottom: 4rem; 
     }
     @include breakpoint(xlarge) {
-      padding-top: rem-calc(54.4);
-      padding-bottom: rem-calc(100); 
-    }
-    .content-band {
-      padding-left: 0;
-      padding-right: 0;
+      margin-top: rem-calc(55);
+      margin-bottom: rem-calc(100); 
     }
     &.even {
-      padding-top: rem-calc($gutter);
-      padding-bottom: rem-calc($gutter);  
+      margin: $gutter 0;    
       @include breakpoint(large) {
-        padding-top: rem-calc($gutter*2);
-        padding-bottom: rem-calc($gutter*2); 
+        margin: $gutter*2 0;  
       }
       @include breakpoint(xlarge) {
-        padding-top: rem-calc($gutter*3);
-        padding-bottom: rem-calc($gutter*3); 
-      }      
-    }
-  }
-
-  .content-band {
-    > .row {
-      > .large-7 {
-        position: relative;
-        z-index: 3;
-        > .jut {
-          margin-bottom: rem-calc(24);
-          @include breakpoint(large) { 
-            width: 106%; 
-          }
-          @include breakpoint(xlarge) { 
-            width: 112%; 
-          }
-        }
-      }
-      > .large-5 {
-        position: relative;
-        z-index: 4;
-        @include breakpoint (medium down) {
-          padding: 0;
-          clear: both;
-          float: none;          
-          margin-right: rem-calc(-$gutter);
-          margin-left: rem-calc(-$gutter);
-          width: calc(100% + 40px);
-        }
-        @include breakpoint(large) {
-          padding-left: 5%;
-        }
-        @include breakpoint(xlarge) {
-          padding-left: 9%;
-        }
-        section {    
-          margin: 0;
-          padding: $gutter * 1.5;      
-          @include breakpoint(large) {
-            padding: $gutter;
-          }  
-          @include breakpoint(xlarge) {
-            padding: $global-padding * 1.9 $global-padding * 2;
-          }
-        }
+        margin: $gutter*3 0;
       } 
+      .content-band {
+        padding-left: 0;
+        padding-right: 0;
+      }      
     }
   }
 }

@@ -1,19 +1,15 @@
 ﻿---
 title: Our Business
-layout: corporate
-bodyclass: grid-2col
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"About","url":"/about/"},{"name":"Our Business"}]
+prefooter: footer-promo-pmms
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Our Business</h1>
-  </div>
-</div>
-
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <p>America relies on Freddie Mac to support the housing market and the nation’s renters, homebuyers, and homeowners – across the entire country and in all economic cycles. Since being chartered by Congress in 1970, we have fulfilled our mission to keep mortgage money flowing, support the stability of the housing market, and promote housing affordability.  And we continue to lead the housing industry forward, building a better housing finance system – for today and for tomorrow.</p>
       <p>Freddie Mac operates in the U.S. secondary mortgage market. That means we don’t lend directly to borrowers but buy loans that meet our standards from approved lenders. With the money that lenders receive in return, they can make loans to other qualified borrowers.  In securitizing pools of mortgages and selling the securities to investors, we shift a significant portion of the credit risk associated with the loans we own to private investors – away from taxpayers.</p>
       <hr>
@@ -38,10 +34,10 @@ bodyclass: grid-2col
       
 
 
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
+    </div>
+  </div>
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
       <section class="sidebar background-concrete">
         <div class="row">
           <div class="column">
@@ -78,6 +74,8 @@ bodyclass: grid-2col
           </div>
         </div>
       </section>
+    </div>
+    <div class="iw_component">
       <section class="sidebar background-blue sidebar-feature">
         <div class="feature-background" style="background-image: url('/about/images/moving-housing-forward.jpg')"></div>
         <div class="row">
@@ -90,13 +88,6 @@ bodyclass: grid-2col
           </div>
         </div>
       </section>
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-{{> share-widget}}
-
-{{> footer-promo-pmms}}
-

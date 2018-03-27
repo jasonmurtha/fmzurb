@@ -1,20 +1,16 @@
 ﻿---
-title: Research Insights
-layout: corporate
-bodyclass: grid-2col
+title: Insight
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Research","url":"/research"},{"name":"Insight"}]
+prefooter: footer-promo-research-signup
 ---
 
-<div class="page-title">
-  <div class="row column">
-    <h1>Research: Insights</h1>
-  </div>
-</div>
-
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
-      <h2>Insights</h2>
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <ul class="no-bullet clipping-block">
       <li class="media-object blurb3-leads-image2 stack-for-small">
         <div class="media-object-section">
@@ -72,19 +68,18 @@ bodyclass: grid-2col
           <p class="gutter-top text-center"><a class="button secondary">View More</a></p>     
         </div>  
       </div>     
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
-        {{> sidebar-posts-research}} 
-        {{> sidebar-cta-research}} 
-        {{> sidebar-contact-research}} 
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
+  </div>    
+
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      {{> sidebar-posts-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-cta-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-contact-research}} 
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-{{> share-widget}}
-
-{{>footer-promo-research-signup}}

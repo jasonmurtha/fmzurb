@@ -1,19 +1,16 @@
 ﻿---
 title: Our Community
-layout: corporate
-bodyclass: grid-2col
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"About","url":"/about/"},{"name":"Our Community"}]
+prefooter: footer-promo-pmms
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Our Community</h1>
-  </div>
-</div>
 
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <div class="callout large background-green">
         <div class="row">
           <div class="column medium-6">
@@ -62,21 +59,15 @@ bodyclass: grid-2col
           </div>
         </li>
       </ul>
-
       <p class="text-center gutter-top"><a href="#">Equal Opportunity in Employment and Contracting</a>  |  <a href="#">Supplier Diversity Policy</a></p>
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
-    {{> sidebar-myhome-promo}}
-    {{> sidebar-creditsmart-promo}}
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
+  </div>
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">	
+      {{> sidebar-myhome-promo}}
+    </div>
+    <div class="iw_component">
+      {{> sidebar-creditsmart-promo}}
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-{{> share-widget}}
-
-{{> footer-promo-pmms}}
-

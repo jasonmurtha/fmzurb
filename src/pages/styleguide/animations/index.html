@@ -1,0 +1,68 @@
+﻿---
+title: Motion-UI Examples
+layout: corporate-altnav
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Motion-UI Examples"}]
+transitions:
+  - name: "Fade"
+    url:  "animation1.html"	
+  - name: "Hinge From Y-Axis"
+    url:  "animation2.html"
+  - name: "Hinge From X-Axis"
+    url:  "animation3.html"
+  - name: "Scale Up and Down"
+    url:  "animation4.html"
+  - name: "Hinge From Left"
+    url:  "animation5.html"
+  - name: "Hinge From Right"
+    url:  "animation6.html"
+  - name: "Hinge From Top"
+    url:  "animation7.html"
+  - name: "Hinge From Bottom"
+    url:  "animation8.html"
+  - name: "Slide From Left"
+    url:  "animation9.html"
+  - name: "Slide From Right"
+    url:  "animation10.html"
+  - name: "Slide Down"
+    url:  "animation11.html"
+  - name: "Slide Up"
+    url:  "animation12.html"
+  - name: "Spin Clockwise"
+    url:  "animation13.html"
+  - name: "Spin Counter-Clockwise"
+    url:  "animation14.html"
+animations: 
+  - name: "Wiggle"
+    url:  "animation15.html"
+  - name: "Shake"
+    url:  "animation16.html"
+  - name: "Spin Clockwise"
+    url:  "animation17.html"
+  - name: "Spin Counter-Clockwise"
+    url:  "animation18.html"
+---
+
+
+<div class="iw_component">
+  <div class="row">
+    <div class="column medium-6">
+      <h2>Transitions</h2>
+      <p>Transitions affect ojects as they change state -- either moving into or out of view.</p>
+      <ol>
+        {{#each transitions}}
+          <li><a href="{{url}}">{{name}}</a></li> 
+        {{/each}}
+      </ol>
+    </div>
+    <div class="column medium-6">
+      <h2>Animations</h2>
+      <p>Animations affect objects that remain in view.  They can be timed, or can occur on events, such as hover or click.</p>
+      <ol>
+        {{#each animations}}
+          <li><a href="{{url}}">{{name}}</a></li> 
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+</div>

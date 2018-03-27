@@ -43,7 +43,7 @@
       margin-bottom: 4rem; 
     }
     @include breakpoint(xlarge) {
-       margin-top: rem-calc(55);
+      margin-top: rem-calc(55);
       margin-bottom: rem-calc(100); 
     }
     &.even {

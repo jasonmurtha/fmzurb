@@ -1,20 +1,16 @@
 ﻿---
 title: Freddie Mac News Release Archive
-layout: corporate
-bodyclass: grid-2col
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Media Room", "url":"/media-room/"},{"name":"Press Release Archive"}]
+prefooter: footer-promo-mission
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Freddie Mac News Release Archive</h1>
-  </div>
-</div>
 
-
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <p>To view archived data related to our <a href="http://www.freddiemac.com/news/finance/">Economic and Housing Research</a> -- including PMMS, Monthly Refinance &amp; ARM Shares, and Refinancing Activity Reports -- <a href="http://www.freddiemac.com/news/finance/">visit here</a>.</p>
       <div class="row">
         <div class="small-12 medium-2 column">
@@ -93,14 +89,7 @@ bodyclass: grid-2col
       </ul>
       
       <div class="content-band-inner gutter-bottom">
-        <!-- marketwire navigation -->
-        <div class="text-center gutter-top"  id="prssTable_paginate">
-        <span title="First" class="first paginate_button" id="prssTable_first">First</span>
-        <span title="Previous" class="previous paginate_button" id="prssTable_previous">Previous</span>
-        <span><span class="paginate_active" title="1">1</span> <span class="paginate_button" title="2">2</span> </span>
-        <span title="Next" class="next paginate_button" id="prssTable_next">Next</span>
-        <span title="Last" class="last paginate_button" id="prssTable_last">Last</span>
-        </div>      
+        Marketwire pagination goes here  
       </div>
  
        <!-- canned legal footer -->
@@ -111,31 +100,18 @@ bodyclass: grid-2col
       <!-- Marketwire share widget -->
       <p><em>Marketwire's share & print widgets would go here.</em></p>
       
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
-      {{> sidebar-contact-media}}
-      {{> sidebar-cta-media}}
-      {{> sidebar-media-search}}
-      
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
-  </div>
-</div>
-<!-- END TWO COLUMN LAYOUT  -->
+    </div>
+  </div>    
 
-<div class="background-yellow footer-promo">
-  <div data-equalize-on="large" data-equalizer class="row">
-      <div data-equalizer-watch="" class="column large-8">
-        <h3 class="callout-footer-title">Getting To Know Freddie Mac</h3>
-        <p>Every day, Freddie Mac employees ensure mortgage credit is available for America's families and help rebuild the nation's housing finance system.</p>
-        <p>Learn how Our Mission is making a positive impact.</p>
-      </div>
-      <div data-equalizer-watch class="column large-offset-1 large-3 position-relative">
-        <div class="footer-promo-cta">
-         <a href="#" class="hollow large button">Our Mission</a>
-        </div>
-      </div>
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      {{> sidebar-contact-media}}
+    </div>
+    <div class="iw_component">  
+      {{> sidebar-cta-media}}
+    </div>
+    <div class="iw_component">  
+      {{> sidebar-media-search}}
+    </div>
   </div>
 </div>

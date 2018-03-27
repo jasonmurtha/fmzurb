@@ -1,19 +1,16 @@
 ﻿---
-title: Loan Lookup
-layout: corporate
-bodyclass: grid-2col
+title: Loan Lookup Tool
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Loan Look-Up Tool"}]
+onload: formSetup
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Loan Look-Up Tool</h1>
-  </div>
-</div>
 
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row">
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">    
       <p class="lead">To understand the options available for getting help with your mortgage &ndash; including the federal <a href="http://myhome.freddiemac.com/refinance/understand-harp.html">Home Affordable Refinance Program&reg;</a> (HARP) &ndash; it's important for you to know who owns your loan.</p>
 
       <p>Using the secured look-up tool below, you can quickly find out if Freddie Mac owns your loan. <strong>Please enter your information carefully </strong>&ndash; a spelling error or other small mistake could cause an inaccurate result. Abbreviations, typos, or including the "Street Type" in the "Street Name" field can also lead to inaccurate results.</p>
@@ -137,33 +134,31 @@ bodyclass: grid-2col
 
         <label for="ssn" class="icon-required">Last 4 Digits of Social Security Number (Format: ####)</label>
         <input type="password" id="ssn" name="ssn" required pattern="ssn" minlength="4" maxlength="4" placeholder="####">
-        <p class="help-text" id="passwordHelpText"><a data-open="modalSS" aria-controls="modalSS">Why do we ask for Social Security?</a></p>      
-
+        <p class="help-text" id="passwordHelpText"><a data-open="modalSS" aria-controls="modalSS">Why do we ask for Social Security?</a></p> 
         <div class="reveal full background-purple" id="modalSS" data-reveal aria-labelledby="modalSS-label">
           <div class="modal-content">
             <div class="modal-header">
               <h2 id="modalSS-label">Social Security Number</h2>
             </div>
             <div class="callout large background-white">
-            <h3>Why do we ask for your Social Security Number</h3>
-            <ul>
-            <li>Freddie Mac takes protecting your privacy seriously. We ask for your Social Security Number (SSN) to help us confirm that the requested information is being given to the mortgage holder or to someone authorized by the mortgage holder to receive the information.</li>
-            <li>We ask for your SSN because it allows us to quickly and accurately determine if your mortgage is held by Freddie Mac and to deliver an answer to you immediately. Providing a SSN increases the speed and accuracy of the look-up response.</li>
-            <li>We take measures to protect the SSN that you deliver to us (see below).</li>
-            </ul>
-            <h3>How do we handle your SSN after you enter it?</h3>
-            <ul>
-            <li>The SSN you enter within this form is only used to answer your specific look-up request. We do not save the number you enter or distribute it to a third party for any other purpose.</li>
-            <li>All information you enter in this form is transmitted from your web browser to our site via an encrypted communication channel. Please review our <a href="http://www.freddiemac.com/terms/privacy.html">privacy policy</a> for more details.</li>
-            </ul>
-            <h3>Do you have to provide your SSN number?</h3>
-            <ul>
-            <li>No. If you wish, you may submit an <a href="avoiding_foreclosure_form.html">email request</a> that does not require your SSN. Our customer service representatives will respond as quickly as they can, but given current demand it may take several days. Please be patient.</li>
-            </ul>
+              <h3>Why do we ask for your Social Security Number</h3>
+              <ul>
+                <li>Freddie Mac takes protecting your privacy seriously. We ask for your Social Security Number (SSN) to help us confirm that the requested information is being given to the mortgage holder or to someone authorized by the mortgage holder to receive the information.</li>
+                <li>We ask for your SSN because it allows us to quickly and accurately determine if your mortgage is held by Freddie Mac and to deliver an answer to you immediately. Providing a SSN increases the speed and accuracy of the look-up response.</li>
+                <li>We take measures to protect the SSN that you deliver to us (see below).</li>
+              </ul>
+              <h3>How do we handle your SSN after you enter it?</h3>
+              <ul>
+                <li>The SSN you enter within this form is only used to answer your specific look-up request. We do not save the number you enter or distribute it to a third party for any other purpose.</li>
+                <li>All information you enter in this form is transmitted from your web browser to our site via an encrypted communication channel. Please review our <a href="http://www.freddiemac.com/terms/privacy.html">privacy policy</a> for more details.</li>
+              </ul>
+              <h3>Do you have to provide your SSN number?</h3>
+              <ul>
+                <li>No. If you wish, you may submit an <a href="avoiding_foreclosure_form.html">email request</a> that does not require your SSN. Our customer service representatives will respond as quickly as they can, but given current demand it may take several days. Please be patient.</li>
+              </ul>
             </div>
           </div>
-        </div>        
-        
+        </div>         
         <fieldset>
           <legend class="icon-required"> Verification</legend>
           <input type="checkbox" id="Verify_0" name="Verify" value="Yes" required>
@@ -183,46 +178,31 @@ bodyclass: grid-2col
           </div>
         </div>
       </form>
-    
-      <p>Home Affordable Refinance Program&reg; is a registered trademark of the U.S. Department of Treasury.</p>  
-
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
-<section class="sidebar background-yellow">
-  <div class="row">
-    <div class="column">
-      <div class="sidebar-txt">
-        <h3>Support Information</h3>
-            <p>If you are having difficulty paying your mortgage on time, your lender (also referred to as a mortgage servicer) should be your first call for assistance. They want to help you. Their telephone number and mailing address should be listed on your monthly statement.</p>
-      </div>
+      <p>Home Affordable Refinance Program&reg; is a registered trademark of the U.S. Department of Treasury.</p> 
     </div>
   </div>
-</section>    
-<section class="sidebar background-teal">
-  <div class="row">
-    <div class="column">
-      <div class="sidebar-txt">
-        <h3>My Home by Freddie Mac<sup>&reg;</sup></h3>
-        <p>Information and guidance on options to stay in your home, options to leave your home, working with a housing counselor or your lender, avoiding fraud and more.</p>
-      </div>
-      <p><a class="hollow button" href="http://myhome.freddiemac.com/">Learn More</a></p>
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      <section class="sidebar background-yellow">
+        <div class="sidebar-txt">
+          <h3>Support Information</h3>
+              <p>If you are having difficulty paying your mortgage on time, your lender (also referred to as a mortgage servicer) should be your first call for assistance. They want to help you. Their telephone number and mailing address should be listed on your monthly statement.</p>
+        </div>
+      </section> 
     </div>
-  </div>
-</section>
-
-
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
+    <div class="iw_component">
+      <section class="sidebar background-teal">
+        <div class="sidebar-txt">
+          <h3>My Home by Freddie Mac<sup>&reg;</sup></h3>
+          <p>Information and guidance on options to stay in your home, options to leave your home, working with a housing counselor or your lender, avoiding fraud and more.</p>
+        </div>
+        <p><a class="hollow button" href="http://myhome.freddiemac.com/">Learn More</a></p>
+      </section>
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-{{> share-widget}}
 
 <script type="text/javascript"> 
-
 function trimExtraneous(val) {
 //	val = val.replace(/[()\[\]{}<>!@#$%^&*_+=|\\/~`]/g,'');
 	return val.replace(/([.,'-]){2,}/g, "$1");
@@ -247,6 +227,4 @@ $('#MyMortgageLookUp')
     console.log("Submit for form id "+ev.target.id+" intercepted");
   });
 }
-
-window.onload = formSetup;
 </script>

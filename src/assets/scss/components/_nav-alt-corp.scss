@@ -15,12 +15,12 @@
   }
 }
 .is-mobile-expanded {
-  + div,
-  + div + div,
-  + div + div + div { 
-    display: none; 
-    transition: display 0.5s ease;
-  }
+  .iw_viewport-wrapper {
+    > div:not(:first-child) { 
+      display: none; 
+      transition: display 0.5s ease;
+    }  
+  } 
 } 
 .nested {
   display: none;
@@ -33,7 +33,7 @@
 }
 
 .logo-corp { 
-  padding: rem-calc($gutter * 3/4 $gutter/2 0 $gutter *1.5);
+  padding: rem-calc($gutter * 3/4 $gutter/2 0 $gutter * 1.5);
   display: inline-block;
   @include breakpoint (large down) {
     transition: display 0.35s ease;
@@ -134,6 +134,9 @@
     width: 100%;
     border-bottom: 1px solid rgba($white, 0.5);
     transition: background 0.5s ease; 
+  }
+  .float-right {
+    padding-right: rem-calc($gutter/2);
   }
   .mobile-home-text {
     color: $primary-color;
@@ -339,14 +342,13 @@
         position: relative;
         z-index: 491; 
         text-align: right;
-        max-width: rem-calc(1380);
-        margin: 0 auto;
+        @include constrained-row; 
       }
       > ul {
         @include breakpoint(xlarge) {
           position: relative;
           float: right; 
-        }  
+        }
         > li {
           > a {
             @include breakpoint(xlarge) {
@@ -373,7 +375,8 @@
               }
             }
           }
-          &:last-child {
+          &:last-child,
+          &.last-visible-xlarge {
             > a {    // set to 10 to keep right edge lined up
               @include breakpoint(xlarge) {
                 padding-right: rem-calc($gutter/2);
@@ -447,8 +450,9 @@
           display: block !important;  
           position: relative;
           z-index: 498; 
-          max-width: rem-calc(1380);
-          margin: 0 auto;
+         @include breakpoint(xlarge) {
+           @include constrained-row; 
+         }
         > ul {
           @include breakpoint(xlarge) {
             display: block !important;

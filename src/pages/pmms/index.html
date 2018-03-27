@@ -1,19 +1,17 @@
 ﻿---
 title: Mortgage Rates
-layout: corporate
-bodyclass: grid-2col
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Research","url":"/research"},{"name":"Mortgage Rates"}]
+prefooter: footer-promo-pmms
+onload: addShare
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Mortgage Rates</h1>
-  </div>
-</div>
 
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row">
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <p class="lead"><strong>Mortgage Rates Trending Up</strong></p>
 
       <p class="lead">Treasury yields marched higher this week. As a result, the 30-year mortgage rate jumped 7 basis points to 3.66 percent. The Federal Reserve’s decision to leave the Federal funds rate unchanged triggered a 9 basis point drop in the 10-year Treasury yield on Wednesday, however the drop occurred too late to impact this week’s survey.</p>
@@ -33,25 +31,27 @@ bodyclass: grid-2col
     </div>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">     
-        {{> tertiary-pmms}}
-        {{> sidebar-featured-research}}
-        {{> sidebar-posts-research}} 
-        {{> sidebar-cta-research}} 
-        {{> sidebar-contact-research}}    
-     </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
+  </div>    
+
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component"> 
+      {{> tertiary-pmms}}
+    </div>
+    <div class="iw_component">
+      {{> sidebar-featured-research}}
+    </div>
+    <div class="iw_component">
+      {{> sidebar-posts-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-cta-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-contact-research}}    
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-
-{{> share-widget}}
-
-{{> footer-promo-pmms}}
 
 <script type="text/javascript"> 
 function addShare() {
@@ -59,5 +59,4 @@ function addShare() {
   $('.page-title:first').append(share);
   shareLinkUpdate1();
 }
-window.onload = addShare;
 </script>

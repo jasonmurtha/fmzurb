@@ -9,6 +9,7 @@ COMPATIBILITY:
   - "ie >= 9"
   - "and_chr >= 30"
   - "ff >= 30"
+  - "ios >= 7"
 
 # UnCSS will use these settings
 UNCSS_OPTIONS:

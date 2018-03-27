@@ -1,35 +1,26 @@
 ﻿---
-title: Blog Rental Housing
-layout: corporate
-bodyclass: grid-2col
+title: Rental Housing
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Blog","url":"/blog/"},{"name":"Rental Housing"}]
 ---
 
-<div class="page-title">
-  <div class="row column">
-    <h1>Rental Housing</h1>
-  </div>
-</div>
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">      
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">   
       <div class="row small-up-2 xlarge-up-3 jut card-block" data-equalizer data-equalize-by-row="true">
       {{> blog-cards}}
       </div>
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">  
+    </div>
+  </div>
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">	 	
       {{> sidebar-cta-blog}}
-      {{> sidebar-tags-blog}}
-      
-    </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
+    <div class="iw_component">
+      {{> sidebar-tags-blog}}     
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-{{> share-widget}}
-
-

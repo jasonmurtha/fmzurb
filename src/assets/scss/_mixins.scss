@@ -66,6 +66,41 @@
     }  
   } 
 }
+//
+@mixin constrained-row(){
+  max-width: rem-calc(1400);
+  margin-left: auto;
+  margin-right: auto;   
+  padding-right: rem-calc(20);
+  padding-left: rem-calc(20); 
+  @include breakpoint(xlarge) {
+    padding-right: rem-calc(40);
+    padding-left: rem-calc(40); 
+    max-width: rem-calc(1400+60);
+  }
+  @include breakpoint(xxlarge) {
+    padding-right: rem-calc(50);
+    padding-left: rem-calc(50); 
+    max-width: rem-calc(1400+40+40);
+  }
+  &li,
+  &.column {
+    padding-right: rem-calc(30);
+    padding-left: rem-calc(30); 
+    @include breakpoint(large) {
+      padding-right: rem-calc(40);
+      padding-left: rem-calc(40);
+    }
+    @include breakpoint(xlarge) {
+      padding-right: rem-calc(60);
+      padding-left: rem-calc(60); 
+    }
+    @include breakpoint(xxlarge) {
+      padding-right: rem-calc(60);
+      padding-left: rem-calc(60); 
+    }
+  }
+}
 // anchors that aren't buttons, when used over dark backgrounds (modals, rotators, call outs, etc.)
 @mixin anchor-on-dark($decoration: underline){
   &.block,

@@ -1,18 +1,16 @@
 ﻿---
 title: Meet Kamara
 layout: corporate-altnav
+grid: 2-col
 bodyclass: 
-breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"name":"About","url":"/about/"},{"name":"Our People","url":"/about/people/"},{"name":"Our Employees","url":"/about/people/employees.html"},{"name":"Meet Our Employees","url":"/about/people/meet-employees.html"},{"name":"Meet Kamara"}]
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"About","url":"/about/"},{"name":"Our People","url":"/about/people/"},{"name":"Our Employees","url":"/about/people/employees.html"},{"name":"Meet Our Employees","url":"/about/people/meet-employees.html"},{"name":"Meet Kamara"}]
+onload: addShare
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Meet Kamara</h1>
-  </div>
-</div>
 
-<div class="content-band">
-  <div class="row"> 
-    <div class="column large-7">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
       <p><img alt="Kamara" src="http://www.freddiemac.com/about/images/meet_kamara_banner.jpg" /></p>
       <p class="lead">Kamara remembers the exact moment when she fully realized the difference her work makes in people's lives. It was at the grand opening of an apartment property for low-income seniors in Chicago.</p>
       <div class="box-right-40">
@@ -36,8 +34,10 @@ breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"nam
       <hr />      
  
     </div>
-    
-    <div class="column large-5">						 
+  </div>    
+
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
       <div class="tertiary-nav">
         <h2><a href="/about/people/">Our People</a></h2> 
         <nav>
@@ -58,7 +58,8 @@ breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"nam
           </ul>
         </nav>
       </div>
-                        
+    </div>
+    <div class="iw_component">
       <section class="sidebar background-gray">
         <div class="row">
           <div class="column medium-6 large-12">
@@ -71,7 +72,10 @@ breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"nam
             </blockquote>       
           </div>
         </div>
-      </section><section class="sidebar background-primary">
+      </section>
+    </div>
+    <div class="iw_component">
+      <section class="sidebar background-primary">
         <div class="row">
           <div class="column">
             <div class="sidebar-txt">
@@ -82,7 +86,8 @@ breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"nam
           </div>
         </div>
       </section>
-
+    </div>
+    <div class="iw_component">
       <section class="sidebar background-blue">
         <div class="row">
           <div class="column">
@@ -94,12 +99,13 @@ breadcrumb: [{"name":"FreddieMac.com"},{"name":"Home","url":"/corporate/"},{"nam
           </div>
         </div>
       </section>						
-							
-       
     </div>
   </div>
 </div>
 
-{{> share-widget}}
-
-
+<script type="text/javascript"> 
+function addShare() {
+  var share = $(".share-wrapper:first").clone() || "";
+  $('.page-title:first').append(share);
+}
+</script>

@@ -47,7 +47,7 @@
 // ---------
 
 $global-font-size: 16px;
-$global-width: rem-calc(1380); 
+$global-width: rem-calc(1500);  
 $global-lineheight: 1.4;
 $light-gray: #f4f4f4;
 $medium-gray: #464645;
@@ -114,7 +114,7 @@ $breakpoints: (
   small: 0,     // FYI: min width on the body element is 320
   medium: 570px,  // was 600 but knocked it down just a tad 1/13
   large: 980px,  // position where aside and main stack/unstack
-  xlarge: 1230px,  // position where we swap between mobile and desktop nav
+  xlarge: 1260px,  // position where we swap between mobile and desktop nav
   xxlarge: 1500px,
 );
 $print-breakpoint: medium;
@@ -123,7 +123,7 @@ $breakpoint-classes: (small medium large xlarge);
 // 3. The Grid
 // -----------
 
-$grid-row-width: $global-width;
+$grid-row-width: none;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
@@ -623,7 +623,7 @@ $thumbnail-radius: $global-radius;
 
 $titlebar-background: $white;
 $titlebar-color: $white;
-$titlebar-padding: 0 $gutter/2 0 0;
+$titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $primary-color;
 $titlebar-icon-color-hover: $primary-color;

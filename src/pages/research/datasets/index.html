@@ -1,20 +1,28 @@
 ﻿---
 title: Additional Datasets
-layout: corporate
-bodyclass: grid-2col
+layout: corporate-altnav
+grid: 2-col
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Research","url":"/research"},{"name":"Additional Datasets"}]
+prefooter:  footer-promo-pmms
 ---
-<div class="page-title">
-  <div class="row column">
-    <h1>Additional Datasets</h1>
-  </div>
-</div>
 
-<!-- START TWO COLUMN LAYOUT NO HERO -->
-<div class="two-column-layout">
-  <div class="row two-column-row">
-    <!-- START MAIN PAGE CONTENT -->
-    <main class="column">
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">    
+      <p class="lead">We conduct a variety of additional research and analysis that we make available to the public. This information provides ongoing insight into activities and trends in the housing market and the broader economy.</p>
+      <h3 class="article-headline"><a href="#">Single-Family Loan-Level Dataset</a></h3>
+      <p>Freddie Mac makes available loan-level credit performance data on a portion of fully amortizing fixed-rate mortgages that the company purchased or guaranteed from 1999 to 2015 to help investors build more accurate credit performance models in support of ongoing risk-sharing initiatives.</p>
+      <h3 class="article-headline"><a href="#">Quarterly Refinance Statistics</a></h3>
+      <p>Our quarterly analysis shows the refinancing trends of borrowers who recently refinanced their home loans.</p>
+      <h3 class="article-headline"><a href="#">The Federal Cost of Funds Index (COFI)</a></h3>
+      <p>COFI is used as a benchmark for some types of mortgage loans and securities. It is calculated as the sum of the monthly average interest rates for marketable Treasury bills and for marketable Treasury notes, divided by two, and rounded to three decimal places.</p>
+      <hr>
+      <p class="reduce">Opinions, estimates, forecasts and other views contained in this document are those of Freddie Mac's Economic &amp; Housing Research group, do not necessarily represent the views of Freddie Mac or its management, should not be construed as indicating Freddie Mac's business prospects or expected results, and are subject to change without notice. Although the Economic &amp; Housing Research group attempts to provide reliable, useful information, it does not guarantee that the information is accurate, current or suitable for any particular purpose. The information is therefore provided on an “as is” basis, with no warranties of any kind whatsoever. Information from this document may be used with proper attribution. Alteration of this document is strictly prohibited. &copy;2017 by Freddie Mac.</p>
 
+
+			<h2>FAQs</h2>
       <ol class="accordion-faq" data-accordion>
         <li class="accordion-item" data-accordion-item>
           <a href="#" class="accordion-title">What is the Refinance Report?</a>
@@ -66,21 +74,21 @@ bodyclass: grid-2col
         </li>
         
       </ol>    
-    </main>
-    <!-- END MAIN PAGE CONTENT -->
-    <!-- START RIGHT SIDEBAR -->
-    <aside class="column">     
-        {{> sidebar-featured-post}}
-        {{> sidebar-posts-research}} 
-        {{> sidebar-cta-research}} 
-        {{> sidebar-contact-research}}    
-     </aside>
-    <!-- END RIGHT SIDEBAR -->
+    </div>
+  </div>    
+
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      {{> sidebar-featured-post}}
+    </div>
+    <div class="iw_component">
+      {{> sidebar-posts-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-cta-research}} 
+    </div>
+    <div class="iw_component">
+      {{> sidebar-contact-research}}          
+    </div>
   </div>
 </div>
-<!-- END TWO COLUMN LAYOUT  -->
-
-
-{{> share-widget}}
-
-{{> footer-promo-pmms}}

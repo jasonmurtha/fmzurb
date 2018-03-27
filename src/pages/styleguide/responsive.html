@@ -2,7 +2,27 @@
 title: Responsive Sampler
 layout: default
 description: Responsive Sampler, handy for getting an image of a page at different breakpoints.
+onload: pageLoad
 ---
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function pageLoad() {
+  var first = getUrlVars()["url"] || 'http://www.freddiemac.com/index.html';
+  if(window.location.href.match(/extcstage/)){ first = first.replace(/www\.freddiemac\.com/i, 'extcstage.fhlmc.com:8090') }
+  var first = decodeURIComponent(first).replace(/\#$/,'');
+  $("#mobile").attr('src', first+"?mobile");
+  $("#tablet").attr('src', first+"?tablet");
+  $("#laptop").attr('src', first+"?laptop");
+  $("#desktop").attr('src', first+"?desktop");    
+}
+</script>
 <style>
 body { background-color: black; }
 .previewdisplay{position:relative;min-height:900px; width:1600px; margin: 2em auto 0;}
@@ -55,25 +75,3 @@ margin:0;padding:0;position:relative;background-color:#fff;border-color:#000}
     </div>
   </section>
 </div>
-<script>
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-
-function pageLoad() {
-  var first = getUrlVars()["url"] || 'http://www.freddiemac.com/index.html';
-  if(window.location.href.match(/extcstage/)){ first = first.replace(/www\.freddiemac\.com/i, 'extcstage.fhlmc.com:8090') }
-  var first = decodeURIComponent(first).replace(/\#$/,'');
-  $("#mobile").attr('src', first+"?mobile");
-  $("#tablet").attr('src', first+"?tablet");
-  $("#laptop").attr('src', first+"?laptop");
-  $("#desktop").attr('src', first+"?desktop");    
-}
-
-window.onload = pageLoad;
-
-</script>
