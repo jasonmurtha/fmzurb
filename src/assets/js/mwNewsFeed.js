@@ -8,9 +8,11 @@ function convertDate(dt) {
     str = monthNames[mm] + " " + dd +", 20" + dtParts[2];
   return str;
 }
-function tidyBlurb(str){
-  var tidy = str.replace('(OTCQB: FMCC)','').replace(/\s*MCLEAN,\s*VA--/,'').replace(/Marketwired\s*-\s*/,'').replace(/\s*\(.{3}\s+\d\d?, \d{4}\)\s*-?\s*/,'').replace(/@*\s*Freddie\s+Mac/g, ' Freddie Mac').replace(/@/g, '&reg;');
-  return tidy;
+function tidyBlurb(str, d){
+var $date = convertDate(d).split(/\s+/), 
+    $regex = new RegExp("^" + $date[0] + " " + $date[1] + " " + $date[2] + " "),  
+    $tidy = str.replace(/\(OTCQB:\s?FMCC\)/,'').replace('(GLOBE NEWSWIRE) --', '').replace(/\s*MCLEAN,\s*VA\.?,?(--)?\s*/i,'').replace(/Marketwired\s*-\s*/,'').replace(/\s*\(.{3}\s+\d\d?, \d{4}\)\s*-?\s*/,'').replace(/@*\s*Freddie\s+Mac/g, ' Freddie Mac').replace(/@/g, '&reg;').replace(/\s+/g, ' ').replace($regex, '');
+  return $tidy;
 }
 
 function getMediaRoomData() {
@@ -48,10 +50,10 @@ function getHomePageData() {
 
 
 function useMediaRoomData(data) {
-  var $html = '', $feature = '', $curr = '', $blurb;
+  var $html = '', $feature = '', $curr = '', $blurb, $date, $regex;
   for (var i = 0,len = data.releases.length; i < len; i++) {
     $curr = data.releases[i];
-    $blurb = tidyBlurb($curr.intro); 
+    $blurb = tidyBlurb($curr.intro, $curr.date);
     if(i == 0)  {
       $feature = '<div class="callout large background-primary release-featured"><div class="article-date-lg">' + convertDate($curr.date) + '</div><h2><a href="' + $curr.url + '">' + $curr.title + '</a></h2><p class="lead">' + $blurb + '</p><p><a class="button hollow" href="' + $curr.url + '">Read More</a></p></div>';
       $('.recent-headlines-container:first').before($feature);
@@ -67,7 +69,7 @@ function useInvestorData(data) {
   var $html = '', $feature = '', $curr = '', $blurb;
   for (var i = 0,len = data.releases.length; i < len; i++) {
     $curr = data.releases[i];
-    $blurb = tidyBlurb($curr.intro); 
+    $blurb = tidyBlurb($curr.intro,  $curr.date); 
     $html += '<li><div class="article-date-lg">' + convertDate($curr.date) + '</div><h3 class="article-headline"><a href="' + $curr.url + '">' + $curr.title + '</a></h3><p>' + $blurb + ' <a href="' + $curr.url + '">More</a></p></li>';    
   }
   $('.investor-headlines-container:first').html($html);   
@@ -77,7 +79,7 @@ function useHomePageData(data) {
   var $html = '', $curr = '', $blurb;
   for (var i = 0,len = data.releases.length; i < len; i++) {
     $curr = data.releases[i];     
-    $blurb = tidyBlurb($curr.intro); 
+    $blurb = tidyBlurb($curr.intro,  $curr.date); 
     $html += '<h2 class="homepage-headline icon-chevron-right-circle-blue"><a href="' + $curr.url + '">' + $curr.title + '</a></h2><p>' + $blurb + '</p>';               
   }
   if ($html !== '') {
