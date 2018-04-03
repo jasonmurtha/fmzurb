@@ -77,7 +77,15 @@
       else {
         toggleExpand();
       }
-		}; 
+		},
+    checkFilter  = function(evt){
+      if($frm.find('.filter-field').length || $frm.find('[name="filterTopic"]:checked').length){
+        applyFilter();
+      }
+    },
+    exitFilter = function(evt){
+      // console.log('leaving page');
+    }; 
     $acc.on("up.zf.accordion", function(){
       console.log("up triggered");
       toggleExpand();
@@ -123,5 +131,12 @@
 if($('.data-filterable').length) {
   if($('.data-filterable').find('.accordion-pointer').length == $('.data-filterable').find('form').length) { 
     $('.data-filterable').filterAccContent();
+    if ("onpagehide" in window) {
+        window.addEventListener("pageshow", checkFilter, false);
+        window.addEventListener("pagehide", exitFilter, false);
+    } else {
+        window.addEventListener("load", checkFilter, false);
+        window.addEventListener("unload", exitFilter, false);
+    }    
   }
 }
