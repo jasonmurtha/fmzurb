@@ -119,7 +119,6 @@ PATHS:
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
     # comment for prod code. this is just for local site
-    # "src/assets/js/fakeNavAlt_corp.js"  
     - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"

@@ -62,7 +62,23 @@
                   <a class="show-on-focus reduce" href="#skipper">Skip to Content</a>
                   {{> ribbon-corp-alt}}
                   {{> nav-mobile-corp}}
-                </header>
+                </header>                
+                <script>
+                  var d= document, 
+                  nav1 = {{#if navLevel1}}'{{navLevel1}}'{{else}}'none'{{/if}},
+                  snav = nav1.replace(/^section/, 'subnav'), 
+                  nav2 = {{#if navLevel2}}'{{navLevel2}}'{{else}}'none'{{/if}};
+                  if(d.getElementById(nav1)){ 
+                    d.getElementById(nav1).classList.add('active');
+                    if(d.getElementById(nav2)){
+                      d.getElementById(nav2).classList.add('active');
+                    }
+                    if (d.getElementById(snav) && d.getElementById(snav + '-list').getElementsByTagName('li').length > 1) { 
+                      d.getElementById(snav).classList.add('expand-desktop'); 
+                      d.getElementById('header-nav').classList.add('header-extend');
+                    } 
+                  }
+                </script>
                 <!--googleon: all--> 
               </div>
             </div>
@@ -96,7 +112,7 @@
                   </div>
                   <div id="skipper"></div>
                 </span>
-              </div>               
+              </div>         
               <div class="iw_component">
                 {{#ifequal herotype "title" }} 
                 <div class="page-title">
@@ -186,7 +202,7 @@
             {{else}}
           <div class="row iw_row iw_container"> 
           {{/ifequal}} 
-            <div class="columns iw_columns large-12">         
+            <div class="columns iw_columns large-12">           
               {{> body}}   
             </div>
           </div>
@@ -222,10 +238,10 @@
                 {{#if javascript}}    
                 <script src="{{ javascript }}"></script>
                 {{/if}}
-                {{#if onload }}
-                  <script type="text/javascript">
+                {{#if onload}}
+                <script type="text/javascript">
                   window.onload = {{onload}};
-                  </script>
+                </script>
                 {{/if}}
               </div> 
             </div> 
