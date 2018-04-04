@@ -81,7 +81,6 @@ PATHS:
     - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
-    #uncomment for prod if desired 
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
   javascriptcorpalt:
@@ -118,11 +117,9 @@ PATHS:
     - "src/assets/js/adjustSidebar-alt.js"
     - "src/assets/js/prepModals.js"
     - "src/assets/js/prepRotators.js" 
-    # comment for prod code. this is just for local site
     - "src/assets/js/mwNewsFeed.js"
     - "src/assets/js/tertiaryNav_corp.js"   
     - "src/assets/js/appCorp.js"
-    #uncomment for prod if desired 
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
   javascriptLanding:

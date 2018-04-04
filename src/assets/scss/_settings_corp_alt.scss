@@ -49,7 +49,7 @@
 $global-font-size: 16px;
 $global-width: rem-calc(1500);  
 $global-lineheight: 1.4;
-$light-gray: #f4f4f4;
+$light-gray: #f4f4f4;  // note: darken($light-gray, 10%) = #dbdbdb;  darken($light-gray, 18.5%) = #cecece;
 $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
@@ -175,8 +175,8 @@ $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
-$list-side-margin: 1.5rem;
-$list-nested-side-margin: 1.5rem;
+$list-side-margin: 1.5em;
+$list-nested-side-margin: 1.5em;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
@@ -418,15 +418,14 @@ $form-button-radius: $button-radius;
 // 20. Label
 // ---------
 
-$label-background: $primary-color;
-$label-color: foreground($label-background);
-$label-color-alt: $black;
-$label-palette: (
-  default: $fm-blue,
-);
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius;
+$label-background: transparent;  // not used
+$label-color: inherit;  // not used
+$label-color-alt: inherit;  // not used
+$label-palette: none;  // not used
+$label-font-size: rem-calc(14);
+$label-padding: 0.4em 1.5em;
+$label-radius: 0;
+
 
 // 21. Media Object
 // ----------------

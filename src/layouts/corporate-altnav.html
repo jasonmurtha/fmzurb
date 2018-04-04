@@ -35,8 +35,10 @@
     <meta name="twitter:image" content="{{ image }}" />
     {{else}}
     <meta property="og:image" content="/images/banner/gen_social_image.jpg" />
-    {{/if}}
+    {{/if}}    
+    {{#if url}}
     <meta property="og:url" content="{{ url }}" />
+    {{/if}}
     {{#if author}}
     <meta name="author" content="{{ author }}" />
     {{/if}}
@@ -49,7 +51,11 @@
     {{/if}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
+  {{#if bodyclass}}
+  <body class="{{ bodyclass }}">
+    {{else}}
   <body>
+  {{/if}}
     <div id="body-wrapper" data-toggler=".is-mobile-expanded">
       <div class="iw_viewport-wrapper"> 
         <div class="iw_section">
@@ -231,10 +237,7 @@
           <div class="row iw_row iw_stretch"> 
             <div class="columns iw_columns large-12"> 
               <div class="iw_component">
-                <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
-                <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
-                <script src="/js/vendor/somni_code.js"></script>
-                <script src="/js/app_corp_alt.js"></script>
+                {{> footer-js-corp-alt}}
                 {{#if javascript}}    
                 <script src="{{ javascript }}"></script>
                 {{/if}}
