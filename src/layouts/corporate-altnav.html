@@ -45,7 +45,7 @@
     <meta name="theme-color" content="#88BD45">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/ss/app_corp_alt.css" />
+    <link rel="stylesheet" href="/ss/app_corp2.css" />
     {{#if stylesheet}}    
     <link rel="stylesheet" href="{{ stylesheet }}" />
     {{/if}}
@@ -62,13 +62,10 @@
           <div class="row iw_row iw_stretch">
             <div class="columns iw_columns large-12">
               <div class="iw_component">
+                <a class="show-on-focus reduce" href="#skipper">Skip to Content</a>
                 <div class="show-for-print">FreddieMac.com</div> 
                 <!--googleoff: all-->
-                <header id="header-nav" class="header-nav hide-for-print">
-                  <a class="show-on-focus reduce" href="#skipper">Skip to Content</a>
-                  {{> ribbon-corp-alt}}
-                  {{> nav-mobile-corp}}
-                </header>                
+                 {{> corp-content-header}}
                 <script>
                   var d= document, 
                   nav1 = {{#if navLevel1}}'{{navLevel1}}'{{else}}'none'{{/if}},
@@ -118,7 +115,7 @@
                   </div>
                   <div id="skipper"></div>
                 </span>
-              </div>         
+              </div>
               <div class="iw_component">
                 {{#ifequal herotype "title" }} 
                 <div class="page-title">
@@ -228,7 +225,7 @@
               {{/if}}
               
               <div class="iw_component">
-               {{> footer-corp-alt}}
+               {{> footer-corp}}
               </div> 
             </div> 
           </div> 
@@ -238,6 +235,7 @@
             <div class="columns iw_columns large-12"> 
               <div class="iw_component">
                 {{> footer-js-corp-alt}}
+
                 {{#if javascript}}    
                 <script src="{{ javascript }}"></script>
                 {{/if}}

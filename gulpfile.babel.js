@@ -186,7 +186,7 @@ function javascript(done) {
   gulp.src(PATHS.javascriptcorpalt)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_corp_alt.js'))
+    .pipe($.concat('app_corp2.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
