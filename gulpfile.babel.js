@@ -9,6 +9,8 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import replace  from 'gulp-replace';
+import rename   from 'gulp-rename';
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
@@ -25,7 +27,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide)
+  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide, postsass, styleLS, javascriptLS)
 );
 
 gulp.task('guide',
@@ -155,12 +157,14 @@ function styleGuideReveal(done) {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
-  return gulp.src('src/assets/scss/{app_,home}*.scss')
+  var source = 'src/assets/scss/{app_,home}*.scss';
+  if(!PRODUCTION){ source = 'src/assets/scss/{app_,home,de}*.scss'; }
+  return gulp.src(source)
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
     })
-      .on('error', $.sass.logError))
+    .on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
@@ -168,6 +172,36 @@ function sass() {
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/ss'))
     .pipe(browser.reload({ stream: true }));
+}
+function postsass(done){
+  if(!PRODUCTION){ 
+  gulp.src(PATHS.dist + '/ss/{dev,app_corp2}.css')
+    .pipe($.if(!PRODUCTION, $.concat('app_corp2.css')))
+    .pipe($.if(!PRODUCTION, gulp.dest(PATHS.dist + '/ss')));
+  }
+  done();
+}
+
+// Create LiveSite version of css with different global image paths
+function styleLS(done) {
+  if(PRODUCTION) {
+    gulp.src(PATHS.dist + '/ss/app_corp2.css')
+    .pipe(replace('(/images/', '(/fmac-resources/images/'))
+    .pipe(rename("app_corp_ls.css"))
+    .pipe(gulp.dest(PATHS.dist + '/ss'));
+  } 
+  done();
+}
+
+// Create LiveSite version of js with different global image paths
+function javascriptLS(done) {
+  if(PRODUCTION) { 
+    gulp.src(PATHS.dist + '/js/app_corp2.js')
+    .pipe(replace('"/images/', '"/fmac-resources/images/'))
+    .pipe(rename("app_corp_ls.js"))
+    .pipe(gulp.dest(PATHS.dist + '/js'));
+  }
+  done();
 }
 
 // Combine JavaScript into one file
@@ -206,7 +240,6 @@ function javascript(done) {
   done();
 }
 
-
 // Copy images to the "dist" folder
 function images() {
   return gulp.src('src/assets/img/**/*')
@@ -235,7 +268,7 @@ function watch() {
   gulp.watch('src/pages/**/**/images/*').on('change', gulp.series(copy, browser.reload));
   gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages, browser.reload));
-  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('change', gulp.series(sass, postsass, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/*').on('change', gulp.series(styleGuide, browser.reload));
