@@ -46,8 +46,7 @@ $(".nav-bus-section").on("mouseleave", function(){
     if($t.attr('aria-expanded') === "true"){
       $t.find('a').blur().triggerHandler('click'); 
     }
- }); 
- 
+}); 
 
 $(window).on('changed.zf.mediaquery', function(e, nS, oS){
   if((nS==="xlarge" || nS==="xxlarge")){
@@ -67,7 +66,7 @@ $(window).on('changed.zf.mediaquery', function(e, nS, oS){
 $(function(){  
   $('#nav-main, #body-wrapper').attr('aria-expanded', "false");
   $("#nav-search").on('on.zf.toggler', function(){ 
-    $("#mobile-search").focus(); 
+    $("#mobile-search").focus();
   });
   $("#menu-toggle").on('click', function(){ 
     if ($('#nav-search').attr('aria-expanded') === "true") {

@@ -5,16 +5,20 @@
         <div class="title-bar">
           <div class="float-right hide-for-xlarge">
             <button id="search-toggle" class="search-icon button" type="button" data-toggle="nav-search" aria-label="toggle search">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.11 64.57"><defs><style>.a{fill:none;stroke-width:8px;}.a,.b{stroke:#00a6e2;}.b{fill:#00a6e2;stroke-linecap:round;stroke-width:7px;}</style></defs><circle class="a" cx="23.67" cy="23.67" r="20.17"/><line class="b" x1="38.19" y1="37.66" x2="62.11" y2="61.57"/></svg>
-            </button><button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="nav-main body-wrapper" aria-label="toggle menu"></button>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 54 54" class="stroke-anchor"><g stroke-width="6" fill="none"><circle cx="17" cy="17" r="16"/><line x1="28.4" y1="28.4" x2="47" y2="47"/></g></svg>
+            </button><button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="nav-main body-wrapper" aria-label="toggle menu">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 54 54" class="stroke-anchor" stroke-width="6">
+              <g class="menu"><line x1="1" y1="44" x2="47" y2="44"/><line x1="1" y1="24" x2="47" y2="24"/><line x1="1" y1="4" x2="47" y2="4"/></g>
+              <g class="menu-close"><line x1="1" y1="1" x2="47" y2="47"/><line x1="47" y1="1" x2="1" y2="47"/></g>
+            </svg>
+            </button>
           </div>
           <a href="/" class="logo-corp">
             <img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo">
           </a>
-          <a href="/" class="mobile-home-text hide-for-xlarge">Freddie Mac Home</a>
         </div>
       </div> 
-      <nav class="nav-main ease-in-out" id="nav-main" role="navigation" data-toggler aria-expanded="false" data-animate="slide-in-down slide-out-up">      
+      <nav class="nav-main ease-in-out fast" id="nav-main" role="navigation" data-toggler aria-expanded="false" data-animate="slide-in-down slide-out-up">      
         <div class="nav-section" id="section-perspectives">
           <a id="nav-perspectives" class="show-for-xlarge" href="/perspectives/">Perspectives</a>
           <ul class="no-bullet vertical menu hide-for-xlarge" id="subnav-perspectives" data-accordion-menu>
@@ -102,30 +106,33 @@
             <li class="nav-accordion-parent nav-bus-toggle"><a href="#">Our Businesses</a>
               <ul class="menu vertical nested" id="subnav-bus-list">
                 <li><a href="/singlefamily/"><h4>Single-Family</h4>
-                      <p>For lenders, servicers and industry partners</p></a></li>
+                  <p>For lenders, servicers and industry partners</p></a>
+                </li>
                 <li><a href="/multifamily/"><h4>Multifamily</h4>
-                      <p>For lenders, servicers, borrowers and investors</p></a></li>
+                  <p>For lenders, servicers, borrowers and investors</p></a>
+                </li>
                 <li><a href="/capital-markets/"><h4>Capital Markets</h4>
-                      <p>For securities investors</p></a></li>
+                  <p>For securities investors</p></a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>  
-        <div class="nav-section hide-for-xlarge">
+        <div class="nav-section hide-for-xlarge  nav-bus-section-mobile">
           <ul class="no-bullet vertical menu">
             <li class="mobile-nav-topic">Our Businesses</li>
             <li><a href="/singlefamily/">Single-Family</a></li>
             <li><a href="/multifamily/">Multifamily</a></li>
             <li><a href="/capital-markets/">Capital Markets</a></li>        
             <li class="mobile-nav-topic">Renters, Buyers, &amp; Owners</li> 
-            <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup></a></li>
-            <li><a href="https://ww3.freddiemac.com/loanlookup/">Do we own your mortgage?</a></li>
-            <li><a href="https://www.homesteps.com/">Homes for Sale</a></li>
+            <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup><div class="weight-light nav-description">Resources to help you rent, buy and own your home.</div></a></li>
+            <li><a href="https://ww3.freddiemac.com/loanlookup/">Do we own your mortgage?<div class="weight-light nav-description">Find out if Freddie Mac owns your loan using our secured lookup tool.</div></a></li>
+            <li><a href="https://www.homesteps.com/">Homes for Sale<div class="weight-light nav-description">Buy a home from HomeSteps<sup>&reg;</sup>, the real estate sales unit of Freddie Mac.</div></a></li>
           </ul>
         </div>
       </nav> 
 
-      <div class="nav-search ease-in-out" aria-expanded="false" id="nav-search" data-toggler data-animate="slide-in-down slide-out-up">
+      <div class="nav-search ease-in-out fast" aria-expanded="false" id="nav-search" data-toggler data-animate="slide-in-down slide-out-up">
         <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
           <input type="hidden" name="entqr" value="0">
           <input type="hidden" name="output" value="xml_no_dtd">
