@@ -68,6 +68,14 @@ $(function(){
   $("#nav-search").on('on.zf.toggler', function(){ 
     $("#mobile-search").focus();
   });
+  $("#search-toggle").on('click', function(){ 
+    if ($('#body-wrapper').attr('aria-expanded') === "true") {
+      if ($('#nav-main').attr('aria-expanded') === "true") {
+        $('#nav-main').foundation('toggle');
+      }
+      $('#body-wrapper').foundation('toggle');
+    }
+  });
   $("#menu-toggle").on('click', function(){ 
     if ($('#nav-search').attr('aria-expanded') === "true") {
       $('#nav-search').foundation('toggle');
