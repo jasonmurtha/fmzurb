@@ -15,18 +15,32 @@
   }
 }
 .iw_viewport-wrapper {
-  > div:not(:first-child) { 
-      opacity: 1;
-      transition:  display 0.2s linear, opacity 0.4 linear;
+  > div:nth-child(n+3) { 
+    @include breakpoint(medium down){       
+      overflow: auto;
+    }
+  }
+  > div:nth-child(n+2) { 
+     @include breakpoint(large down){
+        opacity: 1;
+        max-height: 9999vh;
+     //   transition-delay: 300ms;
+        transition: max-height 350ms linear 300ms, opacity 400ms linear 300ms;
+      }
   }
 }
 .is-mobile-expanded {
   .iw_viewport-wrapper {
-    > div:not(:first-child) { 
-      display: none; 
-      opacity: 0.5;
-      transition:  display 0.2s linear, opacity 0.4 linear;
-    }  
+    > div:nth-child(n+2) { 
+      @include breakpoint(large down){
+        opacity: 0;
+        max-height: 1rem;
+        overflow: hidden;
+      //  transition-delay: 300ms;
+        transition:  opacity 300ms linear 300ms, max-height 800ms linear 0ms;
+       // -ms-overflow-style: none;
+      }
+    }
   } 
 } 
 .nested {
@@ -83,14 +97,14 @@
 svg {
   .menu {
     opacity: 1;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.25s ease;
   }
   .menu-close {
     opacity: 0;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.25s ease;
   }
 }
-.is-mobile-expanded[aria-expanded="true"]  {   
+.is-mobile-expanded  {   
   svg {
     .menu {
       opacity: 0;
@@ -209,6 +223,7 @@ svg {
   }
   @include breakpoint(large down) {
     background-color: $light-gray; 
+    min-height: 101%;
   }
   .nav-global & {
     @include breakpoint(large down) { 
@@ -219,17 +234,6 @@ svg {
       z-index: 399;
     }
   }
-  &[aria-expanded="false"]:not(.slide-in-down):not(.slide-out-up) {
-    @include breakpoint(large down) { 
-      display: none;
-    }
-  }  
-  &.fade-out.mui-leave,
-  &.fade-out.mui-enter  {
-    @include breakpoint(large down) { 
-      transition-duration: 200ms !important;
-    }
-  }   
   .nav-bus-section {   
     > li {
       @include breakpoint(xlarge) {
@@ -449,7 +453,7 @@ svg {
           width: 100%;
           left: 0;
           @include mosaic-fill;
-          z-index: 99999999999;
+          z-index: 600;
         }   
       } 
       z-index: 497;

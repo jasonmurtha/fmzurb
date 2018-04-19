@@ -126,9 +126,6 @@ section {
   }
 }
 @media screen {
-  .whatinput-types-mouse {
-    overflow-y: scroll;   //prevent right scroll bar from disappearing when mobile nav is toggled on and off.
-  }
   .content-band {
     margin-top: 2rem;
     margin-bottom: $gutter * 1.5; 
