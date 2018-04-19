@@ -2,7 +2,6 @@
   background: $light-gray;
   line-height: 1.25;
   color: $fm-gray;
-  border-top: 1px solid darken($light-gray, 9.8039);
   font-weight: $global-weight-normal;
   @include breakpoint(xlarge) {
     display: none;

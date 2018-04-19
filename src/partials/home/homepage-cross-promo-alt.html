@@ -1,16 +1,6 @@
----
-title: Freddie Mac Homepage
-layout: corporate
-bodyclass: 
-stylesheet: /ss/homepage-orig.css
-javascript: 
-breadcrumb: 
-navLevel1: 'none'
-navLevel2: 'none'
----
 <div class="background-concrete">
   {{> homepage-hero-rotator}}
-  <div class="homepage-headlines content-band">
+  <div class="homepage-headlines content-band row-wrapper">
     <div class="row">
       <div class="large-5 xlarge-5 medium-offset-1 medium-11 column">
         <div class="homepage-headlines-dominant">
@@ -27,28 +17,22 @@ navLevel2: 'none'
               {{> homepage-headline-blog}}
           </div>
         </div>
-      </div>  
+      </div>    
     </div>
   </div>
   {{> homepage-business-lines}}
-
-  {{> homepage-multifamily-viewpoint}}
-
+  {{> homepage-multifamily-viewpoint_alt}}
   <div class="finance-offset">
     <div class="finance-research">
-      <div class="row">
-        {{> homepage-finance-recent}}
+      <div class="row collapse">
+        {{> homepage-finance-recent-alt}}
       </div> 
     </div>  
     <div class="finance-pmms">
-      <div class="row" data-equalizer data-equalize-on="medium">
-          {{> homepage-finance-pmms}}
+      <div class="row collapse" data-equalizer data-equalize-on="medium">
+          {{> homepage-finance-pmms-alt}}
       </div>
     </div>
   </div>
-
-
   {{> homepage-careers}}
 </div>
-{{> share-widget}} 
-{{>footer-promo-about-fm}}

@@ -7,7 +7,7 @@
   }
   .nav-global & {
     position: absolute;
-    margin-top: rem-calc(70); 
+    margin-top: rem-calc(80); 
     top: 0;
     width: 100%;
     z-index: 399;
@@ -16,12 +16,9 @@
   border-top: 1px solid darken($light-gray, 9.8039);
   border-bottom: 1px solid $fm-yellow;
   background-color: $fm-yellow;
-  max-height: rem-calc(96); //6rem;
+  max-height: rem-calc(96); 
   &[aria-expanded="false"]:not(.slide-in-down):not(.slide-out-up) {
     display: none;
-  }
-  @media screen and (min-width: 400px) {
-    // padding: rem-calc($gutter/2 $gutter * 1.5 $gutter/2 $gutter * 1.5);
   }
   form {
     width: 100%;

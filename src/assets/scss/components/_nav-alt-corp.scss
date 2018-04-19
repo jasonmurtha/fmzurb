@@ -14,12 +14,33 @@
     margin: 0;
   }
 }
+.iw_viewport-wrapper {
+  > div:nth-child(n+3) { 
+    @include breakpoint(medium down){       
+      overflow: auto;
+    }
+  }
+  > div:nth-child(n+2) { 
+     @include breakpoint(large down){
+        opacity: 1;
+        max-height: 9999vh;
+     //   transition-delay: 300ms;
+        transition: max-height 350ms linear 300ms, opacity 400ms linear 300ms;
+      }
+  }
+}
 .is-mobile-expanded {
   .iw_viewport-wrapper {
-    > div:not(:first-child) { 
-      display: none; 
-      transition: display 0.5s ease;
-    }  
+    > div:nth-child(n+2) { 
+      @include breakpoint(large down){
+        opacity: 0;
+        max-height: 1rem;
+        overflow: hidden;
+      //  transition-delay: 300ms;
+        transition:  opacity 300ms linear 300ms, max-height 800ms linear 0ms;
+       // -ms-overflow-style: none;
+      }
+    }
   } 
 } 
 .nested {
@@ -33,14 +54,14 @@
 }
 
 .logo-corp { 
-  padding: rem-calc($gutter * 3/4 $gutter/2 0 $gutter * 1.5);
+  padding: rem-calc(17 10 16 30);
   display: inline-block;
   @include breakpoint (large down) {
     transition: display 0.35s ease;
   }
   img {
-    width: rem-calc(116);
-    height: rem-calc(41);
+    width: rem-calc(133);
+    height: rem-calc(47);
   }
   @include breakpoint (xlarge) {
     padding: rem-calc(21 0 16);  // 1.3125rem 0 1rem;
@@ -51,45 +72,47 @@
     }
   }
 }
-.is-mobile-expanded[aria-expanded="true"] .logo-corp {
-  @include breakpoint (large down) {
-    display: none;
-  }
-}
+
 .toggle-icon,
 .search-icon,
 .search-button {
-  height: rem-calc(40); //2.5rem;
-  width: rem-calc(30); //1.875rem;
-  margin: rem-calc($titlebar-icon-spacing);
-  padding: rem-calc(7 0);
-  transition: background 0.3s ease;
+  padding: rem-calc($titlebar-icon-spacing);
+  margin: 0;
+  background: transparent;
   border-width: 0;
   border-radius: 0; 
   display: inline;
-}
-.button.toggle-icon {
-  background: transparent icon(menu, $primary-color, 28, 24, 0, 0, 28, 24) no-repeat center center;       
-}
-.is-mobile-expanded[aria-expanded="true"] .button.toggle-icon {
-  background: transparent icon(menu-close, $white, 26, 26) no-repeat center center;          
-}
-.button.search-icon {
-  background: transparent;
-  svg {
-    width: 100%;
-    height: 100%;
-    stroke-color: $primary-color;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  svg {  
+    height: rem-calc(27);
+    width: rem-calc(27); 
+    fill: none;
+    stroke: $anchor-color;
+    vertical-align: middle;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
   }
 }
-.is-mobile-expanded[aria-expanded="true"] .search-icon {  
-  visibility: hidden;
-  width: 0;
-  margin: 0;
-  padding: 0;
-  svg {
-    display: none;
+svg {
+  .menu {
+    opacity: 1;
+    transition: opacity 0.25s ease;
   }
+  .menu-close {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+}
+.is-mobile-expanded  {   
+  svg {
+    .menu {
+      opacity: 0;
+    }
+    .menu-close {
+      opacity: 1;
+    }  
+  } 
 }
 .nav-global {
   font-weight: $global-weight-medium;
@@ -103,7 +126,7 @@
   }
   .menu > li > a { // overriding the ribbon default
     @include breakpoint(large down) {
-      padding: rem-calc(25 30 23);
+      padding: rem-calc(28 52 24 30);
     }
   }
   .nav-bus-section > .menu  > li > a {
@@ -125,38 +148,25 @@
 }
 
 .title-bar {  
-  padding: rem-calc($titlebar-padding);
   z-index: 401;  
   @include breakpoint(large down) {
-    height: rem-calc(70); 
+    height: rem-calc(80); 
     position: relative;
     background-color: $white;
     width: 100%;
-    border-bottom: 1px solid rgba($white, 0.5);
+    border-bottom: 1px solid darken($light-gray, 10%);
     transition: background 0.5s ease; 
-  }
-  .float-right {
-    padding-right: rem-calc($gutter/2);
-  }
-  .mobile-home-text {
-    color: $primary-color;
-    font-size: rem-calc(22); //1.375rem;
-    padding: rem-calc(24 0 0 $gutter * 1.5);
-    text-transform: none;
-    display: none;
-    transition: color 0.6s ease; 
-  }
-  .is-mobile-expanded & {
-    background: $primary-color;     
-    .mobile-home-text {
-      color: $titlebar-color;  
-      display: inline-block;      
-    }
   }    
 }
 
 .nav-section {
   text-transform: uppercase;
+  .nav-description {
+    text-transform: none;
+    padding-top: rem-calc(10);
+    line-height:1.1;
+    font-size: rem-calc(16);
+  }
   @include breakpoint(xlarge) {
     display: table-cell; 
     vertical-align: middle;
@@ -213,21 +223,17 @@
   }
   @include breakpoint(large down) {
     background-color: $light-gray; 
+    min-height: 101%;
   }
   .nav-global & {
     @include breakpoint(large down) { 
       position: absolute;
-      margin-top: rem-calc(70); 
+      margin-top: rem-calc(80); 
       top: 0;
       width: 100%;
       z-index: 399;
     }
   }
-  &[aria-expanded="false"]:not(.slide-in-down):not(.slide-out-up) {
-    @include breakpoint(large down) { 
-      display: none;
-    }
-  }  
   .nav-bus-section {   
     > li {
       @include breakpoint(xlarge) {
@@ -256,11 +262,11 @@
           height: rem-calc(26);   
           width: rem-calc(26); 
           display: block;
-          background: transparent icon(chevron-down, rgba($white, 0.5), 26, 26) no-repeat center center;
+          background: transparent icon(chevron-down, rgba($white, 0.5), 24, 24) no-repeat center center;
           position: absolute;
           top: 50%;
           margin-top: rem-calc(-13);
-          right: rem-calc($gutter * 1.375);
+          right: rem-calc(21);
           transition: background 0.3s ease 0s;
         }
       }
@@ -294,7 +300,8 @@
   }
   .nested {
     @include breakpoint (large down){
-      font-size: rem-calc(16);           
+      font-size: rem-calc(16);     
+      margin-top: -4px; 
       &::after {
         content: "";
         display: block;
@@ -312,13 +319,13 @@
       }
       > li {
         > a {
-          padding: rem-calc($gutter * 0.75 0 $gutter * 0.7 $gutter * 1.5);
+          padding: rem-calc(13 0 12 30);
         }
         &:first-child > a {
           padding-top: rem-calc($gutter * 0.5);
         }
         &:not(.mobile-careers-promo):last-child {
-          padding-bottom: rem-calc($gutter * 0.75);
+          padding-bottom: rem-calc(13);
         }
       }               
     }
@@ -419,7 +426,11 @@
       }
     }
   }
-  
+  .nav-bus-section-mobile {
+    .menu > li:not(.mobile-nav-topic) > a {
+      padding: rem-calc(27 30 23);
+    }
+  }
   .current-hover {  
     > a {
       border-bottom-color: $fm-green;
@@ -442,7 +453,7 @@
           width: 100%;
           left: 0;
           @include mosaic-fill;
-          z-index: 99999999999;
+          z-index: 600;
         }   
       } 
       z-index: 497;
