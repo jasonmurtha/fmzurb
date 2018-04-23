@@ -67,6 +67,14 @@
         padding-left: rem-calc($gutter * 1.5);
         padding-right: rem-calc($gutter * 1.5);
       }
+      .jut {
+        @include breakpoint(large) { 
+          width: 105%; 
+        }
+        @include breakpoint(xlarge) { 
+          width: 112%; 
+        } 
+      } 
     }
     > .iw_columns.large-5 {    
       @include breakpoint(medium down) {
