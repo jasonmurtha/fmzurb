@@ -12,9 +12,13 @@
       "url" : "styleguide_corp.html"
    },
    {
-      "name": "Multifamily Template-Specific Styles",
-      "url" : "https://mf.freddiemac.com/special/styleguide/styleguide_mf.html"
+      "name": "Multifamily-Specific Styles",
+      "url" : "styleguide_mf.html"
    },
+   {
+      "name": "Multifamily Landing Styles (which are not part of corporate template)",
+      "url" : "https://mf.freddiemac.com/special/styleguide/landing.html"
+   }, 
    {
       "name": "Foundation Grid (Layout)",
       "url" : "styleguide_grid.html"
