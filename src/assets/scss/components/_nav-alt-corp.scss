@@ -14,6 +14,9 @@
     margin: 0;
   }
 }
+#body-wrapper {
+  min-height: 101vh;  // prevents IE from losing its scrollbar when the mobile nav starts to fade in.
+}
 .iw_viewport-wrapper {
   > div:nth-child(n+3) { 
     @include breakpoint(medium down){       
@@ -24,21 +27,19 @@
      @include breakpoint(large down){
         opacity: 1;
         max-height: 9999vh;
-     //   transition-delay: 300ms;
-        transition: max-height 350ms linear 300ms, opacity 400ms linear 300ms;
+        transition: opacity 300ms ease-out 0ms, max-height 100ms linear 50ms;
       }
   }
 }
 .is-mobile-expanded {
   .iw_viewport-wrapper {
+    min-height: 105%;
     > div:nth-child(n+2) { 
       @include breakpoint(large down){
         opacity: 0;
-        max-height: 1rem;
+        max-height: 3rem;
         overflow: hidden;
-      //  transition-delay: 300ms;
-        transition:  opacity 300ms linear 300ms, max-height 800ms linear 0ms;
-       // -ms-overflow-style: none;
+        transition:  opacity 200ms linear 300ms, max-height 800ms linear 50ms;
       }
     }
   } 
@@ -56,16 +57,12 @@
 .logo-corp { 
   padding: rem-calc(17 10 16 30);
   display: inline-block;
-  @include breakpoint (large down) {
-    transition: display 0.35s ease;
-  }
   img {
     width: rem-calc(133);
     height: rem-calc(47);
   }
   @include breakpoint (xlarge) {
     padding: rem-calc(21 0 16);  // 1.3125rem 0 1rem;
-    transition: none;
     img {
       width: rem-calc(190);
       height: rem-calc(67.13);
@@ -97,11 +94,11 @@
 svg {
   .menu {
     opacity: 1;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease 150ms;
   }
   .menu-close {
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease 150ms;
   }
 }
 .is-mobile-expanded  {   
@@ -155,7 +152,6 @@ svg {
     background-color: $white;
     width: 100%;
     border-bottom: 1px solid darken($light-gray, 10%);
-    transition: background 0.5s ease; 
   }    
 }
 
@@ -223,7 +219,6 @@ svg {
   }
   @include breakpoint(large down) {
     background-color: $light-gray; 
-    min-height: 101%;
   }
   .nav-global & {
     @include breakpoint(large down) { 
