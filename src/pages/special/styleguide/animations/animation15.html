@@ -1,5 +1,5 @@
 ---
-title: "Animation: Spin Clockwise"
+title: "Animation: Wiggle"
 layout: corporate-altnav
 description:
 image: 
@@ -7,11 +7,12 @@ keywords:
 url:
 bodyclass: 
 herotype: title
-breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Motion-UI Examples", "url":"index.html"},{"name":"Animation: Spin Clockwise"}]
+breadcrumb: [{"name":"Home","url":"/"},{"name":"Style Guides and Tools","url":"/special/styleguide/"},{"name":"Motion-UI Examples", "url":"/special/styleguide/animations/"},{"name":"Animation: Wiggle"}]
 onload: runOnce
-stylesheet: /styleguide/files/animation.css
-javascript: /styleguide/files/animation.js
+stylesheet: /special/styleguide/files/animation.css
+javascript: /special/styleguide/files/animation.js
 ---
+
 
 <div class="iw_component">
   <h2>Animate on Page Load</h2>
@@ -44,10 +45,10 @@ javascript: /styleguide/files/animation.js
 
 <script>
 function runOnce() {
-  runSeries('spin-cw');  
+  runSeries('wiggle');  
   $('.animatable').on("click", function(){ 
-   $(this).addClass('spin-cw').closest('.animate-item').addClass('is-animating');
-    setTimeout(function(){$('.animatable').removeClass('spin-cw').closest('.animate-item').removeClass('is-animating');}, 300);    
+   $(this).addClass('wiggle').closest('.animate-item').addClass('is-animating');
+    setTimeout(function(){$('.animatable').removeClass('wiggle').closest('.animate-item').removeClass('is-animating');}, 300);    
   });
 }
 </script>

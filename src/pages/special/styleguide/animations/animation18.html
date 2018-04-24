@@ -1,5 +1,5 @@
 ---
-title: "Animation: Wiggle"
+title: "Animation: Spin Counter-Clockwise"
 layout: corporate-altnav
 description:
 image: 
@@ -7,10 +7,10 @@ keywords:
 url:
 bodyclass: 
 herotype: title
-breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Motion-UI Examples", "url":"index.html"},{"name":"Animation: Wiggle"}]
+breadcrumb: [{"name":"Home","url":"/"},{"name":"Style Guides and Tools","url":"/special/styleguide/"},{"name":"Motion-UI Examples", "url":"/special/styleguide/animations/"},{"name":"Animation: Spin Counter-Clockwise"}]
 onload: runOnce
-stylesheet: /styleguide/files/animation.css
-javascript: /styleguide/files/animation.js
+stylesheet: /special/styleguide/files/animation.css
+javascript: /special/styleguide/files/animation.js
 ---
 
 
@@ -18,22 +18,22 @@ javascript: /styleguide/files/animation.js
   <h2>Animate on Page Load</h2>
   <div class="row animation-row medium-up-2 large-up-4">
     <div class="column gutter-top">
-      <div class="animate-1 text-center">
+      <div class="animate-1 slow text-center">
         <img class="no-border" src="../files/us-hollow.png">
       </div>
     </div>
     <div class="column gutter-top">
-      <div class="animate-2 text-center">
+      <div class="animate-2 slow text-center">
         <img class="no-border" src="../files/us-hollow.png">
       </div>
     </div>
     <div class="column gutter-top">
-      <div class="animate-3 text-center">
+      <div class="animate-3 slow text-center">
         <img class="no-border" src="../files/us-hollow.png">
       </div>
     </div>
     <div class="column gutter-top">
-      <div class="animate-4 text-center">
+      <div class="animate-4 slow text-center">
         <img class="no-border" src="../files/us-hollow.png">
       </div>
     </div>
@@ -45,10 +45,10 @@ javascript: /styleguide/files/animation.js
 
 <script>
 function runOnce() {
-  runSeries('wiggle');  
+  runSeries('spin-ccw');  
   $('.animatable').on("click", function(){ 
-   $(this).addClass('wiggle').closest('.animate-item').addClass('is-animating');
-    setTimeout(function(){$('.animatable').removeClass('wiggle').closest('.animate-item').removeClass('is-animating');}, 300);    
+   $(this).addClass('spin-ccw').closest('.animate-item').addClass('is-animating');
+    setTimeout(function(){$('.animatable').removeClass('spin-ccw').closest('.animate-item').removeClass('is-animating');}, 500);    
   });
 }
 </script>

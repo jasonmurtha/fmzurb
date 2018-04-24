@@ -46,6 +46,10 @@
    {
       "name": "Fluid Type",
       "url" : "styleguide_fluid.html"
+   },
+   {
+      "name": "Motion-UI (Foundation's library for Transitions & Animation)",
+      "url" : "animations/"
    }
   ]
 }

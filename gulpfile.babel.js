@@ -75,7 +75,7 @@ function pages() {
 
 // Copy page templates into finished HTML files
 function stylePages() {
-  return gulp.src('src/pages/styleguide/*.{html,hbs,handlebars}')
+  return gulp.src('src/pages/special/styleguide/*.{html,hbs,handlebars}')
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
@@ -83,7 +83,7 @@ function stylePages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe(gulp.dest(PATHS.dist + '/styleguide'));
+    .pipe(gulp.dest(PATHS.dist + '/special/styleguide'));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -96,67 +96,67 @@ function resetPages(done) {
 
 function styleGuide(done) {
   sherpa('src/styleguide/index_fm.md', {
-    output: PATHS.dist + '/styleguide/styleguide_fm.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_fm.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideCorp(done) ); 
 }
 function styleGuideCorp(done) {
   sherpa('src/styleguide/index_corp.md', {
-    output: PATHS.dist + '/styleguide/styleguide_corp.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_corp.html',
     template: 'src/styleguide/template_corp.html'
   }, styleGuideMF(done) ); 
 }
 function styleGuideMF(done) {
   sherpa('src/styleguide/index_mf.md', {
-    output: PATHS.dist + '/styleguide/styleguide_mf.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_mf.html',
     template: 'src/styleguide/template_mf.html'
   }, styleGuideScripts(done) ); 
 }
 function styleGuideScripts(done) {
   return sherpa('src/styleguide/scripts_corp.md', {
-    output: PATHS.dist + '/styleguide/styleguide_scripts_corp.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_scripts_corp.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideGrid(done)); 
 }
 function styleGuideGrid(done) {
   return sherpa('src/styleguide/grid.md', {
-    output: PATHS.dist + '/styleguide/styleguide_grid.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_grid.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideFluid(done)); 
 }
 function styleGuideFluid(done) {
   return sherpa('src/styleguide/fluidtype.md', {
-    output: PATHS.dist + '/styleguide/styleguide_fluid.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_fluid.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideAbide(done)); 
 }
 function styleGuideAbide(done) {
   return sherpa('src/styleguide/abide.md', {
-    output: PATHS.dist + '/styleguide/styleguide_abide.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_abide.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideEmbeds(done)); 
 }
 function styleGuideEmbeds(done) {
   return sherpa('src/styleguide/embeds.md', {
-    output: PATHS.dist + '/styleguide/styleguide_embeds.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_embeds.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideOrbit(done)); 
 }
 function styleGuideOrbit(done) {
   return sherpa('src/styleguide/orbit.md', {
-    output: PATHS.dist + '/styleguide/styleguide_orbit.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_orbit.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideTabs(done)); 
 }
 function styleGuideTabs(done) {
   return sherpa('src/styleguide/tabs.md', {
-    output: PATHS.dist + '/styleguide/styleguide_tabs.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_tabs.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideReveal(done)); 
 }
 function styleGuideReveal(done) {
   return sherpa('src/styleguide/reveal.md', {
-    output: PATHS.dist + '/styleguide/styleguide_reveal.html',
+    output: PATHS.dist + '/special/styleguide/styleguide_reveal.html',
     template: 'src/styleguide/template_foundation.html'
   }, done); 
 }
