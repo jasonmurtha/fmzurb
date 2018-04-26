@@ -1,0 +1,29 @@
+.breadcrumb-wrapper,
+.iw_viewport-wrapper > div:nth-child(3) .row  {
+  display: none;
+}
+
+#home-content-bands {
+  @include breakpoint(large down) {
+    opacity: 1;
+    max-height: 9999vh;
+    transition: opacity 300ms ease-out 50ms, max-height 100ms linear 50ms;
+  }
+  .is-mobile-expanded & {
+    @include breakpoint(large down) {
+      opacity: 0;
+      max-height: 10vh;
+      overflow: hidden;      
+      transition:  opacity 200ms linear 200ms, max-height 800ms linear 50ms;
+    }
+  }
+}
+
+.is-mobile-expanded {
+  .homepage-business-highlight,
+  .finance-offset  { 
+    @include breakpoint(large down)  {
+      display: none;   
+    }
+  }
+} 

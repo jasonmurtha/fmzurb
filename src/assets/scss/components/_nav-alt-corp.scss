@@ -24,22 +24,32 @@
     }
   }
   > div:nth-child(n+2) { 
-     @include breakpoint(large down){
-        opacity: 1;
-        max-height: 9999vh;
-        transition: opacity 300ms ease-out 0ms, max-height 100ms linear 50ms;
-      }
+    @include breakpoint(large down){
+      opacity: 1;
+      max-height: 9999vh;
+      transition: opacity 300ms ease-out 50ms, max-height 100ms linear 50ms;
+    }
   }
 }
 .is-mobile-expanded {
   .iw_viewport-wrapper {
-    min-height: 105%;
+    @include breakpoint(medium down){
+      min-height: 101vh;
+    }
     > div:nth-child(n+2) { 
       @include breakpoint(large down){
-        opacity: 0;
-        max-height: 3rem;
+        opacity: 0.8;
+        max-height: 10vh;
         overflow: hidden;
-        transition:  opacity 200ms linear 300ms, max-height 800ms linear 50ms;
+        transition:  opacity 200ms linear 200ms, max-height 800ms linear 50ms;
+      }
+    }
+    .pre-footer-promo,
+    .footer-promo,
+    .homepage-business-highlight,
+    div:nth-child(4) .share-widget { 
+      @include breakpoint(large down)  {
+        display: none;
       }
     }
   } 
@@ -91,14 +101,17 @@
     stroke-miterlimit: 10;
   }
 }
+.toggle-icon.button {
+  transition: none; 
+}
 svg {
   .menu {
     opacity: 1;
-    transition: opacity 0.25s ease 150ms;
+    transition: opacity 0.25s linear 150ms;
   }
   .menu-close {
     opacity: 0;
-    transition: opacity 0.25s ease 150ms;
+    transition: opacity 0.25s linear 150ms;
   }
 }
 .is-mobile-expanded  {   
@@ -219,6 +232,9 @@ svg {
   }
   @include breakpoint(large down) {
     background-color: $light-gray; 
+    &.fade-in {
+      transition-duration: 400ms;
+    }
   }
   .nav-global & {
     @include breakpoint(large down) { 

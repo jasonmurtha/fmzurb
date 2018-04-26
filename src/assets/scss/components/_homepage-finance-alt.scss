@@ -4,8 +4,8 @@ $finance-bg2: lighten(saturate(adjust-hue($celery,-3.97993), 4.26419), 0.78431);
 $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
 
 .finance-offset {
-  position: relative;
   @include breakpoint(xlarge) {
+    position: relative;
     margin-top: -20rem;	
     min-height: 33.5rem;
     margin-left: 9%;
