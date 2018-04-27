@@ -335,7 +335,7 @@ svg {
         &:first-child > a {
           padding-top: rem-calc($gutter * 0.5);
         }
-        &:not(.mobile-careers-promo):last-child {
+        &:not(.mobile-nav-promo):last-child {
           padding-bottom: rem-calc(13);
         }
       }               
@@ -549,7 +549,7 @@ svg {
 }
 
 ////---------------------------------------------------------------------------
-.mobile-careers-promo {
+.mobile-nav-promo {
   padding: rem-calc($gutter * 0.75 0 0);
   margin: 0;
   a {
