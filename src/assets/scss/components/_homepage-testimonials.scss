@@ -82,8 +82,6 @@
 .testimonials-multi { 
   position: relative;
   .testimonials-quote {
-    margin-left: $gutter * 1.5;
-    margin-right: $gutter * 1.5;
     @include breakpoint(medium) {
       width: 60%;
       position: absolute;
@@ -136,7 +134,7 @@
 }
 .testimonials-thumbnails {
   text-align: center;
-  padding: 1rem $gutter/2;
+  padding: 1rem 0;
   float: left;
   width: 100%;
   @include breakpoint(medium) {

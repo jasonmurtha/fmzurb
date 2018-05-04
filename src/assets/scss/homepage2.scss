@@ -10,8 +10,4 @@
 @import 'components/homepage-finance';
 @import 'components/homepage-testimonials';
 @import 'components/homepage-hero';
-
-.iw_viewport-wrapper > :nth-child(2),
-.iw_viewport-wrapper > :nth-child(3) {
-    display: none;
-}
+@import 'components/homepage-content-bands';

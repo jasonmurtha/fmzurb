@@ -47,9 +47,9 @@
 // ---------
 
 $global-font-size: 16px;
-$global-width: rem-calc(1500); 
+$global-width: rem-calc(1500);  
 $global-lineheight: 1.4;
-$light-gray: #f4f4f4;
+$light-gray: #f4f4f4;  // note: darken($light-gray, 10%) = #dbdbdb;  darken($light-gray, 18.5%) = #cecece;
 $medium-gray: #464645;
 $dark-gray: #333333;
 $black: #000000;
@@ -114,7 +114,7 @@ $breakpoints: (
   small: 0,     // FYI: min width on the body element is 320
   medium: 570px,  // was 600 but knocked it down just a tad 1/13
   large: 980px,  // position where aside and main stack/unstack
-  xlarge: 1270px,  // position where we swap between mobile and desktop nav
+  xlarge: 1260px,  // position where we swap between mobile and desktop nav
   xxlarge: 1500px,
 );
 $print-breakpoint: medium;
@@ -123,7 +123,7 @@ $breakpoint-classes: (small medium large xlarge);
 // 3. The Grid
 // -----------
 
-$grid-row-width: $global-width;
+$grid-row-width: none;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
@@ -175,8 +175,8 @@ $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
-$list-side-margin: 1.5rem;
-$list-nested-side-margin: 1.5rem;
+$list-side-margin: 1.5em;
+$list-nested-side-margin: 1.5em;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
@@ -426,6 +426,7 @@ $label-font-size: rem-calc(14);
 $label-padding: 0.4em 1.5em;
 $label-radius: 0;
 
+
 // 21. Media Object
 // ----------------
 
@@ -625,7 +626,7 @@ $titlebar-padding: 0;
 $titlebar-text-font-weight: inherit;
 $titlebar-icon-color: $primary-color;
 $titlebar-icon-color-hover: $primary-color;
-$titlebar-icon-spacing: $gutter;
+$titlebar-icon-spacing: 26px 21px;
 
 // 35. Tooltip
 // -----------

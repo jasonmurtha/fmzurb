@@ -31,12 +31,12 @@ FM.form = {
     if(txt==''&&aria){txt=aria;}
     if(txt==''&&hrf=='/'){txt:'home';}
     if($lk.closest('#ribbon').length){locale='ribbon|';}
-    else if(hrf.match(/privacy\.truste\.com/) || $lk.closest('.acsClassicInvite').length){locale='foreseeinvite|';}	
     else if($lk.closest('#header-nav').length){
       locale='topnav|';  
-      if($lk.closest('.secondary-nav').length&&id){txt=id;}
+      if($lk.closest('.nav-main').length&&id){txt=id;}
     }  	
     else if($lk.closest('.footer').length){locale='footer|';}  
+    else if($lk.closest('.breadcrumb-wrapper').length){locale='breadcrumb|';}  
     else if($lk.closest('.share-widget').length){locale='share|'; trig='share';}
     if($lk.closest('.tertiary-nav').length){desc='tertiarynav:';}
     else if($lk.closest('.modal-content').length){desc='modal:';}
@@ -47,7 +47,7 @@ FM.form = {
     else if($lk.closest('.tabs-content, .tabs').length){desc='tab:';}	
     else if($lk.closest('.hero, hero-blended').length){desc='hero:';} 
     else if($lk.closest('.footer-promo').length){desc='prefooter:';}
-    else if($lk.closest('aside').length){desc='sidebar:';}    
+    else if($lk.closest('.sidebar').length){desc='sidebar:';}    
     if(locale==''&&desc==''){desc='content:';}    
     if(locale==''){locale=dir+'|';} 
     if(hrf.match(/\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|do[ct]x?|xls[mx]?|pptx?|vsd|rtf|txt|xml|csv)(\?.*)?(#.*)?$/i)){ltype='d';}	 
@@ -95,14 +95,17 @@ $('[href]').filter('.offsite, [rel="external"]').each(function(){
 if(FM.form.protocol === 'https:') {		
   $('#header-nav,.footer').find('a[href^="/"]').each(function(){
 	  $(this).attr('href', FM.form.forceGlobalLinks($(this).attr('href')));
-  });		
+  });	
+  $('#breadcrumb-wrapper').find('a').eq(0).each(function(){
+	  if ($(this).text().match(/home/i)) $(this).attr('href', FM.form.domain);
+  });	
 };
 if (FM.form.useOmni()){ 
   $(document).on("click",FM.form.omniNavLink); 
 }
 // process file markers
 if (FM.form.pathElements[0] !== "search") { 
-	$(".content-band, .two-column-layout").find("a[href]").not('.plain').not(":has(img)").not(":has(.callout)").not(":has(.card)").not(function(){
+	$(".iw_section:gt(0)").find("a[href]").not('.plain').not(":has(img)").not(":has(.callout)").not(":has(.card)").not(function(){
     return (/.+\.(html?|#|javascript)(\?.*)?(#.*)?$/i).test($(this).attr('href'));
   }).filter(function(){
     return (/.+\.(pdf|zip|csv|doc|xls|ppt)[mx]?(\?.*)?(#.*)?$/i).test($(this).attr('href'));

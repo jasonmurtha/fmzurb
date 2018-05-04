@@ -3,7 +3,7 @@ $ribbon-edge: adjust-hue(saturate(darken($offwhite, 7.3%), 51%), 77deg);
 $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 97.25%, $ribbon-edge 97.25%, $ribbon-edge 100%);
 
 #ribbon {display: none;}
-#header-nav { background: #fff;}
+.header-nav { background: #fff;}
 
 @include breakpoint(xlarge) {
   #ribbon {
@@ -15,10 +15,20 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
   border-width: 0;
   z-index: 500;
   position: relative;
-  background: $ribbon-background-desktop;  
+  background: $ribbon-background-desktop; 
+  a {
+    color: $fm-gray;
+  } 
+  h4 {
+    font-size: rem-calc(18);
+    font-weight: 400;
+  }
   .ribbon-nav {
     z-index: 501;
   }  
+  .nav-accordion-parent li:not(:last-child) {
+    border-bottom: 1px solid lighten($fm-gray, 40%);
+  }
   .menu > li > a {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
@@ -106,5 +116,4 @@ $ribbon-background-desktop: linear-gradient(to bottom, $offwhite 0%, $offwhite 9
     }    
   }   
 }
-
 
