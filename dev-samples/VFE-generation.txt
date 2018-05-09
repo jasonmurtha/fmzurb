@@ -8,13 +8,13 @@ comment out these items in the app.scss
   @include motion-ui-transitions;
   @include motion-ui-animations;
   @import 'components/page-layout';
+  @import 'components/breadcrumbs';
   @import 'components/hero-corp';
   @import 'components/page-title';
   @import 'components/nav-ribbon';
   @import 'components/nav-footer';
-  @import 'components/nav-primary-corp';
-  @import 'components/nav-secondary-corp';
-  @import 'components/nav-search-mobile';
+  @import 'components/nav-corp';
+  @import 'components/nav-search';
   @import 'components/nav-tertiary';
   @import 'components/share-widget';
   @import 'components/footer-promos';
@@ -23,13 +23,64 @@ npm start (not a production build)
 
 save generated css as responsive.css
 
-delete source mapping string at end of file
+delete body::before classes at the beginning
+
+delete source mapping string near beginning and at end of file
 
 delete large chunks of @media print {
 
-Add tehse overrides to the end:
+Add these overrides to the end:
     .tabs-panel {  display: block; }
     .accordion-pointer .accordion-content, 
     .accordion-faq .accordion-content,
     .accordion-content {display: block; }
     .reveal {display: block; }
+
+    add these from MF:
+.label {
+  display: inline-block;
+  padding: 0.4em 1.5em;
+  border-radius: 0;
+  font-size: 0.875rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default; }
+.icon-deal-marker {
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.3125em;
+  font-size: 1.125rem;
+  font-size: calc(18px +  6 * (100vw - 320px)/1180); }
+  @media screen and (min-width: 78.75em) {
+    .icon-deal-marker {
+      font-size: 1.5rem; } }
+  .icon-deal-marker.large {
+    font-size: 1.5rem;
+    font-size: calc(24px +  8 * (100vw - 320px)/1180); }
+    @media screen and (min-width: 78.75em) {
+      .icon-deal-marker.large {
+        font-size: 2rem; } }
+  .icon-deal-marker.xlarge {
+    font-size: 2.375rem;
+    font-size: calc(38px +  14 * (100vw - 320px)/1180); }
+    @media screen and (min-width: 78.75em) {
+      .icon-deal-marker.xlarge {
+        font-size: 3.25rem; } }
+    .icon-deal-marker.xlarge .marker {
+      margin: 0 0.4em 0 0; }
+  .icon-deal-marker svg {
+    fill: none;
+    stroke: #777874;
+    stroke-width: 2; }
+  .icon-deal-marker .marker {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    font-size: 83.3%;
+    border-radius: 999px;
+    font-weight: 900;
+    height: 2.05em;
+    width: 2.05em;
+    padding: 0.5em 0;
+    margin: 0.3125em 0.3em 0.25em 0; }
