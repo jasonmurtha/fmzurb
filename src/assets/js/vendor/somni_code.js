@@ -143,7 +143,7 @@ s_somni.usePlugins=true
  s_clr=function(str){return str.replace(/[_\&+]|\s+/g, " ").replace(/[^a-z0-9\300-\374.,!():| -]/gi,"")},
  s_wls= decodeURIComponent(window.location.search)||"",
  s_abbr=location.protocol==='https:'&&document.domain.match(/freddiemac/)?'fmsec|':'fm|',
- s_wlp=window.location.pathname.replace(/\/\/+/g,'/').substring(1).replace(/:/g, "").replace(/(index)?(\.html?)?$/i,"").replace(/\//g, ":").toLowerCase(),
+ s_wlp=window.location.pathname.replace(/\/\/+/g,'/').substring(1).replace(/:/g, "").replace(/(index)?(\.html?)?(\.page)?$/i,"").replace(/\//g, ":").toLowerCase(),
  s_li=s_wlp.lastIndexOf(":"),
  s_path=s_li>1?s_clr(s_wlp.substring(0,s_li)):"",
  s_chn=s_wlp=="search"?"search":s_li>1?s_wlp.split(':')[0]:"homepage", 

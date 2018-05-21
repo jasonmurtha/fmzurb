@@ -22,7 +22,7 @@ FM.form = {
   setTimer: function(routine,delay) { if(routine && delay>0){ clearTimeout(FM.form.fmTimer); FM.form.fmTimer = setTimeout(routine, delay);}},
   resetReveal: function(){if ($('.reveal:visible').length === 0) {$('.is-reveal-open').removeClass('is-reveal-open');}},
   offsetReveal: function(){var rev = $(".reveal[aria-hidden='false']").filter('.full');  if(rev.length){ rev.css('top', 0); console.log('reset top');}},
-  omniNavLink:function(event){var $tg=$(event.target),$lk=$tg.closest('a,area'),trig='link',desc='',ltype='o',txt='',dir=FM.form.pathElements[0].length?FM.form.pathElements[0]:'homepage',locale=''; 
+  omniNavLink: function(event){var $tg=$(event.target),$lk=$tg.closest('a,area'),trig='link',desc='',ltype='o',txt='',dir=FM.form.pathElements[0].length?FM.form.pathElements[0]:'homepage',locale=''; 
     if($lk.length<1) { return; } 
     var a='',b='',q='',hrf=$lk.attr('href')||'',tl=$lk.attr('title'),aria=$lk.attr('aria-label'),persona='',ariacontrols=$lk.attr('aria-controls'),id=$lk.attr('id');
     txt=$lk.text().trim().replace(/\r\n|\n|\r/g, "").replace(/\t|\s+/gm, " ").replace(/"/g,"");
@@ -53,7 +53,7 @@ FM.form = {
     if(hrf.match(/\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|do[ct]x?|xls[mx]?|pptx?|vsd|rtf|txt|xml|csv)(\?.*)?(#.*)?$/i)){ltype='d';}	 
     else if(hrf.match(/^https/i)&&!hrf.match(/slearnctr|loanlookup/i)){ltype='e';}
     else if(hrf.match(/^http/i)&&!hrf.match(/www\.freddiemac\.com/i)){ltype='e';}
-    else{hrf=hrf.replace(/^https?:\/\/(www\.freddiemac\.com)?/i,'').replace(/^\//,'').replace(/index.html?/i,'');}
+    else{hrf=hrf.replace(/^https?:\/\/(www\.freddiemac\.com)?/i,'').replace(/^\//,'').replace(/(index)?(\.html?)?(\.page)?/i,'');}
     if(txt==''&&$lk.has('img')){ var $im=$lk.find('img:first');
       if($im.attr("alt")){ txt='image:'+$im.attr("alt")}
       else if($im.attr("title")){ txt='image:'+$im.attr("title")}
@@ -76,7 +76,6 @@ FM.form = {
     }
     if (FM.form.useOmni()){ 
       somniTL(event,ltype,hrf,trig,locale+desc+txt,persona);
-      // console.log('nav link type:'+ltype+', link name:'+ locale+desc+txt+'.'); 
     }
   } 
 };
@@ -129,5 +128,8 @@ $(function(){
   // Site Catalyst trigger
   if (FM.form.useOmni()){
     s_somni.t(); 
+  }
+  else {
+    console.log('page load: ' + window.location.pathname.replace(/\/\/+/g,'/').substring(1).replace(/:/g, "").replace(/(index)?(\.html?)?(\.page)?$/i,"").replace(/\/$/g, "").replace(/\//g, ":").toLowerCase());
   }
 });
