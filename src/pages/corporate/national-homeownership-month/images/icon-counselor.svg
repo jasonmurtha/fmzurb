@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-counselor</title>
+    <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="NHM-Landing" transform="translate(-211.000000, -2178.000000)">
-            <g id="Section-3---Illustration" transform="translate(0.000000, 1681.000000)">
+        <g id="NHM-Landing-2018" transform="translate(-261.000000, -1444.000000)">
+            <g id="Section-3---Illustration" transform="translate(0.000000, 947.000000)">
                 <g id="Labels">
-                    <g id="1" transform="translate(130.000000, 497.000000)">
-                        <g id="icon_counselor" transform="translate(81.000000, 0.000000)">
-                            <circle id="Oval" fill-opacity="0.899999976" fill="#00A6E1" cx="60" cy="60" r="60"></circle>
-                            <g id="person-chat-1" transform="translate(30.000000, 30.000000)">
-                                <g id="Outline_Icons_1_" stroke-width="2.3" stroke="#FFFFFF" stroke-linejoin="round">
+                    <g id="1" transform="translate(230.000000, 497.000000)">
+                        <g id="icon-counselor" transform="translate(31.000000, 0.000000)">
+                            <circle id="Oval" fill="#00A6E1" cx="60" cy="60" r="60"></circle>
+                            <g id="person-chat-1" transform="translate(30.000000, 30.000000)" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="2.3">
+                                <g id="Outline_Icons_1_">
                                     <g id="New_icons_1_">
                                         <g id="Group">
                                             <g>
@@ -26,7 +29,6 @@
                                         </g>
                                     </g>
                                 </g>
-                                <rect id="Rectangle-path" opacity="0.599999964" x="0" y="0" width="60" height="60"></rect>
                             </g>
                         </g>
                     </g>

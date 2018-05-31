@@ -39,6 +39,22 @@
       }
     }
   }
+  &.landing-footer li {
+    @include breakpoint(medium) {
+      display: inline-block;
+    }   
+    @include breakpoint(large only) {
+      font-size: rem-calc(15);
+    }
+    &:not(:last-child) {
+      @include breakpoint(medium) {
+        margin-right: 2rem;
+      }
+      @include breakpoint(large only) {
+        margin-right: 1.25rem;
+      }
+    } 
+  }
 	.footer-top {
 		border-bottom: 1px solid lighten($primary-color, 3%); 
 		ul {

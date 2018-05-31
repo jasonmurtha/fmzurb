@@ -1,44 +1,57 @@
 ﻿---
 title: Data Sample
 layout: default
+stylesheet: /ss/app_landing.css
 ---
-<div class="row column">
-<h1>{{title}}</h1>
-<p>Page: {{page}}</p>
-
-{{#each doclist.docs }}
- {{ name }}: {{ url }}<br>  
-{{/each}} 
-<hr>
       
-      
-{{#if doclist}} 
-  <table>
-    <thead><th>Name</th><th>URL Converted to Title</th><th>0-Based Index</th><th>1-Based Index</th></thead>
-    <tbody>
-      {{#each doclist.docs }}
-      <tr>
-        <td>{{ name }}</td>
-        <td>{{ filename2title url }}</td>
-        <td>{{@index}}</td> 
-        <td>{{add 1 @index}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>  
-  {{/if}} 
+{{>header-landing-linked}}
 
-  <hr>  
+<div class="page-title">
+  <div class="row-container-wide">
+    <div class="row">      
+      <div class="column">
+        <h1>{{{ title }}}</h1>
+      </div>
+    </div>
+  </div>
+</div>    
 
-  {{#each doclist.docs }}
-    {{#if @first}}
-    <ul>
-    {{/if}}
-      <li><a href="{{ url }}">{{ name }}</a></li> 
-     {{#if @last}}
-    </ul>
-    {{/if}}
-  {{/each}}
+<div class="landing-band">
+  <div class="row-container-wide">
+    <div class="row">
+      <div class="column">
+        {{#each doclist.docs }}
+         {{ name }}: {{ url }}<br>  
+        {{/each}} 
+        <hr>    
+        {{#if doclist}} 
+          <table>
+            <thead><th>Name</th><th>URL Converted to Title</th><th>0-Based Index</th><th>1-Based Index</th></thead>
+            <tbody>
+              {{#each doclist.docs }}
+              <tr>
+                <td>{{ name }}</td>
+                <td>{{ filename2title url }}</td>
+                <td>{{@index}}</td> 
+                <td>{{add 1 @index}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>  
+        {{/if}} 
 
-  
+        <hr>  
+
+        {{#each doclist.docs }}
+          {{#if @first}}
+          <ul>
+          {{/if}}
+            <li><a href="{{ url }}">{{ name }}</a></li> 
+           {{#if @last}}
+          </ul>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </div>

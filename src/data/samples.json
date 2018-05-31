@@ -19,17 +19,9 @@
       "name":"Loan LookUp Form",
       "url":"/loanlookup/index.html"
    },
-   {
-       "name": "National Homeownership Month",
-       "url": "/corporate/national-homeownership-month/"
-   },
    {  
-       "name":"Better Housing Finance",
-       "url":"/better-housing-finance/"
-   },
-	{  
-       "name":"Duty to Serve",
-       "url":"/about/duty-to-serve/"
+       "name":"Landing Pages",
+       "url":"/special/landing.html"
    },
    {  
        "name":"Style Guides",

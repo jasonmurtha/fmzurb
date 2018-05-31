@@ -1,0 +1,47 @@
+.background-stripes-green {
+  background-image: repeating-linear-gradient(45deg, rgba($fm-green, 0.25), rgba($fm-green, 0.25) 4px, rgba($fm-green, 0) 4px, rgba($fm-green, 0) 10px);
+}
+.background-evergreen {
+  color: #fff; 
+  background: #87be3c;
+}
+.vertical-gradient-dark-bottom {
+   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 30%,rgba(0,0,0,0.2) 100%);
+}
+.vertical-gradient-dark-top {
+   background-image: linear-gradient(to top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.2) 100%);
+}
+.triangle-in-white,
+.triangle-in-primary,
+.triangle-out-white {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 80px;
+  z-index:300;
+}
+.triangle-in-white,
+.triangle-in-primary {
+  top: 0;
+  + div {
+    padding-top: 60px;
+  } 
+}
+.triangle-out-white {
+  bottom: 0;  
+  + div {
+    padding-bottom: 60px;
+  } 
+} 
+.triangle-in-white {
+  background: linear-gradient(to top right, transparent 50%, $white 50%) no-repeat left bottom / 50.05% 100%,
+    linear-gradient(to top left,transparent 50%, $white 50%) no-repeat right bottom / 50.05% 100%;
+}
+.triangle-in-primary {
+  background: linear-gradient(to top right, transparent 50%, $primary-color 50%) no-repeat left bottom / 50.05% 100%,
+    linear-gradient(to top left,transparent 50%, $primary-color 50%) no-repeat right bottom / 50.05% 100%;
+}
+.triangle-out {
+  background: linear-gradient(to top right, $white 50%, transparent 50%) no-repeat left bottom / 50% 100%,
+    linear-gradient(to top left, $white 50%, transparent 50%) no-repeat right bottom / 50% 100%;
+}

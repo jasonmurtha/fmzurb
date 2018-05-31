@@ -1,4 +1,4 @@
-﻿<title>Styleguide: Embeds</title>
+﻿<title class="hide">Styleguide: Embeds</title><br>
 
 # Embed Basics
 

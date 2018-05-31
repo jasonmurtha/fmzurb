@@ -9,6 +9,17 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
     margin-top: -20rem;	
     min-height: 33.5rem;
     margin-left: 9%;
+    &::after {
+      content: ' ';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      margin-left: -100%;
+      background: linear-gradient(to bottom, transparent 75%, $offwhite 75%);
+      z-index: -1;
+    }
   }
   .row {
     margin: 0;    
@@ -16,7 +27,20 @@ $finance-bg3: desaturate(adjust-hue($pear,-0.21154), 1.69492);
       margin: 0;
     }
   }
+  &::before {
+    @include breakpoint(xlarge) {
+      content: ' ';
+      position: relative;
+      width: 100%;
+      height: 10rem;
+      top: -10rem;
+      left: 0;
+      background: white;
+      height: 20rem
+    }
+  }
 }
+
 .finance-research {
   background: $finance-bg1;  
   color: $white;

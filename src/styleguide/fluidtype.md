@@ -1,4 +1,4 @@
-﻿<title>Styleguide: Fluid Typography</title>
+﻿<title class="hide">Styleguide: Fluid Typography</title><br>
 
 # Fluid Typography
 

@@ -37,10 +37,10 @@
 }
 
 .sidebar-feature {    
+  z-index: 1;
   @include breakpoint(large) {
     min-height: 21rem;
   }
-  z-index: -1;
   .feature-background {   // background will be different for each one, so moving to inline
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +52,11 @@
     width: 100%;
     height: auto;
     opacity: 0.2;
-    z-index: -1;
+    z-index: 2;
+  }
+  .row {
+    z-index:3;
+    position: relative;
   }
 }
 

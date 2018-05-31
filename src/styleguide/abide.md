@@ -1,4 +1,4 @@
-<title>Styleguide: Abide Form Validation</title>
+<title class="hide">Styleguide: Abide Form Validation</title><br>
 
 # Form Validation Basics
 

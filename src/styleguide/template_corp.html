@@ -20,43 +20,51 @@
     <meta name="theme-color" content="#88BD45">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/ss/app_corp.css">
+    <link rel="stylesheet" href="/ss/app_corp2.css">
     <link rel="stylesheet" href="/ss/homepage.css" />
     <link rel="stylesheet" href="files/styleguide.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>    
   </head>
   <body>
-
-    <div id="top" class="page-title">
-      <div class="row column">
-        <form class="form float-right">
-          <select id="ssnav">
-            <option value="">Select Component</option>
-            {{#each pages}}
-              <option value="#{{ anchor }}">{{ title }}</option>
-            {{/each}}
-          </select>
-        </form>
-        <h1 class="subtitle">Corporate Style Guide</h1>
-      </div>
-    </div>
-    
-    <div class="content-band">
-      <div class="row column" id="code-content">
-      <p></p>
-          {{#each pages}}
-          <div class="ss-section" id="{{ anchor }}">
-            <div class="row">
-              <div class="column markup-wrapper">
-              {{ body }}
+    <div class="iw_section"> 
+      <div class="row iw_row iw_stretch"> 
+        <div class="columns iw_columns large-12"> 
+          <div class="iw_component">  
+            <div id="top" class="page-title row-wrapper">
+              <div class="row">
+                <div class="column">
+                  <form class="form float-right">
+                    <select id="ssnav">
+                      <option value="">Select Component</option>
+                      {{#each pages}}
+                        <option value="#{{ anchor }}">{{ title }}</option>
+                      {{/each}}
+                    </select>
+                  </form>
+                  <h1 class="subtitle">Corporate Style Guide</h1>
+                </div>
               </div>
             </div>
+
+            <div id="code-content">   
+              <p class="gutter-all"></p>
+              {{#each pages}}
+                <div class="ss-section row-wrapper" id="{{ anchor }}">
+                  <div class="row">
+                    <div class="column markup-wrapper">
+                    {{ body }}
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+           
+              <p class="text-center"><a class="button small" href="index.html">Back to Style Guides</a></p>
+
+            </div> 
           </div>
-          {{/each}}
-       
-        <p class="text-center"><a class="button small" href="index.html">Back to Style Guides</a></p>
+        </div>
       </div>
-    </div> 
+    </div>
     
     <script src="/js/vendor/jquery-3.2.1.min.js"> </script>  
     <script src="/js/vendor/somni_code.js"></script>

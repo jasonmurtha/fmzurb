@@ -1,4 +1,5 @@
 ﻿{{!-- This is the default -- uses corporate js/css. --}}
+
 <!doctype html>
 
 <html class="no-js" lang="en">
@@ -7,52 +8,103 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
+    <title>{{{sanitize title}}}</title>
+    <meta property="og:title" content="{{{sanitize title}}}" />
+    <meta name="twitter:title" content="{{{sanitize title}}}"/>
+    {{!-- only output abstract if abstract exists --}}
+    {{#if abstract}}
     <meta name="abstract" content="{{ abstract }}" />
+    {{/if}}
+    {{!-- only output keywords if keywords exists --}}
+    {{#if keywords}}
     <meta name="keywords" content="{{ keywords }}" />
+    {{/if}}
+    {{!-- output default twittercard if custom twittercard doesn't exists --}}
     {{#if twittercard}}
     <meta name="twitter:card" content="{{ twittercard }}" />
     {{else}}
     <meta name="twitter:card" content="summary" />
     {{/if}}
     <meta name="twitter:site" content="@FreddieMac" />
-    <meta property="og:title" content="{{ title }}" />
-    <meta name="twitter:title" content="{{ title }}"/>
+    {{!-- only output description if description exists --}}
+    {{#if description}}
     <meta name="Description" content="{{ description }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta name="twitter:description" content="{{ description }}" />
+    {{/if}}
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website" />
+    {{!-- output default image if custom image doesn't exists --}}
+    {{#if image}}
     <meta property="og:image" content="{{ image }}" />
     <meta name="twitter:image" content="{{ image }}" />
+    {{else}}
+    <meta property="og:image" content="http://www.freddiemac.com/images/banner/gen_social_image.jpg" />
+    {{/if}}
+    {{!-- only output url if url exists --}}
+    {{#if url}}
     <meta property="og:url" content="{{ url }}" />
-	  <meta name="date" scheme="RFC822" content="{{ date }}" />
+    {{/if}}
+    {{!-- only output author if author exists --}}
+    {{#if author}}
     <meta name="author" content="{{ author }}" />
+    {{/if}}
     <meta name="theme-color" content="#88BD45">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="stylesheet" href="/ss/app_corp.css" />
+    <link rel="stylesheet" href="/ss/app_corp2.css" />
     {{#if stylesheet}}    
     <link rel="stylesheet" href="{{ stylesheet }}" />
     {{/if}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
-  <body>    
-  <!--googleoff: all-->  
-    {{> body}}    
-  <!--googleon: all-->
-    <!-- temporarily running on local copy -->
-    <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
-    <script src="/js/vendor/somni_code.js"></script>
-    <script src="/js/app_corp2.js"></script>
-    {{#if javascript}}    
-    <script src="{{ javascript }}"></script>
-    {{/if}}
-    {{#if onload }}
-      <script type="text/javascript">
-      window.onload = {{onload}};
-      </script>
-    {{/if}}
+  <body>     
+    <div class="show-for-print">FreddieMac.com</div> 
+    <div class="iw_section"> 
+      {{> body}}
+    </div> 
+    <div class="iw_section"> 
+      <div class="row iw_row iw_stretch"> 
+        <div class="columns iw_columns large-12"> 
+    
+          {{#if crosspromo}}
+          {{> (lookup . 'crosspromo') }}
+          {{/if}}
+          
+          {{#if share}}
+          {{> share-widget }}
+          {{/if}}
+          
+          {{#if prefooter}}
+          {{> (lookup . 'prefooter') }}
+          {{/if}}
+          
+          {{#if footer}}
+          <div class="iw_component">
+           {{> (lookup . 'footer') }}
+          </div> 
+          {{/if}}
+          
+        </div> 
+      </div> 
+    </div>
+
+    <div class="iw_section"> 
+      <div class="row iw_row iw_stretch"> 
+        <div class="columns iw_columns large-12"> 
+          <div class="iw_component">
+            {{> footer-js }}
+            {{#if javascript}}    
+            <script src="{{ javascript }}"></script>
+            {{/if}}
+            {{#if onload }}
+              <script type="text/javascript">
+              window.onload = {{onload}};
+              </script>
+            {{/if}}
+          </div> 
+        </div>        
+      </div> 
+    </div>   
   </body>
 </html>

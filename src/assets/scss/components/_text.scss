@@ -6,44 +6,48 @@
 
 
 h1 {
-    font-size: calc(30px +  12 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 30; font-weight: 700; line-height: 1.2; 
+  font-size: calc(30px +  12 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(42); 
+  }
 }
 h2 {
-    font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 22; font-weight: 700; line-height: 1.2; 
+  font-size: calc(22px +  10 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(32); 
+  }    
 }
 h3 {
-    font-size: calc(20px +  8 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 20; font-weight: 700; line-height: 1.2; 
+  font-size: calc(20px +  8 * (100vw - 320px) / 1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(28); 
+  }    
 }
 h4 {
-    font-size: calc(18px +  7 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 18; font-weight: 700; line-height: 1.2; 
+  font-size: calc(18px +  7 * (100vw - 320px) / 1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(25); 
+  }    
 }
 h5 {
-    font-size: calc(16px +  5 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 16; font-weight: 700; line-height: 1.2; 
+  font-size: calc(16px +  5 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(21); 
+  }    
 }
 h6 {
-    font-size: calc(15px +  2 * (100vw - 320px) / 1180); 
+  // from settings file: font-size: 15; font-weight: 700; line-height: 1.2; 
+  font-size: calc(15px +  2 * (100vw - 320px) / 1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(17); 
+  }    
 }
 
-@include breakpoint(xxlarge) {
-  h1 {
-      font-size: rem-calc(42); 
-  }
-  h2 {
-      font-size: rem-calc(32);  
-  }
-  h3 {
-      font-size: rem-calc(28); 
-  }
-  h4 {
-      font-size: rem-calc(25); 
-  }
-  h5 {
-      font-size: rem-calc(21); 
-  }
-  h6 {
-      font-size: rem-calc(17); 
-  }
-}
 body {  
 	font-weight: $global-weight-light;
 }
@@ -89,8 +93,9 @@ figcaption {
   :last-child { margin-bottom: 0;}
 }
 
-sup, sub {
-  font-size: 65%;
+sup {
+  font-size: 62%;
+  top: -0.55em;  
 }
 .call-to-action {
   font-size: rem-calc(28);
@@ -688,6 +693,9 @@ sup, sub {
 .uppercase { 
   text-transform: uppercase;
 }
+.lowercase { 
+  text-transform: lowercase;
+}
 .small-no-transform { 
   @include breakpoint(small only) {
     text-transform: none;
@@ -744,8 +752,14 @@ sup, sub {
 .accent-gray {
   color: $fm-gray;
 }
+.accent-green {
+  color: $fm-green;
+}
 .accent-dark-gray {
   color: $dark-gray;
+}
+.accent-white {
+  color: $white;
 }
 .file-flag {
   color: $fm-red;

@@ -1,0 +1,28 @@
+.card { 
+  color: $card-font-color;
+  &.border-match {
+    border: $card-border !important;
+  }
+}
+.card-wrapper-at-xlarge {
+  @include breakpoint(xlarge) {
+    padding: $gutter/2;
+  }  
+}
+.callout {
+  &.hollow-thick {
+    border: $card-border;
+    border-width: rem-calc(10);
+  }
+}
+.card-section + .card-section {
+  padding-top: 0;
+}
+
+.large-vertical-center-children {
+  @include breakpoint(large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

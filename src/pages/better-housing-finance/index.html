@@ -1,40 +1,90 @@
 ﻿---
 title: "A Better Company, Building a Better Housing Finance System"
-layout: landing
+layout: default
 description: "A Better Company, Building a Better Housing Finance System"
-image: "/better-housing-finance/images/better_better_meta_social_share.jpg"
+image: "http://www.freddiemac.com/better-housing-finance/images/better_better_meta_social_share.jpg"
 keywords:
 url:  http://www.freddiemac.com/better-housing-finance/
 bodyclass: 
-javascript: /js/app_bhf.js
-stylesheet: /ss/app_bhf.css
+stylesheet: /ss/app_landing-bhf-anim.css
+share: true
+footer: footer-landing
+onload: setUpAnim
 ---
+<style>
+.slide-inner-container {
+   min-height: 28.7rem;
+}
+.image-circle {
+  max-height: 13.75rem;
+  max-width: 61%;
+}
+.orbit-controls-outside .orbit-previous svg, 
+.orbit-controls-outside .orbit-next svg {
+  opacity: 0.7;
+  fill: white;
+  transform: scaleY(1.3);
+}
+</style>
+
+<script>
+function isElementInViewport(item) {
+  var el = item[0];
+  if (el.getBoundingClientRect) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.bottom >= 0 &&
+      rect.right >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  } else {
+    return true;
+  }
+}
+function animTrigger() {
+  if (isElementInViewport($(".large-1"))) {
+    $(".large-1, .small-1, .small-2").addClass("buildings-animate");
+  } else {
+    $(".buildings-animate").removeClass("buildings-animate");
+  }
+  if (isElementInViewport($(".map"))) {
+    $(".map-wrapper").children().addClass("houses-animate");
+  } else {
+    $(".houses-animate").removeClass("houses-animate");
+  }
+  if (isElementInViewport($(".odometer"))) {
+    $(".odometer-number").children().addClass("odometer-animate");
+  } else {
+    $(".odometer-animate").removeClass("odometer-animate");
+  }
+}
+function setUpAnim() {
+  $(window).on("load scroll resize orientationchange", function() {
+    var timerAnim = setTimeout(animTrigger, 300);
+  });
+}
+</script>
 
 
-<div class="hide-for-print"> 
-  <div class="hide-for-xlarge text-center">
-      <a href="/" class="logo-mobile"><img alt="Freddie Mac logo" src="images/FreddieMacLogo-with-tagline.svg" class="no-border"></a>
-  </div>
-  <div class="show-for-xlarge text-center">
-    <a href="/" class="logo-desktop"><img alt="Freddie Mac logo" src="images/FreddieMacLogo-with-tagline.svg" class="no-border"></a>
-  </div>
-</div>
-<div class="footer-bottom-edge">
-</div>
+{{>header-landing-unlinked}}
 
-     <!-- // HERO IMAGE -->
+<!-- // HERO IMAGE -->
+<div class="hide-for-print footer-bottom-edge"></div>
 <div class="notch-wrapper">
-  <div class="bhf-landing-hero content-inner-band">
-    <div class="row">
-      <div class="column large-12 large-centered">
-        <div class="blurb-large"><span class="enlarge"><span class="enlarge"><strong>We&rsquo;re a better company</strong></span></span> &ndash; <br/> 
-          more efficient and innovative in serving homebuyers, renters, our customers and taxpayers
+  <div class="bhf-landing-hero landing-hero background-gray landing-inner-band">
+    <div class="row-container-narrow text-center">
+      <div class="row">
+        <div class="column">
+          <div class="text-flex-22-42"><span class="enlarge"><span class="enlarge"><strong>We&rsquo;re a better company</strong></span></span> &ndash; <br/> 
+            more efficient and innovative in serving homebuyers, renters, our customers and taxpayers
+          </div>
         </div>
       </div>
     </div>
   </div>
-      <div class="notch-top-v background-pear"></div>
-    <div class="notch-top-v background-evergreen"></div>
+  <div class="notch-top-v background-pear"></div>
+  <div class="notch-top-v background-evergreen"></div>
 </div>
 
       <!-- // END HERO IMAGE -->
@@ -42,44 +92,46 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- // GREEN SECTION -->
-<div class="content-band background-evergreen">
-  <div class="row column text-center">
-    <p class="header-large">A Stronger Company</p> 
-    <h3 class="gutter-bottom uppercase">Over the last year...</h3>
-  </div>      
-      
-  <!-- GREEN ROW OF 3 BOXES -->    
-  <div class="row">
-      <div style="padding-bottom:25px;" class="column small-12 large-4">
-        <div class="callout box-green">
-          <p class="text-large">We provided<br> <span class="emphasis">$436 billion</span><br> in mortgage funding</p>
+<div class="landing-band background-evergreen">
+  <div class="row-container text-center">
+    <div class="row">
+      <div class="column">
+        <p class="header-large">A Stronger Company</p> 
+        <h3 class="gutter-bottom uppercase">Over the last year...</h3>
+      </div>
+    </div>  
+    <!-- GREEN ROW OF 3 BOXES -->    
+    <div class="row large-up-3">
+      <div class="column">
+        <div class="callout border-white background-green">
+          <h3>We provided<br><span class="call-to-action">$436 billion</span><br> in mortgage funding</h3>
         </div>    
       </div>  
-    <div style="padding-bottom:25px;" class="column small-12 large-4">
-      <div class="callout box-green">
-        <p style="padding-top:10px;" class="text-large">Our total guarantee portfolio grew to<br> <span class="emphasis">$2 trillion</span></p>
-      </div>    
-    </div> 
-    <div style="padding-bottom:25px;" class="column small-12 large-4">
-      <div class="callout box-green">
-        <p class="text-large">We reported<br> <span class="emphasis">$14 billion</span><br> in net income</p>
-      </div>    
-    </div> 
+      <div class="column">
+        <div class="callout border-white background-green">
+          <h3>Our total guarantee portfolio grew to<br> <span class="call-to-action">$2 trillion</span></h3>
+        </div>    
+      </div> 
+      <div class="column">
+        <div class="callout border-white background-green">
+          <h3>We reported<br> <span class="call-to-action">$14 billion</span><br> in net income</h3>
+        </div>    
+      </div> 
+    </div>
+    <!-- END GREEN ROW OF 3 BOXES -->
   </div>
-  <!-- END GREEN ROW OF 3 BOXES -->
 </div>
 <!-- END GREEN SECTION -->
 
 
-
-
-
-
 <!-- // LIGHT GREEN BLURB SECTION -->
-<div class="content-band background-pear">
-  <div class="row text-center">
-    <div class="column large-12 large-centered">
-      <p class="blurb-large">We’ve returned <span style="color:#fff;" class="header-large"><strong>$110.1 billion</strong></span> to taxpayers, <span style="color:#fff;" class="header-large"><strong>55%</strong></span> more than we received from the U.S. Treasury.</p>
+<div class="landing-band background-pear">
+  <div class="row-container text-center">
+    <div class="row">
+      <div class="column">
+      <p class="text-flex-22-42">We’ve returned <b class="text-flex-36-60 accent-white">$110.1 billion</b> to taxpayers, 
+      <b class="text-flex-36-60 accent-white">55%</b> more than we received from the U.S. Treasury.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -89,18 +141,18 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- // DON QUOTE -->
-<div class="content-band background-concrete stripes">
-  <div class="row text-center">
-  <div class="column large-12 large-centered">
-  	<div class="column medium-12 large-6 quote">
-      <p class="text-dark-large">
-      	<em class="enlarge"><span class="enlarge">"Our performance is evidence of good progress toward our goal to be one of the best-run financial institutions in the country, while successfully delivering on our public policy mission. We call this our transformation to ‘A Better Freddie Mac.'"</span></em>
-      </p>
-      <h4 class="text-green">CEO Donald H. Layton, October 31, 2017</h4>
-    </div>
-    <div class="column medium-12 large-6">
-      <p style="padding-left:25px;"><img src="images/Donald_Layton.jpg"></p>
-    </div>
+<div class="landing-band background-concrete stripes">
+  <div class="row-container gutter-bottom">
+    <div class="row">
+      <div class="column large-6 large-text-right">
+        <p class="text-flex-24-32 accent-dark-gray">
+          <em>"Our performance is evidence of good progress toward our goal to be one of the best-run financial institutions in the country, while successfully delivering on our public policy mission. We call this our transformation to ‘A Better Freddie Mac.'"</em>
+        </p>
+        <h4 class="accent-green">CEO Donald H. Layton, October 31, 2017</h4>
+      </div>
+      <div class="column large-6">
+        <p class="gutter-left-large"><img src="images/Donald_Layton.jpg"></p>
+      </div>
     </div>
   </div>
 </div>
@@ -108,71 +160,65 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- // ODOMETER -->
-<div class="content-band background-pear gutter-top gutter-bottom">
-  <div class="row">
-    <div class="column large-11 large-centered text-center">
-      <p class="blurb-large">Since 1970, we've made home possible nearly<br /> <span class="header-large reduce" style="color:#fff;"><strong>76 million</strong></span> times.</p>
-      <div class="odometer gutter-top">
-        <div class="odometer-number">
-          <div class="odometer-building7"></div>
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-house6"></div>
-        </div>
-        <div class="odometer-separator show-for-medium">
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-building0 speed6"></div>
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-house0 speed5"></div>
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-building0 speed4"></div>
-        </div>
-        <div class="odometer-separator show-for-medium">
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-building0 speed3"></div>
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-house0 speed2"></div>
-        </div>
-        <div class="odometer-number">
-          <div class="odometer-house0 speed1"></div>
+<div class="landing-band background-pear gutter-top gutter-bottom">
+  <div class="row-container text-center gutter-bottom">
+    <div class="row">
+      <div class="column large-11 large-centered">
+        <p class="text-flex-22-42">Since 1970, we've made home possible nearly<br/><b class="text-flex-36-60 accent-white">76 million</b> times.</p>
+        <div class="odometer gutter-top">
+          <div class="odometer-number">
+            <div class="odometer-building7"></div>
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-house6"></div>
+          </div>
+          <div class="odometer-separator show-for-medium">
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-building0 speed6"></div>
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-house0 speed5"></div>
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-building0 speed4"></div>
+          </div>
+          <div class="odometer-separator show-for-medium">
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-building0 speed3"></div>
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-house0 speed2"></div>
+          </div>
+          <div class="odometer-number">
+            <div class="odometer-house0 speed1"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <!-- // END ODOMETER -->
 
 
-
-<!-- // BANNER 1-->
- <!-- <div class="notch-wrapper">
-    <img class="no-border full" style="width:100%" src="images/bhf-sound-housing.jpg">
-    <div class="banner-overlay-header"><p class="header-banner-large"><strong>A More Sound Housing Finance System</strong></p></div>
-  <div class="hide-for-small-only">
-    <div class="notch-top-v background-primary"></div>
-    <div class="notch-top-v background-light-blue"></div>
+<!-- // BANNER 1 -->
+<div class="notch-wrapper">
+  <div class="bhf-banner-better background-primary landing-hero landing-inner-band">
+    <div class="row-container text-center gutter-bottom">
+      <div class="row">
+        <div class="column">
+          <div class="callout small-to-large"></div> 
+          <div class="callout small-to-large">
+            <h2 class="text-flex-36-60">A Better Housing Finance System</h2>
+          </div>  
+          <div class="callout small-to-large"></div>           
+        </div>
+      </div>
+    </div>
   </div>
-</div>-->
-<!-- // END BANNER 1-->
-
-
- <!-- // BANNER 1 -->
-   <div class="notch-wrapper">
-     <div class="banner-better content-inner-band">
-       <div class="row">
-         <div class="column large-12 large-centered">
-           <div class="header-banner-large">A Better Housing Finance System</div>
-              </div>
-            </div>
-          </div>
-      <div class="notch-top-v background-primary"></div>
-    <div class="notch-top-v background-light-blue"></div>
+  <div class="notch-top-v background-primary"></div>
+  <div class="notch-top-v" style="background: #e5f3fc;"></div>
 </div>
       <!-- // BANNER 1 -->
 
@@ -183,25 +229,27 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- LIGHT BLUE ROW OF 3 BOXES -->  
-<div class="content-band background-light-blue"> 
-  <div class="row">
-    <div class="column small-12 large-4 gutter-bottom">
-      <div class="callout box-light-blue">
-        <p class="text-large center-vertically">We've transferred a portion of credit risk on<br><span class="emphasis">$1+ trillion</span><br>of mortgages away from taxpayers</p>
-      </div>    
-    </div>  
-    <div class="column small-12 large-4 gutter-bottom">
-      <div class="callout box-light-blue">
-        <p class="text-large center-vertically">The Single Security will pave the way for a<br> <span class="emphasis">$3.5 trillion</span><br> TBA MBS market in 2019</p>
-      </div>    
-    </div> 
-    <div class="column small-12 large-4 gutter-bottom">
-      <div class="callout box-light-blue">
-        <p class="text-large center-vertically">Our investment in the Common Securitization Platform will standardize <span class="emphasis">agency MBS</span> issuance and management</p>
-      </div>    
-    </div> 
+<div class="landing-band" style="background: #e5f3fc;"> 
+  <div class="row-container text-center gutter-bottom">
+    <div class="row large-up-3" data-equalizer>
+      <div class="column">
+        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3>We've transferred a portion of credit risk on<br><span class="call-to-action">$1+ trillion</span><br>of mortgages away from taxpayers</h3>
+        </div>    
+      </div>  
+      <div class="column">
+        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3>The Single Security will pave the way for a<br> <span class="call-to-action">$3.5 trillion</span><br> TBA MBS market in 2019</h3>
+        </div>    
+      </div> 
+      <div class="column">
+        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3>Our investment in the Common Securitization Platform will standardize <span class="call-to-action">agency MBS</span> issuance and management</h3>
+        </div>    
+      </div> 
+    </div>
+    <!-- END LIGHT BLUE ROW OF 3 BOXES -->
   </div>
-<!-- END LIGHT BLUE ROW OF 3 BOXES -->
 </div>
 
 
@@ -209,335 +257,311 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- // VIDEO 1 TRANSFERRING RISK -->
-<div class="content-band background-sky-blue">
-  <div class="row text-center">
-    <div class="column large-10 large-centered">
-      <h1>Transferring Risk Away from Taxpayers</h1>
-      <p class="text-dark-large">We're the leading innovator in programs that shift credit risk to private investors and shield America's taxpayers.</p>    
-        <p><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=8l7v0rr0w6c" data-src="//www.youtube-nocookie.com/embed/8l7v0rr0w6c?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/credit_risk_transfer_video_still.jpg"></a></p>
+<div class="landing-band" style="background-color: #bfe8f8;">
+  <div class="row-container text-center gutter-bottom">
+    <div class="row">
+      <div class="column large-10 large-centered">
+        <h1>Transferring Risk Away from Taxpayers</h1>
+        <p class="text-flex-24-32 accent-dark-gray">We're the leading innovator in programs that shift credit risk to private investors and shield America's taxpayers.</p>    
+        <p><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" 
+         href="https://www.youtube.com/watch?v=8l7v0rr0w6c" data-src="//www.youtube-nocookie.com/embed/8l7v0rr0w6c?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" 
+         src="images/credit_risk_transfer_video_still.jpg"></a></p>
+      </div>
     </div>
   </div>
 </div>
 <!-- // END VIDEO 1 TRANSFERRING RISK -->
   
 
-
-
 <!-- // WORD COLLAGE SECTION -->
-<div class="content-band background-light-blue">
-  <div class="row children-vertical-align-large">
-    <div class="column large-6">
-      <p class="text-dark-large text-center large-text-left enlarge">Since our credit risk transfer program began in 2009, we've added <strong>new products</strong> to meet the increasing demand, from over <strong>800 investors</strong>.</p>
-    </div>
-    <div class="column large-6">
-      <p><img src="images/bhf_word_cloud.png"></p>
+<div class="landing-band" style="background-color: #bfe8f8;">
+  <div class="row-container text-center gutter-bottom">
+  <div class="row large-up-2" data-equalizer>
+    <div class="column">
+      <div class="table">
+        <div class="table-cell vertical-middle" data-equalizer-watch>
+          <p class="text-flex-24-32 accent-dark-gray text-center large-text-left enlarge">Since our credit risk transfer program began in 2009, we've added <strong>new products</strong> to meet the increasing demand, from over <strong>800 investors</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="table">
+          <div class="table-cell vertical-middle" data-equalizer-watch>       
+            <p><img class="no-border full" alt="" src="images/bhf_word_cloud.png"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <!-- // END WORD COLLAGE SECTION -->
 
-
-<!-- // BANNER 2-->
-<!--<div class="notch-wrapper">
-    <img class="no-border full" style="width:100%" src="images/bhf_creating_opportunities.jpg">
-    <div class="banner-overlay-header"><p class="header-banner-large"><strong>Creating Opportunities for the Industry</strong></p></div>
-  <div class="hide-for-small-only">
-    <div class="notch-top-v background-white"></div>
-    <div class="notch-top-v background-orange"></div>
-  </div>
-</div>-->
-<!-- // END BANNER 2-->
-
-
 <!-- // BANNER 2 -->
-   <div class="notch-wrapper">
-     <div class="banner-opportunities content-inner-band">
-       <div class="row">
-         <div class="column large-12 large-centered">
-           <div class="header-banner-large">Creating Opportunities for the Industry</div>
-              </div>
-            </div>
+<div class="notch-wrapper">
+  <div class="bhf-banner-opportunities background-orange landing-hero landing-band">
+    <div class="row-container text-center gutter-bottom">
+      <div class="row">
+        <div class="column">
+          <div class="callout small-to-large"></div> 
+          <div class="callout small-to-large">
+            <h2 class="text-flex-36-60">Creating Opportunities for the Industry</h2>
           </div>
-      <div class="notch-top-v background-white"></div>
-    <div class="notch-top-v background-orange"></div>
+          <div class="callout small-to-large"></div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="notch-top-v background-white"></div>
+  <div class="notch-top-v background-orange"></div>
 </div>
 <!-- // BANNER 2 -->
       
-      
-
-
-
-
-<!-- // SOLUTIONS FOR HOMEBUYERS HEADER -->
-<!-- <div class="content-band" style="padding-bottom: 10px;">
-  <div class="row text-center">
-    <div class="column large-12 large-centered">
-        <p class="text-dark-large">We're leading the industry in developing solutions to address the nation's housing demands</p>
-          <div class="column small-4 large-2 large-centered">
-            <p><img src="images/orange_house.svg"></p>
-          </div>
-        <p class="header-large" style="color:#ff6c00;">Solutions for <strong>Homebuyers</strong></p>
-    </div>
-  </div>
-</div> -->
-<!-- // END SOLUTIONS FOR HOMEBUYERS HEADER -->
-
-
 
 
 <!-- // ORANGE SECTION -->
 <div class="notch-wrapper">
-<div class="content-band background-orange">
-  <div class="row column text-center">
-    <p class="header-large">Solutions for <strong>Homebuyers</strong></p>
-      <h3 class="uppercase gutter-bottom">Over the last year...</h3>
+  <div class="landing-band background-orange">
+    <div class="row-container text-center">
+      <div class="row">
+        <div class="column">
+          <p class="header-large">Solutions for <strong>Homebuyers</strong></p>
+          <h3 class="uppercase gutter-bottom">Over the last year...</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row-container text-center gutter-bottom">
+    <!-- ORANGE ROW OF 3 BOXES -->
+      <div class="row large-up-3" data-equalizer>
+        <div class="column">
+          <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
+            <h3 class="weight-light"><span class="enlarge">We helped<br /> <span class="call-to-action">349,000</span><br /> first-time homebuyers</span></h3>
+          </div>    
+        </div>  
+        <div class="column">
+          <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
+            <h3 class="weight-light">We helped nearly<br /> <span class="call-to-action">773,000</span><br /> families refinance and save money</h3>
+          </div>    
+        </div> 
+        <div class="column">
+          <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
+            <h3 class="weight-light">Our <span class="call-to-action">3%</span> down payment<br /> program is expanding access to credit for qualified homebuyers</h3>
+          </div>    
+        </div> 
+      </div>
+    </div>
+    <!-- END ORANGE ROW OF 3 BOXES -->
+    <!-- // ORANGE ROTATOR -->
+    <div class="row-container-wide text-center">
+      <div class="row">
+        <div class="column small-11 small-centered large-12"> 
+          <div class="orbit orbit-controls-outside" role="region" aria-hidden="true" data-orbit data-auto-play="false" data-bullets="false" style="border: 5px solid #f5894e;">
+            <ul class="orbit-container">
+              <li class="orbit-slide">
+                <div class="callout small-to-large slide-inner-container">
+                  <div class="gutter-top-large-only"></div>
+                  <div class="row large-vertical-center-children">
+                    <div class="column large-7">
+                      <div class="gutter-top gutter-left-medium-only gutter-right-medium-only">
+                        <div class="map-wrapper hide-for-sr">
+                          <img class="map no-border" src="images/homebuyers_USmap.png" alt="map of USA">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                          <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
+                        </div>  
+                      </div>
+                    </div>
+                    <div class="column large-5">
+                      <h3 class="weight-light">The 30-year fixed-rate mortgage, the cornerstone of our business, accounts for almost 90% of the home-loan market. It lets homeowners enjoy low, stable payments and the flexibility to refinance penalty-free.</h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="orbit-slide">
+                <div class="callout small-to-large slide-inner-container">
+                  <div class="row large-vertical-center-children">
+                    <div class="column large-7 xlarge-6">
+                      <p class="gutter-all-medium-only gutter-top"><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=buAVflEG1nc" data-src="//www.youtube-nocookie.com/embed/buAVflEG1nc?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/bhf_homebuyers_video_still.jpg"></a></p>
+                    </div>
+                    <div class="column large-5 xlarge-6">
+                      <h3 class="weight-light gutter-top-large gutter-left">Home Possible&reg; mortgages offer <strong>low down payment</strong> options to help first-time and low- to moderate-income homebuyers as well as buyers in high-cost and underserved markets.</h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="orbit-slide">
+                <div class="callout small-to-large text-center slide-inner-container">
+                  <div class="row medium-up-3">
+                    <div class="column">
+                      <div class="hide-for-small-only gutter-top-medium-only gutter-bottom"><img alt="" src="images/bhf_homebuyers_circle_image_1.png" class="image-circle no-border"></div>
+                      <p class="text-flex-18-24">We're improving <strong>access to credit</strong> by removing barriers for borrowers who don't have credit scores but qualify for mortgages.</p>
+                    </div>
+                    <div class="column">
+                      <div class="hide-for-small-only gutter-top-medium-only gutter-bottom"><img alt="" src="images/bhf_homebuyers_circle_image_2.png" class="image-circle no-border"></div>
+                      <p class="text-flex-18-24">Loan Advisor Suite<sup>&reg;</sup>, our integrated suite of tool, makes the mortgage process more efficient, more transparent, and more certain.</p>
+                    </div>
+                    <div class="column">
+                      <div class="hide-for-small-only gutter-top-medium-only gutter-bottom"><img alt="" src="images/bhf_homebuyers_circle_image_3.png" class="image-circle no-border"></div>
+                      <p class="text-flex-18-24">We opened our 14th <strong>Borrower Help Center</strong> nationwide, providing counseling to homebuyers and homeowners.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="gutter-all"></div>
+        </div>
+        <div class="gutter-all"> </div>
+      </div>
+    </div>     
   </div>
-  
-<!-- ORANGE ROW OF 3 BOXES -->
-  <div class="row">
-    <div class="column small-12 large-4 gutter-bottom">
-      <div class="callout box-orange">
-        <p class="text-large"><span class="enlarge">We helped<br /> <span class="emphasis">349,000</span><br /> first-time homebuyers</span></p>
-      </div>    
-    </div>  
-  <div class="column small-12 large-4 gutter-bottom">
-    <div class="callout box-orange">
-      <p class="text-large">We helped nearly<br /> <span class="emphasis">773,000</span><br /> families refinance and save money</p>
-    </div>    
-  </div> 
-  <div class="column small-12 large-4 gutter-bottom">
-    <div class="callout box-orange">
-      <p class="text-large">Our <span class="emphasis">3%</span> down payment<br /> program is expanding access to credit for qualified homebuyers</p>
-    </div>    
-  </div> 
-</div>
-<!-- END ORANGE ROW OF 3 BOXES -->
-   
-             
-<!-- // ORANGE ROTATOR -->
-<div class="row">
-<div class="column small-11 small-centered large-12">
-<div class="gutter-bottom">  
-  <div class="orbit background-orange orbit-controls-outside" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false" data-bullets="false" style="border: 5px solid #f5894e;">
-  <ul class="orbit-container">
-    <li class="orbit-slide">
-      <div class="callout large slide-inner-container">
-        <div class="row children-vertical-align-large">
-          <div class="column large-7">
-            <div class="map-wrapper hide-for-sr gutter-top">
-              <img class="map" src="images/homebuyers_USmap.png" alt="map of USA">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="medium" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="small" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-              <img class="large" src="images/bhf_homebuyers_US map_house.svg" alt="house">
-            </div>        
-          </div>
-          <div class="column large-5">
-            <p class="text-large">The 30-year fixed-rate mortgage, the cornerstone of our business, accounts for almost 90% of the home-loan market. It lets homeowners enjoy low, stable payments and the flexibility to refinance penalty-free.</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="orbit-slide">
-      <div class="callout large slide-inner-container">
-        <div class="row children-vertical-align-large">
-          <div class="column large-6 gutter-top">
-            <p class="gutter-top"><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=buAVflEG1nc" data-src="//www.youtube-nocookie.com/embed/buAVflEG1nc?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/bhf_homebuyers_video_still.jpg"></a></p>
-          </div>
-          <div class="column large-6 gutter-top">
-            <p class="text-large gutter-left">Home Possible&reg; mortgages offer <strong>low down payment</strong> options to help first-time and low- to moderate-income homebuyers as well as buyers in high-cost and underserved markets.</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="orbit-slide">
-      <div class="callout large text-center slide-inner-container">
-        <div class="row">
-          <div class="column small-12 medium-4 large-4"> <!--Set to medium 4 column so panel can be visible at medium device width without making rotator extremely long-->
-            <div class="hide-for-small-only"><img src="images/bhf_homebuyers_circle_image_1.png" class="image-circle"></div>
-            <p class="blurb">We're improving <strong>access to credit</strong> by removing barriers for borrowers who don't have credit scores but qualify for mortgages.</p>
-          </div>
-          <div class="column small-12 medium-4 large-4">
-          <div class="hide-for-small-only"><img src="images/bhf_homebuyers_circle_image_2.png" class="image-circle"></div>
-            <p class="blurb">Loan Advisor Suite<sup>&reg;</sup>, our integrated suite of tool, makes the mortgage process more efficient, more transparent, and more certain.</p>
-          </div>
-          <div class="column small-12 medium-4 large-4">
-          <div class="hide-for-small-only"><img src="images/bhf_homebuyers_circle_image_3.png" class="image-circle"></div>
-            <p class="blurb">We opened our 14th <strong>Borrower Help Center</strong> nationwide, providing counseling to homebuyers and homeowners.</p>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-</div>
-          <!-- // END ORANGE ROTATOR --> 
-          
-</div>
-<div class="notch-top-v background-white"></div>
-<div class="notch-top-v background-teal"></div>
+  <div class="notch-top-v background-white"></div>
+  <div class="notch-top-v background-teal"></div>
 </div>
 <!-- // END ORANGE SECTION -->
 
 
-
-
-
-
-
-<!-- // SOLUTIONS FOR RENTERS HEADER -->
-<!-- <div class="content-band" style="padding-bottom: 10px;">
-  <div class="row text-center">
-    <div class="column large-10 large-centered">
-          <div class="column small-4 large-2 large-centered">
-            <p><img src="images/renters_teal_apartment.svg"></p>
-          </div>
-        <p class="header-large" style="color:#00a19a;">Solutions for <strong>Renters</strong></p>
+<!-- // TEAL SECTION -->
+<div class="landing-band background-teal">
+  <div class="row-container text-center">
+    <div class="row">
+      <div class="column">
+        <p class="header-large">Solutions for <strong>Renters</strong></p>
+        <h3 class="gutter-bottom uppercase">Over the last year...</h3>
+      </div>
     </div>
   </div>
-</div> -->
-<!-- // END SOLUTIONS FOR RENTERS HEADER -->
-
-
-<!-- // TEAL SECTION -->
-<div class="content-band background-teal" style="padding-bottom:5px;">
-  <div class="row column text-center">
-    <p class="header-large">Solutions for <strong>Renters</strong></p>
-    <h3 class="gutter-bottom uppercase">Over the last year...</h3>
+  <div class="row-container text-center">    
+    <!-- TEAL ROW OF 3 BOXES --> 
+    <div class="row large-up-3" data-equalizer>
+      <div class="column">
+        <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
+          <h3 class="weight-light">Our funding helped make <span class="call-to-action">714,000</span> apartment units available nationwide</h3>
+        </div>    
+      </div>  
+      <div class="column">
+        <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
+          <h3 class="weight-light">The<br /> <span class="call-to-action">vast majority</span> of the apartments we fund are affordable to moderate- and low-income renters</h3>
+        </div>    
+      </div> 
+      <div class="column">
+        <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
+          <h3 class="weight-light">We provided <span class="call-to-action"><br />$1.1 billion</span> <br />to support manufactured housing communities</h3>
+        </div>    
+      </div> 
+    </div>
+    <!-- END TEAL ROW OF 3 BOXES -->
   </div>
-  
-
-  
-  
-  <!-- TEAL ROW OF 3 BOXES --> 
-  <div class="row">
-    <div class="column small-12 large-4" style="padding-bottom:25px;">
-      <div class="callout box-teal">
-        <p class="text-large center-vertically"><span class="enlarge">Our funding helped make <span class="emphasis">714,000</span> apartment units available nationwide</p>
-      </div>    
-    </div>  
-  <div class="column small-12 large-4" style="padding-bottom:25px;">
-    <div class="callout box-teal">
-      <p class="text-large center-vertically"><span class="enlarge">The<br />  <span class="emphasis">vast majority</span> of the apartments we fund are affordable to moderate- and low-income renters</span></p>
-    </div>    
-  </div> 
-  <div class="column small-12 large-4" style="padding-bottom:25px;">
-    <div class="callout box-teal">
-      <p class="text-large center-vertically"><span class="enlarge">We provided <span class="emphasis"><br />$1.1 billion</span> <br />to support manufactured housing communities</span></p>
-    </div>    
-  </div> 
-</div>
-<!-- END TEAL ROW OF 3 BOXES -->
-      
-        
-  <!-- // TEAL ROTATOR -->
-<div class="row">
-<div class="column small-11 small-centered large-12">
-  <div style="padding-bottom:25px;">
-    <div class="orbit background-teal orbit-controls-outside" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false" data-bullets="false" style="border:5px solid #33b7ae;">
-      <ul class="orbit-container">
-        <li class="orbit-slide">
-          <div class="callout large slide-inner-container">
-            <div class="row children-vertical-align-large" style="padding-top:50px;">
-              <div class="column large-4">
-                <div class="hand-wrapper">
-                  <img class="small-1" src="images/green_apartment.svg">
-                  <img class="large-1" src="images/green_apartment.svg">
-                  <img class="small-2" src="images/green_apartment.svg"> 
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 193">
-                    <path fill="#adcb36" d="M70,0H10A9.87,9.87,0,0,0,0,9.77V166.16a9.71,9.71,0,0,0,10,9.64H70a9.72,9.72,0,0,0,10-9.64V9.77A9.88,9.88,0,0,0,70,0"/>
-                    <path fill="#adcb36" d="M467.08,81c-23.47-22.93-43.72-29.32-70.24-21.91L336.7,78.64C341.61,107.9,323.31,137,290,136.7H190a9.71,9.71,0,0,1-10-9.64,10.07,10.07,0,0,1,10-9.91H290c17.77.27,27.5-13.23,27.5-29.19,0-10.9-5.8-29.32-27.5-29.32H230a10.13,10.13,0,0,1-7.06-2.86c-9.19-9-37.07-36.23-82.94-36.23H110a9.87,9.87,0,0,0-10,9.77V136.84a9.75,9.75,0,0,0,6.84,9.24c31.21,10.17,55.63,18.86,75.22,25.83C220.62,185.61,242.2,193,261.44,193c22.94,0,42.55-10.52,83.53-33.4,27.14-15.17,64.26-35.91,119.51-62.9A9.67,9.67,0,0,0,467.08,81"/>
-                  </svg>
+  <div class="row-container-wide text-center">         
+    <!-- // TEAL ROTATOR -->
+    <div class="row">
+      <div class="column small-11 small-centered large-12">
+        <div class="orbit orbit-controls-outside" role="region" aria-hidden="true" data-orbit data-auto-play="false" data-bullets="false" style="border:5px solid #33b7ae;">
+          <ul class="orbit-container">
+            <li class="orbit-slide">
+              <div class="callout large slide-inner-container">
+                <div class="gutter-all"></div>
+                <div class="row large-vertical-center-children">
+                  <div class="column large-4">
+                    <div class="hand-wrapper">
+                      <img class="small-1" src="images/green_apartment.svg">
+                      <img class="large-1" src="images/green_apartment.svg">
+                      <img class="small-2" src="images/green_apartment.svg"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 193">
+                        <path fill="#adcb36" d="M70,0H10A9.87,9.87,0,0,0,0,9.77V166.16a9.71,9.71,0,0,0,10,9.64H70a9.72,9.72,0,0,0,10-9.64V9.77A9.88,9.88,0,0,0,70,0"/>
+                        <path fill="#adcb36" d="M467.08,81c-23.47-22.93-43.72-29.32-70.24-21.91L336.7,78.64C341.61,107.9,323.31,137,290,136.7H190a9.71,9.71,0,0,1-10-9.64,10.07,10.07,0,0,1,10-9.91H290c17.77.27,27.5-13.23,27.5-29.19,0-10.9-5.8-29.32-27.5-29.32H230a10.13,10.13,0,0,1-7.06-2.86c-9.19-9-37.07-36.23-82.94-36.23H110a9.87,9.87,0,0,0-10,9.77V136.84a9.75,9.75,0,0,0,6.84,9.24c31.21,10.17,55.63,18.86,75.22,25.83C220.62,185.61,242.2,193,261.44,193c22.94,0,42.55-10.52,83.53-33.4,27.14-15.17,64.26-35.91,119.51-62.9A9.67,9.67,0,0,0,467.08,81"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="column large-6">
+                    <h3 class="weight-light">Our goal is to support <strong>all corners of the multifamily market</strong>, to keep rental housing affordable and accessible.</h3>
+                  </div>
                 </div>
               </div>
-              <div class="column large-6">
-                <p class="text-large" style="padding-top:10px;">Our goal is to support <strong>all corners of the multifamily market</strong>, to keep rental housing affordable and accessible.</p>
+            </li>
+            <li class="orbit-slide">
+              <div class="callout large slide-inner-container">
+                <div class="gutter-all"></div>
+                <div class="row large-vertical-center-children">
+                  <div class="column large-6">
+                    <p><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/bhf_renters_video_still.jpg"></a></p>
+                  </div>
+                  <div class="column large-6">
+                    <h3 class="weight-light">Our Targeted Affordable Housing program funded <strong>$6.4 billion</strong> over the last year to support housing for renters with the greatest need.</h3>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </li>
-        <li class="orbit-slide">
-          <div class="callout large slide-inner-container">
-            <div class="row children-vertical-align-large" style="padding-top:50px;">
-              <div class="column large-6">
-                <p><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/bhf_renters_video_still.jpg"></a></p>
+            </li>
+            <li class="orbit-slide">
+              <div class="callout large text-center slide-inner-container">
+                <div class="row medium-up-3">
+                  <div class="column">
+                    <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_1.png" class="image-circle no-border"></div>
+                    <p class="text-flex-18-24">We're <strong>#1</strong> in financing housing for seniors' assisted and independent living.</p>
+                  </div>
+                  
+                  <div class="column">
+                  <div class="hide-for-small-only"><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video" 
+                  href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img src="images/bhf_renters_circle_image_2-tah.png" 
+                  class="image-circle no-border" alt="Video: A Shared Passion"></a></div>
+                    <p class="text-flex-18-24">Our Targeted Affordable Housing program funded <strong>$7.7 billion</strong> over the last year to support housing for renters with the greatest need.</p>
+                  </div>
+                  
+                  <div class="column">
+                  <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_3.png" class="image-circle no-border"></div>
+                    <p class="text-flex-18-24"><strong>Green Advantage<sup>SM</sup></strong> helps multifamily property owners and developers provide affordable, resource-efficient housing.</p>
+                  </div>
+                </div>
               </div>
-              <div class="column large-6">
-                <p class="text-large">Our Targeted Affordable Housing program funded <strong>$6.4 billion</strong> over the last year to support housing for renters with the greatest need.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="orbit-slide">
-          <div class="callout large text-center slide-inner-container">
-            <div class="row">
-              <div class="column small-12 medium-4 large-4"> <!--Set to medium 4 column so panel can be visible at medium device width without making rotator extremely long-->
-                <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_1.png" class="image-circle"></div>
-                <p class="blurb">We're <strong>#1</strong> in financing housing for seniors' assisted and independent living.</p>
-              </div>
-              
-              <div class="column small-12 medium-4 large-4">
-              <div class="hide-for-small-only"><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video" href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img src="images/bhf_renters_circle_image_2-tah.png" class="image-circle" alt="Video: A Shared Passion"></a></div>
-                <p class="blurb">Our Targeted Affordable Housing program funded <strong>$7.7 billion</strong> over the last year to support housing for renters with the greatest need.</p>
-              </div>
-              
-              <div class="column small-12 medium-4 large-4">
-              <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_3.png" class="image-circle"></div>
-                <p class="blurb"><strong>Green Advantage<sup>SM</sup></strong> helps multifamily property owners and developers provide affordable, resource-efficient housing.</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
   <!-- // END TEAL ROTATOR -->     
 </div>
 <!-- // END TEAL BY THE NUMBERS SECTION -->
@@ -545,214 +569,52 @@ stylesheet: /ss/app_bhf.css
 
 
 <!-- // BANNER 3 -->
-<!--<div class="notch-wrapper">
-    <img class="no-border full" style="width:100%;" src="images/bhf-industry-partners.jpg">
-    <div class="banner-overlay-header"><p class="header-banner-large gutter-right gutter-left"><strong>We're proud to work with our industry partners to make home possible</strong></p></div>
-  <div class="hide-for-small-only">
-    <div class="notch-top-v background-yellow"></div>
-    <div class="notch-top-v background-white"></div>
-  </div>
-</div>-->
-<!-- // END BANNER 3 -->
-
-
-<!-- // BANNER 3 -->
-   <div class="notch-wrapper">
-     <div class="banner-partners content-inner-band">
-       <div class="row">
-         <div class="column large-12 large-centered">
-           <div class="header-banner-large">We&rsquo;re Proud to be Part of the Industry</div>
-              </div>
-            </div>
+<div class="notch-wrapper">
+  <div class="bhf-banner-partners background-teal landing-hero landing-inner-band">
+    <div class="row-container text-center gutter-bottom">
+      <div class="row">
+        <div class="column">
+          <div class="callout small-to-large"></div>        
+          <div class="callout small-to-large">
+            <h2 class="text-flex-36-60">We&rsquo;re Proud to be Part of the Industry</h2>
           </div>
-      <div class="notch-top-v background-yellow"></div>
-    <div class="notch-top-v background-white"></div>
+          <div class="callout small-to-large"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="notch-top-v background-yellow"></div>
+  <div class="notch-top-v background-white"></div>
 </div>
 <!-- // BANNER 3 -->
 
 
 
 <!-- // FOUR COLUMN BLURBS WITH ICONS -->
-<div class="content-band" style="padding-bottom: 50px;">
-  <div class="row text-center">
-    <div class="column large-12 large-centered">
-      <div class="column large-3">
+<div class="landing-band">
+  <div class="row-container text-center gutter-bottom gutter-top">
+    <div class="row large-up-4">
+      <div class="column">
         <p><img src="images/industry_partners_icon_1.svg" style="height:100px;"></p>
         <h2>Innovation</h2>
-        <p class="blurb" style="padding:15px;">We're dedicated to automation and innovation that bring more efficiencies to the housing market.</p>
+        <p class="text-flex-18-24" style="padding:15px;">We're dedicated to automation and innovation that bring more efficiencies to the housing market.</p>
       </div>
-      <div class="column large-3">
+      <div class="column">
         <p><img src="images/industry_partners_icon_2.svg" style="height:100px;"></p>
         <h2>Technology</h2>
-        <p class="blurb" style="padding:15px;">Our focus and investment in technology is lowering costs across the industry, while helping to serve more families.</p>
+        <p class="text-flex-18-24" style="padding:15px;">Our focus and investment in technology is lowering costs across the industry, while helping to serve more families.</p>
       </div>
-      <div class="column large-3">
+      <div class="column">
         <p><img src="images/industry_partners_icon_3.svg" style="height:100px;"></p>
         <h2>Commitment</h2>
-        <p class="blurb" style="padding:15px;">We're committed to serving the industry by building a better and more sound housing finance system.</p>
+        <p class="text-flex-18-24" style="padding:15px;">We're committed to serving the industry by building a better and more sound housing finance system.</p>
       </div>
-      <div class="column large-3">
+      <div class="column">
         <p><img src="images/industry_partners_icon_4.svg" style="height:100px;"></p>
         <h2>Excellence</h2>
-        <p class="blurb" style="padding:15px;">We're working closely with our customers to meet their needs and help them remain strong and competitive.</p>
+        <p class="text-flex-18-24" style="padding:15px;">We're working closely with our customers to meet their needs and help them remain strong and competitive.</p>
       </div>
-
     </div>
   </div>
 </div>
 <!-- // END FOUR COLUMN BLURBS WITH ICONS -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<div class="content-band background-gray">
-  <div class="row column">
-    <p>
-      I am a gray band that would likely have an image overlayed for a background
-    </p>
-  </div>
-</div>
-
-
-
-
-<div class="mosaic-3">
-  <div class="content-band">
-    <div class="row column">
-      <p>
-        I am 1 of 3 mosaic band
-      </p>
-    </div>
-  </div>
-  <div class="content-band">
-    <div class="row column">
-      <p>
-        I am 2 of 3 mosaic band
-      </p>
-    </div>  
-  </div>
-  <div class="content-band">
-    <div class="row column">
-      <p>
-        I am 3 of 3 mosaic band
-      </p>
-    </div>  
-  </div>
-</div>
-
-<div class="content-band background-white">
-  <div class="row column">
-    <p>
-      I am a white content band
-    </p>
-    
-<div class="orbit" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false" data-nav-buttons="false">
-  <ul class="orbit-container">
-    <li class="orbit-slide background-yellow">
-      <div class="callout">
-        <h3>Slide One</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><img src="files/plant1-thumb.jpg" /></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-green">
-      <div class="callout">
-        <h3>Slide Two</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-center"><a class="button hollow">Button Link</a></p>
-      </div>
-    </li>
-    <li class="orbit-slide background-orange">
-      <div class="callout">
-        <h3>Slide Three</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-right"><a class="button hollow large">Button Link</a></p>
-      </div>
-    </li>
-  </ul>
-</div>
-
-  </div>
-</div>
-
-
-<div class="content-band background-concrete stripes">
-  <div class="row column">
-    <p>
-      I am a gray striped content band
-    </p>
-  </div>
-</div>
-
-<div class="content-band background-orange">
-  <div class="row column">
-    <p>
-      I am a orange content band
-    </p>
-  </div>
-</div>
-<div class="content-band background-teal">
-  <div class="row column">
-    <p>
-      I am a teal content band
-    </p>
-  </div>
-</div>
-
--->
-
-
-
-
-
-<div class="share-wrapper hide-for-print hide" aria-hidden="true">
-  <div class="row column">
-    <div class="share-widget">
-      <div class="share-title">
-        <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"><path fill="none" stroke="#fff" stroke-width="1.5" d="M11.21 5.38H8.45q-5.87 0-7.21 4.54c-1.16 3.56.09 7.83.09 7.83A13.72 13.72 0 0 1 3 13.21c1-1.33 1.87-1.87 4.63-1.87l5.61-.09v4.81L20.2 8.4 13.26.75v4.63h-2z"/></svg>
-        <span>Share</span>
-      </div> 
-      <div class="share-links">
-        <a class="sharelink-twitter" href="https://twitter.com/intent/tweet/?text=http://www.freddiemac.com&via=freddiemac" aria-label="twitter"><svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 12"><path fill="#fff" d="M16 1.54a6.57 6.57 0 0 1-1.89.52A3.29 3.29 0 0 0 15.57.24a6.58 6.58 0 0 1-2.09.8 3.29 3.29 0 0 0-5.6 3A9.32 9.32 0 0 1 1.11.6 3.29 3.29 0 0 0 2.13 5a3.27 3.27 0 0 1-1.49-.42 3.29 3.29 0 0 0 2.64 3.26 3.29 3.29 0 0 1-1.48.06 3.29 3.29 0 0 0 3.07 2.28 6.59 6.59 0 0 1-4.09 1.4 6.59 6.59 0 0 1-.78 0A9.29 9.29 0 0 0 5 13a9.28 9.28 0 0 0 9.34-9.34v-.42A6.67 6.67 0 0 0 16 1.54z"/></svg></a> 
-        <a class="sharelink-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.freddiemac.com" aria-label="facebook"><svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 7 13"><path fill="#fff" d="M8 2.5H5.71a.76.76 0 0 0-.57.83V5H8v2.34H5.14v7.06H2.45V7.34H0V5h2.45V3.6A3.39 3.39 0 0 1 5.71 0H8v2.5z"/></svg></a> 
-        <a class="sharelink-linkedin" data-location="http://www.freddiemac.com" href="https://www.linkedin.com/" aria-label="linkedin"><svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 15.5"><path fill="#fff" d="M1.94 0a1.78 1.78 0 1 0 0 3.56 1.78 1.78 0 1 0 0-3.56zM.2 4.96h3.42v10.29H.2zM12 4.72a3.4 3.4 0 0 0-3.08 1.7V5h-3.4v10.29h3.42V9.51A2.34 2.34 0 0 1 9 8.67a1.87 1.87 0 0 1 1.8-1.25c1.24 0 1.73.94 1.73 2.33v5.51H16V9.35c0-3.16-1.73-4.63-4-4.63z"/></svg></a> 
-        <a class="sharelink-mailto" href="mailto:?body=Sharing%20a%20link%20http://www.freddiemac.com" aria-label="mail-to"><svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11.5"><path fill="#fff" d="M16 12.95H1.84A1.84 1.84 0 0 1 0 11.11V1.84A1.84 1.84 0 0 1 1.84 0H16a1.84 1.84 0 0 1 1.84 1.84v9.27A1.84 1.84 0 0 1 16 12.95zM1.84 1.56a.28.28 0 0 0-.28.28v9.27a.28.28 0 0 0 .28.28H16a.28.28 0 0 0 .28-.28V1.84a.28.28 0 0 0-.28-.28H1.84z"/><path fill="#fff" d="M16 12.56H1.84a1.46 1.46 0 0 1-1.35-.94.39.39 0 0 1 .11-.43l5.52-4.93a.39.39 0 0 1 .52.58l-5.29 4.72a.67.67 0 0 0 .49.22H16a.67.67 0 0 0 .49-.22l-5.35-4.77a.39.39 0 0 1 .52-.58l5.59 5a.39.39 0 0 1 .11.43 1.45 1.45 0 0 1-1.35.94z"/><path fill="#fff" d="M8.92 9.05A.39.39 0 0 1 8.66 9L.59 1.76a.39.39 0 0 1-.1-.43A1.46 1.46 0 0 1 1.84.39H16a1.45 1.45 0 0 1 1.35.94.39.39 0 0 1-.11.43L9.18 9a.38.38 0 0 1-.26.1zM1.35 1.39l7.57 6.75 7.58-6.75a.67.67 0 0 0-.5-.22H1.84a.66.66 0 0 0-.49.22z"/></svg></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- // FOOTER -->
-<footer class="footer hide-for-print">
-  <div class="row">
-    <div class="column large-4">
-      <ul class="no-bullet text-left gutter-top">
-        <li><a href="/terms/">Terms of Use</a></li>
-        <li><a href="/terms/privacy.html">Privacy Policy</a></li>
-      </ul>      
-    </div>
-    <div class="column large-4 text-center">
-      <div class="hide-for-print"> 
-        <a href="/" class="hide-for-xlarge logo-mobile"><img alt="Freddie Mac logo" src="images/FreddieMacLogo-no-tagline-white.svg" class="no-border"></a>
-        <a href="/" class="show-for-xlarge logo-desktop"><img alt="Freddie Mac logo" src="images/FreddieMacLogo-no-tagline-white.svg" class="no-border"></a>
-      </div>
-    </div>
-    <div class="column large-4">
-      <ul class="no-bullet text-right gutter-top">
-        <li>&copy; Freddie Mac 2017</li>
-      </ul>      
-    </div>
-  </div>
-</footer>
-<div class="footer-bottom-edge"> </div>
-<!-- // END FOOTER -->

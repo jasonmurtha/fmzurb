@@ -1,4 +1,4 @@
-<title>Styleguide: Orbit Carousels</title>
+<title class="hide">Styleguide: Orbit Carousels</title><br>
 
 # Orbit Carousel Basics
 

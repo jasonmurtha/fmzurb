@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-borrower</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NHM-Landing-2018" transform="translate(-1061.000000, -1444.000000)">
+            <g id="Section-3---Illustration" transform="translate(0.000000, 947.000000)">
+                <g id="Labels">
+                    <g id="5" transform="translate(1030.000000, 497.000000)">
+                        <g id="icon-borrower" transform="translate(31.000000, 0.000000)">
+                            <circle id="Oval" fill="#00A6E1" cx="60" cy="60" r="60"></circle>
+                            <g id="house" transform="translate(30.000000, 28.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25">
+                                <g id="Outline_Icons_1_">
+                                    <g id="New_icons_1_">
+                                        <g id="Group">
+                                            <polyline id="Shape" points="8.75 28.75 8.75 56.25 51.25 56.25 51.25 27.5"></polyline>
+                                            <polyline id="Shape" points="1.25 27.5 30 1.25 58.75 27.5"></polyline>
+                                            <polyline id="Shape" points="40 3.75 48.75 3.75 48.75 12.5"></polyline>
+                                            <circle id="Oval" cx="30" cy="28.75" r="7.5"></circle>
+                                            <path d="M43.35,48.75 L16.65,48.75 C16.65,41.3775 22.6275,36.25 30,36.25 C37.375,36.25 43.35,41.3775 43.35,48.75 Z" id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+.button {
+  &.invert {
+    @each $name, $color in $button-palette {
+      &.#{$name} {
+        background: $white;  
+        color: $color;      
+        &:hover,
+        &:focus,
+        &:active {
+          background: $color;
+          color: $white;
+        }
+      }
+    }
+    &.large {  
+      padding: 0.85em 1.5em;
+      font-size: 1.12rem;
+    }
+  }
+  &.medium {
+    padding: 0.75em 1.25em;
+    font-size: 1.12rem;  
+  }
+  &.xlarge {
+    padding: 0.85em 2.25em;
+    font-size: calc(16px +  8 * (100vw - 320px) / 1180); 
+    @include breakpoint(large) {
+      padding: 0.85em 3.25em;
+    }
+    @include breakpoint(xxlarge) {
+      font-size: rem-calc(24);
+      border-width: 3px;
+    }
+  }  
+}

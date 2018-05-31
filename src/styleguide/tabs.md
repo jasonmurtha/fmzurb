@@ -1,4 +1,4 @@
-<title>Styleguide: Tabs</title>
+<title class="hide">Styleguide: Tabs</title><br>
 
 # Tab Elements
 

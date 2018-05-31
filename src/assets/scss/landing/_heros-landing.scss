@@ -1,0 +1,136 @@
+// default to use for all heros with background images
+.landing-hero {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; 
+  background-position: center top;
+}
+
+.dts-landing-hero {
+  background-image: linear-gradient(rgba(46,46,45,.2),rgba(46,46,45,.2)),url("/about/duty-to-serve/images/dts-hero.jpg");
+  background-position: left center;
+	padding: 50px 0 75px; 
+  min-height: rem-calc(150px);
+	@include breakpoint(medium) {
+    min-height: rem-calc(400px);
+    padding-top: 100px;  
+	} 
+  @include breakpoint(large) {
+    min-height: rem-calc(500px);
+    padding-top: 150px; 
+	}
+}
+.bhf-landing-hero {
+  background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("/better-housing-finance/images/bhf-hero.jpg");
+  min-height: rem-calc(150px); 
+  @include breakpoint(large) {
+    min-height: rem-calc(600px); 
+	}
+}
+
+.bhf-banner-opportunities {
+  background-image: url("/better-housing-finance/images/bhf_creating_opportunities.jpg");
+}
+.bhf-banner-partners {
+  background-image: url("/better-housing-finance/images/bhf-industry-partners.jpg");
+}
+.bhf-banner-better {
+  background-image: url("/better-housing-finance/images/bhf-sound-housing.jpg");
+}
+.nhm-landing-hero {
+  background-image: url("/corporate/national-homeownership-month/images/NHM-hero1.jpg");
+  line-height: 1.3;
+  background-position: center bottom;  
+  @include breakpoint(medium) {
+    background-position: center 75%;  
+  }
+  @include breakpoint(xxlarge) {
+    background-position: center 65%;  
+  }
+  &.table {
+    height: rem-calc(310);
+    @include breakpoint(medium) {
+      height: rem-calc(390)
+    }
+    @include breakpoint(large) {
+      height: rem-calc(520);
+    }
+    @include breakpoint(xlarge) {
+      height: rem-calc(572);
+    }
+  }
+  h1, h2 {
+    line-height: 1.125;
+  }
+}
+
+.nhm-landing-work {
+    min-height: rem-calc(270);
+    border-top: rem-calc(20) solid $primary-color;
+    background-image: url("/corporate/national-homeownership-month/images/neighborhood.png");  
+    background-position: center bottom;    
+  @include breakpoint(medium) {
+    min-height: rem-calc(400);
+    border-top: rem-calc(47) solid $primary-color;
+  }  
+  @include breakpoint(large) {
+    min-height: rem-calc(435);    
+  }
+  @include breakpoint(xlarge) {
+    background-size: contain; 
+    min-height: rem-calc(470);
+  }
+  .text-flex-26-65 {
+    margin-top: 1em; 
+    @include breakpoint(medium) {
+      margin: 1.85em 0 5.5em; 
+    } 
+    @include breakpoint(xlarge) {
+      margin-top: rem-calc(90);
+      margin-bottom: 0;
+    }  
+  }
+}
+
+.banner-first {
+  background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-rural_section.jpg");
+  min-height: rem-calc(250);
+  @include breakpoint(large) {
+    min-height: rem-calc(340);
+	}
+}
+.banner-second {
+  background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-manufactured_section.jpg");
+  min-height: rem-calc(250px);
+  @include breakpoint(large) {
+    min-height: rem-calc(340px);
+	}
+}
+.banner-third {
+  background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-preservation_section.jpg");
+  background-position: center;
+  min-height: rem-calc(250px);
+  @include breakpoint(large) {
+    min-height: rem-calc(340px);
+	}
+}
+
+.fixed-highlight {
+  background-position: static;
+  overflow: hidden; 
+  position: relative;
+  color: $white;
+  &::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('/about/duty-to-serve/images/hero_img_closer.jpg') no-repeat center center;
+    background-size: cover;
+    will-change: transform; 
+    z-index: -1;
+	}
+}

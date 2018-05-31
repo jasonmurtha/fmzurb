@@ -1,4 +1,4 @@
-﻿<title>Styleguide: Scripts</title>
+﻿<title class="hide">Styleguide: Scripts</title><br>
 
 # Scripts
 

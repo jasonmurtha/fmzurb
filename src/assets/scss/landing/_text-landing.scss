@@ -1,0 +1,152 @@
+br.reduce {
+  line-height: 1;
+  font-size: rem-calc(12);
+}
+.text-static-16-18 {
+  font-size: rem-calc(16); 
+  @include breakpoint(medium) {
+    font-size: rem-calc(18); 
+  } 
+}
+.text-flex-16-20 {
+  font-size: rem-calc(16);
+  font-size: calc(16px + 4 * (100vw - 320px)/1180);   
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(20); 
+  } 
+}
+.text-flex-18-24 {
+  font-size: rem-calc(18);
+  font-size: calc(18px + 6 * (100vw - 320px)/1180);   
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(24); 
+  } 
+}
+.text-flex-18-25 {
+  font-size: rem-calc(18);
+  font-size: calc(18px + 7 * (100vw - 320px)/1180);   
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(25); 
+  } 
+}
+.text-static-24-28 {
+  font-size: rem-calc(24);   
+  @include breakpoint(medium) {
+    font-size: rem-calc(28); 
+  } 
+}
+.text-flex-22-30 {
+  font-size: rem-calc(22);  
+  font-size: calc(22px + 8 * (100vw - 320px)/1180);    
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(30); 
+  } 
+}
+.text-flex-24-32 {
+	font-size: rem-calc(24);
+  font-size: calc(24px +  8 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(32);
+  }
+}
+.text-flex-26-35 {
+	font-size: rem-calc(26);
+  font-size: calc(26px +  9 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(35);
+  }
+}
+.text-flex-18-38 {
+  font-size: rem-calc(18);
+  font-size: calc(18px + 20 * (100vw - 320px)/1180);   
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(38); 
+  } 
+}
+.text-flex-28-40 {
+  font-size: rem-calc(28);
+  font-size: calc(28px + 12 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(40);       
+  } 
+}
+.text-flex-22-42 {
+  font-size: rem-calc(22);
+  font-size: calc(22px + 20 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(42);       
+  } 
+}
+.text-flex-20-48 {
+  font-size: rem-calc(20);
+  font-size: calc(20px + 28 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(48);       
+  } 
+}
+.text-flex-30-48 {
+  font-size: rem-calc(30);
+  font-size: calc(30px + 18 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(48);       
+  } 
+}
+.text-flex-36-50 {
+  font-size: rem-calc(36);
+  font-size: calc(36px +  14 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(50);
+  }
+}  
+.text-flex-36-52 {
+  font-size: rem-calc(36);
+  font-size: calc(36px +  16 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(52);
+  }
+} 
+.text-flex-36-60 {
+  font-size: rem-calc(36);
+  font-size: calc(36px + 24 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(60); 
+  } 
+}
+.text-flex-26-65 {
+	font-size: rem-calc(26);
+  font-size: calc(26px +  39 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(65);
+  }
+} 
+.text-flex-25-70 {
+  font-size: rem-calc(25);
+  font-size: calc(25px +  45 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(70);
+	}
+}
+.text-flex-56-72 {
+  font-size: rem-calc(56);
+  font-size: calc(56px +  16 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(72);
+	}
+}
+.text-flex-48-84 {
+  font-size: rem-calc(48);
+  font-size: calc(48px + 36 * (100vw - 320px)/1180); 
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(84);
+  }
+}
+.text-flex-42-90 {
+  font-size: rem-calc(42);
+  font-size: calc(42px +  48 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(90);       
+  } 
+}
+.text-shadow-faint {
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

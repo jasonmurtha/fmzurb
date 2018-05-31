@@ -1,0 +1,18 @@
+---
+title: Landing Page Comps
+layout: corporate
+bodyclass: 
+herotype: title
+breadcrumb: [{"name":"Home","url":"/corporate/"},{"name":"Styleguides","url":"/special/styleguide/"},{"name":"Landing Page Comps"}]
+---
+
+<div class="iw_component">
+  {{#if landing}}  
+    <ul>
+      {{#each landing.page}}
+        <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>
+ 

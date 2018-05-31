@@ -1,4 +1,4 @@
-﻿<title>Styleguide: Foundation Grid</title>
+﻿<title class="hide">Styleguide: Foundation Grid</title><br>
 
 # Basics of Foundation Grid
 

@@ -1,0 +1,372 @@
+// oodometer and numbers
+
+.odometer {
+  color: white;
+  font-size: 1.75rem;
+  font-size: calc(28px + 52 * (100vw - 350px) / 1050);
+  @media screen and (min-width: 87.5em) {
+    font-size: 5rem;
+  }
+  img {
+    border: 0;
+  }
+}
+.odometer-number {
+  display: inline-block;
+  width: 9.0%;
+  margin-bottom: 0.2em;
+  padding: 0.15em 0;
+  background: $fm-green;
+  padding: 0.25em 0;
+  @media screen and (min-width: 21.875em) {
+    width: 8.25%;
+    padding: 0.24em 0 0.2em;
+  }
+}
+.odometer-building7, .odometer-house5, .odometer-house6, .odometer-house0, .odometer-building0 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 1em;
+  background-position: 50% 2%;
+}
+.odometer-animate {
+  background-position: 50% 99.8%;
+}
+.odometer-separator {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  min-height: 1em;
+  background-size: contain;
+  display: inline-block;
+  width: 1.5%;
+  margin: 0 -0.35%;
+  background-image: url("/better-housing-finance/images/comma.png");
+}
+.odometer-building7 {
+  background-image: url("/better-housing-finance/images/building-7-sprite.png");
+  &.odometer-animate {
+    transition: background 1.6s linear 0.7s;
+  }
+}
+.odometer-house6 {
+  background-image: url("/better-housing-finance/images/house-6-sprite.png");
+  &.odometer-animate {
+    transition: background 1.6s linear 0.6s;
+  }
+}
+.odometer-house0 {
+  background-image: url("/better-housing-finance/images/building-0-sprite.png");
+}
+.odometer-building0 {
+  background-image: url("/better-housing-finance/images/house-0-sprite.png");
+}
+
+.speed6.odometer-animate {
+  transition: background 1.5s linear 0.5s;
+}
+
+.speed5.odometer-animate {
+  transition: background 1.5s linear 0.4s;
+}
+
+.speed4.odometer-animate {
+  transition: background 1.5s linear 0.3s;
+}
+.speed3.odometer-animate {
+  transition: background 1.4s linear 0.2s;
+}
+.speed2.odometer-animate {
+  transition: background 1.4s linear 0.1s;
+}
+.speed1.odometer-animate {
+  transition: background 1.4s linear 0s;
+}
+
+// hand with apartments animation
+
+.hand-wrapper {
+  position: relative;
+  margin: 0 1rem;
+  img {
+    border-width: 0;
+    position: absolute;
+    height: auto;
+    &.large-1 {
+      transition: all 0.8s ease 0s;
+      width: 42%;
+      transform: scaleX(0.01);
+      top: 0%;
+      left: 28.9%;
+      &.buildings-animate {
+        transform: scaleX(1);
+      }
+    }
+    &.small-1,
+    &.small-2 {
+      width: 26%;
+      transition: all 0.8s ease 0.8s;
+      transform: scaleY(1.05);
+      transform: scaleX(0.0);
+      top: 10.5%;
+      &.buildings-animate {
+        transform: scaleX(1);
+      }
+    }
+    &.small-1 {
+      left: 26%;
+      &.buildings-animate {
+      left: 0.1%;
+      }      
+    }
+    &.small-2 {
+      right: 26%;
+      &.buildings-animate {
+      right: 0.1%;
+      }
+    }
+  }
+  svg {
+    width: 100%;
+    margin-top: 44%;
+  }
+}
+
+
+// houses on usa map animation
+
+.map-wrapper {
+  position: relative;
+  padding: 5% 3% 3% 3%;
+  margin: 0 0 1rem;
+  img {
+    border-width: 0;
+    position: absolute;
+    height: auto;
+    &.large {
+      transition: all 1.3s ease 0.5s;
+      width: 4.9%;
+      margin-left: 0.5%;
+      margin-top: 0.5%;
+      opacity: 0;
+      &.houses-animate {
+        width: 7%;
+      }
+    }
+    &.medium {
+      transition: all 1.4s ease 0.3s;
+      width: 3.5%;
+      margin-left: 0.5%;
+      margin-top: 0.5%;
+      opacity: 0;
+      &.houses-animate {
+        width: 5.3%;
+      }
+    }
+    &.small {
+      width: 2.5%;
+      transition: all 1.5s ease 0.1s;
+      margin-left: 0.5%;
+      margin-top: 0.5%;
+      opacity: 0;
+      &.houses-animate {
+        width: 3.5%;
+      }
+    }
+    &.houses-animate {
+      margin: 0;
+      opacity: 1;
+    }
+    &:nth-of-type(1) {
+      position: relative;
+    }
+    &:nth-of-type(2) {
+      top: 1.4%;
+      left: 9%;
+    }
+    &:nth-of-type(3) {
+      top: 17%;
+      left: 8.5%;
+    }
+    &:nth-of-type(4) {
+      top: 27%;
+      left: 1.4%;
+    }
+    &:nth-of-type(5) {
+      top: 47%;
+      left: 2.8%;
+    }
+    &:nth-of-type(6) {
+      top: 40%;
+      left: 8.5%;
+    }
+    &:nth-of-type(7) {
+      top: 33%;
+      left: 12.5%;
+    }
+    &:nth-of-type(8) {
+      top: 57%;
+      left: 10.4%;
+    }
+    &:nth-of-type(9) {
+      top: 22%;
+      left: 19.5%;
+    }
+    &:nth-of-type(10) {
+      top: 5%;
+      left: 20%;
+    }
+    &:nth-of-type(11) {
+      top: 37%;
+      left: 23.5%;
+    }
+    &:nth-of-type(12) {
+      top: 53%;
+      left: 20%;
+    }
+    &:nth-of-type(13) {
+      top: 15%;
+      left: 31%;
+    }
+    &:nth-of-type(14) {
+      top: 29.5%;
+      left: 33.2%;
+    }
+    &:nth-of-type(15) {
+      top: 32%;
+      left: 36.5%;
+    }
+    &:nth-of-type(16) {
+      top: 38%;
+      left: 29%;
+    }
+    &:nth-of-type(17) {
+      top: 56%;
+      left: 29%;
+    }
+    &:nth-of-type(18) {
+      top: 63%;
+      left: 27%;
+    }
+    &:nth-of-type(19) {
+      top: 62%;
+      left: 33%;
+    }
+    &:nth-of-type(20) {
+      top: 9%;
+      left: 39.2%;
+    }
+    &:nth-of-type(21) {
+      top: 22%;
+      left: 39.2%;
+    }
+    &:nth-of-type(22) {
+      top: 44%;
+      left: 45.6%;
+    }
+    &:nth-of-type(23) {
+      top: 56%;
+      left: 44%;
+    }
+    &:nth-of-type(24) {
+      top: 62%;
+      left: 45.5%;
+    }
+    &:nth-of-type(25) {
+      top: 73%;
+      left: 41.5%;
+    }
+    &:nth-of-type(26) {
+      top: 12%;
+      left: 52%;
+    }
+    &:nth-of-type(27) {
+      top: 26%;
+      left: 48%;
+    }
+    &:nth-of-type(28) {
+      top: 44.3%;
+      left: 49.5%;
+    }
+    &:nth-of-type(29) {
+      top: 27%;
+      left: 69%;
+    }
+    &:nth-of-type(30) {
+      top: 31%;
+      left: 61.5%;
+    }
+    &:nth-of-type(31) {
+      top: 44.3%;
+      left: 59%;
+    }
+    &:nth-of-type(32) {
+      top: 49%;
+      left: 64%;
+    }
+    &:nth-of-type(33) {
+      top: 61.5%;
+      left: 59%;
+    }
+    &:nth-of-type(34) {
+      top: 68%;
+      left: 66.8%;
+    }
+    &:nth-of-type(35) {
+      top: 73%;
+      left: 62%;
+    }
+    &:nth-of-type(36) {
+      top: 35.5%;
+      left: 72.5%;
+    }
+    &:nth-of-type(37) {
+      top: 44%;
+      left: 70%;
+    }
+    &:nth-of-type(38) {
+      top: 53%;
+      left: 74%;
+    }
+    &:nth-of-type(39) {
+      top: 60%;
+      left: 70%;
+    }
+    &:nth-of-type(40) {
+      top: 13%;
+      left: 89.5%;
+    }
+    &:nth-of-type(41) {
+      top: 22%;
+      left: 82%;
+    }
+    &:nth-of-type(42) {
+      top: 28.8%;
+      left: 79%;
+    }
+    &:nth-of-type(43) {
+      top: 24.5%;
+      left: 85%;
+    }
+    &:nth-of-type(44) {
+      top: 35.5%;
+      left: 80%;
+    }
+    &:nth-of-type(45) {
+      top: 51.4%;
+      left: 81%;
+    }
+    &:nth-of-type(46) {
+      top: 65.4%;
+      left: 75.4%;
+    }
+    &:nth-of-type(47) {
+      top: 78%;
+      left: 75.5%;
+    }
+    &:nth-of-type(48) {
+      top: 80%;
+      left: 80%;
+    }
+  }
+}
