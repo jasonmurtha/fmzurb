@@ -43,10 +43,10 @@
   }
 }
   &.hero-nhm {
-  background-image: url("/images/hero/homepage_hero_nhm2018_mobile.jpg");
-  @include breakpoint(medium) {
-    background-image: url("/images/hero/homepage_hero_nhm2018.jpg");    
-  }
+    background-image: url("/images/hero/homepage_hero_nhm2018_mobile.jpg");
+    @include breakpoint(medium) {
+      background-image: url("/images/hero/homepage_hero_nhm2018.jpg");    
+    }
   
   }
   // overrides for better housing finance promotion

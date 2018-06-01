@@ -81,16 +81,6 @@
     background-size: contain; 
     min-height: rem-calc(470);
   }
-  .text-flex-26-65 {
-    margin-top: 1em; 
-    @include breakpoint(medium) {
-      margin: 1.85em 0 5.5em; 
-    } 
-    @include breakpoint(xlarge) {
-      margin-top: rem-calc(90);
-      margin-bottom: 0;
-    }  
-  }
 }
 
 .banner-first {
