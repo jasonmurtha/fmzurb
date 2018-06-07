@@ -792,90 +792,123 @@ Step One, define the custom css for the elements you want to create.
  
 ```css
 .orbit-thumbnails {
-  margin: 0;
-  background: #111;
-  padding: 1rem 0;
-  text-align: center; 
+  background: #111;  
 }
-  @media screen and (max-width: 35.60938em) {
-    .orbit-thumbnails {
-      display: table;
-      width: 100%;
-      padding: 1rem; 
-    } 
-  }
+.orbit-thumbnails-box {
+  margin: 0;
+  text-align: center; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .button-thumbnail {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 1px solid #ffffff;
   border-radius: 0;
+  height: 4rem;
   opacity: 1; 
+  padding: 0.5rem;
+  min-height: 3rem;
+  flex: 0 1 25%;  
+  position: relative;
 }
-  @media screen and (max-width: 35.60938em) {
-    /* small screen only, treat as table cells */
-    .button-thumbnail {
-      height: 4rem;
-      display: table-cell; 
-    } 
-  }
-  @media print, screen and (min-width: 35.625em) {
-    .button-thumbnail {
-      height: 5rem;
-      width: 9rem; 
-    } 
-  }
-.button-thumbnail:hover, .button-thumbnail:focus, .button-thumbnail.is-active {
-    opacity: 0.65; 
+.button-thumbnail:not(:first-child){
+  border-left: 1px solid #999;
 }
-.nav-thumbnail {
-  background: none;
-  font-size: 3rem;
-  color: #eee;
+.button-thumbnail:not(:last-child){
+  border-right: 1px solid #999;
+}
+.button-thumbnail::after {
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.2);
+}
+@media print, screen and (min-width: 40em) {
+  .button-thumbnail {
+    height: 5rem;
+    flex: 0 9rem;
+    border: 1px solid #999;
+    margin: 1rem 0;
+  } 
+}
+.button-thumbnail:hover::after, 
+.button-thumbnail:focus::after, 
+.button-thumbnail.is-active::after {
+    background: rgba(255,255,255,0.35);
 }
 ```
 
 <style>
 .orbit-thumbnails {
-  margin: 0;
-  background: #111;
-  padding: 1rem 0;
-  text-align: center; 
+  background: #111;  
 }
-  @media screen and (max-width: 35.60938em) {
-    /* small screen only, treat as table cells */
-    .orbit-thumbnails {
-      display: table;
-      width: 100%;
-      padding: 1rem; 
-    } 
-  }
+.orbit-thumbnails-box {
+  margin: 0;
+  text-align: center; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .button-thumbnail {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 1px solid #ffffff;
   border-radius: 0;
+  height: 4rem;
   opacity: 1; 
+  padding: 0.5rem;
+  min-height: 3rem;
+  flex: 0 1 25%;  
+  position: relative;
 }
-  @media screen and (max-width: 35.60938em) {
-    .button-thumbnail {
-      height: 4rem;
-      display: table-cell; 
-    } 
-  }
-  @media print, screen and (min-width: 35.625em) {
-    .button-thumbnail {
-      height: 5rem;
-      width: 9rem; 
-    } 
-  }
-.button-thumbnail:hover, .button-thumbnail:focus, .button-thumbnail.is-active {
-    opacity: 0.65; 
+.button-thumbnail:not(:first-child){
+  border-left: 1px solid #999;
 }
-.nav-thumbnail {
-  background: none;
-  font-size: 3rem;
+.button-thumbnail:not(:last-child){
+  border-right: 1px solid #999;
+}
+.button-thumbnail::after {
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.2);
+}
+@media print, screen and (min-width: 40em) {
+  .button-thumbnail {
+    height: 5rem;
+    flex: 0 9rem;
+    border: 1px solid #999;
+    margin: 1rem 0;
+  } 
+}
+.button-thumbnail:hover::after, 
+.button-thumbnail:focus::after, 
+.button-thumbnail.is-active::after {
+    background: rgba(255,255,255,0.35);
 }
 </style>
 
@@ -888,39 +921,35 @@ Step Two, create your custom HTML.
 ```html_example
 <div class="row">
   <div class="large-10 xlarge-9 column large-centered">
-    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-automate-nav="false" data-box-of-bullets="orbit-thumbnails"  data-options="animInFromLeft:hinge-in-from-bottom; animInFromRight:hinge-in-from-top; animOutToLeft:hinge-out-from-bottom; animOutToRight:hinge-out-from-top;">
-      <nav class="orbit-thumbnails">
+    <div class="orbit fast orbit-thumbnails" role="region" aria-label="Favorite Space Pictures" data-orbit data-automate-nav="false" data-box-of-bullets="orbit-thumbnails-box"  data-options="animInFromLeft:hinge-in-from-bottom; animInFromRight:hinge-in-from-top; animOutToLeft:hinge-out-from-bottom; animOutToRight:hinge-out-from-top;">
+      <nav class="orbit-thumbnails-box">
         <button data-slide="0" style="background-image: url(files/orbit/thumb01.jpg)" class="button-thumbnail"><span class="show-for-sr">slide 1</span></button>
         <button data-slide="1" style="background-image: url(files/orbit/thumb02.jpg)" class="button-thumbnail"><span class="show-for-sr">slide 2</span></button>
         <button data-slide="2" style="background-image: url(files/orbit/thumb03.jpg)" class="button-thumbnail"><span class="show-for-sr">slide 3</span></button>
-        <button data-slide="3" style="background-image: url(files/orbit/thumb04.jpg)" class="button-thumbnail"><span class="show-for-sr">slide 3</span></button>
+        <button data-slide="3" style="background-image: url(files/orbit/thumb04.jpg)" class="button-thumbnail"><span class="show-for-sr">slide 4</span></button>
       </nav>
-      <div class="orbit-controls">
-        <button class="orbit-previous nav-thumbnail"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-        <button class="orbit-next nav-thumbnail"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-      </div>
-      <ul class="orbit-container background-black">
+      <ul class="orbit-container background-black" style="border-top: 1px solid #999;">
         <li class="is-active orbit-slide">
           <figure class="orbit-figure">
-            <img class="orbit-image" src="files/orbit/01.jpg" alt="Space 1">
+            <img class="orbit-image no-border" src="files/orbit/01.jpg" alt="Space 1">
             <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure class="orbit-figure">
-            <img class="orbit-image" src="files/orbit/02.jpg" alt="Space 2">
+            <img class="orbit-image no-border" src="files/orbit/02.jpg" alt="Space 2">
             <figcaption class="orbit-caption">Lets Rocket!</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure class="orbit-figure">
-            <img class="orbit-image" src="files/orbit/03.jpg" alt="Space 3">
+            <img class="orbit-image no-border" src="files/orbit/03.jpg" alt="Space 3">
             <figcaption class="orbit-caption">Encapsulating</figcaption>
           </figure>
         </li>
         <li class="orbit-slide">
           <figure class="orbit-figure">
-            <img class="orbit-image" src="files/orbit/04.jpg" alt="Space 4">
+            <img class="orbit-image no-border" src="files/orbit/04.jpg" alt="Space 4">
             <figcaption class="orbit-caption">Outta This World</figcaption>
           </figure>
         </li>
