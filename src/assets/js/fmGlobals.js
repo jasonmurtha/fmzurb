@@ -53,7 +53,7 @@ FM.form = {
     if(hrf.match(/\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|do[ct]x?|xls[mx]?|pptx?|vsd|rtf|txt|xml|csv)(\?.*)?(#.*)?$/i)){ltype='d';}	 
     else if(hrf.match(/^https/i)&&!hrf.match(/slearnctr|loanlookup/i)){ltype='e';}
     else if(hrf.match(/^http/i)&&!hrf.match(/www\.freddiemac\.com/i)){ltype='e';}
-    else{hrf=hrf.replace(/^https?:\/\/(www\.freddiemac\.com)?/i,'').replace(/^\//,'').replace(/(index)?(\.html?)?(\.page)?/i,'');}
+    else{hrf=hrf.replace(/^https?:\/\/(www\.freddiemac\.com)?/i,'').replace(/^\//,'').replace(/(index)?(\.html?)?(\.page)?\??/i,'');}
     if(txt==''&&$lk.has('img')){ var $im=$lk.find('img:first');
       if($im.attr("alt")){ txt='image:'+$im.attr("alt")}
       else if($im.attr("title")){ txt='image:'+$im.attr("title")}

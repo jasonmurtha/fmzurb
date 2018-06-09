@@ -121,7 +121,7 @@ s_somni.busUnit={
 s_somni.events = '';
 
 var somniTL = function(obj,lType,hrf,trig,name1,persona){
- if(hrf!=='index.html'){name1=name1.replace(/\/?index\.html?/i,""); hrf=hrf.replace(/\/?index\.html?/i);}
+ if(hrf!=='index.html'){name1=name1.replace(/\/?(index)?(\.html?)?(\.page)?\??/i,"").replace(); hrf=hrf.replace(/\/?index(\.html?)?(\.page)?/i);}
  if(hrf){hrf=hrf.toLowerCase().replace(/^https?:\/\/(www\.freddiemac\.com)?/,'').replace(/(\?.+)?(#.+)?$/i,"").replace(/\//g, ":").replace(/[_\&-]|\s+/g, " ").replace(/[^a-z0-9\300-\374.,!():| ]/gi,"")}
  if(name1){name1=name1.toLowerCase().replace(/^https?:\/\/(www\.freddiemac\.com)?/,'').replace(/\//g, ":").replace(/[_\&]|\s+/g, " ").replace(/[^a-z0-9\300-\374.,'!():| -]/gi,"")}
  s_somni.events='event18';s_somni.linkTrackVars='prop1,eVar1,prop5,eVar5,prop12,eVar12,eVar71,eVar72,eVar73,eVar74,prop75,eVar75';
@@ -143,7 +143,7 @@ s_somni.usePlugins=true
  s_clr=function(str){return str.replace(/[_\&+]|\s+/g, " ").replace(/[^a-z0-9\300-\374.,!():| -]/gi,"")},
  s_wls= decodeURIComponent(window.location.search)||"",
  s_abbr=location.protocol==='https:'&&document.domain.match(/freddiemac/)?'fmsec|':'fm|',
- s_wlp=window.location.pathname.replace(/\/\/+/g,'/').substring(1).replace(/:/g, "").replace(/(index)?(\.html?)?(\.page)?$/i,"").replace(/\//g, ":").toLowerCase(),
+ s_wlp=window.location.pathname.replace(/\/\/+/g,'/').substring(1).replace(/:/g, "").replace(/(index)?(\.html?)?(\.page)?\??$/i,"").replace(/\//g, ":").toLowerCase(),
  s_li=s_wlp.lastIndexOf(":"),
  s_path=s_li>1?s_clr(s_wlp.substring(0,s_li)):"",
  s_chn=s_wlp=="search"?"search":s_li>1?s_wlp.split(':')[0]:"homepage", 
