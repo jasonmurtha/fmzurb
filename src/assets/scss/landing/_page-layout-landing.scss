@@ -21,30 +21,6 @@
     }
   } 
 }
-.row-container {
-  max-width: rem-calc(1200);
-  @media screen and (min-width: 75em) {
-    margin: 0 auto;
-  }  
-}
-.row-container-narrow {
-  max-width: rem-calc(1000);
-  @media screen and (min-width: 62.5em) {
-    margin: 0 auto;
-  }
-}
-.row-container-wide {
-  max-width: rem-calc(1300);
-  @media screen and (min-width: 81.5em) {
-    margin: 0 auto;
-  }  
-}
-.row-container-stretch {
-  max-width: rem-calc(1500);
-  @include breakpoint(xlarge) {
-    margin: 0 auto;
-  }
-}
 
 .landing-band {
   position: relative;
@@ -78,9 +54,47 @@
   }
 }
 
+.landing-band-sides-only {
+  position: relative;
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+  @include breakpoint(large) {
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30); 
+  }
+  @include breakpoint(xlarge) {
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(40);  
+  }
+}
 .modal-content {
   max-width: rem-calc(1120);
 }
+.row-container {
+  max-width: rem-calc(1200);
+  @media screen and (min-width: 75em) {
+    margin: 0 auto;
+  }  
+}
+.row-container-narrow {
+  max-width: rem-calc(1000);
+  @media screen and (min-width: 62.5em) {
+    margin: 0 auto;
+  }
+}
+.row-container-wide {
+  max-width: rem-calc(1300);
+  @media screen and (min-width: 81.5em) {
+    margin: 0 auto;
+  }  
+}
+.row-container-stretch {
+  max-width: rem-calc(1500);
+  @include breakpoint(xlarge) {
+    margin: 0 auto;
+  }
+}
+
 .logo-wrapper {
   padding: rem-calc(14 14 18);
   @include breakpoint(large) {

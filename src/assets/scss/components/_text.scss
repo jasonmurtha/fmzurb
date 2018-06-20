@@ -42,9 +42,9 @@ h5 {
 }
 h6 {
   // from settings file: font-size: 15; font-weight: 700; line-height: 1.2; 
-  font-size: calc(15px +  2 * (100vw - 320px) / 1180); 
+  font-size: calc(15px +  3 * (100vw - 320px) / 1180); 
   @include breakpoint(xxlarge) {
-    font-size: rem-calc(17); 
+    font-size: rem-calc(18); 
   }    
 }
 

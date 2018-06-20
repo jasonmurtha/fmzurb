@@ -15,6 +15,13 @@ br.reduce {
     font-size: rem-calc(20); 
   } 
 }
+.text-flex-16-24 {
+  font-size: rem-calc(16);
+  font-size: calc(16px + 8 * (100vw - 320px)/1180);   
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(24); 
+  } 
+}
 .text-flex-18-24 {
   font-size: rem-calc(18);
   font-size: calc(18px + 6 * (100vw - 320px)/1180);   
@@ -41,6 +48,13 @@ br.reduce {
   @include breakpoint(xxlarge) {
     font-size: rem-calc(30); 
   } 
+}
+.text-flex-16-32 {
+	font-size: rem-calc(16);
+  font-size: calc(16px +  16 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) { 
+    font-size: rem-calc(32);
+  }
 }
 .text-flex-24-32 {
 	font-size: rem-calc(24);
@@ -73,6 +87,13 @@ br.reduce {
 .text-flex-22-42 {
   font-size: rem-calc(22);
   font-size: calc(22px + 20 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(42);       
+  } 
+}
+.text-flex-26-42 {
+  font-size: rem-calc(26);
+  font-size: calc(26px + 16 * (100vw - 320px)/1180);
   @include breakpoint(xxlarge) {
     font-size: rem-calc(42);       
   } 
@@ -126,6 +147,13 @@ br.reduce {
 		font-size: rem-calc(70);
 	}
 }
+.text-flex-32-72 {
+  font-size: rem-calc(32);
+  font-size: calc(32px +  40 * (100vw - 320px)/1180);
+  @include breakpoint(xxlarge) {
+		font-size: rem-calc(72);
+	}
+}
 .text-flex-56-72 {
   font-size: rem-calc(56);
   font-size: calc(56px +  16 * (100vw - 320px)/1180);
@@ -149,4 +177,7 @@ br.reduce {
 }
 .text-shadow-faint {
   text-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.accent-sapphire { 
+  color: $sapphire;
 }

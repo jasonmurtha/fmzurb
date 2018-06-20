@@ -1,0 +1,513 @@
+---
+title: Leading the Way
+layout: default
+description: "Freddie Mac is #LeadingTheWay"
+image: ""
+keywords:
+url:  http://www.freddiemac.com/
+bodyclass: 
+javascript:
+stylesheet: /ss/app_landing.css
+share: landing
+footer: footer-landing
+prefooter: 
+onload: prepSlider
+---
+<style>
+a.connect { 
+ padding-top: 0.5rem;
+ display: inline-block;
+ margin-left: 0.4rem;
+}
+a.connect:first-of-type {
+  margin-left: 0;
+}
+a.connect svg {
+  fill: #777;
+  width: 22px;
+  height: 22px;
+}
+a.connect:hover svg,
+a.connect:focus svg {
+  fill: #aaa;
+}
+.custom-connect {
+  margin: 0.75rem 0 0.5rem 0;
+  line-height: 1;
+}
+.connect-message {
+  font-size: 0.75rem;
+}
+.border-thick {
+  border-width: 4px;
+  background: white;
+  border-color: #CECECE !important;
+}
+.background-vertical-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 1.25rem;
+  width: 2px;
+  background-color: #F0F0F0;
+  left: calc(50% - 1px);
+}
+.container-fact-large {
+  padding: 0 2rem;
+}
+.slant {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+.border-white {
+  border-color: white !important;
+}
+.border-3 {
+  border-width: 3px !important;
+}
+.shadow-southeast {
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+}
+.logo-simple {
+  width: 148px;
+  max-width: 100%;
+  margin: 18px 0;
+}
+.mosaic-band,
+.footer-bottom-edge {
+  height: 0.625rem;
+  background: #a4c745;
+  background: -webkit-linear-gradient(left, #A4C745 0%, #A4C745 17%, #B1CD43 17%, #B1CD43 33%, #B7D042 33%, #B7D042 50%, #BED240 50%, #BED240 67%, #C4D43E 67%, #C4D43E 83%, #C9D732 83%, #C9D732 100%);
+  background: linear-gradient(to right, #A4C745 0%, #A4C745 17%, #B1CD43 17%, #B1CD43 33%, #B7D042 33%, #B7D042 50%, #BED240 50%, #BED240 67%, #C4D43E 67%, #C4D43E 83%, #C9D732 83%, #C9D732 100%); 
+}
+.ltw-hero {
+  padding: 3rem 0 0;
+  background-image: -webkit-linear-gradient(rgba(0, 166, 226, 0.8), rgba(0, 166, 226, 0.8)), url("/better-housing-finance/images/bhf_creating_opportunities.jpg");
+  background-image: linear-gradient(rgba(0, 166, 226, 0.8), rgba(0, 166, 226, 0.8)), url("/better-housing-finance/images/bhf_creating_opportunities.jpg");
+}
+.secondary > svg.fill-anchor-on-dark { 
+  opacity: 0.8;
+   width:1.0625em; 
+   height:1.0625em;
+}
+.secondary:hover > svg.fill-anchor-on-dark {
+  fill: #00a6e2; 
+}
+.tabs-content {
+  border-width: 0;
+  color: inherit;
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; } 
+  100%{  opacity: 1; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; } 
+  100%{  opacity: 1; }
+}
+.leader-panel {
+  display: block;
+  -webkit-animation: fadeIn .9s;
+          animation: fadeIn .9s;
+  opacity: 1; 
+}
+.leader-panel:not(.is-active) {
+  opacity: 0;
+  display: none;  
+}
+.leader-panel-wrapper {
+  overflow: hidden;
+  position: relative;
+  min-height: 7.75rem;
+  margin: 0 auto;
+  max-width: 62.5rem;
+  line-height: 1;
+}
+.leader-panel-nav {
+  width: 63.25rem;
+  min-height: 7.25rem;
+  float: left;
+}
+.leader-panel-item {
+  padding: 0 0.625rem;
+  width: 6.25rem;
+  float: left; 
+}
+.leader-panel-item:hover,
+.leader-panel-item:focus,
+.leader-panel-item[aria-selected='true'] {
+  background: transparent;
+  color: inherit;
+}
+
+.leader-panel-item.is-active img,
+.leader-panel-item a:hover img,
+.leader-panel-item a:focus img {
+  opacity: 0.3;
+}
+.leader-panel-item a {
+  padding: 0;
+}
+.leader-panel-item p {
+  margin: 0.5rem 0 0;
+}
+.orbit-controls-outside .orbit-previous, 
+.orbit-controls-outside .orbit-next {
+  font-size: 1.85rem;
+  opacity: 0.4;
+}
+.leader-panel-nav-help {
+  display: block;
+  margin: 0.5rem 0 0;
+  position: relative;
+  bottom: -0.5rem;
+}
+.modal-header h2 {
+  font-size: 1.625rem;
+  font-size: calc(26px + 16 * (100vw - 320px)/1180); 
+}
+.reveal .close-button  {
+  font-size: calc(20px + 45 * (100vw - 320px)/1180);  
+} 
+/* pseudo extra small below 360px */
+@media screen and (max-width: 22.5em) {
+  .custom-connect {
+    margin-right: -0.625rem;
+  }
+}   
+/* small only */
+@media screen and (max-width: 35.6249em) {
+  .slant-for-small {
+    -webkit-transform: skew(-10deg);
+    transform: skew(-10deg);
+  }
+  .modal-page-header {
+    padding: 2.5rem 0.5rem;
+  }
+}    
+/* medium and up */
+@media screen and (min-width: 35.625em) {
+  .ltw-hero {
+    padding: 3rem 0 2rem;
+    background-image: -webkit-linear-gradient(rgba(0, 166, 226, 0.8), rgba(0, 166, 226, 0.8)), url("/better-housing-finance/images/bhf_creating_opportunities.jpg");
+    background-image: linear-gradient(rgba(0, 166, 226, 0.8), rgba(0, 166, 226, 0.8)), url("/better-housing-finance/images/bhf_creating_opportunities.jpg");
+    min-height: 22rem;
+  }  
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 70%,rgba(0,0,0,0) 70.1%,rgba(0,0,0,0) 100%);      
+  }
+  .border-thick {
+    border-width: 6px;
+  }
+  .mosaic-band,
+  .footer-bottom-edge {
+    height: 1rem;
+  }
+  .orbit-controls-outside .orbit-previous, 
+  .orbit-controls-outside .orbit-next {
+    font-size: 2.25rem;
+  }
+  .logo-simple {
+    width: 187px;
+    margin: 22px 0 20px;
+  }
+  .custom-connect {
+    margin: 1.25rem 0;
+  }
+  .connect-message {
+    font-size: 0.875rem;
+  }
+  a.connect svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* large and up */
+@media screen and (min-width: 61.25em) {
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 61%,rgba(0,0,0,0) 61.1%,rgba(0,0,0,0) 100%);      
+  }
+  .border-thick {
+    border-width: 8px;
+  }
+  .mosaic-band,
+  .footer-bottom-edge {
+    height: 1.25rem;
+  }
+  .orbit-controls-outside .orbit-previous, 
+  .orbit-controls-outside .orbit-next {
+    font-size: 2.85rem;
+  }
+  .custom-connect {
+    margin: 37px 0 0;
+  }
+  .logo-simple {
+    margin: 36px 0 30px;
+  }
+  .connect-message {
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+  }
+  a.connect,
+  a.connect:first-of-type {
+    margin-left: 0.6rem;
+  }
+  a.connect svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* custom for leader-panel-band overflow */
+@media screen and (max-width: 67em) {
+  .landing-band-sides-only.overflow-right {
+    padding-right: 0;
+    padding-top: 1.125rem;
+  }  
+  .leader-panel-wrapper {
+    overflow-x: auto;
+  }
+  .landing-band-sides-only.overflow-right::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 55px;
+    background: linear-gradient(to right, rgba(16,68,119,0) 0%, #104477 100%); 
+  }
+}
+@media screen and (min-width: 64em) {
+  .leader-panel-nav {
+    width: 62.5rem;
+  }
+  .leader-panel-nav-help {
+    display: none;
+  }
+}
+/* xlarge and up */
+@media screen and (min-width: 78.75em) {
+  .orbit-controls-outside .orbit-previous, 
+  .orbit-controls-outside .orbit-next {
+    font-size: 3.85rem;
+  }
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 52%,rgba(0,0,0,0) 52.1%,rgba(0,0,0,0) 100%);      
+  }
+  .reveal .callout.xlarge {
+    padding-top: 4rem; 
+  }
+}
+
+/* xxlarge and up */
+@media screen and (min-width: 93.75em) {
+  .modal-header h2  {
+    font-size: 2.625rem; 
+  } 
+  .reveal .close-button  {
+    font-size: 4rem; 
+  } 
+}
+
+</style>
+ <!--JUNE 19 or 29 LAUNCH-->
+<div class="landing-band-sides-only">
+  <div class="row-container">
+    <div class="row collapse">
+      <div class="column small-6 medium-4"> 
+         <p class="logo-simple"><a href="/"><img class="" src="/images/FreddieMacLogo-no-tagline.svg"></a></p>
+      </div>  
+      <div class="column small-6 medium-8">
+        <div class="text-right uppercase weight-bold">  
+          <div class="inline-block text-center large-text-right custom-connect">
+            <div class="connect-message">Connect with Us<span class="show-for-large"> and #LeadingTheWay</span></div>
+            <a aria-label="Facebook" href="https://www.facebook.com/FreddieMac" class="connect"><svg aria-hidden="true" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M29.8 50.3h6.7V34h4.5l0.6-5.6h-5.1l0-2.8c0-1.5 0.1-2.3 2.2-2.3h2.8V17.7h-4.5c-5.4 0-7.3 2.7-7.3 7.3v3.4h-3.4v5.6h3.4V50.3zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64z"/></svg></a>
+            <a aria-label="Twitter" href="https://twitter.com/FreddieMac" class="connect"><svg aria-hidden="true" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M38.2 22.3c-2.6 1-4.3 3.4-4.1 6.1l0.1 1 -1-0.1c-3.8-0.5-7.1-2.1-10-4.9l-1.4-1.4 -0.4 1c-0.8 2.3-0.3 4.7 1.3 6.3 0.8 0.9 0.6 1-0.8 0.5 -0.5-0.2-0.9-0.3-1-0.2 -0.1 0.1 0.4 2.1 0.8 2.8 0.5 1.1 1.7 2.1 2.9 2.7l1 0.5 -1.2 0c-1.2 0-1.2 0-1.1 0.5 0.4 1.4 2.1 2.8 3.9 3.5l1.3 0.4 -1.1 0.7c-1.7 1-3.6 1.5-5.6 1.6C20.8 43.3 20 43.3 20 43.4c0 0.2 2.6 1.4 4 1.9 4.5 1.4 9.8 0.8 13.7-1.6 2.8-1.7 5.7-5 7-8.2 0.7-1.7 1.4-4.9 1.4-6.4 0-1 0.1-1.1 1.2-2.3 0.7-0.7 1.3-1.4 1.5-1.6 0.2-0.4 0.2-0.4-0.9 0 -1.8 0.6-2 0.6-1.2-0.4 0.6-0.7 1.4-1.9 1.4-2.3 0-0.1-0.3 0-0.7 0.2 -0.4 0.2-1.2 0.5-1.8 0.7l-1.1 0.4 -1-0.7c-0.6-0.4-1.4-0.8-1.8-0.9C40.8 21.9 39.1 21.9 38.2 22.3zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64z"/></svg></a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/3140" class="connect"><svg aria-hidden="true" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M50.8 48.1V36.4c0-6.3-3.3-9.2-7.8-9.2 -3.6 0-5.2 2-6.1 3.4V27.7h-6.8c0.1 1.9 0 20.4 0 20.4h6.8V36.7c0-0.6 0-1.2 0.2-1.7 0.5-1.2 1.6-2.5 3.5-2.5 2.5 0 3.4 1.9 3.4 4.6v10.9H50.8zM23 24.9c2.4 0 3.8-1.6 3.8-3.5 0-2-1.5-3.5-3.8-3.5s-3.8 1.5-3.8 3.5c0 2 1.5 3.5 3.8 3.5H23zM34 64C17.4 64 4 50.6 4 34 4 17.4 17.4 4 34 4s30 13.4 30 30C64 50.6 50.6 64 34 64zM26.4 48.1V27.7h-6.8v20.4H26.4z"/></svg></a>
+            <a aria-label="YouTube" href="https://www.youtube.com/freddiemac" class="connect"><svg aria-hidden="true" viewBox="8 8 125 125" xmlns="http://www.w3.org/2000/svg"><path d="M72 14.2C40.1 14.2 14.2 40.1 14.2 72c0 31.9 25.9 57.8 57.8 57.8 31.9 0 57.8-25.9 57.8-57.8C129.9 40.1 104 14.2 72 14.2zM104.4 85c0 4.4-3.6 8.1-8 8.1 0 0-6.9 1-24.7 1 -18 0-24.3-1-24.3-1 -4.4 0-8.1-3.6-8.1-8V58.5c0-4.4 3.6-8 8.1-8 0 0 6.3-1 24.3-1 17.9 0 24.8 1 24.8 1 4.4 0 8 3.6 8 8.1V85z"/><polygon points="62 84.5 84 71.8 62 59.1 "/></svg></a>
+          </div>
+        </div>
+      </div>  
+    </div>      
+  </div> 
+</div>       
+<div class="mosaic-band"> </div>  
+
+<!--HERO IMAGE-->
+<div class="landing-hero background-primary ltw-hero">    
+  <div class="row-container-wide landing-band-sides-only text-center medium-text-left">
+    <div class="row small-collapse medium-uncollapse">
+      <div class="column">
+        <div class="callout small-to-large"></div>
+        <h1 class="gutter-top text-flex-32-72">#LeadingTheWay</h1>
+        <h2 class="weight-light gutter-bottom text-flex-16-32 slant">Advancing Women in the Mortgage Industry</h2>
+      </div>  
+    </div>      
+  </div>   
+  <div class="overlay-sapphire-lead">
+    <div class="row-container-wide landing-band-sides-only text-center medium-text-left">
+      <div class="row small-collapse medium-uncollapse">
+        <div class="column medium-8 large-7 xlarge-6">          
+          <div class="gutter-top gutter-bottom">
+            <h3 class="no-margin text-flex-16-24 slant-for-small" style="line-height: 1.4;">Freddie Mac is #LeadingTheWay in the mortgage industry <span class="weight-light">by advancing women to leadership positions and championing women’s rights in the workplace.</span></h3>
+          </div>
+          <p class="gutter-bottom no-margin hide-for-medium"><a data-open="DefineLTWmodal" aria-controls="DefineLTWmodal" href="#" class="button hollow medium">Tell me more</a></p>        
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="row-container-wide landing-band-sides-only show-for-medium text-left">
+    <div class="row small-collapse medium-uncollapse">
+      <div class="column">
+        <p class="gutter-top"><a  data-open="DefineLTWmodal" aria-controls="DefineLTWmodal" id="DefineLTWlabel" href="#" class="button hollow medium">Tell me more</a></p>        
+      </div>  
+    </div>
+  </div> 
+</div>
+ {{> modal-what-is-ltw}}    
+<!--END HERO IMAGE-->
+
+
+    
+<!--LEADERS PANELS-->
+<div class="landing-band" style="background-color: #DBE7EB;">  
+  <div class="row-container">
+    <div class="row">
+      <div class="column">
+        <div class="small-to-large text-center">
+          <h1 class="text-flex-28-42 accent-sapphire gutter-bottom-medium">Women #LeadingtheWay at Freddie Mac</h1>
+          <p class="text-flex-18-24 weight-normal">Praesent non dictum magna. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce</p>
+        </div>
+      </div>
+    </div>
+    <div class="tabs-content leader-tabs" data-tabs-content="leader-panels">
+      {{> ltw-leader-panel-1}}
+      {{> ltw-leader-panel-2}}
+      {{> ltw-leader-panel-3}}
+      {{> ltw-leader-panel-4}}
+      {{> ltw-leader-panel-5}}
+      {{> ltw-leader-panel-6}}
+      {{> ltw-leader-panel-7}}
+      {{> ltw-leader-panel-8}}
+      {{> ltw-leader-panel-9}}
+      {{> ltw-leader-panel-10}}
+    </div>
+  </div>
+</div>  
+<!--LEADERS NAV-->
+<div class="landing-band-sides-only background-sapphire overflow-right gutter-top gutter-bottom">
+  <div class="row-container text-center weight-normal text-static-16-18">
+    <div class="row collapse">
+      <div class="column">
+        <div class="leader-panel-wrapper clearfix" id="leader-panel-wrapper">
+          <div class="leader-panel-nav" data-tabs id="leader-panels" data-deep-link="false" data-link-class="leader-panel-item" data-panel-class="leader-panel">
+            {{> ltw-leaders-nav}}
+          </div>
+        </div>
+        <p class="text-right no-margin leader-panel-nav-help reduce uppercase gutter-right primary" style="line-height: 1;"><a id="slideLeaders" href="javascript:void(0);"><svg aria-hidden="true" style="opacity: 0.6; vertical-align: text-top;" xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 512">
+<path fill="#FFF" d="M213.7 256L213.7 256 213.7 256 380.9 81.9c4.2-4.3 4.1-11.4-0.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-0.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1 -0.1 3 0.9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-0.2l29.9-30.6c4.3-4.4 4.4-11.5 0.2-15.8L213.7 256z"/>
+</svg> Slide for more</a></p>
+      </div>
+    </div>  
+  </div>
+</div>
+<div class="mosaic-band"> </div>  
+
+<div class="background-concrete background-stripes landing-band">
+  <div class="row-container text-center">
+    <div class="row">
+      <div class="column">
+        <div class="small-to-large">
+          <h1 class="text-flex-28-42 accent-sapphire gutter-bottom-medium">Events</h1>  
+          <p class="text-flex-18-24 weight-normal text-left">Freddie Mac is #LeadingTheWay at events around the country. 
+          Check out where we are appearing and how you can be part of it.</p> 
+        </div>    
+      </div>
+    </div>      
+    <div class="row">
+      <div class="column medium-8 medium-centered large-12">   
+        {{> ltw-events}}      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-band">
+  <div class="row-container text-center">
+    <div class="row">
+      <div class="column">
+        <div class="small-to-large">
+          <h1 class="text-flex-28-42 accent-sapphire gutter-bottom-medium">Facts</h1>
+          <p class="text-flex-18-24 weight-normal text-left">While we’ve made great strides in our industry, we need to do more to make our 
+          workplaces as equal a playing field and as full of opportunities for women as possible. Consider these facts and figures, 
+          which point to the need for a stronger focus on female leadership</p>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center hide-for-large">
+      <div class="column">
+        {{> ltw-facts-one-wide}}
+      </div>
+    </div>    
+    <div class="row text-center show-for-large">
+      <div class="column">
+        {{> ltw-facts-two-wide}}
+      </div>
+    </div>
+    <div class="gutter-bottom"></div>
+  </div>
+</div>  
+
+
+<div class="landing-band background-primary">
+  <div class="row-container">
+    <div class="row">
+      <div class="column">
+        <div class="small-to-large text-center">
+          <h1 class="text-flex-28-42 gutter-bottom-medium">Resources</h1> 
+          <p class="text-flex-18-24 weight-normal text-left">Connect to these resources that will help you learn more about 
+          #LeadingTheWay and how you can help bring about positive change in your organization.</p> 
+        </div><br class="gutter-all">        
+      </div>
+    </div> 
+    <div class="row">
+      <div class="column">   
+        {{> ltw-resources}}
+      </div>
+    </div>
+  </div>
+</div>    
+ 
+
+    
+<!--ROW OF NEWS BOXES-->
+<div class="background-concrete background-stripes landing-band">
+  <div class="row-container">
+    <div class="row">
+      <div class="column">
+        <div class="small-to-large text-center">
+          <h1 class="text-flex-28-42 accent-sapphire gutter-bottom-medium">News</h1> 
+          <p class="text-flex-18-24 weight-normal text-left">Praesent non dictum magna. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce</p>  
+        </div>
+      </div>
+    </div>
+    <div class="row medium-up-2 large-up-4" data-equalize-on-stack="true" data-equalizer>
+      {{> ltw-news}}
+    </div>     
+  </div>  
+</div> 
+
+
+
+
+<script>
+function prepSlider(){
+  $("#slideLeaders").on("click",function(){    
+    	var el = document.getElementById('leader-panel-wrapper'), b = el.scrollLeft, 
+      c = window.innerWidth > 600 ? 500 : window.innerWidth > 500 ? 400 : window.innerWidth > 400 ? 300 : 200;
+      el.scrollLeft += c;
+      if(b == el.scrollLeft) { el.scrollLeft = 0; }
+  });
+}
+</script>

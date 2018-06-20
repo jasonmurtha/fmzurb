@@ -21,7 +21,9 @@ h2, h3, h4 {
   }
 } 
 
-
+.no-tap-hightlight {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  // hides the color overlay on mobile tap -- handy for when Jon complains about it conflicting with other items.
+}
 a:hover .background-concrete,
 a:focus .background-concrete {
   opacity: 0.8;

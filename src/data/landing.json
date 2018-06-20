@@ -10,6 +10,10 @@
 	{  
        "name":"Duty to Serve",
        "url":"/about/duty-to-serve/"
+   },
+	{  
+       "name":"LeadingTheWay",
+       "url":"/leadingtheway/"
    }
   ] 
 } 
