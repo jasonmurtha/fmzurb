@@ -4,8 +4,8 @@
 
 ## Before You Begin ##
 
-* When you are creating a page using a **TeamSite template**, the outermost row and column are automatically inserted for you. You should only need to add rows with columns when you want to vertically divide the content area.
-* Be careful not to put a `.column` directly inside a `.column`, or a `.row` directly inside a `.row` --- when nesting you must alternate rows and columns.
+- When you are creating a page using a **TeamSite template**, the outermost row and column are automatically inserted for you. You should only need to add rows with columns when you want to vertically divide the content area.
+- Be careful not to put a `.column` directly inside a `.column`, or a `.row` directly inside a `.row` --- when nesting you must alternate rows and columns.
 
 ---
 

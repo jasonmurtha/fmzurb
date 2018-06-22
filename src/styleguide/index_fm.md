@@ -673,7 +673,7 @@ Add attribute `reversed` to the `<ol>` tag.
 
 Use class `.reversed` to visually reverse the display (for something like a "top 10 list" where you want the items to appear to count down to one. 
 
-<strong>Note:</strong> this only reverses the visual display. The items are still marked up in their standard order.  There is also a reversed attribute, but IE does not support it.
+**Note:** this only reverses the visual display. The items are still marked up in their standard order.  There is also a reversed attribute, but IE does not support it.
 
   
 ```html_example
@@ -2755,17 +2755,17 @@ Lists of Frequently Asked Questions (FAQs) use a variation of the accordion mark
 <p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
 
 Make forms easy to use with the following rules:
-* Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the <code>for</code>, <code>name</code>, and <code>id</code> attributes for all applicable elements.
-* Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
-* Required content should include <code>required</code>.
+- Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the <code>for</code>, <code>name</code>, and <code>id</code> attributes for all applicable elements.
+- Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
+- Required content should include <code>required</code>.
 
 ---
 
 ## Form Validation ##
 
-<p>Validation is done through the <a href="styleguide_abide.html">Abide</a> form validation library.</p>
+Validation is done through the <a href="styleguide_abide.html">Abide</a> form validation library.
 
-<p><a class="button primary large" href="styleguide_abide.html">Learn About Form Validation</a></p>
+<a class="button primary large" href="styleguide_abide.html">Learn About Form Validation</a>
 
 ---
 
@@ -2788,7 +2788,7 @@ Form elements are styled based on their type attribute rather than a class. Inpu
   <div class="row">
     <div class="small-12 column">
       <label for="pw">Password with Sample Help Text</label>
-      <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="***">
+      <input id="pw" type="password" aria-describedby="passwordHelpText" placeholder="&#42;&#42;&#42;">
       <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and a symbol.</p>
     </div>
   </div>
@@ -3034,7 +3034,7 @@ These are intended for interactive forms that sort/filter content within a singl
         <h5>Quick Find</h5>       
         <label class="flex-up" for="filter-field">Filter through the resources below by entering a <strong>keyword</strong>, <strong>filetype</strong> or <strong>year</strong>.</label>
         <div class="gutter-left-medium">
-          <input type="search" class="filter-field" id="filter-field" placeholder="Start typing to filter...">
+          <input type="search" class="filter-field" id="filter-field2" placeholder="Start typing to filter...">
           <button class="reset-filter" type="button" aria-label="remove filter">X</button>
         </div>
       </div>
@@ -3467,7 +3467,7 @@ A media object is a container with the class `.media-object`, and two or three s
 
 Media objects are one of hte few items we use in flexbox mode, so the class .main-section must be added to the section that should stretch in width to fill the available space.
 
-Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding `.align-*` classes on the container to align every child section at once, or individual child sections can be aligned with `.align-self-*` classes.
+Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding `.align-&#42;` classes on the container to align every child section at once, or individual child sections can be aligned with `.align-self-&#42;` classes.
 
 To override the width of the images in the media object, there are additional classes of `.image1-leads-blurb3`, `.image1-leads-blurb2`, and `blurb3-leads-image2`.
 

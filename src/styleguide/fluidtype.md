@@ -37,7 +37,7 @@ The formula (image from above article):
 <div class="row">
   <div class="column medium-9 large-7 xlarge-5 medium-centered">
     <figure>
-    <a  aria-controls="formulaImage" data-open="formulaImage" class="modal-launch"><img alt="Image of a function: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400))" src="files/advanced-calc-800-opt.png"></a>
+    <a  aria-controls="formulaImage" data-open="formulaImage" class="modal-launch"><img alt="Image of a function" src="files/advanced-calc-800-opt.png"></a>
     <figcaption>Image borrowed from [Smashing Magazine](https://www.smashingmagazine.com/2016/05/fluid-typography/) </figcaption>
     </figure>
   </div>
@@ -45,7 +45,7 @@ The formula (image from above article):
 <div class="reveal overlay-image" id="formulaImage" data-reveal>
   <div class="modal-content">
     <figure>
-      <img class="no-border" src="files/advanced-calc-800-opt.png" alt="Image of a function: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400))">
+      <img class="no-border" src="files/advanced-calc-800-opt.png" alt="Image of a function">
     </figure>
   </div>
 </div>
