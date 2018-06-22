@@ -99,9 +99,9 @@ Landing Pages are those pages that are linked from the primary navigation. Add o
 
 <p class="lead">Cards are a are a popular and flexible UI component, typically used to group article entries. </p>
 
-<p>A card is just an element with a `.card` class applied. You can put any kind of content inside.
-Make sure you wrap your content in a `.card-section` element in order to achieve the traditional card look.</p>
-<p>A card container has no padding, allowing you to place full-bleed images inside. Use the `.card-divider` and `.card-section` classes to sub-divide a card. To center the text content (for people cards, for example) simply add class `.text-center` to the `.card-section` container.</p>
+A card is just an element with a `.card` class applied. You can put any kind of content inside.  Make sure you wrap your content in a `.card-section` element in order to achieve the traditional card look.
+
+A card container has no padding, allowing you to place full-bleed images inside. Use the `.card-divider` and `.card-section` classes to sub-divide a card. To center the text content (for people cards, for example) simply add class `.text-center` to the `.card-section` container.
 
 ---
 
@@ -759,7 +759,7 @@ On the viewpoints landing page, the first 2 entries are featured with large imag
 
 Add the `.label` class and any of the <a href="styleguide_fm.html#colors">background color classes</a> to an element to create a label. Labels with dark backgrounds will typically include class `.upperclass` and class `.weight-bold`.
 
-<strong>Warning:</strong> Do not combine `.label` with links, buttons, or elements that are interactive.  
+**Warning:** Do not combine `.label` with links, buttons, or elements that are interactive.  
 
 ```html_example
 <div class="row medium-up-2 large-up-4">

@@ -81,7 +81,7 @@ For the corporate template, the plugin is initialized with these settings.
 | Foundation.Tabs.defaults.updateHistory      | tabs           | true  |
 | Foundation.Tabs.defaults.deepLinkSmudge     | tabs           | true  |
 | Foundation.Tabs.matchHeight                 | tabs           | true only if (getWidth() > 569) |
-| Foundation.Abide.defaults.patterns          | form validation| ['digits_dashes'] = /^[0-9-]*$/ |
+| Foundation.Abide.defaults.patterns          | form validation| ['digits_dashes'] = /^[0-9-]&#42;$/ |
 | Foundation.Abide.defaults.patterns          | form validation| ['tel'] = /^\(?\d{3}\)?[\s+&#x7c;-]?\d{3}[\s+&#x7c;-]?\d{4}/ |
 | Foundation.Abide.defaults                   | form validation| function to validatate form inputs with `checked_required` attribute |
 

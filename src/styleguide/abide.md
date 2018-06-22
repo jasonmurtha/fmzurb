@@ -206,7 +206,7 @@ In addition, these following patterns can be combine with a type="text" to restr
 - pattern="alpha"  (letters only -- no numbers, spaces, or punctuation)
 - pattern="alpha_numeric"  (letters and numbers only -- no spaces or punctuation)
 - pattern="integer"  (+/- numbers, no decimal)
-- pattern="[0-9]*"  (string of numbers only, but allows for leading 0 such as zipcodes)
+- pattern="[0-9]&#42;"  (string of numbers only, but allows for leading 0 such as zipcodes)
 - pattern="tel"   (10 digits, formatted as phone number: (###) ###-#### or ###-###-#### or ########## followed by any text, ext #, etc.)
 - pattern="month_day_year" (preferred American style date format: MM/DD/YYYY, MM-DD-YYYY)
 - pattern="domain"   (website.com -- kinder than url, since it doesn't require http:// or https://)
@@ -325,17 +325,17 @@ The following is provided if you need to run additional code as part of the vali
 
 Setup event listener after foundation is initialized (especially for formvalid/forminvalid). Easier to chain via document selector.
 - `valid.zf.abide` and `invalid.zf.abide` are field level events, triggered in validateInput function 
-  *   ev.target is the DOM field element, 
-  *   elem is jQuery selector for field element
+  -   ev.target is the DOM field element, 
+  -   elem is jQuery selector for field element
 - `formvalid.zf.abide` and `forminvalid.zf.abide` are form events, triggered in validateForm function
-  *   ev.target is the DOM form element, 
-  *   frm is jQuery selector for form element
+  -   ev.target is the DOM form element, 
+  -   frm is jQuery selector for form element
 - `formreset.zf.abide` is a form event, triggered when the form has been reset
-  *   ev.target is the DOM form element, 
-  *   frm is jQuery selector for form element
+  -   ev.target is the DOM form element, 
+  -   frm is jQuery selector for form element
 - `submit` is a form event, triggered when the form has been reset
-  *   ev.target is the DOM form element, 
-  *   frm is jQuery selector for form element
+  -   ev.target is the DOM form element, 
+  -   frm is jQuery selector for form element
 
 
 ```javascript
