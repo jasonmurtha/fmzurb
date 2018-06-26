@@ -125,16 +125,6 @@ $button-transition: background 0.25s ease-out, color 0.25s ease-out !default;
       }
     }
   } 
-  &.small {        
-    main .medium-up-2 & {
-      @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 80px)) {
-        padding: 0.75em 1em;  
-      }
-      @include breakpoint(large only) {
-        padding: 0.75em 1em;  
-      }
-    }
-  }
   .svg-stroke {
     stroke: $white;
   } 

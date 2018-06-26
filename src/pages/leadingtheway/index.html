@@ -69,9 +69,11 @@ a.connect:focus svg {
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
 }
 .logo-simple {
-  width: 148px;
-  max-width: 100%;
   margin: 18px 0;
+}
+.logo-simple img {  
+  width: 148px;
+  height: auto;
 }
 .mosaic-band,
 .footer-bottom-edge {
@@ -156,6 +158,10 @@ a.connect:focus svg {
   font-size: 1.85rem;
   opacity: 0.4;
 }
+.orbit-controls-outside .orbit-previous:hover, 
+.orbit-controls-outside .orbit-next:hover {
+  opacity: 0.8;
+}
 .leader-panel-nav-help {
   display: block;
   margin: 0.5rem 0 0;
@@ -208,8 +214,10 @@ a.connect:focus svg {
     font-size: 2.25rem;
   }
   .logo-simple {
-    width: 187px;
     margin: 22px 0 20px;
+  }
+  .logo-simple img {
+    width: 187px;
   }
   .custom-connect {
     margin: 1.25rem 0;
@@ -309,7 +317,6 @@ a.connect:focus svg {
     font-size: 4rem; 
   } 
 }
-
 </style>
  <!--JUNE 19 or 29 LAUNCH-->
 <div class="landing-band-sides-only">

@@ -432,7 +432,7 @@
   width: 30px;
   height: 30px;
   padding: 15px;
-  main & {
+  .iw_columns.large-7 & {
     @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 80px)) {
       width: 22px;
       height: 22px;

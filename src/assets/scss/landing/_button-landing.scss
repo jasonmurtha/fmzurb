@@ -18,8 +18,10 @@
     }
   }
   &.medium {
-    padding: 0.75em 1.25em;
-    font-size: 1.12rem;  
+    @include breakpoint(medium) {
+      padding: 0.75em 1.25em;
+      font-size: 1.12rem;  
+    }
   }
   &.xlarge {
     padding: 0.85em 2.25em;

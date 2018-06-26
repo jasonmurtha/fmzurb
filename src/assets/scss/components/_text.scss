@@ -234,7 +234,7 @@ sup {
   font-size: calc(18px +  14 * (100vw - 320px)/1180); 
   font-weight: $global-weight-bold;
   margin: 0.25em 0 0.375em;  
-  main & {
+  .iw_columns.large-7 & {
     @include breakpoint(xlarge only) {
       font-size: rem-calc(26);
       font-size: calc(26px +  6 * (100vw - 1180px)/220); 
@@ -273,7 +273,7 @@ sup {
   @include breakpoint(xxlarge) {
 		font-size: rem-calc(36);
 	}
-  main & {
+  .iw_columns.large-7 & {
     @include breakpoint(medium only) {
       font-size: rem-calc(30);
     }
@@ -295,7 +295,7 @@ sup {
   @include breakpoint(medium) {
 		font-size: rem-calc(18);
 	}
-  main & {
+  .iw_columns.large-7 & {
     @include breakpoint(large only) {
       font-size: rem-calc(16);
     }
@@ -468,7 +468,7 @@ sup {
     font-size: rem-calc(17);
     line-height: 1.4;
   }
-  main & {
+  .iw_columns.large-7 & {
     @include breakpoint(large only) {
       font-size: rem-calc(16);
       font-size: calc(16px +  4 * (100vw - 320px)/1180);
