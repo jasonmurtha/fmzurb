@@ -4,6 +4,13 @@
 .background-evergreen {
   color: #fff; 
   background: #87be3c;
+  hr {  
+    border-color: $white; 
+    opacity: 0.4;
+  }
+  .background-green {
+    background: #9ac53c;
+  }
 }
 .background-sapphire { 
   background-color: $sapphire; 
@@ -21,6 +28,9 @@
 }
 .vertical-gradient-dark-top {
    background-image: linear-gradient(to top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.2) 100%);
+}
+.section-shadow-top {
+  box-shadow: 0px -20px 30px 0px rgba(0,0,0,0.2);
 }
 .triangle-in-white,
 .triangle-in-primary,

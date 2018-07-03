@@ -6,7 +6,7 @@ image: "http://www.freddiemac.com/better-housing-finance/images/better_better_me
 keywords:
 url:  http://www.freddiemac.com/better-housing-finance/
 bodyclass: 
-stylesheet: /ss/app_landing-bhf-anim.css
+stylesheet: ["/ss/app_landing.css", "/ss/app_landing-bhf-anim.css"]
 share: true
 footer: footer-landing
 onload: setUpAnim
@@ -24,6 +24,10 @@ onload: setUpAnim
   opacity: 0.7;
   fill: white;
   transform: scaleY(1.3);
+}
+.box-light-blue {
+  border: 5px solid #00a5e4;
+  color: #00a5e4;
 }
 </style>
 
@@ -76,9 +80,16 @@ function setUpAnim() {
     <div class="row-container-narrow text-center">
       <div class="row">
         <div class="column">
-          <div class="text-flex-22-42"><span class="enlarge"><span class="enlarge"><strong>We&rsquo;re a better company</strong></span></span> &ndash; <br/> 
-            more efficient and innovative in serving homebuyers, renters, our customers and taxpayers
+          <div class="callout small-to-large"></div>
+          <div class="callout small-to-large"></div>
+          <div class="gutter-top-large gutter-bottom-large">
+            <h1 class="text-flex-22-42 weight-light"><span class="enlarge"><span class="enlarge"><strong>We&rsquo;re a better company</strong></span></span> &ndash; <br/> 
+              more efficient and innovative in serving homebuyers, renters, our customers and taxpayers
+            </h1>
           </div>
+          <div class="callout small-to-large"></div>
+          <div class="callout small-to-large"></div>
+          <div class="callout no-margin"></div>
         </div>
       </div>
     </div>
@@ -96,26 +107,32 @@ function setUpAnim() {
   <div class="row-container text-center">
     <div class="row">
       <div class="column">
-        <p class="header-large">A Stronger Company</p> 
+        <h2 class="text-flex-36-60 weight-normal gutter-bottom-large">A Stronger Company</h2> 
         <h3 class="gutter-bottom uppercase">Over the last year...</h3>
       </div>
     </div>  
     <!-- GREEN ROW OF 3 BOXES -->    
-    <div class="row large-up-3">
+    <div class="row large-up-3 vertical-center-equalizers" data-equalizer>
       <div class="column">
-        <div class="callout border-white background-green">
-          <h3>We provided<br><span class="call-to-action">$436 billion</span><br> in mortgage funding</h3>
+        <div class="callout xsmall">
+          <div class="callout border-white background-green" data-equalizer-watch>
+            <h3 class="weight-light gutter-top gutter-bottom">We provided <br><strong class="call-to-action">$410 billion</strong> <br>in mortgage funding </h3>
+          </div>
         </div>    
       </div>  
       <div class="column">
-        <div class="callout border-white background-green">
-          <h3>Our total guarantee portfolio grew to<br> <span class="call-to-action">$2 trillion</span></h3>
-        </div>    
+        <div class="callout xsmall">
+          <div class="callout border-white background-green" data-equalizer-watch>
+            <h3 class="weight-light gutter-top gutter-bottom">Nearly <br><strong class="call-to-action">99%</strong><br> of homeowners are current on their mortgage</h3>
+          </div>  
+        </div>  
       </div> 
       <div class="column">
-        <div class="callout border-white background-green">
-          <h3>We reported<br> <span class="call-to-action">$14 billion</span><br> in net income</h3>
-        </div>    
+        <div class="callout xsmall">
+          <div class="callout border-white background-green" data-equalizer-watch>
+            <h3 class="weight-light gutter-top gutter-bottom full">We reported <br><strong class="call-to-action">$6.4 billion</strong><br> in net income</h3>
+          </div>  
+        </div>  
       </div> 
     </div>
     <!-- END GREEN ROW OF 3 BOXES -->
@@ -129,8 +146,8 @@ function setUpAnim() {
   <div class="row-container text-center">
     <div class="row">
       <div class="column">
-      <p class="text-flex-22-42">We’ve returned <b class="text-flex-36-60 accent-white">$110.1 billion</b> to taxpayers, 
-      <b class="text-flex-36-60 accent-white">55%</b> more than we received from the U.S. Treasury.</p>
+      <p class="text-flex-22-42">We’ve returned <b class="text-flex-36-60 accent-white">$112.4 billion</b> to taxpayers, nearly
+      <b class="text-flex-36-60 accent-white">60%</b> more than we received from the U.S. Treasury.</p>
       </div>
     </div>
   </div>
@@ -146,9 +163,9 @@ function setUpAnim() {
     <div class="row">
       <div class="column large-6 large-text-right">
         <p class="text-flex-24-32 accent-dark-gray">
-          <em>"Our performance is evidence of good progress toward our goal to be one of the best-run financial institutions in the country, while successfully delivering on our public policy mission. We call this our transformation to ‘A Better Freddie Mac.'"</em>
+          <em>"Our results this quarter provide a particularly clear view of our earnings capacity and the progress we’ve made in fulfilling our mission by creating a better housing finance system."</em>
         </p>
-        <h4 class="accent-green">CEO Donald H. Layton, October 31, 2017</h4>
+        <h4 class="accent-green">CEO Donald H. Layton, May 1, 2018</h4>
       </div>
       <div class="column large-6">
         <p class="gutter-left-large"><img src="images/Donald_Layton.jpg"></p>
@@ -164,13 +181,13 @@ function setUpAnim() {
   <div class="row-container text-center gutter-bottom">
     <div class="row">
       <div class="column large-11 large-centered">
-        <p class="text-flex-22-42">Since 1970, we've made home possible nearly<br/><b class="text-flex-36-60 accent-white">76 million</b> times.</p>
+        <p class="text-flex-22-42">Since 1970, we've made home possible nearly<br/><b class="text-flex-36-60 accent-white">77 million</b> times.</p>
         <div class="odometer gutter-top">
           <div class="odometer-number">
             <div class="odometer-building7"></div>
           </div>
           <div class="odometer-number">
-            <div class="odometer-house6"></div>
+            <div class="odometer-building7"></div>
           </div>
           <div class="odometer-separator show-for-medium">
           </div>
@@ -231,20 +248,20 @@ function setUpAnim() {
 <!-- LIGHT BLUE ROW OF 3 BOXES -->  
 <div class="landing-band" style="background: #e5f3fc;"> 
   <div class="row-container text-center gutter-bottom">
-    <div class="row large-up-3" data-equalizer>
+    <div class="row large-up-3 vertical-center-equalizers" data-equalizer>
       <div class="column">
-        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
-          <h3>We've transferred a portion of credit risk on<br><span class="call-to-action">$1+ trillion</span><br>of mortgages away from taxpayers</h3>
+        <div class="callout small-to-default box-light-blue" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3 class="weight-light">We've transferred a portion of credit risk on<br><strong class="call-to-action">$1+ trillion</strong><br>of mortgages away from taxpayers</h3>
         </div>    
       </div>  
       <div class="column">
-        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
-          <h3>The Single Security will pave the way for a<br> <span class="call-to-action">$3.5 trillion</span><br> TBA MBS market in 2019</h3>
+        <div class="callout small-to-default box-light-blue" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3 class="weight-light">The Single Security will pave the way for a<br> <strong class="call-to-action">$3.5 trillion</strong><br> TBA MBS market in 2019</h3>
         </div>    
       </div> 
       <div class="column">
-        <div class="callout" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
-          <h3>Our investment in the Common Securitization Platform will standardize <span class="call-to-action">agency MBS</span> issuance and management</h3>
+        <div class="callout small-to-default box-light-blue" style="background: rgba(256, 256, 256, 0.65);" data-equalizer-watch>
+          <h3 class="weight-light">Our investment in the Common Securitization Platform will standardize <strong class="call-to-action">agency MBS</strong> issuance and management</h3>
         </div>    
       </div> 
     </div>
@@ -324,27 +341,27 @@ function setUpAnim() {
     <div class="row-container text-center">
       <div class="row">
         <div class="column">
-          <p class="header-large">Solutions for <strong>Homebuyers</strong></p>
+          <h2 class="text-flex-36-60">Solutions for <strong>Homebuyers</strong></p>
           <h3 class="uppercase gutter-bottom">Over the last year...</h3>
         </div>
       </div>
     </div>
     <div class="row-container text-center gutter-bottom">
     <!-- ORANGE ROW OF 3 BOXES -->
-      <div class="row large-up-3" data-equalizer>
+      <div class="row large-up-3 vertical-center-equalizers" data-equalizer>
         <div class="column">
           <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
-            <h3 class="weight-light"><span class="enlarge">We helped<br /> <span class="call-to-action">349,000</span><br /> first-time homebuyers</span></h3>
+            <h3 class="weight-light"><span class="enlarge">We helped<br /> <strong class="call-to-action">312,000</strong><br /> first-time homebuyers</span></h3>
           </div>    
         </div>  
         <div class="column">
           <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
-            <h3 class="weight-light">We helped nearly<br /> <span class="call-to-action">773,000</span><br /> families refinance and save money</h3>
+            <h3 class="weight-light">We helped nearly<br /> <strong class="call-to-action">579,000</strong><br /> families refinance and save money</h3>
           </div>    
         </div> 
         <div class="column">
           <div class="callout border-white" style="background: rgba(256, 256, 256, 0.13);"  data-equalizer-watch>
-            <h3 class="weight-light">Our <span class="call-to-action">3%</span> down payment<br /> program is expanding access to credit for qualified homebuyers</h3>
+            <h3 class="weight-light">Our <strong class="call-to-action">3%</strong> down payment<br /> program is expanding access to credit for qualified homebuyers</h3>
           </div>    
         </div> 
       </div>
@@ -441,7 +458,7 @@ function setUpAnim() {
                     </div>
                     <div class="column">
                       <div class="hide-for-small-only gutter-top-medium-only gutter-bottom"><img alt="" src="images/bhf_homebuyers_circle_image_2.png" class="image-circle no-border"></div>
-                      <p class="text-flex-18-24">Loan Advisor Suite<sup>&reg;</sup>, our integrated suite of tool, makes the mortgage process more efficient, more transparent, and more certain.</p>
+                      <p class="text-flex-18-24">We're <strong>reimagining</strong> our technology. Our automated collateral evaluation lets some borrowers skip traditional home appraisals, saving time and money.</p>
                     </div>
                     <div class="column">
                       <div class="hide-for-small-only gutter-top-medium-only gutter-bottom"><img alt="" src="images/bhf_homebuyers_circle_image_3.png" class="image-circle no-border"></div>
@@ -469,28 +486,28 @@ function setUpAnim() {
   <div class="row-container text-center">
     <div class="row">
       <div class="column">
-        <p class="header-large">Solutions for <strong>Renters</strong></p>
+        <h2 class="text-flex-36-60">Solutions for <strong>Renters</strong></h2>
         <h3 class="gutter-bottom uppercase">Over the last year...</h3>
       </div>
     </div>
   </div>
   <div class="row-container text-center">    
     <!-- TEAL ROW OF 3 BOXES --> 
-    <div class="row large-up-3" data-equalizer>
+    <div class="row large-up-3 vertical-center-equalizers" data-equalizer>
       <div class="column">
         <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
-          <h3 class="weight-light">Our funding helped make <span class="call-to-action">714,000</span> apartment units available nationwide</h3>
+          <h3 class="weight-light">Our funding helped make <strong class="call-to-action">814,000</strong> apartment units available nationwide</h3>
         </div>    
       </div>  
       <div class="column">
         <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
-          <h3 class="weight-light">The<br /> <span class="call-to-action">vast majority</span> of the apartments we fund are affordable to moderate- and low-income renters</h3>
+          <h3 class="weight-light">The<br /> <strong class="call-to-action">vast majority</strong> of the apartments we fund are affordable to moderate- and low-income renters</h3>
         </div>    
       </div> 
       <div class="column">
         <div class="callout border-white" style="background: rgba(256, 256, 256, 0.2);" data-equalizer-watch>
-          <h3 class="weight-light">We provided <span class="call-to-action"><br />$1.1 billion</span> <br />to support manufactured housing communities</h3>
-        </div>    
+          <h3 class="weight-light">Our Targeted Affordable Housing program funded <strong class="call-to-action"><br />$9.1 billion</strong> <br />to support housing for renters with the greatest need </h3>
+        </div>     
       </div> 
     </div>
     <!-- END TEAL ROW OF 3 BOXES -->
@@ -516,7 +533,7 @@ function setUpAnim() {
                       </svg>
                     </div>
                   </div>
-                  <div class="column large-6">
+                  <div class="column large-6 large-text-left">
                     <h3 class="weight-light">Our goal is to support <strong>all corners of the multifamily market</strong>, to keep rental housing affordable and accessible.</h3>
                   </div>
                 </div>
@@ -527,10 +544,10 @@ function setUpAnim() {
                 <div class="gutter-all"></div>
                 <div class="row large-vertical-center-children">
                   <div class="column large-6">
-                    <p><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video overlay block" href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img alt="Video: A Shared Passion" src="images/bhf_renters_video_still.jpg"></a></p>
+                    <p><img src="images/sbl_image.jpg?1530639303541" alt="SBL"></p>   
                   </div>
-                  <div class="column large-6">
-                    <h3 class="weight-light">Our Targeted Affordable Housing program funded <strong>$6.4 billion</strong> over the last year to support housing for renters with the greatest need.</h3>
+                  <div class="column large-6 large-text-left">
+                    <h3 class="weight-light">Since launching our Small Balance Loan program, we've financed over <strong>6,700 loans</strong>, bringing our total funding for smaller apartment properties to <strong>$16.5 billion</strong></h3>
                   </div>
                 </div>
               </div>
@@ -539,20 +556,18 @@ function setUpAnim() {
               <div class="callout large text-center slide-inner-container">
                 <div class="row medium-up-3">
                   <div class="column">
-                    <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_1.png" class="image-circle no-border"></div>
-                    <p class="text-flex-18-24">We're <strong>#1</strong> in financing housing for seniors' assisted and independent living.</p>
+                    <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_1.png" class="image-circle no-border" alt=""></div>
+                    <p class="text-flex-18-24">We're <strong>a leader </strong> in financing housing for seniors' assisted and independent living.</p>
                   </div>
                   
                   <div class="column">
-                  <div class="hide-for-small-only"><a tabindex="0" aria-haspopup="true" aria-controls="videoModal0" data-open="videoModal0" class="video-modal widescreen-video" 
-                  href="https://www.youtube.com/watch?v=JI1zThrLMpk" data-src="//www.youtube-nocookie.com/embed/JI1zThrLMpk?rel=0&amp;wmode=transparent"><img src="images/bhf_renters_circle_image_2-tah.png" 
-                  class="image-circle no-border" alt="Video: A Shared Passion"></a></div>
-                    <p class="text-flex-18-24">Our Targeted Affordable Housing program funded <strong>$7.7 billion</strong> over the last year to support housing for renters with the greatest need.</p>
+                  <div class="hide-for-small-only"><img alt="Manufactured housing communities" class="image-circle no-border" src="images/bhf_renters_circle_image_2-tah.png"></div>
+                    <p class="text-flex-18-24">We've made home possible for more than <strong>84,000</strong> families in manufactured housing communities.</p>
                   </div>
                   
                   <div class="column">
-                  <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_3.png" class="image-circle no-border"></div>
-                    <p class="text-flex-18-24"><strong>Green Advantage<sup>SM</sup></strong> helps multifamily property owners and developers provide affordable, resource-efficient housing.</p>
+                  <div class="hide-for-small-only"><img src="images/bhf_renters_circle_image_3.png" class="image-circle no-border" alt=""></div>
+                    <p class="text-flex-18-24"><strong>Green Advantage&reg;</strong> helps multifamily property owners and developers provide affordable, resource-efficient housing.</p>
                   </div>
                 </div>
               </div>
@@ -597,22 +612,22 @@ function setUpAnim() {
       <div class="column">
         <p><img src="images/industry_partners_icon_1.svg" style="height:100px;"></p>
         <h2>Innovation</h2>
-        <p class="text-flex-18-24" style="padding:15px;">We're dedicated to automation and innovation that bring more efficiencies to the housing market.</p>
+        <p class="text-flex-18-24 weight-normal" style="padding:15px;">We're dedicated to automation and innovation that bring more efficiencies to the housing market.</p>
       </div>
       <div class="column">
         <p><img src="images/industry_partners_icon_2.svg" style="height:100px;"></p>
         <h2>Technology</h2>
-        <p class="text-flex-18-24" style="padding:15px;">Our focus and investment in technology is lowering costs across the industry, while helping to serve more families.</p>
+        <p class="text-flex-18-24 weight-normal" style="padding:15px;">Our focus and investment in technology is lowering costs across the industry, while helping to serve more families.</p>
       </div>
       <div class="column">
         <p><img src="images/industry_partners_icon_3.svg" style="height:100px;"></p>
         <h2>Commitment</h2>
-        <p class="text-flex-18-24" style="padding:15px;">We're committed to serving the industry by building a better and more sound housing finance system.</p>
+        <p class="text-flex-18-24 weight-normal" style="padding:15px;">We're committed to serving the industry by building a better and more sound housing finance system.</p>
       </div>
       <div class="column">
         <p><img src="images/industry_partners_icon_4.svg" style="height:100px;"></p>
         <h2>Excellence</h2>
-        <p class="text-flex-18-24" style="padding:15px;">We're working closely with our customers to meet their needs and help them remain strong and competitive.</p>
+        <p class="text-flex-18-24 weight-normal" style="padding:15px;">We're working closely with our customers to meet their needs and help them remain strong and competitive.</p>
       </div>
     </div>
   </div>

@@ -105,6 +105,10 @@ $button-transition: background 0.25s ease-out, color 0.25s ease-out !default;
   @include breakpoint (small only) {
     margin-bottom: 0.25em;
   }
+  @media (max-width: 25em){
+    padding: 0.85em 1.325em;
+    font-size: 0.8125rem;
+  }
   &::after,
   &::before {
     transition: $button-transition;

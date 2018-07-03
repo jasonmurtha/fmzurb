@@ -1,0 +1,243 @@
+{ "albums" : 
+  [
+    {
+      "type":"green",
+      "title":"Love Yourself: Tear",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-11-img.png",
+      "released": "05/18/2018",
+      "spotify": "https://open.spotify.com/album/2jJfnAZE6IG3oYnUv2eCj4",
+      "songs":[
+        "Intro: Singularity",
+        "FAKE LOVE",
+        "The Truth Untold",
+        "134340",
+        "Paradise",
+        "Love Maze",
+        "Magic Shop",
+        "Airplane pt.2",
+        "Anpanman",
+        "So What",
+        "Outro: Tear"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"purple",
+      "title":"The Most Beautiful Moment In Life pt.2",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-6-img.png",
+      "released": "11/30/2015",
+      "spotify": "https://open.spotify.com/album/4frjaGAtuBmm8CPuYPY4oG",
+      "songs":[
+        "Intro: Never Mind",
+        "RUN",
+        "Butterfly",
+        "Whalien 52",
+        "Ma City",
+        "Silver Spoon",
+        "Dead Leaves",
+        "Outro: House of Cards"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"teal",
+      "title":"2 Cool 4 Skool",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-1-img.png",
+      "released": "06/12/2013",
+      "spotify": "https://open.spotify.com/album/26z5WolFltYgVMuuJ3c0Am",
+      "songs":[
+        "Intro: 2 Cool 4 Skool (ft. DJ Friz)",
+        "We Are Bulletproof pt.2",
+        "No More Dream",
+        "Interlude",
+        "Like",
+        "Outro: Circle Room Cypher"
+      ],
+      "showSongs":false
+    },    
+    {
+      "type":"orange",
+      "title":"You Never Walk Alone",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-9-img.png",
+      "released":"02/13/2017",
+      "spotify": "https://open.spotify.com/album/7LF4N7lvyDhrPBuCJ1rplJ",
+      "songs":[
+        "Intro: Boy Meets Evil",
+        "Blood, Sweat, & Tears",
+        "Begin (Jungkook Solo)",
+        "Lie (Jimin Solo)",
+        "Stigma (V Solo)",
+        "First Love (SUGA Solo)",
+        "Reflection (RM Solo)",
+        "MAMA (j-hope Solo)",
+        "Awake (Jin Solo)",
+        "Lost",
+        "BTS Cypher pt. 4",
+        "Am I Wrong",
+        "21st Century Girl",
+        "2! 3!",
+        "Spring Day",
+        "Not Today",
+        "Outro: Wings",
+        "A Supplementary Story: You Never Walk Alone"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"green",
+      "title":"The Most Beautiful Moment In Life: Young Forever",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-7-img.png",
+      "released": "05/02/2016",
+      "spotify": "https://open.spotify.com/album/7qvA0kf1dkmR1As2gOnBPn",
+      "songs":[
+        "Intro: The Most Beautiful Moment in Life",
+        "I NEED U",
+        "Hold Me Tight",
+        "Dead Leaves",
+        "Butterfly prologue mix",
+        "RUN",
+        "Ma City",
+        "Silver Spoon",
+        "DOPE",
+        "FIRE",
+        "Save ME",
+        "Epilogue: Young Forever",
+        "Converse High",
+        "Moving On",
+        "Whalien 52",
+        "Butterfly",
+        "House of Cards (full length edition)",
+        "Love is Not Over (full length edition)",
+        "I NEED U urban mix",
+        "I NEED U remix",
+        "RUN ballad mix",
+        "RUN (alternative mix)",
+        "Butterfly (alternative mix)"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"purple",
+      "title":"Love Yourself: Her",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-10-img.png",
+      "released":"09/18/2017",
+      "spotify": "https://open.spotify.com/album/2FTS6a6DLXMNp8flyA0HGO",
+      "songs":[
+        "Intro: Serendipity",
+        "DNA",
+        "Best of Me",
+        "Dimple (Illegirl)",
+        "Pied Piper",
+        "MIC Drop",
+        "Go Go",
+        "Outro: Her"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"teal",
+      "title":"Wings",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-8-img.png",
+      "released": "10/10/2016",
+      "spotify": "https://open.spotify.com/album/17FnTn4P3Bkyf6mbNQDhhy",
+      "songs":[
+        "Intro: Boy Meets Evil",
+        "Blood, Sweat, & Tears",
+        "Begin (Jungkook Solo)",
+        "Lie (Jimin Solo)",
+        "Stigma (V Solo)",
+        "First Love (SUGA Solo)",
+        "Reflection (RM Solo)",
+        "MAMA (j-hope Solo)",
+        "Awake (Jin Solo)",
+        "Lost",
+        "BTS Cypher pt. 4",
+        "Am I Wrong",
+        "21st Century Girl",
+        "2! 3!",
+        "Interlude: Wings"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"orange",
+      "title":"The Most Beautiful Moment In Life pt.1",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-5-img.png",
+      "released": "04/29/2015",
+      "spotify": "https://open.spotify.com/album/0Gv6nwfgk6Cy62j0GGITQc",
+      "songs":[
+        "Intro: The Most Beautiful Moment in Life",
+        "I NEED U",
+        "Hold Me Tight",
+        "DOPE",
+        "Boyz with Fun",
+        "Converse High",
+        "Moving On",
+        "Outro: Love is Not Over"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"green",
+      "title":"Dark & Wild",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-4-img.png",
+      "released":"08/19/2014",
+      "spotify": "https://open.spotify.com/album/7FxxU3EP37uMsZf8FilkDR",
+      "songs":[
+        "Intro: What Am I To You",
+        "Danger",
+        "War of Hormone",
+        "Hip Hop Phile",
+        "Let Me Know",
+        "Rain",
+        "BTS Cypher pt.3 Killer (ft. Supreme Boi)",
+        "Interlude: What Are You Doing",
+        "Would You Turn Off Your Cell Phone?",
+        "Blanket Kick",
+        "24/7=Heaven",
+        "Look Here",
+        "2nd Grade",
+        "Outro: Does That Make Sense?"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"purple",
+      "title":"Skool Luv Affair",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-3-img.png",
+      "released": "02/12/2014",
+      "spotify": "https://open.spotify.com/album/5DIb84mvBHZnYFpIsdt2tL",
+      "songs":[
+        "Intro: Skool Luv Affair",
+        "Boy In Luv",
+        "Where Are You From?",
+        "Just One Day",
+        "Tomorrow",
+        "BTS Cypher pt.2 Triptych",
+        "Spine Breaker",
+        "Jump",
+        "Outro: Propose"
+      ],
+      "showSongs":false
+    },
+    {
+      "type":"teal",
+      "title":"O!RUL8,2?",
+      "artwork": "http://bts.ibighit.com/images/discography/disco-2-img.png",
+      "released":"09/11/2013",
+      "spotify": "https://open.spotify.com/album/7xp8NlqiWjtSJ8oFvyShB2",
+      "songs":[
+        "Intro: O!RUL8,2?",
+        "N.O",
+        "We On",
+        "If I Ruled The World",
+        "Coffee",
+        "BTS Cypher pt.1",
+        "Attack of Bangtan",
+        "Satoori Rap",
+        "Outro: Luv in Skool"
+      ],
+      "showSongs":false
+    }
+  ]
+}

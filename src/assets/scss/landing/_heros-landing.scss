@@ -9,22 +9,33 @@
 
 .dts-landing-hero {
   background-image: linear-gradient(rgba(46,46,45,.2),rgba(46,46,45,.2)),url("/about/duty-to-serve/images/dts-hero.jpg");
-  background-position: left center;
-	padding: 50px 0 75px; 
-  min-height: rem-calc(150px);
+    background-position: 20% center;
+	padding-top: 50px; 
+  min-height: rem-calc(216px);  
 	@include breakpoint(medium) {
-    min-height: rem-calc(400px);
-    padding-top: 100px;  
+    min-height: rem-calc(270px);
+    padding-top: 65px;  
+    background-position: 30% center;
 	} 
   @include breakpoint(large) {
+    min-height: rem-calc(400px);
+    padding-top: 110px; 
+    background-position: 25% center;
+	}
+  @include breakpoint(xlarge) {
     min-height: rem-calc(500px);
-    padding-top: 150px; 
+    padding-top: 170px; 
+    background-position: 22% center;
+	}
+  @include breakpoint(xxlarge) {
+    background-position: left center;
+    padding-top: 160px; 
 	}
 }
 .bhf-landing-hero {
   background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("/better-housing-finance/images/bhf-hero.jpg");
   min-height: rem-calc(150px); 
-  @include breakpoint(large) {
+  @include breakpoint(xlarge) {
     min-height: rem-calc(600px); 
 	}
 }
@@ -85,25 +96,19 @@
 
 .banner-first {
   background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-rural_section.jpg");
-  min-height: rem-calc(250);
-  @include breakpoint(large) {
-    min-height: rem-calc(340);
-	}
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 .banner-second {
   background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-manufactured_section.jpg");
-  min-height: rem-calc(250px);
-  @include breakpoint(large) {
-    min-height: rem-calc(340px);
-	}
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 .banner-third {
   background-image: linear-gradient(rgba(46,46,45,.4),rgba(46,46,45,.4)),url("/about/duty-to-serve/images/hdr-preservation_section.jpg");
+  padding-top: 10px;
+  padding-bottom: 30px;
   background-position: center;
-  min-height: rem-calc(250px);
-  @include breakpoint(large) {
-    min-height: rem-calc(340px);
-	}
 }
 
 .fixed-highlight {

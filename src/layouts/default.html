@@ -53,9 +53,9 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp2.css" />
-    {{#if stylesheet}}    
-    <link rel="stylesheet" href="{{ stylesheet }}" />
-    {{/if}}
+    {{#each stylesheet}}
+    <link rel="stylesheet" href="{{.}}" />
+    {{/each}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
   <body>     
