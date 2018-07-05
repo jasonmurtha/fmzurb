@@ -1,11 +1,10 @@
 ﻿---
 title: Discography Sample
 layout: default
-stylesheet: ["/ss/app_landing.css"]
+stylesheet: [/ss/app_landing.css, /special/styleguide/files/album.css]
 onload: triggerList
 ---
-<link rel="stylesheet" href="/special/styleguide/files/album.css" />     
-{{>header-landing-linked}}
+   
 
 <div class="page-title">
   <div class="row-container-wide">
@@ -19,37 +18,38 @@ onload: triggerList
 
 <div class="landing-band">
   <div class="row-container-wide">
-    <div class="row large-up-2 accent-white" data-equalizer="outer" data-equalize-by-row="true">    
-      {{#each albums.albums}}
-        <div class="column">
-          <div class="album background-album" data-equalizer-watch="outer">
-            <div class="{{type}} album-block">
-              <div class="row collapse">
-                <div class="column medium-10">
-                  <figure>
-                    <figcaption class="text-center medium-text-left">
-                      <h2 class="sidebar-subtitle">{{title}}</h2>
-                    </figcaption>
-                    <div class="album-art"><a class="album-link" href="javascript:void(0);"><img src="{{artwork}}" alt="{{title}}"></a></div>
-                    <figcaption class="text-center medium-text-left">
-                      <p class="gutter-bottom-medium"><a rel="external noreferrer noopener" href="{{spotify}}" tabindex="-1" class="button hollow">Listen on spotify</a></p>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="column medium-2">
-                  <div class="more-info text-left">
-                    <ol class="songs flex-down">
-                    {{#each songs}}
-                      <li>{{.}}</li>
-                    {{/each}}
-                    </ol>
+    <div class="row">  
+      <div class="column medium-10 medium-centered large-8 xlarge-12">
+        <h2 class="gutter-bottom text-center">Click on each album cover to view its track list.</h2>
+        <div class="row xlarge-up-2 accent-white album-wrapper">    
+          {{#each albums.albums}}
+            <div class="column">
+              <div class="album background-album">
+                <div class="{{type}} album-block">
+                  <h2 class="sidebar-subtitle">{{title}}</h2>                  
+                  <div class="row collapse">
+                    <div class="column large-10">
+                      <figure class="album-art">
+                        <a class="album-link" href="javascript:void(0);"><img src="{{artwork}}" alt="{{title}}"></a>
+                      </figure>
+                    </div>
+                    <div class="column large-2">
+                      <div class="more-info text-left">
+                        <ol class="songs flex-down">
+                        {{#each songs}}
+                          <li><span>{{.}}</span></li>
+                        {{/each}}
+                        </ol>
+                      </div>
+                    </div>
                   </div>
+                  <div class="spotify"><a rel="external noreferrer noopener" href="{{spotify}}" tabindex="-1" class="button hollow">Listen on spotify</a></div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      {{/each}}
+          {{/each}}
+        </div>     
+      </div>
     </div>
   </div>
 </div>
@@ -58,16 +58,13 @@ onload: triggerList
 function triggerList() {
   $(".album").find('a.album-link').on("click", function(){
     var $album = $(this).closest('.album'), $cols = $album.find('.column');
-    if($cols.filter('.medium-10:even').length) { 
-      $cols.filter(':even').removeClass('medium-10').addClass('medium-7');
-      $cols.filter(':odd').removeClass('medium-2').addClass('medium-5');
+    if($cols.filter('.large-10:even').length) { 
+      $cols.filter(':even').removeClass('large-10').addClass('large-7');
+      $cols.filter(':odd').removeClass('large-2').addClass('large-5');
     }
-    else if($cols.filter('.medium-7:even').length){
-      $cols.filter(':even').removeClass('medium-7').addClass('medium-10');
-      $cols.filter(':odd').removeClass('medium-5').addClass('medium-2');    
-    }
-    else {
-      console.log($cols.filter('.medium-10:even').length);
+    else if($cols.filter('.large-7:even').length){
+      $cols.filter(':even').removeClass('large-7').addClass('large-10');
+      $cols.filter(':odd').removeClass('large-5').addClass('large-2');    
     }
   });  
 }
