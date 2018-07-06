@@ -1,0 +1,64 @@
+$hero-opacity: 0.8;
+$hero-blend-color: $primary-color;
+
+// only apply color and backgrounds on screen, not in print
+@media screen {
+  .hero-edge {
+    height: rem-calc(14);  
+    background: $celery;
+    @include mosaic-fill(); 
+  }
+  .hero-blended {
+    background-color: $hero-blend-color;
+    color: $white;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    .hero-date {
+      margin-top: 0.5em;
+      margin-bottom: 0.7em;
+    }
+    > .row {
+      @include vertical-center;
+      right: 0;
+      left: 0;
+      position: relative;
+    }
+  }
+  // default center aligned hero
+  .hero-blended-content {
+    @include breakpoint(large) {
+      @include grid-column(10);
+      @include grid-column-position(center);
+    }
+    @include breakpoint(xlarge) {
+      @include grid-column(7);
+      @include grid-column-position(center);
+    }
+    p {
+      font-size: calc(18px +  10 * (100vw - 320px)/1180);
+      @include breakpoint(xxlarge) {
+        font-size: rem-calc(28);
+      }
+    }    
+  }
+  
+  .cm-landing-hero {
+    @include breakpoint(small only) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-placeholder.jpg');
+      height: rem-calc(219);
+      text-align: center;
+      background-position: center bottom;
+    }
+    @include breakpoint(medium) {
+      background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-placeholder.jpg');
+      height: rem-calc(345);
+      background-position: center bottom;
+      text-align: center;
+    }
+    @include breakpoint(xlarge) {
+      background-position: center 85%;
+    }
+  } 
+}

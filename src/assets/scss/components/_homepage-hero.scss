@@ -11,7 +11,7 @@
   position: relative;
   padding: rem-calc(30 0 30);
   @media screen { 
-    background: $fm-gray url('/images/hero/homepage_hero_dts_mobile.jpg') no-repeat left bottom / cover;  
+    background: $fm-gray url('/images/hero/homepage_hero4_mobile.jpg') no-repeat left bottom / cover;  
   }
   @media (min-width: -zf-bp-to-em(map-get($breakpoints, medium) - 120px)) {
     padding: rem-calc(35 0 30);
@@ -52,8 +52,8 @@
   // overrides for better housing finance promotion
   &.hero-better-housing {
     @media screen {   
-      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/images/hero/homepage_hero_bhf.jpg");
-      background-position: center center;
+      background-image: url("/images/hero/homepage_hero5.jpg");
+      background-position: 50% center;
     }
     @include breakpoint(xxlarge) {
       background-position: center bottom;

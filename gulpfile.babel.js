@@ -184,6 +184,9 @@ function postsass(done){
   gulp.src(PATHS.dist + '/ss/{dev,app_corp2}.css')
     .pipe($.if(!PRODUCTION, $.concat('app_corp2.css')))
     .pipe($.if(!PRODUCTION, gulp.dest(PATHS.dist + '/ss')));
+  gulp.src(PATHS.dist + '/ss/{dev,app_cm}.css')
+    .pipe($.if(!PRODUCTION, $.concat('app_cm.css')))
+    .pipe($.if(!PRODUCTION, gulp.dest(PATHS.dist + '/ss')));
   }
   done();
 }
@@ -213,7 +216,6 @@ function javascriptLS(done) {
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript(done) {
-  var landing = [];
   gulp.src(PATHS.javascriptcorp)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
@@ -223,17 +225,25 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
-  landing = PATHS.javascriptLanding;
-  landing.push("src/assets/js/appBetterHousing.js");
-  gulp.src(landing)
+  gulp.src(PATHS.javascriptcapital)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_bhf.js'))
+    .pipe($.concat('app_cm.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
+ // commenting out landing until it has a reason to exist
+ // gulp.src(PATHS.javascriptlanding)
+ //   .pipe($.sourcemaps.init())
+ //   .pipe($.babel({ignore: ['what-input.js']}))
+ //   .pipe($.concat('app_landing.js'))
+ //   .pipe($.if(PRODUCTION, $.uglify()
+ //     .on('error', e => { console.log(e); })
+ //   ))
+ //   .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+ //   .pipe(gulp.dest(PATHS.dist + '/js'));
   done();
 }
 

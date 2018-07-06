@@ -1,0 +1,19 @@
+﻿---
+title: Freddie Mac Redesign Prototypes
+layout: corporate
+herotype: title
+breadcrumb: [{"name":"Home","url":"/"},{"name":"Prototypes"}]
+navLevel1: 'none'
+navLevel2: 'none'
+---
+
+
+  <div class="iw_component">
+    {{#if samples}}  
+      <ul>
+        {{#each samples.page}}
+          <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>

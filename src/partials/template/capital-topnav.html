@@ -1,0 +1,121 @@
+<div class="nav-global" id="nav-global">
+  <div class="row">
+    <div class="column">
+      <div class="top-bar" id="top-bar"> 
+        <div class="title-bar">
+          <div class="float-right hide-for-xlarge">
+            <button id="search-toggle" class="search-icon button" type="button" data-toggle="nav-search" aria-label="toggle search">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 54 54"><g stroke-width="6" fill="none"><circle cx="17" cy="17" r="16"/><line x1="28.4" y1="28.4" x2="47" y2="47"/></g></svg>
+            </button><button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="nav-main body-wrapper" aria-label="toggle menu">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 54 54" stroke-width="6">
+              <g class="menu"><line x1="1" y1="44" x2="47" y2="44"/><line x1="1" y1="24" x2="47" y2="24"/><line x1="1" y1="4" x2="47" y2="4"/></g>
+              <g class="menu-close"><line x1="1" y1="1" x2="47" y2="47"/><line x1="47" y1="1" x2="1" y2="47"/></g>
+            </svg>
+            </button>
+          </div>
+          <a href="/" class="logo-corp">
+            <img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo">
+          </a>
+        </div>
+      </div> 
+      <nav class="nav-main" id="nav-main" role="navigation" data-toggler aria-expanded="false" data-animate="fade-in fade-out" style="display: none; transition-duration: 0s;">      
+        <div class="nav-section" id="section-debt">
+          <a id="nav-debt" class="show-for-xlarge" href="/debt/">Debt Securities</a>       
+          <ul class="no-bullet vertical menu" id="subnav-debt" data-accordion-menu>
+            <li class="subnav-item ease" id="subnav-debt-item">
+              <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-debt-toggle" data-toggle="subnav-debt-list" aria-controls="subnav-debt-list">Debt Securities</a>
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-debt-list">
+                <li class="hide-for-xlarge"><a id="subnav-debt-overview" href="/debt/">Overview</a></li>
+                <li><a id="subnav-debt-data" href="/debt/html/sactivitymain.html">Securities Data</a></li>
+                <li><a id="subnav-debt-products" href="/debt/products/">Debt Products</a></li>
+                <li><a id="subnav-debt-auctions" href="/debt/auctionrepurch/auctions.html">Securities Auctions</a></li>
+                <li><a id="subnav-debt-legal" href="/debt/html/docsmain.html">Legal Documentation</a></li>
+                <li><a id="subnav-debt-contact" href="/debt/html/contactinfo.html">Contact Information</a></li>
+              </ul>
+            </li>  
+          </ul>
+        </div>
+        <div class="nav-section" id="section-mbs"> 
+          <a id="nav-mbs" class="show-for-xlarge" href="/mbs/">Mortgage Securities</a>
+          <ul class="no-bullet vertical menu" id="subnav-mbs" data-accordion-menu>
+            <li class="subnav-item" id="subnav-mbs-item">
+              <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-mbs-toggle" data-toggle="subnav-mbs-list" aria-controls="subnav-mbs-list">Mortgage Securities</a>
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-mbs-list">
+                <li class="hide-for-xlarge"><a id="subnav-mbs-overview" href="/mbs/">Overview</a></li>
+                <li><a id="subnav-mbs-homeownership" href="/mbs/html/single_security_csp.html">Single Security &amp; CSP</a></li>
+                <li><a id="subnav-mbs-lookup" href="/mbs/html/sd_pc_lookup.html">Security Lookup</a></li>
+                <li><a id="subnav-mbs-data" href="/mbs/html/security_data.html">Security Data</a></li>
+                <li><a id="subnav-mbs-products" href="/mbs/html/product/">Mortgage Products</a></li>
+                <li><a id="subnav-mbs-legal" href="/mbs/html/legal_doc.html">Legal Documentation</a></li>
+                <li><a id="subnav-mbs-info" href="/mbs/html/info_request.html">Information Requests</a></li>
+                <li><a id="subnav-mbs-contact" href="/mbs/html/contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-section" id="section-seasonedloans">
+          <a id="nav-seasonedloans" class="hide show-for-xlarge" href="/seasonedloanofferings/">Seasoned Loan Offerings</a>
+          <ul class="no-bullet vertical menu" id="subnav-seasonedloans" data-accordion-menu>
+            <li class="subnav-item" id="subnav-seasonedloans-item">
+              <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-seasonedloans-toggle" data-toggle="subnav-seasonedloans-list" aria-controls="subnav-seasonedloans-list">Seasoned Loan Offerings</a>
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-seasonedloans-list">
+                <li class="hide-for-xlarge"><a id="subnav-seasonedloans-overview" href="/seasonedloanofferings/">Overview</a></li>
+                <li><a id="subnav-seasonedloans-performing" href="/seasonedloanofferings/seasoned_performing_loan_offerings.html">Seasoned Performing Loan Offerings</a></li>
+                <li><a id="subnav-seasonedloans-nonperforming" href="/seasonedloanofferings/non_performing_loan_offerings.html">Non-Performing Loan Offerings</a></li>
+              </ul> 
+            </li>
+          </ul>
+        </div>
+        <div class="nav-section" id="section-creditrisk">
+          <a id="nav-creditrisk" class="show-for-xlarge" href="https://crt.freddiemac.com/">Credit Risk Transfer</a>
+          <ul class="no-bullet vertical menu hide-for-xlarge" id="subnav-creditrisk" data-accordion-menu>
+            <li class="subnav-item" id="subnav-creditrisk-item">
+              <a class="mobile-nav-accordion-parent hide-for-xlarge" id="subnav-creditrisk-toggle" data-toggle="subnav-creditrisk-list" aria-controls="subnav-creditrisk-list">Credit Risk Transfer</a>
+              <ul class="menu vertical nested xlarge-horizontal quick-delay" id="subnav-creditrisk-list">
+                <li class="hide-for-xlarge"><a id="subnav-creditrisk-overview" href="https://crt.freddiemac.com/">Overview</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-section hide-for-xlarge  nav-bus-section-mobile">
+          <ul class="no-bullet vertical menu">
+            <li class="mobile-nav-topic">Our Businesses</li>
+            <li><a href="/">Corporate</a></li>  
+            <li><a href="/singlefamily/">Single-Family</a></li>
+            <li><a href="https://mf.freddiemac.com/">Multifamily</a></li>      
+            <li class="mobile-nav-topic">Renters, Buyers, &amp; Owners</li> 
+            <li><a href="http://myhome.freddiemac.com/">My Home by Freddie Mac<sup>&reg;</sup><div class="weight-light nav-description">Resources to help you rent, buy and own your home.</div></a></li>
+            <li><a href="https://ww3.freddiemac.com/loanlookup/">Do we own your mortgage?<div class="weight-light nav-description">Find out if Freddie Mac owns your loan using our secured lookup tool.</div></a></li>
+            <li><a href="https://www.homesteps.com/">Homes for Sale<div class="weight-light nav-description">Buy a home from HomeSteps<sup>&reg;</sup>, the real estate sales unit of Freddie Mac.</div></a></li>
+          </ul>
+        </div>
+      </nav> 
+
+      <div class="nav-search ease-in-out fast quick-delay" aria-expanded="false" id="nav-search" data-toggler data-animate="slide-in-down slide-out-up">
+        <form action="http://search.freddiemac.com/search" method="get" accept-charset="utf-8">
+          <input type="hidden" name="entqr" value="0">
+          <input type="hidden" name="output" value="xml_no_dtd">
+          <input type="hidden" name="sort" value="date:D:L:d1">
+          <input type="hidden" name="client" value="default_frontend">
+          <input type="hidden" name="ud" value="1">
+          <input type="hidden" name="oe" value="UTF-8">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="proxystylesheet" value="default_frontend">
+          <input type="hidden" name="getfields" value="description">
+          <input type="hidden" name="site" value="default_collection">
+          <div class="row collapse medium-uncollapse">
+            <div class="column small-10 medium-10 large-11">
+              <div class="gutter-right-small-only">
+                <label for="mobile-search" class="show-for-sr">Site Search</label>
+                <input id="mobile-search" name="q" type="search" placeholder="Site Search" required maxlength="100">
+              </div>              
+            </div>
+            <div class="column small-2 medium-2 large-1">
+              <button type="submit" class="float-right button search-button">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

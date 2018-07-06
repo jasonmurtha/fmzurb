@@ -1,0 +1,12 @@
+// built off of corporate version, only include overrides to that style 
+#subnav-creditrisk-list {
+  @include breakpoint(xlarge){
+    visibility: hidden;   // for some reason, setting display: none; dorks up something if you start at desktop view and reduce to mobile width
+    height: 0;
+  }
+}
+.nav-section {
+  @include breakpoint(xlarge) {
+    padding: rem-calc(0 18 0);
+  }
+}

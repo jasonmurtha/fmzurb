@@ -50,6 +50,14 @@ $(".nav-bus-section").on("mouseleave", function(){
 
 $(window).on('changed.zf.mediaquery', function(e, nS, oS){
   if((nS==="xlarge" || nS==="xxlarge")){
+    $('.is-accordion-submenu-parent[aria-expanded="true"]').each(  
+      function(){   
+        $(this).closest('[data-accordion-menu]').foundation('hideAll'); 
+      }
+    );
+    if ($('#nav-main').attr('aria-expanded') === "true") {
+      $('#nav-main').foundation('toggle');
+    }
     if ($('#body-wrapper.is-mobile-expanded').length) {
       $('#body-wrapper').foundation('toggle');
     }
@@ -59,7 +67,7 @@ $(window).on('changed.zf.mediaquery', function(e, nS, oS){
   } 
   else if((oS==="xlarge" || oS==="xxlarge") && (nS==="small" || nS==="medium" || nS==="large")){
     navHoverOff(); 
-    $('#nav-main, #body-wrapper').attr('aria-expanded', "false");
+    $('#nav-main, #nav-search').attr('aria-expanded', "false");
   }
 });
 
