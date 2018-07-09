@@ -1,0 +1,30 @@
+---
+title: Training Samples
+layout: default
+stylesheet: [/ss/app_landing.css]
+onload: 
+---
+  {{>header-landing-linked}}
+
+<div class="page-title">
+  <div class="row-container-wide">
+    <div class="row">      
+      <div class="column">
+        <h1>{{{ title }}}</h1>
+      </div>
+    </div>
+  </div>
+</div>    
+<div class="landing-band">
+  <div class="row-container"> 
+    <div class="iw_component">
+      {{#if training}}  
+        <ul>
+          {{#each training.page}}
+            <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
+  </div>
+</div>  

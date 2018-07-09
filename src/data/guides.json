@@ -5,7 +5,7 @@
    },
    {
       "name": "Freddie Mac Scripts",
-      "url" : "styleguide_scripts_corp.html"
+      "url" : "scripts_corp.html"
    },
    {
       "name": "Corporate Template-Specific Styles",
@@ -21,35 +21,39 @@
    }, 
    {
       "name": "Foundation Grid (Layout)",
-      "url" : "styleguide_grid.html"
+      "url" : "grid.html"
    },
    {
       "name": "Foundation Orbit (Carousels)",
-      "url" : "styleguide_orbit.html"
+      "url" : "orbit.html"
    },
    {
       "name": "Foundation Reveal (Modals)",
-      "url" : "styleguide_reveal.html"
+      "url" : "reveal.html"
    },
    {
       "name": "Foundation Abide (Form Validation)",
-      "url" : "styleguide_abide.html"
+      "url" : "abide.html"
    },
    {
       "name": "Foundation Tabs",
-      "url" : "styleguide_tabs.html"
+      "url" : "tabs.html"
    },
    {
       "name": "Foundation Embeds",
-      "url" : "styleguide_embeds.html"
+      "url" : "embeds.html"
    },
    {
       "name": "Fluid Type",
-      "url" : "styleguide_fluid.html"
+      "url" : "fluid.html"
    },
    {
       "name": "Motion-UI (Foundation's library for Transitions & Animation)",
       "url" : "animations/"
+   },
+   {
+      "name": "Writing in Markdown",
+      "url" : "markdown.html"
    }
   ]
 }

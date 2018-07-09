@@ -1,0 +1,27 @@
+﻿{ "page": [
+   {  
+      "name":"SCSS",
+      "url":"/special/training/scss.html"
+   },
+   {  
+      "name":"Color",
+      "url":"/special/training/color.html"
+   },
+   {  
+      "name":"Math",
+      "url":"/special/training/math.html"
+   },
+   {  
+      "name":"Logic",
+      "url":"/special/training/logic.html"
+   },
+   {  
+      "name":"Data Basics",
+      "url":"/special/training/data-basics.html"
+   },
+   {  
+      "name":"Data Combined with Design",
+      "url":"/special/training/data-design.html"
+   }
+  ] 
+} 

@@ -1,0 +1,200 @@
+﻿---
+title: Foundation Color Variables Demo 
+layout: default
+stylesheet: [/ss/app_landing.css]
+onload: 
+---
+{{>header-landing-linked}}
+
+<div class="page-title">
+  <div class="row-container-wide">
+    <div class="row">      
+      <div class="column">
+        <h1>{{{ title }}}</h1>
+      </div>
+    </div>
+  </div>
+</div>    
+
+<div class="landing-band">
+  <div class="row-container-wide">
+    <div class="row">
+      <div class="column">
+        <ul class="accordion-pointer" data-accordion>
+          <li class="accordion-item" data-accordion-item>
+            <a class="accordion-title" href="#scss" id="scss-heading" aria-controls="scss" role="tab">By default, this page loads the standard colors for the corp template.</a>
+            <div class="accordion-content" data-tab-content id="scss" aria-labelledby="scss-heading" role="tabpanel">
+            <p>To show the way that colors are controlled by variable names, temporarily substitute different colors in settings_corp such as:</p>
+              <div class="callout">        
+                <p class="gutter-bottom weight-normal">$primary-color: #03A6D5;<br>
+                  $fm-orange: #b2561A;<br>
+                  $fm-green: #467413;<br>
+                  $fm-yellow: #DFAC11;<br>
+                  $fm-red: #943C3C;<br>
+                  $fm-teal: #16766B;<br>
+                  $fm-blue: #16507D;<br>
+                  $fm-purple: #764CDC;<br>
+                  $fm-gray: #6A717E;<br>
+                  and<br>
+                  $light-gray: #DBDBDB;
+                </p>        
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  
+    <div class="row up-1 medium-up-3 large-up-5 enlarge">
+      <div class="column">
+        <div class="callout background-orange">
+          $fm-orange
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-green">
+          $fm-green
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-yellow">
+          $fm-yellow
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-red">
+          $fm-red
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-primary">
+          $primary-color
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-blue">
+          $fm-blue
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-teal">
+          $fm-teal
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-purple">
+          $fm-purple
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-gray">
+          $fm-gray
+        </div>
+      </div>
+      <div class="column">
+        <div class="callout background-concrete">
+          $light-gray
+        </div>
+      </div>
+    </div>
+
+    <p class="gutter-bottom">
+      <a href="#" class="button">Button</a>
+      <a href="#" class="primary button">primary</a>
+      <a href="#" class="secondary button">secondary</a>
+      <a href="#" class="tertiary button">tertiary</a>
+    </p>
+
+    <table class="hover">
+      <thead>
+        <tr>
+          <th>Table Header</th>
+          <th>Table Header</th>
+          <th>Table Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Row Header</th>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <th>Row Header</th>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <th>Row Header</th>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <th>Row Header</th>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Footer Row Header</th>
+          <td>Footer content</td>
+          <td>Footer content</td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="orbit bullets-overlay" role="region" aria-label="This is my slideshow" data-orbit data-auto-play="false">
+      <ul class="orbit-container">
+        <li class="orbit-slide background-yellow">
+          <div class="callout">
+            <h3>Slide One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-green">
+          <div class="callout">
+            <h3>Slide Two</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-orange">
+          <div class="callout">
+            <h3>Slide Three</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-red">
+          <div class="callout">
+            <h3>Slide Four</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-purple">
+          <div class="callout">
+            <h3>Slide Five</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-blue">
+          <div class="callout">
+            <h3>Slide Six</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+        <li class="orbit-slide background-teal">
+          <div class="callout">
+            <h3>Slide Seven</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. </p>
+          </div>
+        </li>
+        <li class="orbit-slide background-gray">
+          <div class="callout">
+            <h3>Slide Nine</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

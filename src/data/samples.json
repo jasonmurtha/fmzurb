@@ -26,6 +26,10 @@
    {  
        "name":"Style Guides",
        "url":"/special/styleguide/"
+   },
+   {  
+       "name":"Training Examples",
+       "url":"/special/training/"
    }
   ] 
 } 

@@ -1,0 +1,152 @@
+﻿---
+title: SCSS Color Demo 
+layout: default
+stylesheet: [/ss/app_landing.css]
+---
+<style>
+.demo-color {  background: rgba(20, 161, 154, 0.85); }
+.demo-color-fill {
+  background: rgba(20, 161, 154, 0.85);
+  background: linear-gradient(to right, rgba(155, 215, 212, 0.925), rgba(155, 215, 212, 0.925) 14.28571%, rgba(106, 196, 191, 0.895) 14.28571%, rgba(106, 196, 191, 0.895) 28.57143%, rgba(65, 179, 173, 0.8725) 28.57143%, rgba(65, 179, 173, 0.8725) 42.85714%, rgba(20, 161, 154, 0.85) 42.85714%, rgba(20, 161, 154, 0.85) 57.14286%, rgba(16, 130, 124, 0.8725) 57.14286%, rgba(16, 130, 124, 0.8725) 71.42857%, rgba(13, 102, 97, 0.895) 71.42857%, rgba(13, 102, 97, 0.895) 85.71429%, rgba(9, 68, 65, 0.925) 85.71429%, rgba(9, 68, 65, 0.925) 100%); }
+.test-0 {  background: rgba(0, 181, 172, 0.85); }
+.test-1 {  background: rgba(43, 138, 134, 0.85); }
+.test-2 {  background: rgba(20, 161, 84, 0.85); }
+.test-3 {  background: rgba(20, 98, 161, 0.85); }
+.test-4 {  background: rgba(161, 20, 27, 0.85); }
+.test-5 {  background: rgba(79, 120, 115, 0.88); }
+.test-6 {  background: rgba(15, 153, 115, 0.88); }
+.test-7 {  background: rgba(15, 120, 180, 0.88); }
+.test-8 {  background: rgba(9, 70, 67, 0.85); }
+.test-8b {  background: rgba(15, 120, 115, 0.88); }
+.test-9 {  background: rgba(53, 230, 221, 0.85); }
+.test-9b {  background: rgba(79, 185, 180, 0.88); }
+.test-10 {  background: rgba(20, 161, 154, 0.45); }
+.test-10b {  background: #14a19a; }
+.test-11 {  background: rgba(235, 94, 101, 0.85); }
+.test-12 {  background: rgba(91, 91, 91, 0.85); }
+.test-13 {  background: #140000; }
+.test-14 {  background: #00a100; }
+.test-15 {  background: #00009a; }
+</style>
+{{>header-landing-linked}}
+
+<div class="page-title">
+  <div class="row-container-wide">
+    <div class="row">      
+      <div class="column">
+        <h1>{{{ title }}}</h1>
+      </div>
+    </div>
+  </div>
+</div>    
+<div class="landing-band">
+  <div class="row-container-wide">
+    <div class="row">
+      <div class="column">
+        <h4>All colors on this page are generated from rgba(20, 161, 154, 0.85).</h4>
+        <p>To create the colors below, we firsts created a variable: <code>$demo-color: rgba(20, 161, 154, 0.85);</code> and then used that variable to create variations in sass.</p>
+
+        <div class="enlarge weight-medium accent-white">
+          <div class="accent-dark-gray">starting color:</div>
+          <div class="text-center callout small demo-color">rgba(20, 161, 154, 0.85)</div> 
+          <code>saturate($demo-color, 70%)</code> 
+          <div class="text-center callout small test-0">rgba(0, 181, 172, 0.85)</div>
+          <code>desaturate($demo-color, 25%)</code> 
+          <div class="text-center callout small test-1">rgba(43, 138, 134, 0.85)</div>
+          <code>adjust_hue($demo-color, -30deg)</code>  
+          <div class="text-center callout small test-2">rgba(20, 161, 84, 0.85)</div>
+          <code>adjust_hue($demo-color, 30deg)</code> 
+          <div class="text-center callout small test-3">rgba(20, 98, 161, 0.85)</div>
+          <code>complement($demo-color)</code> 
+          <div class="text-center callout small test-4">rgba(161, 20, 27, 0.85)</div> 
+          <code>mix($demo-color, red, 80%)</code> 
+          <div class="text-center callout small test-5">rgba(79, 120, 115, 0.88)</div>
+          <code>mix($demo-color, green, 80%)</code> 
+          <div class="text-center callout small test-6">rgba(15, 153, 115, 0.88)</div> 
+          <code>mix($demo-color, blue, 80%)</code> 
+          <div class="text-center callout small test-7">rgba(15, 120, 180, 0.88)</div>
+          <code>darken($demo-color, 20%)</code> 
+          <div class="text-center callout small test-8">rgba(9, 70, 67, 0.85)</div> 
+          <code>mix(black, $demo-color, 20%)</code> 
+          <div class="text-center callout small test-8b">rgba(15, 120, 115, 0.88)</div>
+          <code>lighten($demo-color, 20%)</code> 
+          <div class="text-center callout small test-9">rgba(53, 230, 221, 0.85) </div>
+          <code>mix(white, $demo-color, 20%)</code> 
+          <div class="text-center callout small test-9b">rgba(79, 185, 180, 0.88) </div>
+          <code>transparentize($demo-color, 0.4)</code> 
+          <div class="text-center callout small test-10">rgba(20, 161, 154, 0.45) </div> 
+          <code>opacify($demo-color, 0.4)</code> 
+          <div class="text-center callout small test-10b">#14a19a</div> 
+          <code>invert($demo-color)</code> 
+          <div class="text-center callout small test-11">rgba(235, 94, 101, 0.85) </div>
+          <code>grayscale($demo-color)</code> 
+          <div class="text-center callout small test-12">rgba(91, 91, 91, 0.85)</div> 
+          <code>rgb(red($demo-color), 0, 0)</code> 
+          <div class="text-center callout small test-13">#140000</div>
+          <code>rgb(0, green($demo-color), 0)</code> 
+          <div class="text-center callout small test-14">#00a100</div>
+          <code>rgb(0, 0, blue($demo-color))</code> 
+          <div class="text-center callout small test-15">#00009a </div>
+        </div>
+        <hr>
+        
+        <h4>We can also create a gradient background based entirely off of rgba(20, 161, 154, 0.85).</h4>    
+        <p>This gradient background is based solely on the variable: <code>$demo-color: rgba(20, 161, 154, 0.85)</code>, which is also the color in the center of the gradient.</p>
+        <div class="enlarge weight-medium accent-white">
+          <div class="callout small demo-color-fill">
+            <div style="margin-left: 15%;">background: linear-gradient(to right, rgba(155, 215, 212, 0.925), rgba(155, 215, 212, 0.925) 14.28571%, rgba(106, 196, 191, 0.895) 14.28571%, rgba(106, 196, 191, 0.895) 28.57143%, rgba(65, 179, 173, 0.8725) 28.57143%, rgba(65, 179, 173, 0.8725) 42.85714%, rgba(20, 161, 154, 0.85) 42.85714%, rgba(20, 161, 154, 0.85) 57.14286%, rgba(16, 130, 124, 0.8725) 57.14286%, rgba(16, 130, 124, 0.8725) 71.42857%, rgba(13, 102, 97, 0.895) 71.42857%, rgba(13, 102, 97, 0.895) 85.71429%, rgba(9, 68, 65, 0.925) 85.71429%, rgba(9, 68, 65, 0.925) 100%) </div>
+          </div>
+        </div>
+        <p>These are the functions and mix-in used to create the gradient.</p>
+        <div class="callout"> 
+          <pre class="weight-bold" style="color: #000;">
+          // function to mix white with a color
+          @function tint($base-color, $percentage) {
+            @return mix($white, $base-color, $percentage);
+          }
+
+          //function to mix black with a color
+          @function shade($base-color, $percentage) {
+            @return mix($black, $base-color, $percentage);
+          }
+
+          // function to create an array from whiter to blacker shades of a color
+          @function create-palette($base-color) {
+            $colors: ();
+              $colors: append($colors, tint($base-color, 50%));
+              $colors: append($colors, tint($base-color, 30%));
+              $colors: append($colors, tint($base-color, 15%));
+              $colors: append($colors, $base-color);
+              $colors: append($colors, shade($base-color, 15%));
+              $colors: append($colors, shade($base-color, 30%));  
+              $colors: append($colors, shade($base-color, 50%)); 
+            @return $colors;
+          }
+
+          // mix-in to create a repeatable way of doing this, given any starting color.
+          @mixin draw-palette($base-color) {
+            $palette: create-palette($base-color);
+            $length: length($palette);
+            $color-stops: append((), nth($palette, 1), comma);
+            $stop-size: 100 / $length;
+            @for $i from 1 through $length {
+              $color: nth($palette, $i);      
+              @if $i > 1 {
+                $color-stops: append($color-stops, $color $stop-size * ($i - 1) * 1%);
+              }    
+              $color-stops: append($color-stops, $color $stop-size * $i * 1%); 
+            }
+            background: nth($palette, ceil($length / 2));
+            background: linear-gradient(to right, $color-stops);
+          }
+          
+          // class that calls the mix-in and tells it to start with our demo color.
+          .demo-color-fill {
+            @include draw-palette($demo-color);
+          }
+          </pre>                     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

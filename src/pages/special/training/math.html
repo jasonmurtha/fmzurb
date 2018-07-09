@@ -1,0 +1,156 @@
+﻿---
+title: Math Based SCSS 
+layout: default
+stylesheet: [/ss/app_landing.css]
+---
+<style>
+.demo-container {
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.15);
+}
+  @media screen and (min-width: 61.25em) {
+    .demo-container {
+      float: left;
+    }
+  }
+  .demo-container::before,
+  .demo-container::after {
+    display: table;
+    content: ' ';
+  }
+  .demo-container::after {
+    clear: both;
+  }
+  .demo-container article {
+    font-size: 1.3125rem; 
+    min-height: 20rem;
+  }
+    @media screen and (min-width: 61.25em) {
+      .demo-container article {
+        float: left;
+        width: 61.45833%;
+        padding: 40px;
+      }
+    }
+  .demo-container aside {
+    min-height: 10rem;
+  } 
+    @media screen and (min-width: 61.25em) {    
+      .demo-container aside {
+        float: right;
+        width: 34.375%;
+        padding: 20px 50px; 
+      } 
+    }
+</style>
+
+{{>header-landing-linked}}
+
+<div class="page-title">
+  <div class="row-container">
+    <div class="row">      
+      <div class="column">
+        <h1>{{{ title }}}</h1>
+      </div>
+    </div>
+  </div>
+</div>    
+<div class="landing-band">
+  <div class="row-container">
+    <div class="row">
+      <div class="column">      
+        <h3>In addition to color calculations, you can use math in SCSS to calculate widths, font-sizes, etc.</h3>
+      </div>
+      <div class="column large-6">
+      <p><span class="lead">You can write SCSS like this:</span>
+<pre class="weight-bold" style="color: #000;">
+.demo-container { 
+  width: 100%;
+  background: rgba($black, 0.15);
+  @include breakpoint(large){
+    float: left;
+  }
+  @include clearfix;
+  article {
+    font-size: rem-calc($global-font-size + 5px);
+    min-height: 20rem;
+    @include breakpoint(large){
+      float: left;
+      width: 590px / 960px * 100%;
+      padding: $gutter + $gutter;    
+    }
+  }
+  aside {
+    min-height: 10rem;
+    @include breakpoint(large){
+      float: left;
+      width: 330px / 960px * 100%;
+      padding: $gutter $gutter * 2.5; 
+    }
+  }
+}
+</pre>
+    </p>
+      </div>
+      <div class="column large-6">
+        <p><span class="lead">To generate CSS like this:</span>
+<pre class="weight-bold" style="color: #000;">
+.demo-container {
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.15);
+}
+  @media screen and (min-width: 61.25em) {
+    .demo-container {
+      float: left;
+    }
+  }
+  .demo-container::before,
+  .demo-container::after {
+    display: table;
+    content: ' ';
+  }
+  .demo-container::after {
+    clear: both;
+  }
+  .demo-container article {
+    font-size: 1.3125rem; 
+    min-height: 20rem;
+  }
+    @media screen and (min-width: 61.25em) {
+      .demo-container article {
+        float: left;
+        width: 61.45833%;
+        padding: 40px;
+      }
+    }
+  .demo-container aside {
+    min-height: 10rem;
+  } 
+    @media screen and (min-width: 61.25em) {    
+      .demo-container aside {
+        float: right;
+        width: 34.375%;
+        padding: 20px 50px; 
+      } 
+    }
+</pre>    
+        </p>  
+      </div>
+      <div class="column">      
+        <div class="demo-container">
+          <h3>I am div.demo-container</h3>
+           <article class="background-teal">
+             <h3>I am article.background-teal</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p> 
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. </p> 
+
+           </article> 
+           <aside class="background-purple">
+             <h3>I am aside.background-purple</h3>
+             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p> 
+           </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

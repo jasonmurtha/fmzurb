@@ -114,49 +114,55 @@ function styleGuideMF(done) {
 }
 function styleGuideScripts(done) {
   return sherpa('src/styleguide/scripts_corp.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_scripts_corp.html',
+    output: PATHS.dist + '/special/styleguide/scripts_corp.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideGrid(done)); 
 }
 function styleGuideGrid(done) {
   return sherpa('src/styleguide/grid.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_grid.html',
+    output: PATHS.dist + '/special/styleguide/grid.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideFluid(done)); 
 }
 function styleGuideFluid(done) {
   return sherpa('src/styleguide/fluidtype.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_fluid.html',
+    output: PATHS.dist + '/special/styleguide/fluid.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideAbide(done)); 
 }
 function styleGuideAbide(done) {
   return sherpa('src/styleguide/abide.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_abide.html',
+    output: PATHS.dist + '/special/styleguide/abide.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideEmbeds(done)); 
 }
 function styleGuideEmbeds(done) {
   return sherpa('src/styleguide/embeds.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_embeds.html',
+    output: PATHS.dist + '/special/styleguide/embeds.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideOrbit(done)); 
 }
 function styleGuideOrbit(done) {
   return sherpa('src/styleguide/orbit.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_orbit.html',
+    output: PATHS.dist + '/special/styleguide/orbit.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideTabs(done)); 
 }
 function styleGuideTabs(done) {
   return sherpa('src/styleguide/tabs.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_tabs.html',
+    output: PATHS.dist + '/special/styleguide/tabs.html',
+    template: 'src/styleguide/template_foundation.html'
+  }, styleGuideMarkdown(done)); 
+}
+function styleGuideMarkdown(done) {
+  return sherpa('src/styleguide/markdown.md', {
+    output: PATHS.dist + '/special/styleguide/markdown.html',
     template: 'src/styleguide/template_foundation.html'
   }, styleGuideReveal(done)); 
 }
 function styleGuideReveal(done) {
   return sherpa('src/styleguide/reveal.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_reveal.html',
+    output: PATHS.dist + '/special/styleguide/reveal.html',
     template: 'src/styleguide/template_foundation.html'
   }, done); 
 }
