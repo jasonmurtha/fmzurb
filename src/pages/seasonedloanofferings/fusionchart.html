@@ -1,0 +1,81 @@
+---
+title: Fusion Chart Test
+layout: capital
+herotype: "title"
+navLevel1: 'section-seasonedloans'
+navLevel2: 'none'
+javascript: [/js/vendor/fusioncharts.js, /js/vendor/fusioncharts-jquery-plugin.min.js, /js/vendor/fusioncharts.theme.fint.js]
+breadcrumb: [{"name":"Capital Markets","url":"/capital-markets/"},{"name":"Seasoned Loan Offerings"}]
+onload: processLatticeOverview
+---
+<style>
+#lineChart-container-ltceNplSales { min-height: 300px;}
+</style>
+
+  <div class="iw_component">  
+    <div class="row">
+      <div class="column large-8 xlarge-6 end">
+        <div id="lineChart-container-ltceNplSales"></div>
+      </div>
+    </div>
+    <div class="callout large"></div>
+  </div>  
+    
+<script>
+  function processLatticeOverview() {
+    //set chart variables (these can be passed dynamically to the function)
+    var chartType  ="column2d"
+    var id         ="#lineChart-container-ltceNplSales"
+    var title      ="NPL Sales - UPB ($ Millions) Auctioned by Half Year";
+    var width      ="100%";
+    var height     ="100%";      
+    var data       ="[{\"label\":\"2014\",\"value\":\"6.9795031189E8\"},{\"label\":\"2015\",\"value\":\"7.648944633960001E9\"},{\"label\":\"2016\",\"value\":\"1.052559750254E10\"},{\"label\":\"2017\",\"value\":\"4.2152034652799997E9\"},{\"label\":\"2018\",\"value\":\"3.340480093E9\"}]~~";
+     //set function variables
+    var resArr     =data.split("~~");
+    var chartData  =resArr[0];
+    var obj        =JSON.parse(resArr[0]);
+    var evalY      =0;
+    var minY       =0;
+    var maxY       =0;
+    for(var i in obj){
+      evalY=obj[i]["value"];       
+      if(i==0) {
+         minY=obj[i]["value"];
+         maxY=obj[i]["value"];
+      }       
+      if(obj[i]["value"]){
+       if(evalY < minY){minY=evalY;}      
+       if(evalY > maxY){maxY=evalY;}
+      }
+    }         
+    //set chart properties
+    var chartProperties =  {         
+      "caption": title,
+      "captionFontSize": "18",
+      "captionFontColor": "#0075c2",
+      "decimals": "0",
+      "forceDecimals": "1",
+      "showLabels": "1",
+      "showValues": "0",
+      "adjustDiv": "0",
+      "yAxisMaxValue": maxY,
+      "yAxisMinValue": minY,
+      "setAdaptiveYMin": "1",
+      "showZeroPlane":"0",
+      "zeroPlaneAlpha": "0", 
+      "numDivLines": "5",
+      "exportEnabled" :"1",
+      "theme": "fint"
+    };                   
+    //build chart                
+    $(id).insertFusionCharts({ 
+      type: chartType,
+      width: width,
+      height: height,
+      dataSource: {
+       "chart": chartProperties, 
+        "data": JSON.parse(chartData)
+      }
+    });
+  }
+</script>

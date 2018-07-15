@@ -164,6 +164,18 @@ function styleGuideReveal(done) {
   return sherpa('src/styleguide/reveal.md', {
     output: PATHS.dist + '/special/styleguide/reveal.html',
     template: 'src/styleguide/template_foundation.html'
+  }, styleGuidePanini(done)); 
+}
+function styleGuidePanini(done) {
+  return sherpa('src/styleguide/panini.md', {
+    output: PATHS.dist + '/special/styleguide/panini.html',
+    template: 'src/styleguide/template_foundation.html'
+  }, styleGuideEqualizer(done)); 
+}
+function styleGuideEqualizer(done) {
+  return sherpa('src/styleguide/equalizer.md', {
+    output: PATHS.dist + '/special/styleguide/equalizer.html',
+    template: 'src/styleguide/template_foundation.html'
   }, done); 
 }
 // Compile Sass into CSS
@@ -222,10 +234,13 @@ function javascriptLS(done) {
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript(done) {
+  var str1 = '6LemIFwUAAAAAFGv', 
+  str2 = '_8X-gtgzd3Zq2pxexvRAXJO7';
   gulp.src(PATHS.javascriptcorp)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
-    .pipe($.concat('app_corp2.js'))
+    .pipe($.if(PRODUCTION, $.replace(str1, str1+str2)))
+    .pipe($.concat('app_corp2.js'))    
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
@@ -234,6 +249,7 @@ function javascript(done) {
   gulp.src(PATHS.javascriptcapital)
     .pipe($.sourcemaps.init())
     .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.if(PRODUCTION, $.replace(str1, str1+str2)))
     .pipe($.concat('app_cm.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })

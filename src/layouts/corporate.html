@@ -46,9 +46,9 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/ss/app_corp2.css" />
-    {{#if stylesheet}}    
-    <link rel="stylesheet" href="{{ stylesheet }}" />
-    {{/if}}
+    {{#each stylesheet}}
+    <link rel="stylesheet" href="{{.}}" />
+    {{/each}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
   </head>  
   {{#if bodyclass}}
@@ -236,9 +236,9 @@
               <div class="iw_component">
                 {{> corp-footer-js}}
 
-                {{#if javascript}}    
-                <script src="{{ javascript }}"></script>
-                {{/if}}
+                {{#each javascript}}    
+                <script src="{{ this }}"></script>
+                {{/each}}
                 {{#if onload}}
                 <script type="text/javascript">
                   window.onload = {{onload}};

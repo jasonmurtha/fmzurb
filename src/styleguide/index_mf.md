@@ -235,9 +235,9 @@ A card container has no padding, allowing you to place full-bleed images inside.
 </div>
 ```
 
-<div class="two-column-layout">
-  <div class="row two-column-row">
-    <main class="column">
+<div class="columns iw_columns large-12">
+  <div class="row iw_row"> 
+    <div class="columns iw_columns large-7"> 
       <div class="jut">
         <div class="row medium-up-2 xlarge-up-3 gutter-top"  data-equalizer data-equalize-by-row="true">
           <div class="column">
@@ -285,7 +285,7 @@ A card container has no padding, allowing you to place full-bleed images inside.
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </div>
 
 ---
@@ -690,9 +690,9 @@ On the News landing page and the Customer News page, the first entry is featured
 </div>   
 ```
 
-<div class="two-column-layout">
-  <div class="row two-column-row">
-    <main class="column">  
+<div class="columns iw_columns large-12">
+  <div class="row iw_row"> 
+    <div class="columns iw_columns large-7">   
       <div class="callout large background-green news-featured">
         <div class="article-date-lg">September 06, 2017</div>
         <div class="media-object blurb3-leads-image2 stack-for-small">
@@ -706,7 +706,7 @@ On the News landing page and the Customer News page, the first entry is featured
           </div>
         </div>
       </div> 
-    </main>
+    </div>
   </div>
 </div>
 
@@ -908,9 +908,9 @@ News landing page has a custom styled table, which can be achieved by applying c
 </section>
 ```
 
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <aside class="column">  
+<div class="columns iw_columns large-12">
+  <div class="row iw_row">  
+    <div class="columns iw_columns large-5">  
       <section class="sidebar background-gray">
         <div class="row">
           <div class="column">
@@ -944,7 +944,7 @@ News landing page has a custom styled table, which can be achieved by applying c
           </div>
         </div>
       </section>
-    </aside>
+    </div>
   </div>
 </div>
 

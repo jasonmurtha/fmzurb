@@ -1,9 +1,14 @@
 ﻿---
-title: Logic Based SCSS 
+title: Page to Play with Handlebars and SCSS 
 layout: default
-stylesheet: [/ss/app_landing.css]
+stylesheet: [/ss/app_landing.css, //cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css]
+breakfast:
+  - eggs
+  - bacon
+  - toast
 ---
 {{>header-landing-linked}}
+
 
 <div class="page-title">
   <div class="row-container">
@@ -14,12 +19,203 @@ stylesheet: [/ss/app_landing.css]
     </div>
   </div>
 </div>    
-<div class="landing-band">
-  <div class="row-container">
-    <div class="row">
-      <div class="column">
-      
+<div class="landing-band row-container">
+  <div class="row">
+    <div class="column large-6 end">   
+      <h3 class="gutter-bottom">Stacked Talk Bubbles</h3>    
+      <div class="talk-bubble right">
+      <q class="lead">Praesent non dictum magna. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce.</q>
+      </div>
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section main-section align-self-middle text-right">  
+          <p><strong class="uppercase">Yvette Gilmore</strong></p>
+        </div>
+        <div class="media-object-section">
+          <img class="avatar small" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+        </div>
+      </div>
+
+      <div class="talk-bubble">
+        <q class="lead">Mauris placerat volutpat leo a ornare.</q>
+      </div>
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img class="avatar small" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+        </div>
+        <div class="media-object-section main-section align-self-middle">  
+          <p><strong class="uppercase">Don Layton</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <hr>
+      <h3 class="gutter-bottom">Offset Talk Bubbles</h3> 
+    </div>
+  </div> 
+  <div class="row">     
+    <div class="column large-8 large-centered"> 
+      <div class="row">  
+        <div class="column small-10 medium-11 end">
+          <div class="talk-bubble">
+            <q class="intro weight-normal">Mauris placerat volutpat leo a ornare.</q>
+          </div>
+          <div class="media-object gutter-bottom">
+            <div class="media-object-section">
+              <img class="avatar" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+            </div>
+            <div class="media-object-section main-section align-self-middle">  
+              <p><strong class="uppercase">Don Layton</strong></p>
+            </div>
+          </div>       
+        </div> 
+        <div class="column small-10 small-offset-2  medium-11 medium-offset-1">
+          <div class="talk-bubble right">
+          <q class="intro weight-normal">Praesent non dictum magna. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce.</q>
+          </div>
+          <div class="media-object gutter-bottom">
+            <div class="media-object-section main-section align-self-middle text-right">  
+              <p><strong class="uppercase">Yvette Gilmore</strong></p>
+            </div>
+            <div class="media-object-section">
+              <img class="avatar" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+            </div>
+          </div> 
+        </div>
+      </div>   
+    </div>
+    <div class="column">
+      <hr>
+      <h3 class="gutter-bottom">Talk Bubbles Cards</h3>
+    </div>
+  </div> 
+  <div class="row" data-equalizer> 
+    <div class="column medium-6 large-3">
+      <div class="talk-bubble" data-equalizer-watch>
+      <q class="grid-block-text weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</q>
+      </div> 
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img class="avatar" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+        </div>
+        <div class="media-object-section main-section align-self-middle">  
+          <p><strong class="uppercase">Yvette Gilmore</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="column medium-6 large-3">
+      <div class="talk-bubble" data-equalizer-watch>
+        <q class="grid-block-text weight-normal">Mauris placerat volutpat leo a ornare.</q>
+      </div>
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img class="avatar" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+        </div>
+        <div class="media-object-section main-section align-self-middle">  
+          <p><strong class="uppercase">Don Layton</strong></p>
+        </div>
+      </div> 
+    </div>
+    <div class="column medium-6 large-3">
+      <div class="talk-bubble" data-equalizer-watch>
+        <q class="grid-block-text weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</q>
+      </div> 
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img class="avatar" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+        </div>
+        <div class="media-object-section main-section align-self-middle">  
+          <p><strong class="uppercase">Yvette Gilmore</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="column medium-6 large-3">
+      <div class="talk-bubble" data-equalizer-watch>
+        <q class="grid-block-text weight-normal">Duis aute irure dolor in reprehenderit in voluptate, velit esse cillum dolore eu fugiat nulla.</q>
+      </div>
+      <div class="media-object gutter-bottom">
+        <div class="media-object-section">
+          <img class="avatar" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+        </div>
+        <div class="media-object-section main-section align-self-middle">  
+          <p><strong class="uppercase">Don Layton</strong></p>
+        </div>
+      </div> 
+    </div>  
+    <div class="column">
+      <hr>
+      <h3>Rotating Talk Bubbles</h3>
+      <p class="gutter-bottom">(larger variant: with more padding and a taller, slanted triangle)</p>      
+    </div>
+  </div> 
+  <div class="row background-blue">   
+    <div class="column large-8 large-centered">
+      <div class="orbit ease bullets-overlay" role="region" aria-label="quotes" data-orbit data-auto-play="true"  data-nav-buttons="false">
+        <ul class="orbit-container">
+          <li class="orbit-slide">
+            <div class="callout large no-margin">
+              <div class="talk-bubble large">
+              <q class="intro weight-normal"><span class="enlarge">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</span></q>
+              </div> 
+              <div class="media-object">
+                <div class="media-object-section">
+                  <img class="avatar" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+                </div>
+                <div class="media-object-section main-section align-self-middle">  
+                  <p><strong class="uppercase">Yvette Gilmore</strong></p>
+                </div>
+              </div>     
+            </div>
+          </li>
+          <li class="orbit-slide">
+            <div class="callout large no-margin">
+              <div class="talk-bubble large right">
+                <q class="intro weight-normal"><span class="enlarge">Mauris placerat volutpat leo a ornare.</span></q>
+              </div>
+              <div class="media-object">
+                <div class="media-object-section main-section align-self-middle text-right">  
+                  <p><strong class="uppercase">Don Layton</strong></p>
+                </div>
+                <div class="media-object-section">
+                  <img class="avatar" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+                </div>
+              </div>         
+            </div>
+          </li>
+          <li class="orbit-slide">
+            <div class="callout large no-margin">
+              <div class="talk-bubble large">
+              <q class="intro weight-normal"><span class="enlarge">Praesent non dictum magna. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce.</span></q>
+              </div> 
+              <div class="media-object">
+                <div class="media-object-section">
+                  <img class="avatar" src="/perspectives/images/gilmore-small.jpg" alt="Yvette Gilmore" />
+                </div>
+                <div class="media-object-section main-section align-self-middle">  
+                  <p><strong class="uppercase">Yvette Gilmore</strong></p>
+                </div>
+              </div>     
+            </div>
+          </li>
+          
+          <li class="orbit-slide">
+            <div class="callout large no-margin">
+              <div class="talk-bubble large">
+                <q class="intro weight-normal"><span class="enlarge">Duis aute irure dolor in reprehenderit in voluptate, velit esse cillum dolore eu fugiat nulla pariatur.</span></q>
+              </div>
+              <div class="media-object">
+                <div class="media-object-section">
+                  <img class="avatar" src="/perspectives/images/exec_donald_layton-small.jpg" alt="Donald H. Layton" />
+                </div>
+                <div class="media-object-section main-section align-self-middle">  
+                  <p><strong class="uppercase">Don Layton</strong></p>
+                </div>
+              </div>         
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
+
+

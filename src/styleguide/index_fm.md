@@ -6,29 +6,36 @@ The site has 2 primary templates in Teamsite: Page and Article.  The page articl
 When you are creating a page using the TeamSite template, the following markup is **automatically inserted for you** by the TeamSite template.
 
 <div class="row">
-<div class="column large-6">
-  **One Column Content**
+  <div class="column large-6">
+  <h2>One Column</h2>
   <pre>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"content-band"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row column"</span>&gt;</span>
-        <span class="hljs-comment">main content from template</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-</div>
-<div class="column large-6">
-  **Two Column Content**
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"iw_section"</span>&gt;</span> 
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row iw_row iw_container"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns iw_columns large-12"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"iw_component"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  </pre>
+  </div>
+  <div class="column large-6">
+  <h2>Two Column</h2>
   <pre>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"two-column-layout"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row two-column-row"</span>&gt;</span> 
-      <span class="hljs-tag">&lt;<span class="hljs-title">main</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
-        <span class="hljs-comment">main content from template</span>      
-      <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>  
-        <span class="hljs-comment">sidebar content from template</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-</div>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"iw_section"</span>&gt;</span> 
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row iw_row iw_container"</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns iw_columns large-7"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"iw_component"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"columns iw_columns large-5"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"iw_component"</span>&gt;</span> 
+     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>   
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> 
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  </pre>
+  </div>
 </div>
 
 
@@ -1346,7 +1353,7 @@ To add dividers between the entries, add class `.description-block` to the `<dl>
 Callouts can be sized using the `.small`, `.large` and `.xlarge` classes. These will affect the padding around content to be smaller and larger respectively.  You can limit the width of a callout by putting it inside less than 12 columns at larger widths.
 
 ```html_example
-<div class="row">  
+<div class="row">
   <div class="medium-8 column medium-centered">
     <div class="callout background-purple small">
       <p>This is a callout with class of small. It has less padding between the contents and the edge of the container.</p>
@@ -1418,61 +1425,73 @@ Pair the callout with the [close button](#close-button) component and `data-clos
   </div>
 </div>
 ```
+<span id="vertical"></span>
 
 ---
 
-## Making Callouts the Same Height
+## Making Callout Contents Align Vertically
 
-<p class="intro">Whenever you need to make containers the same height, utilize the Foundation <a href="https://foundation.zurb.com/sites/docs/equalizer.html">Equalizer</a> plug-in.</p>
+These example uses the Foundation <a href="equalizer.html">Equalizer</a> plug-in.
+You can either combine the plugin with some flex-based centering or you can combine it with table-based centering to achieve your results. 
 
-To set up an Equalizer group, you need a container, which gets the attribute `data-equalizer`, and then a series of child elements, which get the attribute `data-equalizer-watch`. The child elements will all be resized to have the same height.
-- By default, Equalizer works across all breakpoints. You can add an attribute of `data-equalize-on` set to medium, large, or xlarge if you only want the containers to equalize at large screen widths.
+### Flex-based Centering
+
+- To center horizontally, add class `.text-center` to the container.
+- To center vertically, add class `.vertical-center-equalizers` to the `data-equalizer` container. (If you only want items to center at large breakpoint and above, use class `.large-vertical-center-equalizers`)
+
 
 ```html_example
-<p>In this example, the blue callouts stretch to match the height of the taller callout, at breakpoints medium and above.</p>
-<div class="row" data-equalizer data-equalize-on="medium">
-  <div class="medium-4 columns">
-    <div class="callout background-primary" data-equalizer-watch>
-      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
-      
-    </div>
-  </div>
-  <div class="medium-4 columns">
-    <div class="callout hollow" data-equalizer-watch>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-    </div>
-  </div>
-  <div class="medium-4 columns">
-    <div class="callout background-primary" data-equalizer-watch>
-      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
-    </div>
-  </div>
+<div class="row large-up-3 vertical-center-equalizers text-center" data-equalizer  data-equalize-on="large">
+  <div class="column">
+    <div class="callout xsmall">
+      <div class="callout border-white background-teal" data-equalizer-watch>
+        <h3 class="weight-light gutter-top gutter-bottom"><strong class="call-to-action">0.001%</strong><br>isn't much</h3>
+      </div>
+    </div>    
+  </div>  
+  <div class="column">
+    <div class="callout xsmall">
+      <div class="callout border-white background-purple" data-equalizer-watch>
+        <h3 class="weight-light gutter-top gutter-bottom">Did you know that <br><strong class="call-to-action">99% uptime</strong><br> allows for 3.6 days of downtime anually?</h3>
+      </div>  
+    </div>  
+  </div> 
+  <div class="column">
+    <div class="callout xsmall">
+      <div class="callout border-white background-blue" data-equalizer-watch>
+        <h3 class="weight-light gutter-top gutter-bottom">A salary of  <br><strong class="call-to-action">$1.2 million</strong><br> would be awesome!</h3>
+      </div>  
+    </div>  
+  </div> 
 </div>
 ```
-
+    
 ---
 
-## Making Callout Contents Vertically and Horizontally Center
+###  Table Style Centering
 
-This example uses the Foundation <a href="https://foundation.zurb.com/sites/docs/equalizer.html">Equalizer</a> plug-in mentioned above, and combines it with vertical and horizontal centering. 
+- Refer to the [equalizer](#equalizer) section for more information on using data-equalizer.
 - To center horizontally, add class `.text-center` to the container.
-- To center vertically, add class `.table` to the callouts, and add class `.table-cell` and `.vertical-middle` to a `<div>` around the contents; and add class `.gutter-all` to compensate for the missing padding between the text and the callout.
+- To center vertically:
+  1. add class `.table` to the `data-equalizer-watch` elements (this will **override** any padding on these items, even if they have class `.callout`), 
+  1. add class `.table-cell` and `.vertical-middle` to a `<div>` around the contents
+  1. add class `.gutter-all` or a [callout class](#callouts) to compensate for the missing padding due to the table-based styles.
 
 ```html_example
-<div class="row gutter-bottom" data-equalizer data-equalize-on="medium">
-  <div class="column medium-4">
-    <div class="callout background-green text-center table" data-equalizer-watch>
-      <div class="grid-block-text table-cell vertical-middle gutter-all">Pellentesque <div class="stat-med">100,000</div> habitant morbi tristique senectus</div>
+<div class="row medium-up-3 text-center" data-equalizer data-equalize-on="medium">
+  <div class="column">
+    <div class="background-green table" data-equalizer-watch>
+      <div class="sidebar-headline table-cell vertical-middle callout small">Pellentesque <div class="stat-med">100,000</div> habitant morbi tristique senectus</div>
     </div>
   </div>
-  <div class="column medium-4">
-    <div class="callout background-green text-center table" data-equalizer-watch>
-      <div class="grid-block-text table-cell vertical-middle gutter-all">Ut enim ad <div class="stat-med">6,040</div> minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+  <div class="column">
+    <div class="background-green table" data-equalizer-watch>
+      <div class="sidebar-headline table-cell vertical-middle callout small">Ut enim ad <div class="stat-med">6,040</div> minim veniam quis nostrud exercitation ullamco laboris nisi aliquip.</div>
     </div>
   </div>
-  <div class="column medium-4">
-    <div class="callout background-green text-center table" data-equalizer-watch>
-      <div class="grid-block-text table-cell vertical-middle gutter-all">Lorem <div class="stat-med">30%</div> ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+  <div class="column">
+    <div class="background-green table" data-equalizer-watch>
+      <div class="sidebar-headline table-cell vertical-middle callout small">Lorem <div class="stat-med">30%</div> ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
     </div>
   </div>
 </div>
@@ -1782,7 +1801,7 @@ Use class `.box-left-40` to float content to the left at 40% of the content area
       </div>
       <p>This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. This content comes after a floated container, and thus can wrap around it if needed.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-</div>
+  </div>
 </div>
 
 ---
@@ -2074,6 +2093,42 @@ Add the `.expanded` class to the container to make a full-width button group. Ea
 
 
 
+# Equalizer
+
+## Making Callouts the Same Height
+
+<p class="intro">Whenever you need to make containers the same height, utilize the Foundation <a href="equalizer.html">Equalizer</a> plug-in.</p>
+
+To set up an Equalizer group, you need a container, which gets the attribute `data-equalizer`, and then a series of child elements, which get the attribute `data-equalizer-watch`. The child elements will all be resized to have the same height.
+- By default, Equalizer works across all breakpoints. You can add an attribute of `data-equalize-on` set to medium, large, or xlarge if you only want the containers to equalize at specific screen widths.
+- Refer to **[vertical alignment](#vertical)** if you need to make the content sections vertically align.
+
+```html_example
+<p>In this example, the blue callouts stretch to match the height of the taller callout, at breakpoints medium and above.</p>
+<div class="row" data-equalizer data-equalize-on="medium">
+  <div class="medium-4 columns">
+    <div class="callout background-primary" data-equalizer-watch>
+      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
+      
+    </div>
+  </div>
+  <div class="medium-4 columns">
+    <div class="callout hollow" data-equalizer-watch>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+    </div>
+  </div>
+  <div class="medium-4 columns">
+    <div class="callout background-primary" data-equalizer-watch>
+      <p>Pellentesque habitant morbi tristique senectus et netus et, ante.</p>
+    </div>
+  </div>
+</div>
+```
+
+<p><a class="button tertiary large" href="equalizer.html">Learn more about Equalizer</a></p>
+
+
+
 # Heros
 
 <p class="lead">There are several different hero styles, depending upon site design and template type.  For most pages, you should use a [page title](#page-title) instead of a hero.</p>
@@ -2266,26 +2321,25 @@ All items in the tertiary nav (including the heading) should be linked.  Add cla
 </div>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <div class="tertiary-nav demo">
-        <h2><a href="#">Level Two Link</a></h2> 
-        <nav>
-          <ul class="no-bullet">
-            <li class="parent data-expanded"><a class="active" href="#">Level Three Link</a>
-              <ul class="no-bullet" style="display: block !important;">
-                <li><a href="#">Level Four Link</a></li>
-                <li><a href="#">Level Four Link</a></li>
-              </ul> 
-            </li>
-            <li><a href="#">Level Three Link</a></li>
-            <li><a href="#">Level Three Link</a></li>
-            <li><a href="#">Level Three Link</a></li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
+
+<div class="row">
+  <div class="column large-5">
+    <div class="tertiary-nav" style="margin-top: 0;">
+      <h2><a href="#">Level Two Link</a></h2> 
+      <nav>
+        <ul class="no-bullet">
+          <li class="parent data-expanded"><a class="active" href="#">Level Three Link</a>
+            <ul class="no-bullet" style="display: block !important;">
+              <li><a href="#">Level Four Link</a></li>
+              <li><a href="#">Level Four Link</a></li>
+            </ul> 
+          </li>
+          <li><a href="#">Level Three Link</a></li>
+          <li><a href="#">Level Three Link</a></li>
+          <li><a href="#">Level Three Link</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
 
@@ -2320,24 +2374,24 @@ For divided list items, include these classes on the `ul` tag: `.no-bullet` (to 
 </section>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">  
-      <section class="sidebar background-yellow">
-        <div class="row">
-          <h2>Trending Now</h2>
-          <ul class="list-divided-white no-bullet lead">
-            <li><a href="#">Credit Smart</a></li>
-            <li><a href="#">Education &amp; Tools</a></li>
-            <li><a href="#">Fraud</a></li>
-            <li><a href="#">HARP</a></li>
-            <li><a href="#">MiMi</a></li>
-          </ul>
-        </div>
-      </section>
-    </aside>
+
+<div class="row">
+  <div class="column large-5">
+    <section class="sidebar background-yellow">
+      <div class="row">
+        <h2>Trending Now</h2>
+        <ul class="list-divided-white no-bullet lead">
+          <li><a href="#">Credit Smart</a></li>
+          <li><a href="#">Education &amp; Tools</a></li>
+          <li><a href="#">Fraud</a></li>
+          <li><a href="#">HARP</a></li>
+          <li><a href="#">MiMi</a></li>
+        </ul>
+      </div>
+    </section>
   </div>
 </div>
+
 
 ---
 
@@ -2361,21 +2415,19 @@ If a sidebar contains multiple calls-to-action, set one button to be the `.prima
 </section>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-primary">
-        <div class="row">
-          <div class="column">
-            <div class="sidebar-txt">
-              <h2 class="sidebar-title">Connect with Us</h2>
-              <p>Sign up to get the latest <strong>Lorem Ipsum updates</strong> in your inbox.</p>      
-            </div>
-            <p><a class="primary button" href="#">Subscribe</a> <a class="hollow button" href="#">Unsubscribe</a></p>
+<div class="row">
+  <div class="column large-5">
+    <section class="sidebar background-primary">
+      <div class="row">
+        <div class="column">
+          <div class="sidebar-txt">
+            <h2 class="sidebar-title">Connect with Us</h2>
+            <p>Sign up to get the latest <strong>Lorem Ipsum updates</strong> in your inbox.</p>      
           </div>
+          <p><a class="primary button" href="#">Subscribe</a> <a class="hollow button" href="#">Unsubscribe</a></p>
         </div>
-      </section>
-    </aside>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -2410,32 +2462,30 @@ For divided list items, include these classes on the `ul` tags: `.no-bullet`, `.
 </section>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-      <aside class="column">
-        <section class="sidebar background-gray">
-          <div class="row">
-            <h2>RSS Feeds</h2>
-            <ul class="list-divided-white flex-up no-bullet">
-              <li>
-                <ul class="no-bullet list-rss">
-                  <li><a href="#">Housing and Economic Research</a></li>
-                  <li><a href="#">Perspectives</a></li>
-                </ul>
-              </li>
-              <li><span class="uppercase weight-bold">Freddie Mac Blog</span>
-                <ul class="no-bullet list-rss">
-                  <li><a href="#">All Posts</a></li>
-                  <li><a href="#">Homeownership</a></li>
-                  <li><a href="#">Rental Housing</a></li>
-                  <li><a href="#">Research &amp; Analysis</a></li>
-                  <li><a href="#">Notable</a></li>
-                </ul>            
-              </li>
+<div class="row">
+  <div class="column large-5">
+    <section class="sidebar background-gray">
+      <div class="row">
+        <h2>RSS Feeds</h2>
+        <ul class="list-divided-white flex-up no-bullet">
+          <li>
+            <ul class="no-bullet list-rss">
+              <li><a href="#">Housing and Economic Research</a></li>
+              <li><a href="#">Perspectives</a></li>
             </ul>
-          </div>
-        </section>
-      </aside>
+          </li>
+          <li><span class="uppercase weight-bold">Freddie Mac Blog</span>
+            <ul class="no-bullet list-rss">
+              <li><a href="#">All Posts</a></li>
+              <li><a href="#">Homeownership</a></li>
+              <li><a href="#">Rental Housing</a></li>
+              <li><a href="#">Research &amp; Analysis</a></li>
+              <li><a href="#">Notable</a></li>
+            </ul>            
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -2459,34 +2509,32 @@ Use a [background color class](#colors) to set the background on the `.sidebar-f
 </section>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-primary sidebar-feature">
-        <div class="feature-background" style="background-image: url('files/feature-bg.jpg')"></div>
-        <div class="row">
+<div class="row">
+  <div class="column large-5">
+    <section class="sidebar background-primary sidebar-feature">
+      <div class="feature-background" style="background-image: url('files/feature-bg.jpg')"></div>
+      <div class="row">
+        <div class="sidebar-txt">
+          <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
+          <h3 class="sidebar-title">Life's a Beach</h3>
+          <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
+          <p><a class="hollow button expand" href="#">Read More</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="sidebar background-purple sidebar-feature">
+      <div class="feature-background" style="background-image: url('files/featured-background.jpg')"></div>
+      <div class="row">
+        <div class="column">
           <div class="sidebar-txt">
-            <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
-            <h3 class="sidebar-title">Life's a Beach</h3>
-            <p class="lead">So you've always dreamed of living at the beach, but you're discouraged by the high price of beachfront property? Not to worry. We've found just the place for you.  </p>
-            <p><a class="hollow button expand" href="#">Read More</a></p>
+          <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
+          <h3 class="sidebar-title">Interest Rates Heading Higher. What That Means for Housing.</h3>
+            <p>Interest rates surged higher over the past two weeks following the U.S. presidential election.  The 10-year Treasury closed at 2.35 percent on November 18, 2016, up over 50 basis points... </p>
+            <p><a class="hollow button" href="#">Read More</a></p>
           </div>
         </div>
-      </section>
-      <section class="sidebar background-purple sidebar-feature">
-        <div class="feature-background" style="background-image: url('files/featured-background.jpg')"></div>
-        <div class="row">
-          <div class="column">
-            <div class="sidebar-txt">
-            <p class="article-category">Insight <span class="weight-light">| November 30, 2016</span></p>
-            <h3 class="sidebar-title">Interest Rates Heading Higher. What That Means for Housing.</h3>
-              <p>Interest rates surged higher over the past two weeks following the U.S. presidential election.  The 10-year Treasury closed at 2.35 percent on November 18, 2016, up over 50 basis points... </p>
-              <p><a class="hollow button" href="#">Read More</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </aside>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -2520,55 +2568,53 @@ Refer to the Media Object section for more details about this markup.
 </section>
 ```
 
-<div class="two-column-layout content-band">
-  <div class="row two-column-row"> 
-    <aside class="column">
-      <section class="sidebar background-concrete">
-        <div class="row">
-          <div class="column">
-            <h2 class="sidebar-title">Recent Posts</h2>
-            <ul class="list-divided no-bullet">
-              <li class="media-object image1-leads-blurb2">
-                <div class="media-object-section">  
-                  <a class="overlay" href="#">
-                    <img src="files/post-1.jpg" alt="Post Img" />
-                  </a>
-                </div>
-                <div class="media-object-section">
-                  <div class="article-date">May 9, 2016</div>
-                  <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
-                  <div class="article-category">Homeownership</div>
-                </div>
-              </li>
-              <li class="media-object image1-leads-blurb2">
-                <div class="media-object-section">  
-                  <a class="overlay" href="#">
-                    <img src="files/post-2.jpg" alt="Post Img" />
-                  </a>
-                </div>
-                <div class="media-object-section">  
-                  <div class="article-date">May 2, 2016</div>
-                  <h3 class="sidebar-headline"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
-                  <div class="article-category">Rental Housing</div>
-                </div>
-              </li>
-              <li class="media-object image1-leads-blurb2">
-                <div class="media-object-section">
-                  <a class="overlay" href="#">
-                    <img src="files/post-3.jpg" alt="Post Img" />
-                  </a>
-                </div>
-                <div class="media-object-section">
-                  <div class="article-date">April 23, 2016</div>
-                  <h3 class="sidebar-headline"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
-                  <div class="article-category">Research &amp; Analysis</div>
-                </div>
-              </li>
-            </ul>
-          </div>
+<div class="row">
+  <div class="column large-5">
+    <section class="sidebar background-concrete">
+      <div class="row">
+        <div class="column">
+          <h2 class="sidebar-title">Recent Posts</h2>
+          <ul class="list-divided no-bullet">
+            <li class="media-object image1-leads-blurb2">
+              <div class="media-object-section">  
+                <a class="overlay" href="#">
+                  <img src="files/post-1.jpg" alt="Post Img" />
+                </a>
+              </div>
+              <div class="media-object-section">
+                <div class="article-date">May 9, 2016</div>
+                <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
+                <div class="article-category">Homeownership</div>
+              </div>
+            </li>
+            <li class="media-object image1-leads-blurb2">
+              <div class="media-object-section">  
+                <a class="overlay" href="#">
+                  <img src="files/post-2.jpg" alt="Post Img" />
+                </a>
+              </div>
+              <div class="media-object-section">  
+                <div class="article-date">May 2, 2016</div>
+                <h3 class="sidebar-headline"><a href="#">Law Enforcement Cracking Down on Home Rental Scams</a></h3>
+                <div class="article-category">Rental Housing</div>
+              </div>
+            </li>
+            <li class="media-object image1-leads-blurb2">
+              <div class="media-object-section">
+                <a class="overlay" href="#">
+                  <img src="files/post-3.jpg" alt="Post Img" />
+                </a>
+              </div>
+              <div class="media-object-section">
+                <div class="article-date">April 23, 2016</div>
+                <h3 class="sidebar-headline"><a href="#">A Slow Start to the Best Year in Home Sales in a Decade</a></h3>
+                <div class="article-category">Research &amp; Analysis</div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
-    </aside>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -2578,6 +2624,7 @@ Refer to the Media Object section for more details about this markup.
 
 Embedded objects (iframes, videos, Tableau visuals) were <a href="styleguide_embeds.html">moved to their own page</a> to speed up the load of the initial styleguide. 
 
+<a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
 <a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
 
 

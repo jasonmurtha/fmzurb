@@ -94,9 +94,9 @@
         <div class="columns iw_columns large-12"> 
           <div class="iw_component">
             {{> corp-footer-js }}
-            {{#if javascript}}    
-            <script src="{{ javascript }}"></script>
-            {{/if}}
+            {{#each javascript}}    
+            <script src="{{ this }}"></script>
+            {{/each}}
             {{#if onload }}
               <script type="text/javascript">
               window.onload = {{onload}};

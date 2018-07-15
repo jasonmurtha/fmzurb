@@ -4,6 +4,7 @@
 }
 
 #home-content-bands {
+  overflow-x: hidden;
   @include breakpoint(large down) {
     opacity: 1;
     max-height: 9999vh;
@@ -15,6 +16,11 @@
       max-height: 10vh;
       overflow: hidden;      
       transition:  opacity 200ms linear 200ms, max-height 800ms linear 50ms;
+    }
+    .orbit-slide {
+      @include breakpoint(large down) {
+        background: none;
+      }      
     }
   }
 }

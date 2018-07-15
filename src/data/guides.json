@@ -16,6 +16,10 @@
       "url" : "styleguide_mf.html"
    },
    {
+      "name": "Corporate Landing Styles (which are not part of corporate template)",
+      "url" : "landing.html"
+   }, 
+   {
       "name": "Multifamily Landing Styles (which are not part of corporate template)",
       "url" : "https://mf.freddiemac.com/special/styleguide/landing.html"
    }, 
@@ -36,6 +40,10 @@
       "url" : "abide.html"
    },
    {
+      "name": "Foundation Equalizer (Height Matching)",
+      "url" : "equalizer.html"
+   },
+   {
       "name": "Foundation Tabs",
       "url" : "tabs.html"
    },
@@ -54,6 +62,10 @@
    {
       "name": "Writing in Markdown",
       "url" : "markdown.html"
+   },
+   {
+      "name": "Panini (Handlebars) Templating",
+      "url" : "panini.html"
    }
   ]
 }

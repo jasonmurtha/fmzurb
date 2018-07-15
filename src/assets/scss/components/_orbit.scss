@@ -168,3 +168,16 @@
     }
   }
 }
+// speed up transition when mobile nav is expanded
+.is-mobile-expanded .slide-in-left.mui-enter,
+.is-mobile-expanded .slide-out-left.mui-enter,
+.is-mobile-expanded .slide-out-right.mui-leave,
+.is-mobile-expanded .slide-in-right.mui-enter {
+  transition-duration: 10ms !important;
+}
+
+// hide slides when mobile nav is expanded
+.is-mobile-expanded .orbit-slide { 
+  opacity: 0; 
+  background: none; 
+}

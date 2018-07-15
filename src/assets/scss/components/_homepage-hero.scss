@@ -41,7 +41,6 @@
       margin-bottom: 3rem;      
     }
   }
-}
   &.hero-nhm {
     background-image: url("/images/hero/homepage_hero_nhm2018_mobile.jpg");
     @include breakpoint(medium) {
@@ -84,3 +83,4 @@
       background-position: center bottom;
     }
 	}
+}

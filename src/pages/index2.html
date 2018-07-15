@@ -10,6 +10,7 @@ navLevel2: 'none'
 
   <div class="iw_component">
     {{#if samples}}  
+      <h2>Prototypes</h2>
       <ul>
         {{#each samples.page}}
           <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
@@ -17,3 +18,14 @@ navLevel2: 'none'
       </ul>
     {{/if}}
   </div>
+  
+  <div class="iw_component">  
+  {{#if landing}}  
+    <h2>Landing Pages</h2>
+    <ul>
+      {{#each landing.page}}
+        <li class="item-name"><a href="{{url}}">{{name}}</a></li> 
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>

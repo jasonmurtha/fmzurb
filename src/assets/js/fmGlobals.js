@@ -1,4 +1,28 @@
-var FM=FM || {},QueryParam={};
+var FM=FM || {},
+QueryParam={},
+captchaonloadCallback = function(){
+  if($("#form-submit").attr('disabled')){
+  }
+  else{
+    $("#form-submit").attr("disabled","disabled");
+    grecaptcha.reset();
+  }
+  grecaptcha.render('recaptcha', {
+    'sitekey' : '6LemIFwUAAAAAFGv',
+    'callback' : checkResponse,
+    'expired-callback' : captchaonloadCallback
+  });
+},
+checkResponse = function(response){
+  $.post( "/cgi-bin/captcha/captcha.cgi", { token: response }, function( data ) {
+    if(data.success){
+      $("#form-submit").removeAttr('disabled');
+    }
+    else{
+      alert("Validation failed, please try again!");
+    }
+  }, "json");
+};
 FM.form = {  						
   domain : 'http://www.freddiemac.com',	
   protocol : location.protocol, 			// returns http:

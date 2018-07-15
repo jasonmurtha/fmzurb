@@ -1,0 +1,122 @@
+﻿---
+title: Landing Page Styles
+layout: default
+image: /special/styleguide/files/styleguide.jpg
+stylesheet: [/ss/app_landing.css]
+description: Style guides and web tools for managing FreddieMac.com websites.
+footer: 
+onload: 
+---
+
+<div class="gutter-all">
+  <h1>{{{ title }}}</h1>
+  <h2 class="weight-medium">There are 3 types of bands</h2>
+  <p>Choose the band based upon how much padding is desired above/below the band contents: landing-band, landing-inner-band, landing-band-sides-only. 
+  All three band classes include minimal padding to the left and right sides, to prevent content from touching the edge of the window.</p>
+</div>
+<div class="landing-band background-primary">landing-band includes the largest amount of padding above and below the content
+</div>
+<br>
+<div class="landing-inner-band background-primary">landing-inner-band includes a smaller amount of padding above and below the content
+</div>
+<br>
+<div class="landing-band-sides-only background-primary">landing-band-sides-only includes no padding above and below the content
+</div>
+<div class="gutter-all">
+  <h2 class="weight-medium gutter-top">Solid backgrounds</h2>
+  <p>Any of the backgrounds from the standard template can be used, as well as these landing-page-only backgrounds.</p>
+</div>
+<div class="landing-inner-band background-offwhite">Offwhite
+</div>
+<div class="landing-inner-band background-evergreen">Evergreen
+</div>
+
+<div class="gutter-all">
+  <h2 class="weight-medium gutter-top">Striped backgrounds</h2>
+  <p>Add class background-stripes to any band to overlay the background with a semi-transparent striped pattern.</p>
+  <p>Or, add class background-stripes-green to any band to overlay the background with a green-striped pattern.</p>
+</div>
+<div class="landing-inner-band background-green background-stripes">Green with stripe overlay
+</div>
+<div class="landing-inner-band background-white background-stripes">White with stripe overlay
+</div>
+<div class="landing-inner-band background-primary background-stripes">Primary with stripe overlay
+</div>
+<div class="landing-inner-band background-white background-stripes-green">White with green stripe overlay
+</div>
+<div class="landing-inner-band background-offwhite background-stripes-green">Offwhite with green stripe overlay
+</div>
+
+<div class="gutter-all">
+  <h2 class="weight-medium gutter-top">Row Containers</h2>
+  <p>Choose the row container based upon the maximum width that is desired for the contained rows.  At screen widths below 1000px, all of these will look the same.</p>
+</div>
+<div class="landing-band">
+  <div class="row-container-narrow">  
+    <div class="row">
+      <div class="column">        
+        <div class="callout small hollow-thick">Example of a content contained by row-container-narrow.  The max width of the rows in this band is 1000px.</div>
+      </div> 
+    </div>
+  </div>
+  <br>
+  <div class="row-container">  
+    <div class="row">
+      <div class="column">
+        <div class="callout small hollow-thick">Example of a content contained by a default size row-container.  The max width of the rows in this band is 1200px.</div>
+      </div> 
+    </div>
+  </div>
+  <br>
+  <div class="row-container-wide">  
+    <div class="row">
+      <div class="column">
+        <div class="callout small hollow-thick">Example of a content contained by row-container-wide.  The max width of the rows in this band is 1300px.</div>
+      </div> 
+    </div>
+  </div>
+  <br>
+  <div class="row-container-stretch">  
+    <div class="row">
+      <div class="column">
+        <div class="callout small hollow-thick">Example of a content contained by row-container-wide.  The max width of the rows in this band is 1500px.</div>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="row-container landing-inner-band">
+  <h2>Text Sizes</h2>
+  <p>Landing pages require many more options for text than standard web pages.  As a result, the following classes are available in addition to all the text weights, colors and sizes from the standard template.</p>
+
+{{#markdown}}
+| Class              | Min Size| Max Size|Static or Fluid     |
+|--------------------|---------|---------|--------------------|
+|`.text-static-16-18`| 16px    | 18px    | Static, size changes at Medium |         
+|`.text-flex-16-20`  | 16px    | 20px    | Responsive Font    |      
+|`.text-flex-16-24`  | 16px    | 24px    | Responsive Font    | 
+|`.text-flex-18-24`  | 18px    | 24px    | Responsive Font    | 
+|`.text-flex-18-25`  | 18px    | 25px    | Responsive Font    | 
+|`.text-static-24-28`| 24px    | 28px    | Static, size changes at Medium | 
+|`.text-flex-18-30`  | 18px    | 30px    | Responsive Font    | 
+|`.text-flex-22-30`  | 22px    | 30px    | Responsive Font    | 
+|`.text-flex-16-32`  | 16px    | 32px    | Responsive Font    | 
+|`.text-flex-24-32`  | 24px    | 32px    | Responsive Font    | 
+|`.text-flex-18-34`  | 18px    | 34px    | Responsive Font    | 
+|`.text-flex-26-35`  | 26px    | 35px    | Responsive Font    | 
+|`.text-flex-18-38`  | 18px    | 38px    | Responsive Font    | 
+|`.text-flex-28-40`  | 28px    | 40px    | Responsive Font    | 
+|`.text-flex-18-42`  | 18px    | 42px    | Responsive Font    | 
+|`.text-flex-22-42`  | 22px    | 42px    | Responsive Font    | 
+|`.text-flex-26-42`  | 26px    | 42px    | Responsive Font    | 
+|`.text-flex-30-48`  | 30px    | 48px    | Responsive Font    | 
+|`.text-flex-36-50`  | 36px    | 50px    | Responsive Font    | 
+|`.text-flex-36-52`  | 36px    | 52px    | Responsive Font    | 
+|`.text-flex-36-60`  | 36px    | 60px    | Responsive Font    | 
+|`.text-flex-26-65`  | 26px    | 65px    | Responsive Font    | 
+|`.text-flex-56-72`  | 56px    | 72px    | Responsive Font    | 
+|`.text-flex-48-84`  | 48px    | 84px    | Responsive Font    | 
+|`.text-flex-42-90`  | 42px    | 90px    | Responsive Font    | 
+{{/markdown}}
+
+
+</div>

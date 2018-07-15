@@ -120,3 +120,4 @@ PATHS:
     - "src/assets/js/appCapMkts.js"
     - "src/assets/js/shareWidget.js"
     # Paths to JavaScript libraries, which are compined into one file
+

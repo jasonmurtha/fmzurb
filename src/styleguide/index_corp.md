@@ -511,73 +511,71 @@ Research landing page has custom styled tables, which can be achieved by applyin
 </section>
 ```
 
-<div class="two-column-layout">
-  <div class="row two-column-row"> 
-    <aside class="column">  
-      <section class="sidebar background-concrete">
-        <div class="row">
-          <div class="column">
-            <ul class="list-divided no-bullet">
-              <li>
-                <table class="research-table">
-                  <thead>
-                    <tr>
-                      <th colspan="2" class="text-center uppercase"><span class="weight-light">Full Year YYYY</span> as of Month</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center"><span class="reduce">30-Yr FRM</span><br>
-                        <span class="stat-sm">4.2%</span><br>
-                      </td>
-                      <td class="text-center"><span class="reduce">Originations</span><br>
-                        <span class="stat-sm">1,505 ($B)</span><br>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center"><span class="reduce">Home Sales</span><br>
-                        <span class="stat-sm">5.75 (M)</span><br>
-                      </td>
-                      <td class="text-center"><span class="reduce">House Price Growth</span><br>
-                        <span class="stat-sm">4.7%</span><br>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-              <li>
-                <table class="research-table">
-                  <thead>
-                    <tr>
-                      <th colspan="3" class="text-center uppercase"><span class="weight-light">Average Rates</span> as of Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center">
-                        <span class="reduce">30-Yr FRM</span><br>
-                        <span class="stat-sm">4.19%</span><br>
-                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                      <td class="text-center">
-                        <span class="reduce">15-Yr FRM</span><br>
-                        <span class="stat-sm">3.41%</span><br>
-                        <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                      <td class="text-center">
-                        <span class="reduce">5/1-Yr ARM</span><br>
-                        <span class="stat-sm">3.23%</span><br>
-                        <span class="reduce"><strong>0.4</strong> Fees/<wbr>Points</wbr></span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-            </ul>
-          </div>
+<div class="row">  
+  <div class="large-5">  
+    <section class="sidebar background-concrete">
+      <div class="row">
+        <div class="column">
+          <ul class="list-divided no-bullet">
+            <li>
+              <table class="research-table">
+                <thead>
+                  <tr>
+                    <th colspan="2" class="text-center uppercase"><span class="weight-light">Full Year YYYY</span> as of Month</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center"><span class="reduce">30-Yr FRM</span><br>
+                      <span class="stat-sm">4.2%</span><br>
+                    </td>
+                    <td class="text-center"><span class="reduce">Originations</span><br>
+                      <span class="stat-sm">1,505 ($B)</span><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center"><span class="reduce">Home Sales</span><br>
+                      <span class="stat-sm">5.75 (M)</span><br>
+                    </td>
+                    <td class="text-center"><span class="reduce">House Price Growth</span><br>
+                      <span class="stat-sm">4.7%</span><br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <table class="research-table">
+                <thead>
+                  <tr>
+                    <th colspan="3" class="text-center uppercase"><span class="weight-light">Average Rates</span> as of Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">
+                      <span class="reduce">30-Yr FRM</span><br>
+                      <span class="stat-sm">4.19%</span><br>
+                      <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
+                    </td>
+                    <td class="text-center">
+                      <span class="reduce">15-Yr FRM</span><br>
+                      <span class="stat-sm">3.41%</span><br>
+                      <span class="reduce"><strong>0.5</strong> Fees/<wbr>Points</wbr></span>
+                    </td>
+                    <td class="text-center">
+                      <span class="reduce">5/1-Yr ARM</span><br>
+                      <span class="stat-sm">3.23%</span><br>
+                      <span class="reduce"><strong>0.4</strong> Fees/<wbr>Points</wbr></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
         </div>
-      </section>
-    </aside>
+      </div>
+    </section>
   </div>
 </div>
 

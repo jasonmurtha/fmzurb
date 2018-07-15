@@ -22,6 +22,7 @@
   bottom: 2rem;
   transition: .5s;
   z-index: -1;
+  border-radius: 0 5rem 5rem 0;
 }
 .green::before {
   background-color: #88BD45;
@@ -51,8 +52,8 @@
   border-color: rgba(255,255,255,0.8);
   border-style: solid;
   margin: 0 0 0.75rem;
+    border-radius: 2.5rem 0 0 2.5rem;
 }
-
 .more-info {
   display: block;
   max-height: 0;
@@ -87,7 +88,7 @@
     width: 100%;
   }
   .album-block img:not(.no-border) {
-    border-width: 0.7rem 0.7rem 0.7rem 0;
+    border-width: 0.7rem;
     min-width: 100%;
   }
   .more-info {

@@ -195,24 +195,105 @@ Then, for most fields, all you need to do is to add the attribute `required` to 
 
 # Validation and Patterns
 
-Input fields with the following types will validate agaisnt their type's pattern.
+## Builtin Patterns and Validators
 
-- type="email"  (properly formated email address including `@` and `.`)
-- type="url"  (full url including http:// or https:// )
-- type="number" (+/- floating point numbers:  -2,330.21 -- not intended for phone numbers or zip codes)
+The following patterns and validators are already built in: 
 
-In addition, these following patterns can be combine with a type="text" to restrict the provided value.
+`alpha`,
+`alpha_numeric`,
+`card`,
+`color`
+`cvv`,
+`date`,
+`dateISO`,
+`datetime`,
+`day_month_year`,
+`domain`,
+`email`,
+`integer`,
+`month_day_year`,
+`number`,
+`time`,
+`url`
 
-- pattern="alpha"  (letters only -- no numbers, spaces, or punctuation)
-- pattern="alpha_numeric"  (letters and numbers only -- no spaces or punctuation)
-- pattern="integer"  (+/- numbers, no decimal)
-- pattern="[0-9]&#42;"  (string of numbers only, but allows for leading 0 such as zipcodes)
-- pattern="tel"   (10 digits, formatted as phone number: (###) ###-#### or ###-###-#### or ########## followed by any text, ext #, etc.)
-- pattern="month_day_year" (preferred American style date format: MM/DD/YYYY, MM-DD-YYYY)
-- pattern="domain"   (website.com -- kinder than url, since it doesn't require http:// or https://)
+They are defined by regular expressions as you can see below. 
 
+Here are the definitions of the builtin patterns:
+
+```javascript
+alpha : /^[a-zA-Z]+$/,
+alpha_numeric : /^[a-zA-Z0-9]+$/,
+integer : /^[-+]?\d+$/,
+number : /^[-+]?\d*(?:[\.\,]\d+)?$/,
+
+// amex, visa, diners
+card : /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/,
+cvv : /^([0-9]){3,4}$/,
+
+// http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#valid-e-mail-address
+email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/,
+
+// abc.de
+domain : /^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,8}$/,
+// https://abd.de (url is stricter than domain)
+url : /^(https?|ftp|file|ssh):\/\/(((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/,
+
+datetime : /^([0-2][0-9]{3})\-([0-1][0-9])\-([0-3][0-9])T([0-5][0-9])\:([0-5][0-9])\:([0-5][0-9])(Z|([\-\+]([0-1][0-9])\:00))$/,
+// YYYY-MM-DD
+date : /(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))$/,
+// HH:MM:SS
+time : /^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}$/,
+dateISO : /^\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}$/,
+// MM/DD/YYYY
+month_day_year : /^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.]\d{4}$/,
+// DD/MM/YYYY
+day_month_year : /^(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.]\d{4}$/,
+
+// #FFF or #FFFFFF
+color : /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/
+```
+
+## Additional Patterns and Validators
+
+The following patterns have already been added, and can be combine with a type="text" to restrict the provided value: `pattern="digits_dashes"`, `pattern="tel"`.
+
+```javascript
+\\  string of numbers and dashes only, good for elements like SSN
+Foundation.Abide.defaults.patterns['digits_dashes'] = /^[0-9-]*$/;
+\\ generous phone number format with optional parenthesis around area code, and optional dashes or spaces between number groupings
+\\ any of these are valid: (###) ###-#### or ###-###-#### or ### ###-#### or ########## followed by any text, ext #, etc.
+Foundation.Abide.defaults.patterns['tel'] = /^\(?\d{3}\)?[\s+|-]?\d{3}[\s+|-]?\d{4}/;
+```
+In addition to these named pattern, you can create a simple regular expression and use it as the pattern value.  For example: `pattern="[0-9]*"` would represent a string of digits, while allowing for leading zeros, useful for account numbers and zipcodes.
+
+```html
+<input id="SSN" type="text" pattern="digits_dashes" required>
+<input id="phone" type="text" pattern="tel" required>
+<input id="zipcode" type="text" pattern="[0-9]*" required>
+```
 
 ---
+
+## Adding Custom Pattern and Validator
+
+In the main javascript file for your site, you can
+- override builtin patterns and validators before foundation is initialized
+- add new patterns and validators before or after foundation is initialized
+
+```javascript
+Foundation.Abide.defaults.validators['greater_than'] =
+function($el,required,parent) {
+  // parameter 1 is jQuery selector
+  if (!required) return true;
+  var from = $('#'+$el.attr('data-greater-than')).val(),
+      to = $el.val();
+  return (parseInt(to) > parseInt(from));
+};
+```
+
+
+
+# Errors
 
 ## Field Error Examples ##
 
