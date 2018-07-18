@@ -104,12 +104,6 @@ function styleGuideCorp(done) {
   sherpa('src/styleguide/index_corp.md', {
     output: PATHS.dist + '/special/styleguide/styleguide_corp.html',
     template: 'src/styleguide/template_corp.html'
-  }, styleGuideMF(done) ); 
-}
-function styleGuideMF(done) {
-  sherpa('src/styleguide/index_mf.md', {
-    output: PATHS.dist + '/special/styleguide/styleguide_mf.html',
-    template: 'src/styleguide/template_mf.html'
   }, styleGuideScripts(done) ); 
 }
 function styleGuideScripts(done) {

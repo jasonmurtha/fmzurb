@@ -28,14 +28,14 @@
   <li class="accordion-item" data-accordion-item>
     <a class="accordion-title" href="#panel2" id="panel2-heading" aria-controls="panel2" role="tab">Customized Components</a>
     <div class="accordion-content" data-tab-content id="panel2" aria-labelledby="panel2-heading" role="tabpanel">
-      abide (custom routines and patterns, see <a href="styleguide_abide.html">abide</a>)<br>
+      abide (custom routines and patterns, see <a href="abide.html">abide</a>)<br>
       accordion	(styles are different, see <a href="styleguide_fm.html#accordions">accordions</a> and <a href="styleguide_fm.html#faqs">FAQs</a>)<br>
       buttons	(styles are different, see <a href="styleguide_fm.html#buttons">buttons</a>)<br>
       callout	(styles are different, see <a href="styleguide_fm.html#callouts">callouts</a>)<br>
       grid (the outermost row/column is inserted by <a href="styleguide_fm.html#the-templates">the template</a>)<br>
       media-object	(styles are different, see <a href="styleguide_fm.html#media-objects">media objects</a>)<br>
-      orbit	(buttons and slide nav is automated for you, see <a href="styleguide_orbit.html">carousels</a>) <br>
-      reveal (buttons are automated for you, see <a href="styleguide_reveal.html">modals</a>)<br>
+      orbit	(buttons and slide nav is automated for you, see <a href="orbit.html">carousels</a>) <br>
+      reveal (buttons are automated for you, see <a href="reveal.html">modals</a>)<br>
       tabs (styles are different, see <a href="styleguide_fm.html#tabs">tabs</a>)<br>
       table	(styles are different, see <a href="#data-tables">data tables</a>)
     </div>

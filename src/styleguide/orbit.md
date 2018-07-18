@@ -280,7 +280,7 @@ Regardless of which option you choose:
 - Try to make sure your images are all similar in size and proportion.  
 - Each image should still have an `alt` attribute, even if it has an associated caption.
 - Captions can contain additional markup -- from blockquotes to paragraphs to text formatting.
-- Image carousels **cannot** be used inside a modal window -- instead refer to [Image Gallery Modal](styleguide_reveal.html#image-gallery-modal).
+- Image carousels **cannot** be used inside a modal window -- instead refer to [Image Gallery Modal](reveal.html#image-gallery-modal).
 
 ---
 

@@ -22,7 +22,7 @@ Currently, these ratio classes exist, but it is fairly simple to [define your ow
 
 # Videos
 
-Videos that open in modal windows are covered under [video modals](styleguide_reveal.html#video-modal).  
+Videos that open in modal windows are covered under [video modals](reveal.html#video-modal).  
 - For Youtube videos, make sure you include `?rel=0&amp;wmode=transparent` at the end of the url to disable the related videos and to prevent conflict with overlays/drop downs on out site.  
 - Most Freddie Mac videos use widescreen format, but a few older videos are still in 4 x 3 format. If yuou are unsure, start off trying the widescreen layout first.
 - Do not set videos to autoplay.

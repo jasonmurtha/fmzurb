@@ -46,7 +46,7 @@ When you are creating a page using the TeamSite template, the following markup i
 
 The Foundation 6.3 grid uses two key elements: rows and columns. When you need to create additional columns inside the initial ones added by the template, start by adding an element with a class of `.row`. This will create a horizontal block to contain vertical columns. Then add elements with a `.column` class within that row. Specify the widths of each column with the `.small-#`, `.medium-#`, and `.large-#` classes.
 
-<p><a class="button tertiary large" href="styleguide_grid.html">Learn more about rows and columns</a></p>
+<p><a class="button tertiary large" href="grid.html">Learn more about rows and columns</a></p>
 
 ---
 
@@ -1503,7 +1503,7 @@ You can either combine the plugin with some flex-based centering or you can comb
 
 <p>Links are very standard, and the color is preset to $primary-color. </p>
 <p>Links inside <a href="#sidebar-modules">sidebar modules</a> and links inside <a href="#cards">Cards</a> inherit the existing text color to blend in better.  Use class `.primary` on the card eletement to override this default.</p>
-<p>Refer to <a href="styleguide_reveal.html">Modals</a> if you are looking for information on how to make a link launch a video, image, or content block inside a modal.</p>
+<p>Refer to <a href="reveal.html">Modals</a> if you are looking for information on how to make a link launch a video, image, or content block inside a modal.</p>
 <div class="callout background-yellow">
   <div class="callout background-white">
     <h3>Tagging Links for Analytics, Screen Readers and Search Engines </h3>
@@ -1629,7 +1629,7 @@ Use class `.fill-anchor` on an svg to have fill color match link color and class
 ## Linked Image Overlays
 
 Apply the `.overlay` class to the `<a>` that wraps an image to style the image with a blue overlay on hover and focus. 
-Refer to <a href="styleguide_reveal.html">modals</a> for additional options if you are launching a modal from the link.
+Refer to <a href="reveal.html">modals</a> for additional options if you are launching a modal from the link.
 
 If you need to force an overlay to always be full width, add class `.block` to the `<a>` and class `.full` to the image.
 
@@ -2019,7 +2019,7 @@ If you use a one-color svg icon without a fill color, css will allow it to inher
 
 A close button is a `<button>` element with the class `.close-button`.  The button is also labeled with `aria-label` to clarify what the button's purpose is.
 - For simple close buttons, we use the multiplication symbol (`&times;`) as the X icon. This icon is wrapped in a `<span>` with the attribute `aria-hidden="true"`, so screen readers don't read the X icon.
-- Some elements, such as [modals](styleguide_reveal.html), have predefined close button styles.
+- Some elements, such as [modals](reveal.html), have predefined close button styles.
 
 ```html_example
 <div class="callout background-yellow">
@@ -2622,10 +2622,10 @@ Refer to the Media Object section for more details about this markup.
 
 # Embedded Objects
 
-Embedded objects (iframes, videos, Tableau visuals) were <a href="styleguide_embeds.html">moved to their own page</a> to speed up the load of the initial styleguide. 
+Embedded objects (iframes, videos, Tableau visuals) were <a href="embeds.html">moved to their own page</a> to speed up the load of the initial styleguide. 
 
-<a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
-<a href="styleguide_embeds.html" class="button tertiary large">Learn about embeds</a>
+<a href="embeds.html" class="button tertiary large">Learn about embeds</a>
+<a href="embeds.html" class="button tertiary large">Learn about embeds</a>
 
 
 
@@ -2810,9 +2810,9 @@ Make forms easy to use with the following rules:
 
 ## Form Validation ##
 
-Validation is done through the <a href="styleguide_abide.html">Abide</a> form validation library.
+Validation is done through the <a href="abide.html">Abide</a> form validation library.
 
-<a class="button primary large" href="styleguide_abide.html">Learn About Form Validation</a>
+<a class="button primary large" href="abide.html">Learn About Form Validation</a>
 
 ---
 
@@ -3139,9 +3139,9 @@ These are intended for interactive forms that sort/filter content within a singl
 
 ### Design Options
 
-There are numerous [design options](styleguide_tabs.html) for tabs beyond the example shown below. 
+There are numerous [design options](tabs.html) for tabs beyond the example shown below. 
 
-<a href="styleguide_tabs.html" class="button tertiary">Learn more about Tab Design Options</a>
+<a href="tabs.html" class="button tertiary">Learn more about Tab Design Options</a>
 
 ### Example
 
@@ -3494,7 +3494,7 @@ title="Fancy word for a beetle."><img src="/images/icon-tooltip.svg" alt="tool t
 
 <p class="lead">There are numerous options for carousels -- so many that they have their own page.</p>
 
-<a class="button tertiary large" href="styleguide_orbit.html">Learn More About Carousels</a>
+<a class="button tertiary large" href="orbit.html">Learn More About Carousels</a>
 
 
 
@@ -3502,7 +3502,7 @@ title="Fancy word for a beetle."><img src="/images/icon-tooltip.svg" alt="tool t
 
 <p class="lead">There are numerous options for modals -- so many that they have their own page.</p>
 
-<a class="button tertiary large" href="styleguide_reveal.html">Learn More About Modals</a>
+<a class="button tertiary large" href="reveal.html">Learn More About Modals</a>
 
 
 

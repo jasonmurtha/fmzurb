@@ -165,7 +165,7 @@ For the corporate template, the tabs plugin is initialized with these defaults. 
 # Fixed Width Tabs
 
 With fixed-width tabs, all tabs are the same width, with labels centered, and the tabs stretch edge to edge.
-- Add a [block grid](styleguide_grid.html#advanced) class `.[size]-up-[n]` to the tabs element that defines the starting breakpoint and quantity of tabs. For example, `.small-up-3` represents 3 equal-width tabs, starting at the smallest breakpoint.  
+- Add a [block grid](grid.html#advanced) class `.[size]-up-[n]` to the tabs element that defines the starting breakpoint and quantity of tabs. For example, `.small-up-3` represents 3 equal-width tabs, starting at the smallest breakpoint.  
   - You can set more than one at a time -- for example, at small you could have 2 rows of 2 tabs and at medium have 1 row of 4 tabs by adding both `.small-up-2` and `.medium-up-4`.
   - Utilize the [equalizer plugin](http://foundation.zurb.com/sites/docs/equalizer.html) to keep all tabs at the same height if there is a chance words might wrap within a tab.
 
@@ -327,7 +327,7 @@ Utilize the [equalizer plugin](http://foundation.zurb.com/sites/docs/equalizer.h
 
 ## Vertical Tabs to the Right of Tab Content
 
-Utilize the [Source Ordering](styleguide_grid.html#advanced) options to shift the vertical tabs to the right at a specific breakpoint.
+Utilize the [Source Ordering](grid.html#advanced) options to shift the vertical tabs to the right at a specific breakpoint.
 - Add class `.edge` to each `.tabs-title` element to flip the bordered edge to the other side.
   - To flip the bordered edge only above a specific breakpoint, use `.edge-left-medium` or `.edge-left-large`.
 

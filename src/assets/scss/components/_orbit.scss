@@ -177,7 +177,8 @@
 }
 
 // hide slides when mobile nav is expanded
-.is-mobile-expanded .orbit-slide { 
+.is-mobile-expanded .orbit-slide,
+.is-mobile-expanded .orbit-controls { 
   opacity: 0; 
   background: none; 
 }

@@ -3,6 +3,17 @@
   display: none;
 }
 
+.is-mobile-expanded {
+  .iw_viewport-wrapper {
+    > div:nth-child(n+4) { 
+      @include breakpoint(large down){
+        opacity: 0;
+        max-height: 100vh;
+        transition:  opacity 200ms linear 100ms, max-height 1000ms linear 50ms;
+      }
+    }
+  } 
+} 
 #home-content-bands {
   overflow-x: hidden;
   @include breakpoint(large down) {
@@ -13,23 +24,19 @@
   .is-mobile-expanded & {
     @include breakpoint(large down) {
       opacity: 0;
-      max-height: 10vh;
+      max-height: 90vh;
       overflow: hidden;      
-      transition:  opacity 200ms linear 200ms, max-height 800ms linear 50ms;
-    }
-    .orbit-slide {
-      @include breakpoint(large down) {
-        background: none;
-      }      
+      transition:  opacity 200ms linear 100ms, max-height 1000ms linear 50ms;
     }
   }
 }
 
 .is-mobile-expanded {
-  .homepage-business-highlight,
-  .finance-offset  { 
-    @include breakpoint(large down)  {
-      display: none;   
+  .row-wrapper,
+  .finance-offset { 
+    @include breakpoint(large down){
+      opacity: 0;  
+      transition: opacity 100ms linear 10ms;     
     }
   }
 } 

@@ -1,6 +1,6 @@
 ﻿{ "page": [
    {
-      "name": "Freddie Mac Styles",
+      "name": "Freddie Mac Global Styles",
       "url" : "styleguide_fm.html"
    },
    {
@@ -8,12 +8,12 @@
       "url" : "scripts_corp.html"
    },
    {
-      "name": "Corporate Template-Specific Styles",
+      "name": "Corporate-Specific Styles",
       "url" : "styleguide_corp.html"
    },
    {
       "name": "Multifamily-Specific Styles",
-      "url" : "styleguide_mf.html"
+      "url" : "https://mf.freddiemac.com/special/styleguide/styleguide_mf.html"
    },
    {
       "name": "Corporate Landing Styles (which are not part of corporate template)",
@@ -56,7 +56,7 @@
       "url" : "fluid.html"
    },
    {
-      "name": "Motion-UI (Foundation's library for Transitions & Animation)",
+      "name": "Motion-UI Examples (Foundation's library for CSS Transitions & Animation)",
       "url" : "animations/"
    },
    {
