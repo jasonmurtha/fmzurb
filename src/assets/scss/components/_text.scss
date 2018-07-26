@@ -708,6 +708,12 @@ sup {
   font-size: 0.875em;
   line-height: 1.25;
 }
+.large-reduce {
+  @include breakpoint(large) {
+    font-size: 0.875em;
+    line-height: 1.25;
+  }
+}
 .enlarge {
   font-size: 1.125em;
 }
