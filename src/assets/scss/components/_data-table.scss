@@ -59,10 +59,20 @@ table tfoot td {
     }
   }
 }
-.table-scroll .full.stack {
-  @include breakpoint(medium down){
-    width: 100%;
-  } 
+.large-stack {
+  @include breakpoint(large down) {
+    @include table-stack;
+  }
+}
+.xlarge-stack {
+    @include table-stack;
+}
+.table-scroll {
+  .full.stack {
+    @include breakpoint(medium down){
+      width: 100%;
+    } 
+  }
 }
 .stack .row-divided {
   tr::before {
@@ -71,6 +81,22 @@ table tfoot td {
       display: block;
       border-bottom: 2px solid scale-color($fm-blue, $lightness: 60%);
     }
+  }
+}
+.large-stack .row-divided {
+  tr::before {
+    @include breakpoint(large down){
+      content: "";
+      display: block;
+      border-bottom: 2px solid scale-color($fm-blue, $lightness: 60%);
+    }
+  }
+}
+.xlarge-stack .row-divided {
+  tr::before {
+    content: "";
+    display: block;
+    border-bottom: 2px solid scale-color($fm-blue, $lightness: 60%);
   }
 }
 .vertical-middle { vertical-align: middle; } 
