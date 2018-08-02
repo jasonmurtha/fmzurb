@@ -44,7 +44,9 @@ $hero-blend-color: $primary-color;
     }    
   }
   
-  .cm-landing-hero {
+  .debt-landing-hero,
+  .mbs-landing-hero,
+  .seasonedloans-landing-hero  {
     @include breakpoint(small only) {
       background-image: linear-gradient(rgba($hero-blend-color, $hero-opacity), rgba($hero-blend-color, $hero-opacity)), url('/images/hero/hero-placeholder.jpg');
       height: rem-calc(219);

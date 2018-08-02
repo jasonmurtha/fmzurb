@@ -503,3 +503,49 @@ li {
     background-image:url("/images/icon_file-html.svg");
   }
 }
+
+.icon-deal-marker {
+  font-weight: $global-weight-normal;
+  line-height: 1;
+  margin-bottom: 0.3125em;
+    font-size: rem-calc(18);
+  font-size: calc(18px +  6 * (100vw - 320px)/1180);
+  @include breakpoint(xlarge){    
+    font-size: rem-calc(24);
+  } 
+  &.large {
+    font-size: 1.5rem;
+    font-size: calc(24px +  8 * (100vw - 320px)/1180);
+    @include breakpoint(xlarge){    
+      font-size: 2rem;
+    }  
+  }
+  &.xlarge {
+    font-size: rem-calc(38);
+    font-size: calc(38px +  14 * (100vw - 320px)/1180);
+    @include breakpoint(xlarge){    
+      font-size: rem-calc(52);
+    }  
+    .marker {
+      margin: 0 0.4em 0 0; 
+    }
+  }
+  svg {
+    fill: none;
+    stroke: $fm-gray;
+    stroke-width: 2;
+  }    
+  .marker {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    font-size: 83.3%;
+    border-radius: 999px;
+    font-weight: $global-weight-black;
+    height: 2.05em;
+    width: 2.05em;
+    padding: 0.5em 0;
+    margin: 0.3125em 0.3em 0.25em 0;   
+  }  
+}

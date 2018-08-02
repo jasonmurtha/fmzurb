@@ -68,7 +68,8 @@ table tfoot td {
     @include table-stack;
 }
 .table-scroll {
-  .full.stack {
+  .full.stack,
+  .full.large-stack {
     @include breakpoint(medium down){
       width: 100%;
     } 
