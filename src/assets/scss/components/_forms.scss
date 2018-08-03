@@ -51,12 +51,25 @@ fieldset {
         border-radius: 0 $input-radius $input-radius 0;
       }
     }
+    .input-group-label {
+      @include breakpoint(small only) {
+        padding: 0 0.875rem;
+        font-size: rem-calc(14);
+      }
+    }
     .input-group-field {
-      height: 2.6125rem;      
+      height: 2.6125rem; 
+      @include breakpoint(small only) {
+        font-size: rem-calc(14);
+      } 
     }
     .input-group-button {
       .button {
         padding: 0 1em;
+        @include breakpoint(small only) {
+          padding: 0 0.875rem;
+          font-size: rem-calc(14);
+        } 
       }
     }
   } 
