@@ -1,6 +1,8 @@
-.stroke-anchor {
+// eventually ditch .stroke-anchor-on-dark
+.stroke-anchor-on-dark,
+.stroke-anchor {  
   fill: none;
-  stroke: $anchor-color;
+  stroke: currentColor;
   vertical-align: middle;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -9,38 +11,15 @@
   &.baseline {
     vertical-align: baseline;
   }
-  :hover > & {
-    stroke: $anchor-color-hover;
-  }
 }
-.stroke-anchor-on-dark {
-  fill: none;
-  stroke: $white;
-  opacity: 0.8;
-  vertical-align: middle;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-  &.baseline {
-    vertical-align: baseline;
-  }
-}
+// eventually ditch .fill-anchor-on-dark
+.fill-anchor-on-dark,
 .fill-anchor {
-  fill: $anchor-color;
+  fill: currentColor;
   stroke: none;
+  opacity: 0.8;  
   vertical-align: middle; 
   transition: fill 0.25s ease-out;
-  &.baseline {
-    vertical-align: baseline;
-  }
-  :hover > & {
-    fill: $anchor-color-hover;
-  }
-}
-.fill-anchor-on-dark {
-  fill: $white;
-  stroke: none;
-  vertical-align: middle; 
   &.baseline {
     vertical-align: baseline;
   }

@@ -82,6 +82,8 @@ PATHS:
     # Paths to JavaScript libraries, which are compined into one file
   javascriptlanding:
     # Libraries requried in addition to corp
+  javascriptsticky:
+    - "bower_components/foundation-sites/js/foundation.sticky.js"    
   javascriptcapital:
     # Libraries requried by Foundation
     - "bower_components/what-input/dist/what-input.js"

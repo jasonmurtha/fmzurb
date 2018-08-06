@@ -128,34 +128,22 @@ $button-transition: background 0.25s ease-out, color 0.25s ease-out !default;
         }
       }
     }
-  } 
-  .svg-stroke {
-    stroke: $white;
-  } 
+  }   
 	&:hover,
   &:focus,
   &:active  {
 		background: $button-background-hover;
     color: $button-background;    
-    .svg-stroke {
-      stroke: $button-background;
-    }
 	}
  @each $name, $color in $button-palette {
     &.#{$name} {
       background: $color;
       border-color: $color;
-      .svg-stroke {
-        stroke: $white;
-      }
       &:hover,
       &:focus,
       &:active {
         background: $button-color;
         color: $color;
-        .svg-stroke {
-          stroke: $color;
-        }
       }
     }
   } 
@@ -175,20 +163,6 @@ $button-transition: background 0.25s ease-out, color 0.25s ease-out !default;
   &[disabled] {
     @include button-disabled;
   }
-  svg { 
-    fill: currentColor;
-    height: 1em;
-    width: 1.25em;
-    opacity: 0.9;
-    vertical-align: bottom;
-    &.large {
-      height: 1.5em;
-      width: 1.75em;  
-      position: relative;
-      margin-top: -0.25em;
-    }
-  }
-
 }
 span.button {
   &:hover {

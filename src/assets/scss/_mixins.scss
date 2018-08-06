@@ -104,6 +104,7 @@
 @mixin anchor-on-dark($decoration: underline){
   &.block,
   &.mailto,
+  &.icon,
   &:not([class]) { 
     color: currentColor;
     position: relative;

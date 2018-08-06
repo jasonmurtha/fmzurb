@@ -69,7 +69,7 @@ There are 5 primary breakpoints for the corporate design.  If you need to write 
 The site is broken down into 4 main designs: Corporate, Multifamily, Single-Family, and Capital Markets.  Each of these designs has some Foundation elements enabled and some disabled.  Refer to each individual template for details.
 <ul>
   <li class="item-name"><a href="styleguide_corp.html#framework">Corporate Site</a></li> 
-  <li class="item-name"><a href="styleguide_mf.html#framework">Multifamily Site</a></li> 
+  <li class="item-name"><a href="https://mf.freddiemac.com/special/styleguide/styleguide_mf.html#framework">Multifamily Site</a></li> 
   <li class="item-name">Singlefamily Site TBD</li> 
   <li class="item-name">Capital Markets Site TBD</li> 
 </ul>
@@ -1574,9 +1574,6 @@ Add class `.secured` to a link to include a solid padlock icon.  If the link alr
   <p><a href="#" class="secured">link with padlock decoration</a></p>
   <p><a href="files/webform-tracking.docx">link with filemarker</a> <img src="/images/icon-locked-orange.svg" alt="login required"></p>
   <p><a href="#" class="secured button">link with padlock decoration</a></p>
-  <p><a href="#" class="secured button primary">link with padlock decoration</a></p>
-  <p><a href="#" class="secured button secondary">link with padlock decoration</a></p>
-  <p><a href="#" class="secured button tertiary">link with padlock decoration</a></p>
 </div>
 ```
 
@@ -1584,32 +1581,31 @@ Add class `.secured` to a link to include a solid padlock icon.  If the link alr
 
 ### Links With SVG Icons
 
-
-Use class `.icon` when you want to include an svg icon and have it inherit its size from the existing text and class `.secondary` when you want the link to be secondary color. 
-
-Use class `.fill-anchor` on an svg to have fill color match link color and class `.stroke-anchor` on an svg to have stroke color match link color.
+1. Use a tool like [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize the svg markup. (works best in Chrome)
+1. Use class `.icon` when you want to include an svg icon and have it inherit its size from the existing text and class, `.secondary` when you want the link to be secondary color. 
+1. If you want the `<svg>` to have a fill color that inherits the link's default and hover colors, give it a class of  `.fill-anchor` and remove any fill color in the svg markup.
+1. If you want the `<svg>` to have a stroke color that inherits the link's default and hover colors, give it a class of  `.stroke-anchor` and remove any stroke color in the svg markup.
+1. Add the attribute `aria-hidden="true"` to prevent screen readers from speaking the svg code. If the link does not contain text, be sure to include an aria-label on the `<a>` for screen-readers.
 
 ```html_example
 <div class="callout hollow">
   <ul>
-    <li><a class="icon" href="#">text link with svg
+    <li class="enlarge"><a class="icon" href="#">text link with svg using fill-anchor
       <svg class="fill-anchor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 350 350">
       <polygon points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
       </svg>
       </a>
     </li>
-    <li><a class="icon" href="#">text link with svg
+    <li class="enlarge"><a class="icon secondary" href="#">primary text link with svg using stroke-anchor
       <svg class="stroke-anchor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 350 350">
-      <polygon fill="none" stroke-width="25" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+      <polygon fill="none" stroke-width="35" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
       </svg>
       </a>
     </li>
-  </ul> 
-  <div class="gutter-left">link that is svg only on a round blue background
-    <div class="gutter-top" style="max-width: 300px;">
-      <a class="svglink-round-blue" href="#" aria-hidden="true">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <style>.st0{fill:none;stroke:#fff;stroke-width:0.6752;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#fff;stroke-width:0.6752;stroke-linejoin:round;stroke-miterlimit:10;}</style>
+    <li class="enlarge">link that is only an svg, and so requires an aria-label.<br>
+      <a href="#" aria-label="View our Products">
+        <svg aria-hidden="true" class="stroke-anchor" width="2rem" height="2rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <style>.st0{fill:none;stroke-width:0.6752;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke-width:0.6752;stroke-linejoin:round;stroke-miterlimit:10;}</style>
           <path class="st0" d="M16.8 21.3l-3.1.9.9-3.1 6.7-6.8 2.3 2.3z"/>
           <path class="st1" d="M19.5 14.1l2.3 2.3"/><path class="st0" d="M14.6 19.1l2.2 2.2"/>
           <path class="st0" d="M12.1 22.2H3.6V3.3h1.8"/><path class="st0" d="M18 3.3h1.8v8.1"/>
@@ -1619,9 +1615,9 @@ Use class `.fill-anchor` on an svg to have fill color match link color and class
           <path class="st0" d="M8.1 13.2h7.2"/><path class="st0" d="M8.1 15h4"/>
         </svg>
       </a>
-    </div>
-  </div>
-</div> 
+    </li>
+  </ul> 
+</div>  
 ```
 
 ---
@@ -1998,18 +1994,23 @@ Use class `.hollow` for non-call-to-action buttons used on a dark background.
 
 ---
 
-## Buttons with Icons
+## Buttons with SVG Icons
 
-If your svg icon includes a fill color (as in the third example), it will maintain that color on hover, focus, and active states.
-If you use a one-color svg icon without a fill color, css will allow it to inherit the current TEXT color as it's fill color, and will adjust to match the text's color on hover, focus, and active states.  Use a tool like <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a> to optimize the svg markup.
+1. Use a tool like [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize the svg markup. (works best in Chrome)
+1. If you want the `<svg>` to have a fill color that inherits the button's default and hover colors for text, give it a class of  `.fill-anchor` and remove any fill color in the svg markup.
+1. If you want the `<svg>` to have a stroke color that inherits the button's default and hover colors for text, give it a class of  `.stroke-anchor` and remove any stroke color in the svg markup.
+1. The "padlock" icon does not need to be included inline, just add class `.secured`.
+1. Add the attribute `aria-hidden="true"` to prevent screen readers from speaking the svg code. If the button does not contain text, be sure to include an aria-label on the `<a>` for screen-readers.
 
 ```html_example
-<p>
-  <a class="button secondary"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M189.3 128.4L89 233.4c-6 5.8-9 13.7-9 22.4s3 16.5 9 22.4l100.3 105.4c11.9 12.5 31.3 12.5 43.2 0 11.9-12.5 11.9-32.7 0-45.2L184.4 288h217c16.9 0 30.6-14.3 30.6-32s-13.7-32-30.6-32h-217l48.2-50.4c11.9-12.5 11.9-32.7 0-45.2-12-12.5-31.3-12.5-43.3 0z"/></svg> Previous</a>
-   
+<p>SVG whose fill color matches the text color, even on hover.<br>
+  <a class="button secondary">Next <svg aria-hidden="true" class="fill-anchor" style="height:1em; width:1.25em;" xmlns="http://www.w3.org/2000/svg" viewBox="40 60 400 420"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z"/></svg></a>
+</p>
+<p>SVG whose stroke color matches the text color, even on hover.<br>
+  <a href="#" class="button primary">Next <svg aria-hidden="true" class="stroke-anchor" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path stroke-width="3" d="M12 22l10-10L12 2M2 22l10-10L2 2"/></svg></a>
+</p>
+<p>Padlock icon.<br>
   <a href="#" class="button tertiary secured">Log In</a>
-   
-  <a class="button secondary">Next <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="40 40 400 400"><path d="M322.7 128.4l100.3 105c6 5.8 9 13.7 9 22.4s-3 16.5-9 22.4L322.7 383.6c-11.9 12.5-31.3 12.5-43.2 0-11.9-12.5-11.9-32.7 0-45.2l48.2-50.4h-217c-17 0-30.7-14.3-30.7-32s13.7-32 30.6-32h217l-48.2-50.4c-11.9-12.5-11.9-32.7 0-45.2 12-12.5 31.3-12.5 43.3 0z"/></svg></a>
 </p>
 ```
 
@@ -2021,7 +2022,7 @@ A close button is a `<button>` element with the class `.close-button`.  The butt
 - For simple close buttons, we use the multiplication symbol (`&times;`) as the X icon. This icon is wrapped in a `<span>` with the attribute `aria-hidden="true"`, so screen readers don't read the X icon.
 - Some elements, such as [modals](reveal.html), have predefined close button styles.
 
-```html_example
+```html
 <div class="callout background-yellow">
   <button class="close-button" aria-label="Close alert" type="button">
     <span aria-hidden="true">&times;</span>
@@ -2029,6 +2030,17 @@ A close button is a `<button>` element with the class `.close-button`.  The butt
   <p>Look at this close button!</p>
 </div>
 ```
+
+<div class="row">
+  <div class="column medium-6 end">
+    <div class="callout background-yellow">
+      <button class="close-button" aria-label="Close alert" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p>Look at this close button!</p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -2044,22 +2056,20 @@ The below example pairs the callout with the close button component and `data-cl
 
 ```html_example
 <div class="row">
-  <div class="large-12 column">
-    <div class="large-6 column">
-      <div class="callout background-concrete" data-closable>
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p>You can so totally close this!</p>
-      </div>
+  <div class="large-6 column">
+    <div class="callout background-concrete" data-closable>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p>You can so totally close this!</p>
     </div>
-    <div class="large-6 column">
-      <div class="callout background-concrete" data-closable="slide-out-right">
-        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p>You can close me too, and I close using a Motion UI animation.</p>
-      </div>
+  </div>
+  <div class="large-6 column">
+    <div class="callout background-concrete" data-closable="slide-out-right">
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p>You can close me too, and I close using a Motion UI animation.</p>
     </div>
   </div>
 </div>
@@ -2134,7 +2144,7 @@ To set up an Equalizer group, you need a container, which gets the attribute `da
 <p class="lead">There are several different hero styles, depending upon site design and template type.  For most pages, you should use a [page title](#page-title) instead of a hero.</p>
 <ul>
   <li class="item-name"><a href="styleguide_corp.html#heros">Corporate Site Heros</a></li> 
-  <li class="item-name"><a href="styleguide_mf.html#heros">Multifamily Site Heros</a></li> 
+  <li class="item-name"><a href="https://mf.freddiemac.com/special/styleguide/styleguide_mf.html#heros">Multifamily Site Heros</a></li> 
   <li class="item-name">Singlefamily Site TBD</li> 
   <li class="item-name">Capital Markets Site TBD</li> 
 </ul>
@@ -2205,7 +2215,7 @@ Make sure you wrap your content in a `.card-section` element in order to achieve
 
 <ul>
   <li class="item-name"><a href="styleguide_corp.html#cards">Corporate Cards</a></li> 
-  <li class="item-name"><a href="styleguide_mf.html#cards">Multifamily Cards</a></li> 
+  <li class="item-name"><a href="https://mf.freddiemac.com/special/styleguide/styleguide_mf.html#cards">Multifamily Cards</a></li> 
   <li class="item-name">Singlefamily Site TBD</li> 
   <li class="item-name">Capital Markets Site TBD</li> 
 </ul>
@@ -3184,22 +3194,25 @@ Horizontal set of 3 tabs, first tab active.
 - For tables with *more* than 3 rows, add class `.hover` to the `<table>` so that each table row highlights on mouseover. 
 
 Some sidebar tables have unique designs just for their site sections.  
-<ul>
-  <li class="item-name"><a href="styleguide_corp.html#data-tables">Corporate Site</a></li> 
-  <li class="item-name"><a href="styleguide_mf.html#data-tables">Multifamily Site</a></li> 
-  <li class="item-name">Singlefamily Site TBD</li> 
-  <li class="item-name">Capital Markets Site TBD</li> 
-</ul>
+- [Corporate Site](styleguide_corp.html#data-tables)
+- [Multifamily Site](https://mf.freddiemac.com/special/styleguide/styleguide_mf.html#data-tables)
+
 
 ---
 
 ## Stacking Tables
 
-To stack a table on medium and small screens, add the class `.stack`.  Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead.
+Cells that span multiple rows are only shown in their original row -- if you have a complex table that has numerous rowspans and colspans, you may need opt for the scrolling table instead, or you may want to simplify the table design.
 
-By default, *all* header rows are hidden when the table stacks.  You can make the first header cell visible by adding class `.show-header` to the table.  If you opt for this route, make sure you put relevant content info in the first cell.  
-
-To swap the contents of the first cell between stacked and non-stacked displays, use class `.hide-for-large` for content that should only display when stacked and class `.show-for-large` for content that should only show when not stacked.
+How to make a table stack:
+- To add visible row dividers between each data row when stacked, add class `.row-divided` to the `<tbody>`.
+- To stack a table at the medium breakpoint and below, add class `.stack` to the `<table>`.  To stack a table at large breakpoint and below, add class `.large-stack` to the `<table>`.
+- You can combine a stacking table at smaller screens with a scrolling table at wider screens. 
+- Pay attention to cell alignment - take advantage of [alignment classes](#text-alignment) like `.large-text-center` to allow cells to left align at small/stacked sizes, but then align differently when unstacked.
+- Determine how to handle the header rows.
+  - By default, *all* header rows are hidden when the table stacks.  You can make the first header cell visible by adding class `.show-header` to the table.  If you opt for this route, make sure you put relevant content info in the first cell.  
+  - To swap the contents of the first cell between stacked and non-stacked displays, use class `.hide-for-large` for content that should only display when stacked and class `.show-for-large` for content that should only show when not stacked.
+  - When a row of stacked cells need more clarification, you can insert a label into each cell that hides when the breakpoint is wide enough for the table to unstack. Refer to the sample table with mobile data labels.
 
 ---
 
@@ -3215,7 +3228,7 @@ To swap the contents of the first cell between stacked and non-stacked displays,
       <th>Table Header</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="row-divided">
     <tr>
       <th>Row Header</th>
       <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
@@ -3269,9 +3282,9 @@ To swap the contents of the first cell between stacked and non-stacked displays,
       <th>Table Header (desktop only)</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="row-divided">
     <tr>
-      <th>Row Header</th>
+      <tr>Row Header</th>
       <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
       <td>Content Goes Here</td>
       <td>Content Goes Here</td>
@@ -3308,11 +3321,70 @@ To swap the contents of the first cell between stacked and non-stacked displays,
 
 ---
 
+<h3>Stacking table (at large and below) that includes mobile-friendly data labels and varying text alignment.</h3>
+
+Tables that contain lots of dates, numbers, and other values that require specific labeling when stacked, you can use a `<strong>` tag that contains the label, and add a class to hide it when the table unstacks.
+
+```html_example
+<table class="large-stack hover">
+  <thead>
+    <tr>
+      <th class="text-center">Unit Number</th>
+      <th class="text-center">Offer Date</th>
+      <th class="text-center">Closing Date</th>
+      <th class="text-center">Refinance Date</th>
+      <th class="text-center">Asking Price</th>
+      <th class="text-center">Selling Price</th>
+      <th class="text-center">Discount Amount</th>
+      <th class="text-center">Ratio</th>
+      <th class="text-center">Inventory</th>
+    </tr>
+  </thead>
+  <tbody class="row-divided">
+    <tr>
+      <td><strong class="hide-for-xlarge gutter-right">Unit Number:</strong> X236GD12000X-52J</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Offer Date:</strong> 12/05/2003</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Closing Date:</strong> 1/2/2004</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Refinance Date:</strong> 7/15/2009</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Asking Price:</strong> $297,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Selling Price:</strong> $247,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Discount Amount:</strong>$50,000</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Ratio:</strong>3:7</td>
+      <td><strong class="hide-for-xlarge gutter-right">Inventory:</strong>Yes</td>
+    </tr>  
+    <tr>
+      <td><strong class="hide-for-xlarge gutter-right">Unit Number:</strong> J766GD12044X-12V</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Offer Date:</strong> 2/21/2006</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Closing Date:</strong> 3/4/2006</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Refinance Date:</strong> 10/5/2011</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Asking Price:</strong> $194,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Selling Price:</strong> $188,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Discount Amount:</strong>$6,000</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Ratio:</strong>4:5</td>
+      <td><strong class="hide-for-xlarge gutter-right">Inventory:</strong>Yes</td>
+    </tr>   
+    <tr>
+      <td><strong class="hide-for-xlarge gutter-right">Unit Number:</strong> W406JD14043X-05F</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Offer Date:</strong> 4/21/2016</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Closing Date:</strong> 5/4/2016</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Refinance Date:</strong> -na-</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Asking Price:</strong> $224,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Selling Price:</strong> $218,000</td>
+      <td class="xlarge-text-right"><strong class="hide-for-xlarge gutter-right">Discount Amount:</strong>$6,000</td>
+      <td class="xlarge-text-center"><strong class="hide-for-xlarge gutter-right">Ratio:</strong>4:5</td>
+      <td><strong class="hide-for-xlarge gutter-right">Inventory:</strong>No</td>
+    </tr> 
+  </tbody>
+</table>
+```
+
+---
+
 ## Scrolling Table
 
 Got a lot of tubular tabular data? Add a wrapper element with the class `.table-scroll` or `.overflow-horizontal` around your table to enable horizontal scrolling.
 
-<strong>Note:</strong> You can combine scrolling with stacking, but you may want to avoid doing so on tables with complex row and column spanning.
+<strong>Note:</strong> You can combine scrolling with stacking.
 
 ```html
 <div class="table-scroll">
