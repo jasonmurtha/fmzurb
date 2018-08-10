@@ -25,7 +25,18 @@ navLevel2: 'subnav-mbs-lookup'
             <!-- choose form type -->
             <div class="callout background-concrete">
               <form id="chooseFormType" name="chooseFormType" class=""><br>
-                <label for="formType">
+                <fieldset name="formType" id="formType"  class="formSelect required">
+                  <legend>What type of Mortgage Security do you want to look up?</legend>
+                    <input type="radio" name="securityLookup" value="pcSecurityForm" id="pcSecurityForm">
+                      <label for="pcSecurityForm">PC Security</label>
+                    <input type="radio" name="securityLookup" value="giantPCSecurityForm" id="giantPCSecurityForm"><label for="giantPCSecurityForm">Giant PC</label>
+                    <input type="radio" name="securityLookup" value="stripSecurityForm" id="stripSecurityForm">
+                      <label for="stripSecurityForm">Strip</label>
+                    <input type="radio" name="securityLookup" value="REMICSecurityForm" id="REMICSecurityForm">
+                      <label for="REMICSecurityForm">REMIC</label>
+                    <input type="radio" name="securityLookup" value="multifamilySecurityForm" id="multifamilySecurityForm"><label for="multifamilySecurityForm">Multifamily</label>                    
+                </fieldset>
+                <!--<label for="formType">
                   <h5 class="gutter-bottom">What type of Mortgage Security do you want to look up?</h5>
                 </label>
                   <select name="formType" id="formType"  class="formSelect required">
@@ -36,6 +47,7 @@ navLevel2: 'subnav-mbs-lookup'
                     <option value="REMICSecurityForm">REMIC</option>
                     <option value="multifamilySecurityForm">Multifamily</option>
                   </select>
+                -->
               </form>
             </div>
             <!-- choose form type -->
@@ -43,7 +55,7 @@ navLevel2: 'subnav-mbs-lookup'
         </div>
         <h1 class="gutter-bottom gutter-top"></h1>
         <!-- PC Security Lookup Form -->
-        <div id="pcSecurityForm" class="hide form1 gutter-top gutter-left">
+        <div id="pcSecurityForm" class="form1 gutter-top gutter-left">
           <h3 class="">PC Security</h3>
           <form id="MBSPCLookUp" name="MBSPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
             <div class="callout hollow">
@@ -470,19 +482,20 @@ navLevel2: 'subnav-mbs-lookup'
 </div>
 <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
+<script></script>
 <script>
-  document.getElementById("formType").onchange = function getFormType()
+  document.getElementById("formType").onclick = function getFormType()
     {
-      var selectionValue = document.getElementById("formType");
+      var selectionValue = document.getElementsByName("securityLookup");
       var forms = document.getElementsByClassName("form1");
         for (let i = 0; i < forms.length; i++) {
         forms[i].classList.add("hide");
         }
       //get the form value
-      var userSelection = selectionValue.options [selectionValue.selectedIndex].value;
+      var userSelection = selectionValue.querySelector('input[name="securityLookup"]:checked').value;
         //check form value is/is not selected
         document.getElementById(userSelection).classList.remove("hide");         
-        console.log(userSelection);
+        //console.log(userSelection);
     }  
 </script>
 
