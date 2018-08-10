@@ -1,3 +1,6 @@
+//
+// Background Sections
+//
 .background-sapphire { 
   background-color: $sapphire; 
   color: $white;
@@ -6,14 +9,15 @@
     opacity: 0.4;
   }
 }
-.accent-sapphire { 
-  color: $sapphire;
+.background-foam { 
+  background-color: $foam; 
 }
-
-.overlay-sapphire-lead {
-   background-color: rgba($sapphire,0.64);
+.diagonal-band {
+  background-image: linear-gradient(65deg, rgba($white,0.12) 0%, rgba($white,0.12) 40%, rgba($white, 0) 40.01%);
 }
-
+//
+// Container Styles
+//
 .border-white {
   border-color: white !important;
 }
@@ -23,118 +27,36 @@
 .shadow-southeast {
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
 }
-.mosaic-band,
-.footer-bottom-edge {
-  height: 0.625rem;
-  background: $celery;
-  @include mosaic-fill($celery, $mosaic-last); 
+
+//
+// Text Styles 
+//
+.accent-sapphire { 
+  color: $sapphire;
 }
-.landing-band-sides-only.header-nav {
- @include breakpoint(large down){
-   padding-left: 0;
-   padding-right: 0;
- }
+.accent-iceblue {
+  color: $iceblue;
 }
+.accent-primary {
+  color: $primary-color;
+}
+//
+// Template Component Overwrites
+//
 .footer {
   background-color: darken($primary-color, 3%);
 }
-.nav-main {
-  .nav-section {
-    &.active,
-    a:hover,
-    a:focus,
-    a:active  {
-      color: $primary-color;
-    }
-    a {
-      @include breakpoint(xlarge){
-        border-bottom-width: 0; 
-      }
-    } 
-  }
+.subnav-edge {
+  height: rem-calc(10);
+  @include mosaic-fill($celery, $mosaic-last); 
 }
-
-.logo-corp {
- @include breakpoint(medium down){
-   padding-left: rem-calc(20px);
- }
- @include breakpoint(large only){
-   padding-left: rem-calc(30px);
- }
-}
-.nav-main > div:last-child {
- @include breakpoint(xlarge){
-    padding-right: rem-calc(10);
+.footer-bottom-edge {
+  height: rem-calc(10);
+  @include mosaic-fill($celery, $mosaic-last); 
+  @include breakpoint (medium){
+    height: rem-calc(16);
   }
-}
-.xlarge-2.logo-wrapper-duty {
-  @include breakpoint(xlarge){
-    width: rem-calc(200); //12.5rem
-    + .xlarge-10 {
-      max-width: calc(100% - 13rem);
-      float: right;
-    }
-  }
-}
-
-.nav-duty {
-  font-weight: $global-weight-medium;
-  line-height: 1;
-  font-size: rem-calc(16);
-  .menu > li > a { // overriding the ribbon default
-    @include breakpoint(large down) {
-      padding: rem-calc(28 52 24 30);
-    }
-  }
-  .top-bar {
-    @include breakpoint(xlarge) {
-      float: left;
-    }
-  }
-}
-.nav-main {   
-  .nav-duty & {
-    @include breakpoint(large down) { 
-      position: absolute;
-      margin-top: rem-calc(80); 
-      top: 0;
-      width: 100%;
-      z-index: 399;
-    }
-  }
-}  
-   
-/* pseudo extra small below 360px */
-@media screen and (max-width: 22.5em) {
-  .custom-connect {
-    margin-right: -0.625rem;
+  @include breakpoint (large){
+    height: rem-calc(20);
   }
 }   
-/* small only */
-@media screen and (max-width: 35.6249em) {
-  .slant-for-small {
-    -webkit-transform: skew(-10deg);
-    transform: skew(-10deg);
-  }
-  .modal-page-header {
-    padding: 2.5rem 0.5rem;
-  }
-}    
-/* medium and up */
-@media screen and (min-width: 35.625em) {
-  .border-thick {
-    border-width: 6px;
-  }
-  .footer-bottom-edge {
-    height: 1rem;
-  }
-}
-/* large and up */
-@media screen and (min-width: 61.25em) {
-  .border-thick {
-    border-width: 8px;
-  }
-  .footer-bottom-edge {
-    height: 1.25rem;
-  }
-}
