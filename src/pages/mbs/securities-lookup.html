@@ -26,13 +26,13 @@ navLevel2: 'subnav-mbs-lookup'
             <div class="callout background-purple">
               <form id="chooseFormType" name="chooseFormType" class="outline"><br>
                 <label for="formType"><h3>Step 1: Choose a Mortgage Securities Form.</h3></label>
-                  <select name="formType" id="formType"  class="formSelect required">
-                    <option value="pcSecurityForm">PC Security</option>
-                    <option value="giantPCSecurityForm">Giant PC</option>
-                    <option value="stripSecurityForm">Strip</option>
-                    <option value="REMICSecurityForm">REMIC</option>
-                    <option value="multifamilySecurityForm">Multifamily</option>
-                  </select>
+                  <fieldset name="formType" id="formType"  class="formSelect required">
+                    <input name="lookup" type="radio" value="pcSecurityForm">PC Security</input>
+                    <input name="lookup" type="radio" value="giantPCSecurityForm">Giant PC</input>
+                    <input name="lookup" type="radio" value="stripSecurityForm">Strip</input>
+                    <input name="lookup" type="radio" value="REMICSecurityForm">REMIC</input>
+                    <input name="lookup" type="radio" value="multifamilySecurityForm">Multifamily</input>
+                  </fieldset>
               </form>
             </div>
             <!-- choose form type -->
