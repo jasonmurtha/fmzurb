@@ -376,8 +376,11 @@ There are several text and typography styles to choose from, although some style
         <h2 class="page-subtitle">This is class page subtitle (also used for subtitles in <a href="#page-title">page titles</a>)</h2>
         <p class="flex-up">This is class flex-up</p>
         <p>This is class <span class="accent-orange">accent-orange</span>, which can be combined with other classes to change weight or size, such as <span class="enlarge accent-orange weight-medium">accent-orange</span> which combines the accent with <code>.enlarge</code> and <code>.weight-medium</code>.</p>
+        <p>This is class <span class="accent-green">accent-green</span>, which can be combined with other classes to change weight or size, such as <span class="enlarge accent-green weight-medium">accent-green</span> which combines the accent with <code>.enlarge</code> and <code>.weight-medium</code>.</p>
         <p>This is class <span class="accent-yellow">accent-yellow</span>, which can be combined with other classes to change weight or size, such as <span class="enlarge accent-yellow weight-bold">accent-yellow</span> which combines the accent with <code>.enlarge</code> and <code>.weight-bold</code>.</p>
         <p>This is class <span class="accent-gray">accent-gray</span>, which can also be combined with other classes, such as <span class="uppercase accent-gray weight-medium">accent-gray</span> which combines the accent with <code>.uppercase</code> and <code>.weight-medium</code>.</p>
+        <p>This is class <span class="accent-dark-gray">accent-dark-gray</span>, which can also be combined with other classes, such as <span class="uppercase accent-dark-gray weight-medium">accent-dark-gray</span> which combines the accent with <code>.uppercase</code> and <code>.weight-medium</code>.</p>
+        <p>There is class <span class="accent-primary">accent-primary</span>, which can be helpful when you need to override a default link color such as gray links in some card layouts.</p>
       </div>
     </div>
   </li>

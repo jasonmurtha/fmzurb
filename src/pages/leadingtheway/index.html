@@ -151,6 +151,29 @@ a.connect:focus svg {
   border-width: 0;
   color: inherit;
 }
+.overlay-sapphire-lead {
+   background-color: rgba($sapphire,0.64);
+}
+
+/* pseudo extra small below 360px */
+@media screen and (max-width: 22.5em) {
+  .custom-connect {
+    margin-right: -0.625rem;
+  }
+} 
+
+  
+/* small only */
+@media screen and (max-width: 35.6249em) {
+  .slant-for-small {
+    -webkit-transform: skew(-10deg);
+    transform: skew(-10deg);
+  }
+  .modal-page-header {
+    padding: 2.5rem 0.5rem;
+  }
+} 
+
 /* medium and up */
 @media screen and (min-width: 35.625em) {
   .orbit-controls-outside .orbit-previous, 
@@ -175,6 +198,12 @@ a.connect:focus svg {
   }
   .mosaic-band {
     height: 1rem;
+  }
+  .border-thick {
+    border-width: 6px;
+  }
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 70%,rgba(0,0,0,0) 70.1%,rgba(0,0,0,0) 100%);
   }
 }
 /* large and up */
@@ -205,6 +234,12 @@ a.connect:focus svg {
   }
   .mosaic-band {
     height: 1.25rem;
+  }  
+  .border-thick {
+    border-width: 8px;
+  }  
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 61%,rgba(0,0,0,0) 61.1%,rgba(0,0,0,0) 100%);      
   }
 }
 /* custom for leader-panel-band overflow */
@@ -243,6 +278,9 @@ a.connect:focus svg {
   }
   .reveal .callout.xlarge {
     padding-top: 4rem; 
+  }
+  .overlay-sapphire-lead {
+    background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 52%,rgba(0,0,0,0) 52.1%,rgba(0,0,0,0) 100%);      
   }
 }
 

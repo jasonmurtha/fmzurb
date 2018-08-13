@@ -2,7 +2,7 @@
 title: Landing Page Styles
 layout: default
 image: /special/styleguide/files/styleguide.jpg
-stylesheet: [/ss/app_landing.css]
+stylesheet: [/ss/app_landing.css, /ss/app_sf-landing.css]
 description: Style guides and web tools for managing FreddieMac.com websites.
 footer: 
 onload: 
@@ -12,7 +12,7 @@ onload:
   <h1>{{{ title }}}</h1>
   <h2 class="weight-medium">There are 3 types of bands</h2>
   <p>Choose the band based upon how much padding is desired above/below the band contents: landing-band, landing-inner-band, landing-band-sides-only. 
-  All three band classes include minimal padding to the left and right sides, to prevent content from touching the edge of the window.</p>
+  All three band classes include minimal padding to the left and right sides, to prevent content from touching the edge of the window.  If additional padding is desired at larger breakpoints, utilize breakpoint-specific gutter classes or callouts.</p>
 </div>
 <div class="landing-band background-primary">landing-band includes the largest amount of padding above and below the content
 </div>
@@ -26,11 +26,14 @@ onload:
   <h2 class="weight-medium gutter-top">Solid backgrounds</h2>
   <p>Any of the backgrounds from the standard template can be used, as well as these landing-page-only backgrounds.</p>
 </div>
-<div class="landing-inner-band background-offwhite">Offwhite
+<div class="landing-inner-band background-offwhite">background-offwhite
 </div>
-<div class="landing-inner-band background-evergreen">Evergreen
+<div class="landing-inner-band background-evergreen">background-evergreen
 </div>
-
+<div class="landing-inner-band background-sapphire">background-sapphire (SF-landing only)
+</div>
+<div class="landing-inner-band background-foam">background-foam (SF-landing only)
+</div>
 <div class="gutter-all">
   <h2 class="weight-medium gutter-top">Striped backgrounds</h2>
   <p>Add class background-stripes to any band to overlay the background with a semi-transparent striped pattern.</p>
@@ -45,6 +48,22 @@ onload:
 <div class="landing-inner-band background-white background-stripes-green">White with green stripe overlay
 </div>
 <div class="landing-inner-band background-offwhite background-stripes-green">Offwhite with green stripe overlay
+</div>
+
+<div class="gutter-all">
+  <h2 class="weight-medium gutter-top">Gradient background overlays</h2>
+  <p>There are 4 gradient overlays that can be added on top of any background color.</p>
+</div>
+<div class="landing-inner-band background-primary vertical-gradient-dark-bottom">vertical-gradient-dark-bottom
+</div>
+<br class="reduce">
+<div class="landing-inner-band  background-primary vertical-gradient-dark-top">vertical-gradient-dark-top 
+</div>
+<br class="reduce">
+<div class="landing-inner-band background-primary horizontal-gradient-dark-left">horizontal-gradient-dark-left
+</div>
+<br class="reduce">
+<div class="landing-inner-band  background-primary horizontal-gradient-dark-right">horizontal-gradient-dark-right
 </div>
 
 <div class="gutter-all">
@@ -85,17 +104,25 @@ onload:
   </div>
 </div>
 <div class="row-container landing-inner-band">
+  <h2>Text Colors</h2>
+  <p>2 additional text colors are available in the Single-Family landing template.</p>
+  <ul>
+    <li class="accent-sapphire">.accent-sapphire (used on dark backgrounds)</li>
+    <li><span class="accent-iceblue">.accent-iceblue</span> (used on dark backgrounds).</li>
+  </ul>
   <h2>Text Sizes</h2>
   <p>Landing pages require many more options for text than standard web pages.  As a result, the following classes are available in addition to all the text weights, colors and sizes from the standard template.</p>
 
 {{#markdown}}
 | Class              | Min Size| Max Size|Static or Fluid     |
-|--------------------|---------|---------|--------------------|
+|--------------------|---------|---------|--------------------|      
+|`.text-flex-15-18`  | 15px    | 18px    | Responsive Font    |      
 |`.text-static-16-18`| 16px    | 18px    | Static, size changes at Medium |         
 |`.text-flex-16-20`  | 16px    | 20px    | Responsive Font    |      
 |`.text-flex-16-24`  | 16px    | 24px    | Responsive Font    | 
 |`.text-flex-18-24`  | 18px    | 24px    | Responsive Font    | 
 |`.text-flex-18-25`  | 18px    | 25px    | Responsive Font    | 
+|`.text-flex-21-28`  | 21px    | 28px    | Responsive Font    | 
 |`.text-static-24-28`| 24px    | 28px    | Static, size changes at Medium | 
 |`.text-flex-18-30`  | 18px    | 30px    | Responsive Font    | 
 |`.text-flex-22-30`  | 22px    | 30px    | Responsive Font    | 
@@ -108,11 +135,14 @@ onload:
 |`.text-flex-18-42`  | 18px    | 42px    | Responsive Font    | 
 |`.text-flex-22-42`  | 22px    | 42px    | Responsive Font    | 
 |`.text-flex-26-42`  | 26px    | 42px    | Responsive Font    | 
+|`.text-flex-20-48`  | 20px    | 48px    | Responsive Font    | 
 |`.text-flex-30-48`  | 30px    | 48px    | Responsive Font    | 
 |`.text-flex-36-50`  | 36px    | 50px    | Responsive Font    | 
 |`.text-flex-36-52`  | 36px    | 52px    | Responsive Font    | 
 |`.text-flex-36-60`  | 36px    | 60px    | Responsive Font    | 
 |`.text-flex-26-65`  | 26px    | 65px    | Responsive Font    | 
+|`.text-flex-25-70`  | 25px    | 70px    | Responsive Font    | 
+|`.text-flex-32-72`  | 32px    | 72px    | Responsive Font    | 
 |`.text-flex-56-72`  | 56px    | 72px    | Responsive Font    | 
 |`.text-flex-48-84`  | 48px    | 84px    | Responsive Font    | 
 |`.text-flex-42-90`  | 42px    | 90px    | Responsive Font    | 
