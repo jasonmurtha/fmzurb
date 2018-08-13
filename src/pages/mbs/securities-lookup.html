@@ -20,10 +20,13 @@ navLevel2: 'subnav-mbs-lookup'
         <div class="column">
           <div class="gutter-bottom">
             <!-- choose form type -->
-            <div class="callout background-concrete">
+            <div class="gutter-all background-concrete">
               <form id="chooseFormType" name="chooseFormType" class=""><br>
                 <fieldset name="formType" id="formType"  class="formSelect required">
-                  <legend>What type of Mortgage Security do you want to look up?</legend>
+                  <legend>
+                    <h5>What type of Mortgage Security do you want to look up?</h5>
+
+                  </legend>
                     <input type="radio" name="securityLookup" value="pcSecurityForm" id="pcForm" checked="checked">
                       <label for="pcForm">PC Security</label>
                     <input type="radio" name="securityLookup" value="giantPCSecurityForm" id="giantForm"><label for="giantForm">Giant PC</label>
@@ -47,11 +50,11 @@ navLevel2: 'subnav-mbs-lookup'
                 -->
               </form>
             </div>
-            <!-- choose form type -->
           </div>
         </div>
+        <div class="column">
         <!-- PC Security Lookup Form -->
-        <div id="pcSecurityForm" class="form1 gutter-top gutter-left">
+        <div id="pcSecurityForm" class="form1">
           <h3 class="">PC Security</h3>
           <form id="MBSPCLookUp" name="MBSPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
             <div class="callout hollow">
@@ -106,7 +109,7 @@ navLevel2: 'subnav-mbs-lookup'
               <div class="row">
                 <div class="column">
                   <label for="TaxYear" class="formLabel">
-                    <h5 class="icon-required gutter-bottom" style="color: #777874;">
+                    <h5 class="gutter-bottom" style="color: #777874;">
                       Step 3: Select Tax Year
                     </h5>
                   </label>
@@ -127,7 +130,7 @@ navLevel2: 'subnav-mbs-lookup'
       </div>
       <!-- END PC Security Lookup Form -->
       <!-- Giant PC Security Lookup Form -->
-        <div id="giantPCSecurityForm" class="form1 gutter-left">
+        <div id="giantPCSecurityForm" class="form1">
           <h3 class="">Giant PC Security</h3>
           <form id="MBSGiantLookUp" name="MBSGiantLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
           <div class="callout hollow">
@@ -185,7 +188,7 @@ navLevel2: 'subnav-mbs-lookup'
               <div class="row">
                 <div class="column">
                   <label for="TaxYear" class="formLabel">
-                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
                   </label>
                     <select name="TaxYear" id="TaxYear" class="formSelect" required>
                       <option value="2018">2018</option>
@@ -207,7 +210,7 @@ navLevel2: 'subnav-mbs-lookup'
         </div>
       <!-- END Giant PC Security Lookup Form -->
       <!-- Strip Security Lookup Form -->
-        <div id="stripSecurityForm" class="form1 gutter-left">
+        <div id="stripSecurityForm" class="form1">
           <h3 class="">Strip PC Security</h3>
           <form id="MBSStripLookUp" name="MBSStripLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
             <div class="callout hollow">
@@ -252,7 +255,7 @@ navLevel2: 'subnav-mbs-lookup'
               <div class="row">
                 <div class="column">
                   <label for="TaxYear" class="formLabel">
-                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
                   </label>
                     <select name="TaxYear" id="TaxYear" class="formSelect" required>
                       <option value="2018">2018</option>
@@ -271,7 +274,7 @@ navLevel2: 'subnav-mbs-lookup'
         </div>
       <!-- END Strip Security Lookup Form -->
       <!-- REMIC Security Lookup Form -->
-      <div id="REMICSecurityForm" class="form1 gutter-left">
+      <div id="REMICSecurityForm" class="form1">
         <h3 class="">REMIC Security</h3>
           <form id="MBSREMICLookUp" name="MBSREMICLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
           <div class="callout hollow">
@@ -377,7 +380,7 @@ navLevel2: 'subnav-mbs-lookup'
               <div class="row">
                 <div class="column"> 
                   <label for="TaxYear" class="">
-                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
                   </label>
                     <select name="TaxYear" id="TaxYear" class="formSelect" required>
                       <option value="2018">2018</option>
@@ -396,7 +399,7 @@ navLevel2: 'subnav-mbs-lookup'
         </div>
       <!-- END REMIC Security Lookup Form -->
       <!-- Multifamily Lookup Form -->
-        <div id="multifamilySecurityForm" class="form1 gutter-left">
+        <div id="multifamilySecurityForm" class="form1">
           <h3 class="">Multifamily</h3>
           <form id="MBSMFPCLookUp" name="MBSMFPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
           <div class="callout hollow">
@@ -436,7 +439,8 @@ navLevel2: 'subnav-mbs-lookup'
                     <input type="radio" id="multifamilyReport_4" name="Report" value="GEO"><label for="multifamilyReport_4">Geographic Information </label><br>
                     <input type="radio" id="multifamilyReport_5" name="Report" value="LOY"><label for="multifamilyReport_5">Loan Origination Year </label><br>
                     <input type="radio" id="multifamilyReport_6" name="Report" value="QUA"><label for="multifamilyReport_6">Quartiles (Fixed Rate Only) </label><br>
-                    <input type="radio" id="multifamilyReport_7" name="Report" value="ORI"><label for="multifamilyReport_7">Next Interest Rate Adjustment Date <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.freddiemac.com/mbs/html/data_files_5bd.html">Multifamily Gold PC Loan Level (MLYYMM05)</a></label><br>
+                    <input type="radio" id="multifamilyReport_7" name="Report" value="ORI">
+                    <label for="multifamilyReport_7">Next Interest Rate Adjustment Date &mdash; <span class="reduce"><a href="http://www.freddiemac.com/mbs/html/data_files_5bd.html">Multifamily Gold PC Loan Level (MLYYMM05)</a></span></label><br>
                     <input type="radio" id="multifamilyReport_8" name="Report" value="TAX"><label for="multifamilyReport_8">Tax Information</label><br>
                   </span>
               </div>
@@ -447,7 +451,7 @@ navLevel2: 'subnav-mbs-lookup'
             <div class="row">
               <div class="column">
                 <label for="TaxYear">
-                  <h5 class="icon-required" style="color: #777874;">Step 3: Select Tax Year</h5>
+                  <h5 class="" style="color: #777874;">Step 3: Select Tax Year</h5>
                 </label>
                 <select name="TaxYear" id="TaxYear" class="formSelect" required>
                   <option value="2018">2018</option>
@@ -467,7 +471,7 @@ navLevel2: 'subnav-mbs-lookup'
       <!-- END Multifamily Lookup Form -->
     </div>
   </div>
-
+    </div>
 </div>
 <!-- Sidebar -->
 <div class="columns iw_columns large-5"> 
@@ -484,6 +488,7 @@ navLevel2: 'subnav-mbs-lookup'
     </section>
   </div>
 </div>
+</div>
 <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
 <script>
@@ -495,7 +500,10 @@ navLevel2: 'subnav-mbs-lookup'
     $('#pcForm').on('click', function(){
       if ($(this).is(':checked')){
         $('#pcSecurityForm').show();
-        
+        $('#giantPCSecurityForm').hide();
+    $('#stripSecurityForm').hide();
+    $('#REMICSecurityForm').hide();
+    $('#multifamilySecurityForm').hide();
       }
       
     })
