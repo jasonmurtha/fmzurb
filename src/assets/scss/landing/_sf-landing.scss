@@ -27,6 +27,31 @@
 .shadow-southeast {
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
 }
+.manufactured-facts {
+  .main-section {
+    min-height: rem-calc(180);
+  }
+}
+.affordable-facts {
+  .main-section {
+    min-height: rem-calc(220);
+  }
+}
+.rural-facts {
+  .main-section {
+    min-height: rem-calc(220);
+  }
+}
+
+//
+// Orbit Prev/Next 
+//
+.orbit-controls-outside .orbit-previous svg, 
+.orbit-controls-outside .orbit-next svg {
+  fill: currentColor;
+  opacity: 0.25;
+  transform: scale(1.4);
+}
 
 //
 // Text Styles 
@@ -39,6 +64,25 @@
 }
 .accent-primary {
   color: $primary-color;
+}
+
+//
+// Icons
+//
+.checkbox-list li {
+  position: relative;
+  list-style: none;
+  margin-left: 2rem;
+  &::before {
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    left: -2rem;
+    position: absolute;
+    top: 0;
+    background: transparent url("/singlefamily/duty-to-serve/images/checkbox.svg") no-repeat center center;
+  } 
 }
 //
 // Template Component Overwrites
