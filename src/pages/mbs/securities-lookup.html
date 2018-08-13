@@ -9,19 +9,34 @@ onload:
 navLevel1: 'section-mbs'
 navLevel2: 'subnav-mbs-lookup'
 ---
-<style>.form1{display: none;}</style>
- <div class="row iw_row"> 
-    <div class="columns iw_columns large-7"> 
-      <div class="iw_component">
-        <div class="row">
-          <div class="column">
-            <p class="lead">Use the forms below to retrieve Mortgage Securities information.</p>
-            <div class="gutter-bottom">
-              <!-- choose form type
-              <div class="callout background-concrete">
-                <form id="chooseFormType" name="chooseFormType" class=""><br />
+
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7">
+    <div class="iw_component">
+      <!-- MBS Consolidated Form -->
+
+      
+      <div class="row">
+        <div class="column">
+          <div class="gutter-bottom">
+            <!-- choose form type -->
+            <div class="callout background-concrete">
+              <form id="chooseFormType" name="chooseFormType" class=""><br>
+                <fieldset name="formType" id="formType"  class="formSelect required">
+                  <legend>What type of Mortgage Security do you want to look up?</legend>
+                    <input type="radio" name="securityLookup" value="pcSecurityForm" id="pcForm" checked="checked">
+                      <label for="pcForm">PC Security</label>
+                    <input type="radio" name="securityLookup" value="giantPCSecurityForm" id="giantForm"><label for="giantForm">Giant PC</label>
+                    <input type="radio" name="securityLookup" value="stripSecurityForm" id="stripForm">
+                      <label for="stripForm">Strip</label>
+                    <input type="radio" name="securityLookup" value="REMICSecurityForm" id="REMICForm">
+                      <label for="REMICForm">REMIC</label>
+                    <input type="radio" name="securityLookup" value="multifamilySecurityForm" id="multifamilyForm"><label for="multifamilyForm">Multifamily</label>                    
+                </fieldset>
+                <!--<label for="formType">
                   <h5 class="gutter-bottom">What type of Mortgage Security do you want to look up?</h5>
-                  <select name="formType" id="formType" class="formSelect required">
+                </label>
+                  <select name="formType" id="formType"  class="formSelect required">
                     <option value="">Choose Your Lookup Tool</option>
                     <option value="pcSecurityForm">PC Security</option>
                     <option value="giantPCSecurityForm">Giant PC</option>
@@ -31,319 +46,513 @@ navLevel2: 'subnav-mbs-lookup'
                   </select></form>
               </div>
               choose form type -->
-              <div class="callout background-concrete">
-                <form id="chooseFormType" name="chooseFormType" class=""><br />
-                  <h5 class="gutter-bottom">What type of Mortgage Security do you want to look up?</h5>
-                  <fieldset name="formType" id="formType" class="formSelect required">
-                    <input type="radio" name="lookuppOptions" value="pcSecurityForm" id="pcForm" checked>
-                      <label for="pcForm">PC Security</label>
-                    <input type="radio" name="lookuppOptions" value="giantPCSecurityForm" id="giantForm">
-                      <label for="giantForm">Giant PC</label>
-                    <input type="radio" name="lookuppOptions"  value="stripSecurityForm" id="stripForm">
-                      <label for="stripForm">Strip</label>
-                    <input type="radio" name="lookuppOptions" value="REMICSecurityForm" id="remicForm">
-                      <label for="remicForm">REMIC</label>
-                    <input type="radio" name="lookuppOptions" value="multifamilySecurityForm" id="mfForm">
-                      <label for="mfForm">Multifamily</label>
+              
+            </div>
+          </div>
+        </div>
+        <!-- PC Security Lookup Form -->
+        <div id="pcSecurityForm" class="form1 gutter-top gutter-left">
+          <h3 class="">PC Security</h3>
+          <form id="MBSPCLookUp" name="MBSPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <h5 class="gutter-bottom" style="color: #777874;">
+                    Step 1: Enter CUSIP OR Pool Number.
+                  </h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column medium-6">
+                  <label for="CusipNum" class="formLabel">
+                    CUSIP Number
+                  </label>            
+                  <input type="text" placeholder="(e.g. 3128Q43H0)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text">
+                </div>
+                <div class="column medium-1">
+                  <h5 class="uppercase" style="#333;"><br>or</h5>
+                </div>             
+                <div class="column medium-5">
+                  <label for="PoolNum" class="formLabel">
+                    Pool Number
+                  </label>
+                  <input placeholder="(e.g. A84000)" type="text" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text">
+                </div>
+              </div>
+            </div>  
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <label for="Report" class="formLabel">
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
+                  </label>
+                    <span class="fieldgroup required" id="Report">
+                      <input type="radio" id="Report_0" name="Report" checked value="DES"><label for="Report_0">Description </label><br>
+                      <input type="radio" id="Report_1" name="Report" value="HIS"><label for="Report_1">Historical Factors &amp; Coupons </label><br>
+                      <input type="radio" id="Report_2" name="Report" value="OCS"><label for="Report_2">Pool Supplements, Add'l Supplements and PC Offering Circulars</label><br>
+                      <input type="radio" id="Report_3" name="Report" value="BRE"><label for="Report_3">Stratification Information</label><br>
+                      <input type="radio" id="Report_4" name="Report" value="LLF"><label for="Report_4">Loan Level File</label><br>
+                      <input type="radio" id="Report_5" name="Report" value="QUA"><label for="Report_5">Quartiles</label><br>
+                      <input type="radio" id="Report_6" name="Report" value="ORI"><label for="Report_6">Next Interest Rate Adjustment Date</label><br>
+                      <input type="radio" id="Report_7" name="Report" value="MOD"><label for="Report_7">Modified Pool Information </label><br>
+                      <input type="radio" id="Report_8" name="Report" value="TAX"><label for="Report_8">Tax Information</label><br>
+                    </span>
+                </div>
+              </div>
+            </div>  
+            <br>         
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <label for="TaxYear" class="formLabel">
+                    <h5 class="icon-required gutter-bottom" style="color: #777874;">
+                      Step 3: Select Tax Year
+                    </h5>
+                  </label>
+                  <select name="TaxYear" id="TaxYear" class="formSelect" required>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                  </select>
+                </div>
+              </div>
+            </div>  
+            <button class="button primary fmSubmit" type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- END PC Security Lookup Form -->
+      <!-- Giant PC Security Lookup Form -->
+        <div id="giantPCSecurityForm" class="form1 gutter-left">
+          <h3 class="">Giant PC Security</h3>
+          <form id="MBSGiantLookUp" name="MBSGiantLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
+          <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP OR Pool Number.</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column medium-6">
+                  <label for="CusipNum" class="formLabel">CUSIP Number</label>
+                <input placeholder="(e.g. 3133T5S12)" type="text" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text">
+                </div>
+                <div class="column medium-1">
+                  <h5 class="uppercase" style="#333;"><br>or</h5>
+                </div>             
+                <div class="column medium-5">
+                  <label for="PoolNum" class="formLabel">Pool Number</label>
+                <input placeholder="(e.g. D12345)" type="text" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text">
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">                
+                  <label for="Report" class="formLabel">
+                    <h5 class="gutter-bottom" style="color: #777874;">
+                      Step 2: Select Information Option.
+                    </h5>
+                  </label>
+                  <fieldset class="" id="Report">
+                    <input type="radio" id="giantReport_0" name="Report" checked value="DES">
+                      <label for="giantReport_0">Description </label><br>
+                    <input type="radio" id="giantReport_1" name="Report" value="HIS">
+                      <label for="giantReport_1">Historical Factors &amp; Coupons </label><br>
+                    <input type="radio" id="giantReport_2" name="Report" value="OCS">
+                      <label for="giantReport_2">Giant Offering Circular Supplements </label><br>
+                    <input type="radio" id="giantReport_3" name="Report" value="BRE">
+                      <label for="giantReport_3">Stratification Information</label><br>
+                    <input type="radio" id="giantReport_4" name="Report" value="QUA">
+                      <label for="giantReport_4">Quartiles</label><br>
+                    <input type="radio" id="giantReport_5" name="Report" value="ORI">
+                      <label for="giantReport_5">Next Interest Rate Adjustment Date</label><br>
+                    <input type="radio" id="giantReport_6" name="Report" value="MOD">
+                      <label for="giantReport_6">Modified Pool Information</label><br>
+                    <input type="radio" id="giantReport_7" name="Report" value="TAX">
+                      <label for="giantReport_7">Tax Information</label>
                   </fieldset>
-                </form>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <label for="TaxYear" class="formLabel">
+                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                  </label>
+                    <select name="TaxYear" id="TaxYear" class="formSelect" required>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <button class="button primary fmSubmit" type="submit">
+              Submit
+            </button>
+                
+          </form>
+        </div>
+      <!-- END Giant PC Security Lookup Form -->
+      <!-- Strip Security Lookup Form -->
+        <div id="stripSecurityForm" class="form1 gutter-left">
+          <h3 class="">Strip PC Security</h3>
+          <form id="MBSStripLookUp" name="MBSStripLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <h5 class="gutter-bottom" style="color: #777874;">
+                    Step 1: Enter CUSIP Number OR Series &amp; Class.
+                  </h5>
+                  <label for="CusipNum" class="formLabel">
+                    CUSIP Number
+                  </label>
+                    <input type="text" placeholder="(e.g. 3133T5S12)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" />
+                  <label for="StripSeriesNum" class="formLabel">
+                    Series &amp; Class
+                  </label>
+                    <input type="text" id="StripSeriesNum" name="StripSeriesNum" maxlength="5" value="" class="formTextOne text" />
+                  <label for="Class" class="example">Class ID <span class="reduce">(optional)</span></label>
+                    <input type="text" id="Class" name="Class" maxlength="4" value="" class="formTextOne text" />
+                </div>
+              </div>              
+            </div>
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">      
+                  <label for="Report" class="formLabel">
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
+                  </label>
+                  <span class="fieldgroup required" id="Report">
+                    <input type="radio" id="stripReport_0" name="Report" checked value="DES"><label for="stripReport_0">Description </label><br>
+                    <input type="radio" id="stripReport_1" name="Report" value="HIS"><label for="stripReport_1">Historical Factors &amp; Coupons </label><br>
+                    <input type="radio" id="stripReport_2" name="Report" value="OCS"><label for="stripReport_2">Offering Circulars and Supplement  (Prospectus) </label><br>
+                    <input type="radio" id="stripReport_3" name="Report" value="STR"><label for="stripReport_3">Structuring Information</label><br>
+                    <input type="radio" id="stripReport_4" name="Report" value="SET"><label for="stripReport_4">Settlement Information</label><br>
+                    <input type="radio" id="stripReport_5" name="Report" value="TAX"><label for="stripReport_5">Tax Information</label><br>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <label for="TaxYear" class="formLabel">
+                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                  </label>
+                    <select name="TaxYear" id="TaxYear" class="formSelect" required>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <button class="button primary fmSubmit" type="submit">Submit</button>
+          </form>
+        </div>
+      <!-- END Strip Security Lookup Form -->
+      <!-- REMIC Security Lookup Form -->
+      <div id="REMICSecurityForm" class="form1 gutter-left">
+        <h3 class="">REMIC Security</h3>
+          <form id="MBSREMICLookUp" name="MBSREMICLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
+          <div class="callout hollow">
+              <div class="row">
+                <div class="column">
+                  <h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP Number OR Series &amp; Class.</h5>
+                    <label for="CusipNum" class="formLabel">CUSIP Number</label>
+                      <input placeholder="(e.g. 3133T5S12)" type="text" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" />
+                    <label for="RemicNum" class="formLabel">
+                      Series &amp; Class <span class="reduc">REMIC Series Number</span>
+                    </label>
+                    <input type="text" id="RemicNum" name="RemicNum" maxlength="6" value="" class="formTextOne text" />
+                    <label for="Tranche">Class ID (optional)</label>
+                      <input type="text" id="Tranche" name="Tranche" maxlength="6" value="" class="formTextOne text" />
+
+                        <div id="" class="product-table accordion-pointer" data-accordion>
+                          <div class="accordion-item" data-accordion-item>
+                            <a class="accordion-title" href="#">Product Reference Table</a>
+                            <div class="accordion-content" data-tab-content>
+                              <table width="80%" class="table1 zebra" cellpadding="0" cellspacing="0">
+                                <thead>
+                                  <tr>
+                                    <th>Product</th>
+                                    <th>Example Series Number</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Multiclass Certificates (REMIC, Stated Final REMIC) </td>
+                                    <td>3530, SF05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reference REMIC </td>
+                                    <td>R016</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Stripped Interest Certificates (STRIP) </td>
+                                    <td>258</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Structured Pass-through Certificates (T-deal) </td>
+                                    <td>T082</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Freddie Mac Securities REMIC Trust (Whole Loan REMIC) </td>
+                                    <td>05S001</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Multifamily M Series</td>
+                                    <td>M022</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Multifamily Structured Pass-through Certificates<br>
+                                    (K-deal, Q-deal, SB-deal) <br></td>
+                                    <td>K003, Q001, KKA1*, SB001</td>
+                                  </tr>
+                                  <tr> 
+                                    <td>Multifamily Aggregation  Risk Transfer Certificates (KT-deal)</td>
+                                    <td>KT01</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <strong>*KKA series for Lookup purposes is KKA1</strong>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Multifamily REMIC</td>
+                                    <td>P001</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Multifamily ML Certificates (ML-Deal) </td>
+                                    <td>17ML01</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>                  
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="callout hollow">
+            <div class="row">
+              <div class="column">
+                <label for="Report" class="formLabel">
+                    <h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option</h5>
+                  </label>
+                  <span class="fieldgroup required" id="Report">
+                    <input type="radio" id="remicReport_0" name="Report" checked value="DES"><label for="remicReport_0">Description </label><br>
+                    <input type="radio" id="remicReport_1" name="Report" value="HIS"><label for="remicReport_1">Historical Factors &amp; Coupons </label><br>
+                    <input type="radio" id="remicReport_2" name="Report" value="CER"><label for="remicReport_2">Historical Certificate Reports </label><br>
+                    <input type="radio" id="remicReport_3" name="Report" value="OCS"><label for="remicReport_3">Offering Circular Supplement </label><br>
+                    <input type="radio" id="remicReport_4" name="Report" value="STR"><label for="remicReport_4">Structuring Information</label><br>
+                    <input type="radio" id="remicReport_5" name="Report" value="SET"><label for="remicReport_5">Settlement Information</label><br>
+                    <input type="radio" id="remicReport_6" name="Report" value="TAX"><label for="remicReport_6">Tax Information</label><br>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="callout hollow">
+              <div class="row">
+                <div class="column"> 
+                  <label for="TaxYear" class="">
+                    <h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
+                  </label>
+                    <select name="TaxYear" id="TaxYear" class="formSelect" required>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <button class="button primary fmSubmit" type="submit">Submit</button>
+          </form>
+        </div>
+      <!-- END REMIC Security Lookup Form -->
+      <!-- Multifamily Lookup Form -->
+        <div id="multifamilySecurityForm" class="form1 gutter-left">
+          <h3 class="">Multifamily</h3>
+          <form id="MBSMFPCLookUp" name="MBSMFPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide novalidate>
+          <div class="callout hollow">
+            <div class="row">
+              <div class="column">
+                <h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP OR Pool Number.</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column medium-6">
+                <label for="CusipNum" class="formLabel"> 
+                  CUSIP Number
+                </label>
+                <input placeholder="(e.g. 3133T5S12)" type="text" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text">
+              </div>
+              <div class="column medium-1">
+                <h5 class="uppercase" style="#333;"><br>or</h5>
+              </div>
+              <div class="column medium-5">
+                <label for="PoolNum" class="formLabel">Pool Number</label>
+                  <input placeholder="(e.g. D12345)" type="text" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text">
               </div>
             </div>
           </div>
-<!-- PC Security Lookup Form -->
-<div id="pcSecurityForm" class="pcSecurityForm">
-<h3 class="">PC Security</h3>
-<form id="MBSPCLookUp" name="MBSPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP OR Pool Number.</h5>
-</div>
-</div>
-<div class="row">
-<div class="column medium-6"><label class="formLabel" for="CusipNum"> CUSIP Number </label> <input placeholder="(e.g. 3128Q43H0)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" type="text" /></div>
-<div class="column medium-1">
-<h5 class="uppercase"><br />or</h5>
-</div>
-<div class="column medium-5"><label class="formLabel" for="PoolNum"> Pool Number </label> <input placeholder="(e.g. A84000)" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text" type="text" /></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
-<span class="fieldgroup required" id="Report"> <input id="Report_0" name="Report" checked="checked" value="DES" type="radio" /><label for="Report_0">Description </label><br /> <input id="Report_1" name="Report" value="HIS" type="radio" /><label for="Report_1">Historical Factors &amp; Coupons </label><br /> <input id="Report_2" name="Report" value="OCS" type="radio" /><label for="Report_2">Pool Supplements, Add'l Supplements and PC Offering Circulars</label><br /> <input id="Report_3" name="Report" value="BRE" type="radio" /><label for="Report_3">Stratification Information</label><br /> <input id="Report_4" name="Report" value="LLF" type="radio" /><label for="Report_4">Loan Level File</label><br /> <input id="Report_5" name="Report" value="QUA" type="radio" /><label for="Report_5">Quartiles</label><br /> <input id="Report_6" name="Report" value="ORI" type="radio" /><label for="Report_6">Next Interest Rate Adjustment Date</label><br /> <input id="Report_7" name="Report" value="MOD" type="radio" /><label for="Report_7">Modified Pool Information </label><br /> <input id="Report_8" name="Report" value="TAX" type="radio" /><label for="Report_8">Tax Information</label><br /> </span></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
-<select name="TaxYear" id="TaxYear" class="formSelect" required="">
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-</select></div>
-</div>
-</div>
-<button class="button primary fmSubmit" type="submit">Submit</button></form></div>
-<!-- END PC Security Lookup Form --> <!-- Giant PC Security Lookup Form -->
-<div id="giantPCSecurityForm" class="giantPCSecurityForm form1">
-<h3 class="">Giant PC Security</h3>
-<form id="MBSGiantLookUp" name="MBSGiantLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP OR Pool Number.</h5>
-</div>
-</div>
-<div class="row">
-<div class="column medium-6"><label class="formLabel" for="CusipNum">CUSIP Number</label> <input placeholder="(e.g. 3133T5S12)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" type="text" /></div>
-<div class="column medium-1">
-<h5 class="uppercase"><br />or</h5>
-</div>
-<div class="column medium-5"><label class="formLabel" for="PoolNum">Pool Number</label> <input placeholder="(e.g. D12345)" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text" type="text" /></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
-<span class="fieldgroup" id="Report"> <input id="Report_0" name="Report" checked="checked" value="DES" type="radio" /><label for="Report_0">Description </label><br /> <input id="Report_1" name="Report" value="HIS" type="radio" /><label for="Report_1">Historical Factors &amp; Coupons </label><br /> <input id="Report_2" name="Report" value="OCS" type="radio" /><label for="Report_2">Giant Offering Circular Supplements </label><br /> <input id="Report_3" name="Report" value="BRE" type="radio" /><label for="Report_3">Stratification Information </label><br /> <input id="Report_4" name="Report" value="QUA" type="radio" /><label for="Report_4">Quartiles </label><br /> <input id="Report_5" name="Report" value="ORI" type="radio" /><label for="Report_5">Next Interest Rate Adjustment Date</label><br /> <input id="Report_6" name="Report" value="MOD" type="radio" /><label for="Report_6">Modified Pool Information</label><br /> <input id="Report_7" name="Report" value="TAX" type="radio" /><label for="Report_7">Tax Information</label><br /> </span></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
-<select name="TaxYear" id="TaxYear" class="formSelect" required="">
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-</select></div>
-</div>
-</div>
-<button class="button primary fmSubmit" type="submit"> Submit </button></form></div>
-<!-- END Giant PC Security Lookup Form --> <!-- Strip Security Lookup Form -->
-<div id="stripSecurityForm" class="stripSecurityForm form1">
-<h3 class="">Strip PC Security</h3>
-<form id="MBSStripLookUp" name="MBSStripLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP Number OR Series &amp; Class.</h5>
-<label class="formLabel" for="CusipNum"> CUSIP Number </label> <input placeholder="(e.g. 3133T5S12)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" type="text" /> <label class="formLabel" for="StripSeriesNum"> Series &amp; Class </label> <input id="StripSeriesNum" name="StripSeriesNum" maxlength="5" value="" class="formTextOne text" type="text" /> <label class="example" for="Class">Class ID <span class="reduce">(optional)</span></label> <input id="Class" name="Class" maxlength="4" value="" class="formTextOne text" type="text" /></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
-<span class="fieldgroup required" id="Report"> <input id="Report_0" name="Report" checked="checked" value="DES" type="radio" /><label for="Report_0">Description </label><br /> <input id="Report_1" name="Report" value="HIS" type="radio" /><label for="Report_1">Historical Factors &amp; Coupons </label><br /> <input id="Report_2" name="Report" value="OCS" type="radio" /><label for="Report_2">Offering Circulars and Supplement (Prospectus) </label><br /> <input id="Report_3" name="Report" value="STR" type="radio" /><label for="Report_3">Structuring Information</label><br /> <input id="Report_4" name="Report" value="SET" type="radio" /><label for="Report_4">Settlement Information</label><br /> <input id="Report_5" name="Report" value="TAX" type="radio" /><label for="Report_5">Tax Information</label><br /> </span></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
-<select name="TaxYear" id="TaxYear" class="formSelect" required="">
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-</select></div>
-</div>
-</div>
-<button class="button primary fmSubmit" type="submit">Submit</button></form></div>
-<!-- END Strip Security Lookup Form --> <!-- REMIC Security Lookup Form -->
-<div id="REMICSecurityForm" class="REMICSecurityForm form1">
-<h3 class="">REMIC Security</h3>
-<form id="MBSREMICLookUp" name="MBSREMICLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP Number OR Series &amp; Class.</h5>
-<label class="formLabel" for="CusipNum">CUSIP Number</label> <input placeholder="(e.g. 3133T5S12)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" type="text" /> <label class="formLabel" for="RemicNum"> Series &amp; Class <span class="reduc">REMIC Series Number</span> </label> <input id="RemicNum" name="RemicNum" maxlength="6" value="" class="formTextOne text" type="text" /> <label for="Tranche">Class ID (optional)</label> <input id="Tranche" name="Tranche" maxlength="6" value="" class="formTextOne text" type="text" />
-<div id="" class="product-table accordion-pointer" data-accordion="">
-<div class="accordion-item" data-accordion-item=""><a class="accordion-title" href="#">Product Reference Table</a>
-<div class="accordion-content" data-tab-content="">
-<table class="table1 zebra" width="80%" cellspacing="0" cellpadding="0">
-<thead>
-<tr>
-<th>Product</th>
-<th>Example Series Number</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Multiclass Certificates (REMIC, Stated Final REMIC)</td>
-<td>3530, SF05</td>
-</tr>
-<tr>
-<td>Reference REMIC</td>
-<td>R016</td>
-</tr>
-<tr>
-<td>Stripped Interest Certificates (STRIP)</td>
-<td>258</td>
-</tr>
-<tr>
-<td>Structured Pass-through Certificates (T-deal)</td>
-<td>T082</td>
-</tr>
-<tr>
-<td>Freddie Mac Securities REMIC Trust (Whole Loan REMIC)</td>
-<td>05S001</td>
-</tr>
-<tr>
-<td>Multifamily M Series</td>
-<td>M022</td>
-</tr>
-<tr>
-<td>Multifamily Structured Pass-through Certificates<br /> (K-deal, Q-deal, SB-deal)</td>
-<td>K003, Q001, KKA1*, SB001</td>
-</tr>
-<tr>
-<td>Multifamily Aggregation Risk Transfer Certificates (KT-deal)</td>
-<td>KT01</td>
-</tr>
-<tr>
-<td colspan="2"><strong>*KKA series for Lookup purposes is KKA1</strong></td>
-</tr>
-<tr>
-<td>Multifamily REMIC</td>
-<td>P001</td>
-</tr>
-<tr>
-<td>Multifamily ML Certificates (ML-Deal)</td>
-<td>17ML01</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option</h5>
-<span class="fieldgroup required" id="Report"> <input id="Report_0" name="Report" checked="checked" value="DES" type="radio" /><label for="Report_0">Description </label><br /> <input id="Report_1" name="Report" value="HIS" type="radio" /><label for="Report_1">Historical Factors &amp; Coupons </label><br /> <input id="Report_2" name="Report" value="CER" type="radio" /><label for="Report_2">Historical Certificate Reports </label><br /> <input id="Report_3" name="Report" value="OCS" type="radio" /><label for="Report_3">Offering Circular Supplement </label><br /> <input id="Report_4" name="Report" value="STR" type="radio" /><label for="Report_4">Structuring Information</label><br /> <input id="Report_5" name="Report" value="SET" type="radio" /><label for="Report_5">Settlement Information</label><br /> <input id="Report_6" name="Report" value="TAX" type="radio" /><label for="Report_6">Tax Information</label><br /> </span></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="icon-required gutter-bottom" style="color: #777874;">Step 3: Select Tax Year</h5>
-<select name="TaxYear" id="TaxYear" class="formSelect" required="">
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-</select></div>
-</div>
-</div>
-<button class="button primary fmSubmit" type="submit">Submit</button></form></div>
-<!-- END REMIC Security Lookup Form --> <!-- Multifamily Lookup Form -->
-<div id="multifamilySecurityForm" class="multifamilySecurityForm form1">
-<h3 class="">Multifamily</h3>
-<form id="MBSMFPCLookUp" name="MBSMFPCLookUp" action="/mbs/cgi-bin/lookup2.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 1: Enter CUSIP OR Pool Number.</h5>
-</div>
-</div>
-<div class="row">
-<div class="column medium-6"><label class="formLabel" for="CusipNum"> CUSIP Number </label> <input placeholder="(e.g. 3133T5S12)" id="CusipNum" name="CusipNum" maxlength="9" value="" class="formTextOne text" type="text" /></div>
-<div class="column medium-1">
-<h5 class="uppercase"><br />or</h5>
-</div>
-<div class="column medium-5"><label class="formLabel" for="PoolNum">Pool Number</label> <input placeholder="(e.g. D12345)" id="PoolNum" name="PoolNum" maxlength="6" value="" class="formTextOne text" type="text" /></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
-<span class="fieldgroup required" id="Report"> <input id="Report_0" name="Report" checked="checked" value="DES" type="radio" /><label for="Report_0">Description </label><br /> <input id="Report_1" name="Report" value="HIS" type="radio" /><label for="Report_1">Historical Factors &amp; Coupons </label><br /> <input id="Report_2" name="Report" value="OCS" type="radio" /><label for="Report_2">Offering Circular Supplement (Prospectus) </label><br /> <input id="Report_3" name="Report" value="SET" type="radio" /><label for="Report_3">Settlement Information</label><br /> <input id="Report_4" name="Report" value="GEO" type="radio" /><label for="Report_4">Geographic Information </label><br /> <input id="Report_5" name="Report" value="LOY" type="radio" /><label for="Report_5">Loan Origination Year </label><br /> <input id="Report_6" name="Report" value="QUA" type="radio" /><label for="Report_6">Quartiles (Fixed Rate Only) </label><br /> <input id="Report_7" name="Report" value="ORI" type="radio" /><label for="Report_7">Next Interest Rate Adjustment Date <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.freddiemac.com/mbs/html/data_files_5bd.html">Multifamily Gold PC Loan Level (MLYYMM05)</a></label><br /> <input id="Report_8" name="Report" value="TAX" type="radio" /><label for="Report_8">Tax Information</label><br /> </span></div>
-</div>
-</div>
-<br />
-<div class="callout hollow">
-<div class="row">
-<div class="column">
-<h5 class="icon-required" style="color: #777874;">Step 3: Select Tax Year</h5>
-<select name="TaxYear" id="TaxYear" class="formSelect" required="">
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-<option value="2012">2012</option>
-</select></div>
-</div>
-</div>
-<button class="button primary fmSubmit" type="submit">Submit</button></form></div>
-<!-- END Multifamily Lookup Form --></div>
-                          
-                      
-                     </div>
-                  </div>
-                  <div class="columns iw_columns large-5">  
-                    <div class="iw_component">
-                      <section class="sidebar background-gray">
-                        <div class="row">
-                          <div class="column">
-                            <div class="sidebar-txt">
-                              <h2>Freddie Mac Credit Ratings</h2>
-                              <p>Freddie Mac's financial strength, as measured by the three nationally recognized statistical rating organizations Moody's, Standard &amp; Poor's and Fitch</p>
-                              <a class="button hollow">View Raitings</a>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                  </div>
-                </div>
+          <br>  
+          <div class="callout hollow">
+            <div class="row">
+              <div class="column">
+                <label for="Report" class="formLabel">
+                  <h5 class="gutter-bottom" style="color: #777874;">Step 2: Select Information Option.</h5>
+                </label>
+                  <span class="fieldgroup required" id="Report">
+                    <input type="radio" id="multifamilyReport_0" name="Report" checked value="DES"><label for="multifamilyReport_0">Description </label><br>
+                    <input type="radio" id="multifamilyReport_1" name="Report" value="HIS"><label for="multifamilyReport_1">Historical Factors &amp; Coupons </label><br>
+                    <input type="radio" id="multifamilyReport_2" name="Report" value="OCS"><label for="multifamilyReport_2">Offering Circular Supplement (Prospectus) </label><br>
+                    <input type="radio" id="multifamilyReport_3" name="Report" value="SET"><label for="multifamilyReport_3">Settlement Information</label><br>
+                    <input type="radio" id="multifamilyReport_4" name="Report" value="GEO"><label for="multifamilyReport_4">Geographic Information </label><br>
+                    <input type="radio" id="multifamilyReport_5" name="Report" value="LOY"><label for="multifamilyReport_5">Loan Origination Year </label><br>
+                    <input type="radio" id="multifamilyReport_6" name="Report" value="QUA"><label for="multifamilyReport_6">Quartiles (Fixed Rate Only) </label><br>
+                    <input type="radio" id="multifamilyReport_7" name="Report" value="ORI"><label for="multifamilyReport_7">Next Interest Rate Adjustment Date <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.freddiemac.com/mbs/html/data_files_5bd.html">Multifamily Gold PC Loan Level (MLYYMM05)</a></label><br>
+                    <input type="radio" id="multifamilyReport_8" name="Report" value="TAX"><label for="multifamilyReport_8">Tax Information</label><br>
+                  </span>
               </div>
-              <br>
-             <!-- End of iw_section -->
-             <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
-            <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
-            
-            <script>
-              $(document).ready(function(){
-              $('input[type="radio"]').click(function(){
-                  var inputValue = $(this).attr("value");
-                  var targetBox = $("." + inputValue);
-                  $(".form1").not(targetBox).hide();
-                  $(targetBox).show();
-              });
-          });
-          </script>
+            </div>
+          </div>
+          <br>
+          <div class="callout hollow">
+            <div class="row">
+              <div class="column">
+                <label for="TaxYear">
+                  <h5 class="icon-required" style="color: #777874;">Step 3: Select Tax Year</h5>
+                </label>
+                <select name="TaxYear" id="TaxYear" class="formSelect" required>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                </select>
+              </div>
+            </div>
+          </div>
+            <button class="button primary fmSubmit" type="submit">Submit</button>            
+        </form>
+      </div>
+      <!-- END Multifamily Lookup Form -->
+    </div>
+  </div>
+
+</div>
+<!-- Sidebar -->
+<div class="columns iw_columns large-5"> 
+  <div class="iw_component">
+    <section class="background-gray"> 
+      <div class="row">
+        <div class="column">
+          <div class="sidebar-txt">
+            <h3>Header</h3>
+            <p>Content</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/'+'script>')</script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/'+'script>')</script>
+<script>
+  $(function(){
+    $('#giantPCSecurityForm').hide();
+    $('#stripSecurityForm').hide();
+    $('#REMICSecurityForm').hide();
+    $('#multifamilySecurityForm').hide();
+    $('#pcForm').on('click', function(){
+      if ($(this).is(':checked')){
+        $('#pcSecurityForm').show();
+        
+      }
+      
+    })
+    $('#giantForm').on('click', function(){
+      if ($(this).is(':checked')){
+        $('#giantPCSecurityForm').show();
+        $('#pcSecurityForm').hide();
+        $('#stripSecurityForm').hide();
+        $('#REMICSecurityForm').hide();
+        $('#multifamilySecurityForm').hide();
+      }
+    });
+    $('#stripForm').on('click', function(){
+      if ($(this).is(':checked')){
+        $('#stripSecurityForm').show();
+        $('#pcSecurityForm').hide();
+        $('#giantPCSecurityForm').hide();
+        $('#REMICSecurityForm').hide();
+        $('#multifamilySecurityForm').hide();
+      }
+    });
+    $('#REMICForm').on('click', function(){
+      if ($(this).is(':checked')){
+        $('#REMICSecurityForm').show();
+        $('#pcSecurityForm').hide();
+        $('#giantPCSecurityForm').hide();
+        $('#stripSecurityForm').hide();
+        $('#multifamilySecurityForm').hide();
+      }
+    });
+    $('#multifamilyForm').on('click', function(){
+      if ($(this).is(':checked')){
+        $('#multifamilySecurityForm').show();
+        $('#pcSecurityForm').hide();
+        $('#giantPCSecurityForm').hide();
+        $('#stripSecurityForm').hide();
+        $('#REMICSecurityForm').hide();
+      }
+    });
+
+  });
+</script>
+<script>
+    /*
+    <script>
+    document.getElementById("formType").onchange = function getFormType()
+      {
+        var selectionValue = document.getElementById("formType");
+        var forms = document.getElementsByClassName("form1");
+          for (let i = 0; i < forms.length; i++) {
+          forms[i].classList.add("hide");
+          }
+        //get the form value
+        var userSelection = selectionValue.options [selectionValue.selectedIndex].value;
+          //check form value is/is not selected
+          document.getElementById(userSelection).classList.remove("hide");         
+          console.log(userSelection);
+    } */   
+</script>
+
