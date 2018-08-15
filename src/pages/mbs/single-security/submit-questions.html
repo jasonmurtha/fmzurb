@@ -1,0 +1,50 @@
+---
+title: Submit a Question
+subtitle:
+layout: capital
+herotype: title
+grid: 2-col
+breadcrumb: [{"name":"Home", "url":"/mbs/single-security/submit-questions.html"},{"name":"Submit a Question","url":"/mbs/single-security/submit-questions.html"},{"name":"Submit a Question"}]
+onload:
+navLevel1: 'section-mbs'
+navLevel2: 'subnav-mbs-data'
+---
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
+      <div class="row">
+        <div class="column">
+          <form data-abide novalidate id="FM_Form" name="FM_Form" action="/cgi-bin/email/email.cgi" method="post" enctype="x-www-form-urlencoded" class="fmform">
+            
+            <label class="icon-required" for="Name">Name</label>
+              <input id="Name" name="Name" required type="text" />
+            <label class="icon-required" for="Email">Email</label>
+              <input id="Email" name="user-email" required type="email" />
+            <label class="icon-required" for="comments">Question/Comments</label>
+                <textarea id="comments" name="comments" rows="4" cols="40" required></textarea><label for="Comments" class="formLabel">Question/Comments</label>
+            
+            <p><em>We will not be able to respond to questions or comments individually. Instead, we will update the existing FAQs featured <a href="/mbs/single-security/single-security-csp-faqs.html">here</a>.</em></p>
+            <button class="button primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sidebar -->
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      <section class="sidebar background-gray">
+        <div class="row">
+          <div class="column">
+            <div class="sidebar-txt">
+              <h2>Subscribe for Updates</h2>
+              <p>Updates and technical resources in support of your implementation of the Single Security.</p>
+              <a class="button hollow" href="/mbs/single-security/subscription.html">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </section>     
+    </div>
+  </div>
+  <!-- Sidebar -->
+</div>
