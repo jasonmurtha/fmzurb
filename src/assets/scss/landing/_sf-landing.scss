@@ -15,6 +15,29 @@
 .diagonal-band {
   background-image: linear-gradient(65deg, rgba($white,0.12) 0%, rgba($white,0.12) 40%, rgba($white, 0) 40.01%);
 }
+@media screen {
+    .background-quote:before {
+        content: "\201D";
+        font-size: 8rem;
+        font-size: calc(128px + 160 * (100vw)/1180);
+        opacity: .2;
+        display: inline;
+        float: right;
+        width: .45em;
+        position: absolute;
+		top: 200px;
+		right:300px;
+        padding-left: .05em;
+        font-family: Lucida Sans,Lucida Sans Typewriter,Lucida Console,monospace;
+        line-height: .25em
+    }
+}
+
+@media screen and (min-width: 78.75em) {
+    .background-quote:before {
+        font-size:22rem
+    }
+}
 //
 // Container Styles
 //
@@ -103,4 +126,7 @@
   @include breakpoint (large){
     height: rem-calc(20);
   }
-}   
+}
+.has-tip {
+  border: none;
+}
