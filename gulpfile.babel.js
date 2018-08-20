@@ -259,16 +259,15 @@ function javascript(done) {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
- // commenting out landing until it has a reason to exist
- // gulp.src(PATHS.javascriptlanding)
- //   .pipe($.sourcemaps.init())
- //   .pipe($.babel({ignore: ['what-input.js']}))
- //   .pipe($.concat('app_landing.js'))
- //   .pipe($.if(PRODUCTION, $.uglify()
- //     .on('error', e => { console.log(e); })
- //   ))
- //   .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
- //   .pipe(gulp.dest(PATHS.dist + '/js'));
+  gulp.src(PATHS.javascriptlanding)
+    .pipe($.sourcemaps.init())
+    .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.concat('app_landing.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist + '/js'));
   done();
 }
 

@@ -1,6 +1,7 @@
 ---
 title: "Duty to Serve"
-layout: default
+subtitle: Every Single Family deserves an affordable home
+layout: landing-sf
 description: "Every Single Family deserves an affordable home"
 image: ""
 keywords:
@@ -13,80 +14,189 @@ footer:
 onload: 
 ---
 
-<a class="show-on-focus reduce" href="#skipper">Skip to Content</a>
-<div class="show-for-print">FreddieMac.com</div> 
-<!--googleoff: all-->
-<header id="header-nav" class="landing-band-sides-only header-nav hide-for-print">                    
-  <div class="row-container" id="nav-duty">
-    <div class="row">
-      <div class="column xlarge-2 logo-wrapper-duty">
-        <div class="title-bar">
-          <div class="float-right hide-for-xlarge">
-            <button id="menu-toggle" class="toggle-icon button" type="button" data-toggle="nav-main body-wrapper" aria-label="toggle menu">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 54 54" stroke-width="6">
-              <g class="menu"><line x1="1" y1="44" x2="47" y2="44"/><line x1="1" y1="24" x2="47" y2="24"/><line x1="1" y1="4" x2="47" y2="4"/></g>
-              <g class="menu-close"><line x1="1" y1="1" x2="47" y2="47"/><line x1="47" y1="1" x2="1" y2="47"/></g>
-            </svg>
-            </button>
-          </div>
-          <a href="/" class="logo-corp">
-            <img class="no-border" src="/images/FreddieMacLogo.svg" alt="Freddie Mac logo">
-          </a>
-        </div>
-      </div> 
-      <div class="column xlarge-10">
-        
-        <nav class="nav-main weight-medium" id="nav-main" role="navigation" data-toggler aria-expanded="false" data-animate="fade-in fade-out" style="display: none; transition-duration: 0s;">      
-          <div class="nav-section active" id="section-home">
-            <a id="nav-home" href="/">Home</a>
-          </div>
-          <div class="nav-section" id="section-manufactured">
-            <a id="nav-manufactured" href="/">Manufactured Housing</a>
-          </div>
-          <div class="nav-section" id="section-rural">
-            <a id="nav-rural" href="/">Rural Housing</a>
-          </div>
-          <div class="nav-section" id="section-affordable">
-            <a id="nav-affordable" href="/">Affordable Housing Preservation</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>                    
-</header>    
-<!--googleon: all-->  
-<div class="mosaic-band show-for-xlarge"></div> 
+{{> sf-duty-header}}
+<script>
+  document.getElementById("section-home").classList.add('active');          
+</script> 
 
 <!--HERO IMAGE-->
 <div class="landing-band landing-hero background-primary">    
   <div class="row-container text-center medium-text-left">
-    <div class="row small-collapse medium-uncollapse">
+    <div class="row small-collapse medium-uncollapse gutter-bottom">
       <div class="column">
+        <div class="callout small show-for-xlarge"></div>
         <div class="callout small-to-large"></div>
-        <h1 class="gutter-top text-flex-32-72">Duty To Serve</h1>
-        <h2 class="weight-light gutter-bottom text-flex-16-32">Every Single Family deserves an affordable home</h2>
+        <div class="callout small-to-large"></div>
+        <p class="text-flex-15-18 uppercase weight-bold accent-iceblue no-margin">Freddie Mac Single-Family</p>
+        <h1 class="text-flex-32-72">{{title}}</h1>
+        <h2 class="weight-light text-flex-21-28 accent-iceblue no-margin"><em>{{subtitle}}</em></h2>
+        <div class="callout small show-for-xlarge"></div>
+        <div class="callout small-to-large"></div>
+        <div class="callout small-to-large"></div>
       </div>  
     </div>      
   </div>   
 </div>
 <!--END HERO IMAGE-->
 
-<div class="landing-band" style="background-color: #DBE7EB;">  
+<div class="background-foam landing-band">   
   <div class="row-container">
-    <div class="row">
+    <div class="row gutter-bottom">
       <div class="column">
-        content
-      </div>
-    </div>
-  </div>
-</div>  
-<div class="landing-inner-band background-primary">
-  <div class="row-container">
-    <div class="row">
-      <div class="column">
-        prefooter
+        <div class="media-object stack-for-small gutter-bottom text-center medium-text-left">
+          <div class="media-object-section">  
+              <img class="no-border" style="width:180px;" src="/singlefamily/duty-to-serve/images/dts_identifier_primary.png" alt="Duty to Serve Icon" />
+          </div>
+          <div class="media-object-section align-self-middle">
+            <p class="text-flex-21-28">Supporting underserved markets by financing more <strong class="weight-bold">rural and manufactured housing</strong> and <strong class="weight-bold">preserving more affordable housing</strong> for homebuyers nationwide.</p>
+          </div>
+        </div>
+        <div class="gutter-bottom"></div>
+        <br class="reduce show-for-xlarge">         
+        <div class="row large-up-3 text-center">
+          <div class="column">
+            <div class="callout small">
+              <h3>Manufactured housing</h3>
+              <p class="flex-up weight-medium">It’s a viable source of sustainable, energy-efficient and affordable homeownership market.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="callout small">
+              <h3>Rural Housing</h3>
+              <p class="flex-up weight-medium">Removing barriers and supporting innovative solutions to put qualified borrowers in rural markets on the path to homeownership. </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="callout small">
+              <h3>Affordable housing preservation</h3>
+              <p class="flex-up weight-medium">Let’s about keep homes affordable throughout the life of the mortgage and reduce housing costs.</p>
+            </div>
+          </div>
+        </div>   
       </div>
     </div>
   </div>
 </div>
+
+<div class="background-primary landing-band vertical-gradient-dark-top">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">  
+        <div class="row">
+          <div class="column xlarge-offset-1 large-4 xlarge-3"> 
+            <p class="text-flex-15-18 uppercase weight-bold accent-iceblue half-margin-bottom">Featured Video</p>
+            <h2 class="text-flex-26-42 gutter-bottom no-margin">Introduction to Duty to Serve</h2>
+          </div>
+          <div class="column xlarge-offset-1 large-8 xlarge-6 end"> 
+              <div class="responsive-embed widescreen">
+              <iframe width="100%" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>     
+  </div>
+</div>
+
+<div class="background-foam landing-band">   
+  <div class="row-container text-center">
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">
+        <h2 class="text-flex-26-42 accent-sapphire">Thought Leadership / Industry Insights</h2>
+        <div class="small-to-default"></div>
+        <div class="row medium-up-2 large-up-4 text-left"  data-equalizer>
+          <div class="column">
+            <div class="background-white" data-equalizer-watch>
+              <a class="block" href="#">
+                <img src="https://placekitten.com/350/200" alt="Img description" />
+              </a>
+              <div class="callout">
+                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
+                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="background-white" data-equalizer-watch>
+              <a class="block" href="#">
+                <img src="https://placekitten.com/350/200" alt="Img description" />
+              </a>
+              <div class="callout">
+                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
+                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="background-white" data-equalizer-watch>
+              <a class="block" href="#">
+                <img src="https://placekitten.com/350/200" alt="Img description" />
+              </a>
+              <div class="callout">
+                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
+                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="background-white" data-equalizer-watch>
+              <a class="block" href="#">
+                <img src="https://placekitten.com/350/200" alt="Img description" />
+              </a>
+              <div class="callout">
+                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
+                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="background-primary landing-band vertical-gradient-dark-top">
+  <div class="row-container">
+    <div class="row gutter-bottom-large large-up-3 text-flex-16-20">
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span  style="opacity: .6;">About Duty to Serve</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="#"><strong>FHFA Rules</strong></a></p>
+            <p><a class="block" href="#"><strong>Freddie Mac Duty to Serve Plan</strong></a></p>
+            <p><a class="block" href="#"><strong>FAQs</strong> – Frequently Asked Questions about Single-Family Duty to Serve</a></p>
+            <br class="hide-for-large">
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">From Our Leaders</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="/perspectives/danny_gardner/20160919_saving_resources.html"><strong>Saving Your Resources and the Earth's</strong> &ndash; Danny Gardner</a></p>
+            <p><a class="block" href="/perspectives/david_leopold/20161003_rental_green_advantage.html"><strong>Rental Housing Needs a Green Advantage</strong> &ndash; David Leopold</a></p>
+            <br class="hide-for-large">
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">Freddie Mac Learning</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="#"><strong>Title of Learning Resource</strong> – synopsis or additional info | Date, Location, Etc.</a></p>
+            <p><a class="block" href="#"><strong>Title of Learning Resource</strong> – synopsis or additional info | Date, Location, Etc.</a></p>
+            <p><a class="block" href="#"><strong>Title of Learning Resource</strong> – synopsis or additional info | Date, Location, Etc.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {{> footer-landing-duty}}

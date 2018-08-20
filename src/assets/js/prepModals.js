@@ -62,6 +62,7 @@ function preRevealGallery() {
 }
 function preRevealVideo() {  
   var w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth; 
+    console.log($(".video-modal[data-src]").length);
   if (w <= 450) { return; }
   $(".video-modal[data-src]").each(function(x){    
     var $lnk = $(this),
@@ -88,6 +89,7 @@ function preRevealVideo() {
       "html": '<div class="' + $wrapperClass + '"><iframe id="'+ $frameId +'" frameborder="0" src="" allowfullscreen></iframe></div>'
     });
     $parent.prepend(modal); 
+    console.log('modal prepended to '+i);
     $('#'+i).find('.responsive-embed').append(btnClose);      
     $lnk.attr('data-open', i).attr('aria-controls', i);
     $('#'+i).on('open.zf.reveal', function(){$('#'+$frameId).attr('src',$src+'&autoplay=1');}).on('closed.zf.reveal', function(){$('#'+$frameId).attr('src','')});
