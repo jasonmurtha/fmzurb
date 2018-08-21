@@ -556,7 +556,7 @@ $slider-radius: $global-radius;
 // ----------
 
 $switch-background: $medium-gray;
-$switch-background-active: $primary-color;
+$switch-background-active: $fm-green;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
@@ -632,7 +632,7 @@ $titlebar-icon-spacing: 26px 21px;
 // -----------
 
 $has-tip-font-weight: $global-weight-normal;
-$has-tip-border-bottom: dotted 1px $dark-gray;
+$has-tip-border-bottom: dotted 1px currentColor;
 $tooltip-background-color: $fm-gray;
 $tooltip-color: $white;
 $tooltip-padding: 0.75rem;

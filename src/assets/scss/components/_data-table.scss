@@ -100,6 +100,14 @@ table tfoot td {
     border-bottom: 2px solid scale-color($fm-blue, $lightness: 60%);
   }
 }
+tr.row-subheader {
+  + tr::before  { 
+    border-bottom-width: 0 !important; 
+  }
+  th {
+    background: scale-color($fm-blue, $lightness: 70%);
+  }
+}
 .vertical-middle { vertical-align: middle; } 
 .vertical-top { vertical-align: top; } 
 .vertical-baseline {   vertical-align: baseline; } 

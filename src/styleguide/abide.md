@@ -255,21 +255,36 @@ color : /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/
 
 ## Additional Patterns and Validators
 
-The following patterns have already been added, and can be combine with a type="text" to restrict the provided value: `pattern="digits_dashes"`, `pattern="tel"`.
+The following patterns have already been added, and can be combine with a type="text" to restrict the provided value: `pattern="digits_dashes"`, `pattern="YYslashMM"`, `pattern="tel"`.
 
 ```javascript
 \\  string of numbers and dashes only, good for elements like SSN
 Foundation.Abide.defaults.patterns['digits_dashes'] = /^[0-9-]*$/;
+Foundation.Abide.defaults.patterns['YYslashMM'] = /^\d{2}\/(0[1-9]|1[0-2])$/;
 \\ generous phone number format with optional parenthesis around area code, and optional dashes or spaces between number groupings
 \\ any of these are valid: (###) ###-#### or ###-###-#### or ### ###-#### or ########## followed by any text, ext #, etc.
 Foundation.Abide.defaults.patterns['tel'] = /^\(?\d{3}\)?[\s+|-]?\d{3}[\s+|-]?\d{4}/;
 ```
 In addition to these named pattern, you can create a simple regular expression and use it as the pattern value.  For example: `pattern="[0-9]*"` would represent a string of digits, while allowing for leading zeros, useful for account numbers and zipcodes.
 
-```html
-<input id="SSN" type="text" pattern="digits_dashes" required>
-<input id="phone" type="text" pattern="tel" required>
-<input id="zipcode" type="text" pattern="[0-9]*" required>
+```html_example
+<div class="row">
+  <div class="column medium-5 medium-offset-1 end">
+    <p class="intro">Built-in patterns:</p>
+    <label for="SSN">Social Security Number</label>
+    <input id="SSN" type="text" pattern="digits_dashes" required placeholder="###-##-####">
+    
+    <label for="phone">Telephone Number</label>
+    <input id="phone" type="text" pattern="tel" required  placeholder="###-##-####">
+    
+    <label for="date4">Enter Date (YY/MM)</label>
+    <input id="date4" type="text" pattern="YYslashMM" required placeholder="YY/MM">
+
+    <p class="intro">Regular Expression pattern:</p>
+    <label for="zipcode">Postal Code</label>
+    <input id="zipcode" type="text" pattern="[0-9]*" required placeholder="#####">
+  </div>
+</div>
 ```
 
 ---

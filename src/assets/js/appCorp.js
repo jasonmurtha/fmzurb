@@ -20,6 +20,7 @@ if (getWidth() > 569) {
   Foundation.Tabs.defaults.matchHeight = true;
 }
 Foundation.Abide.defaults.patterns['digits_dashes'] = /^[0-9-]*$/;
+Foundation.Abide.defaults.patterns['digits_slashes'] = /^[0-9\/]*$/;
 Foundation.Abide.defaults.patterns['tel'] = /^\(?\d{3}\)?[\s+|-]?\d{3}[\s+|-]?\d{4}/;
 Foundation.Abide.defaults['validators']['checked_required'] =
   function ($el, required, parent) {
