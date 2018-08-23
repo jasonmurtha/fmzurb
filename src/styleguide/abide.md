@@ -289,7 +289,7 @@ In addition to these named pattern, you can create a simple regular expression a
 
 ---
 
-## Adding Custom Pattern and Validator
+## Adding Custom Pattern and Validator *
 
 In the main javascript file for your site, you can
 - override builtin patterns and validators before foundation is initialized

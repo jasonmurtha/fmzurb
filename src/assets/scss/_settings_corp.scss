@@ -555,17 +555,17 @@ $slider-radius: $global-radius;
 // 31. Switch
 // ----------
 
-$switch-background: $medium-gray;
+$switch-background: $fm-gray;
 $switch-background-active: $fm-green;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
+$switch-radius: 999em;   //guaranteed pill shape at all heights;
 $switch-margin: $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-radius:  999em;   //guaranteed pill shape at all heights;
 $switch-paddle-transition: all 0.25s ease-out;
 
 // 32. Table
