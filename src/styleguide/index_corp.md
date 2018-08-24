@@ -36,6 +36,7 @@
       media-object	(styles are different, see <a href="styleguide_fm.html#media-objects">media objects</a>)<br>
       orbit	(buttons and slide nav is automated for you, see <a href="orbit.html">carousels</a>) <br>
       reveal (buttons are automated for you, see <a href="reveal.html">modals</a>)<br>
+      switch	<br>
       tabs (styles are different, see <a href="styleguide_fm.html#tabs">tabs</a>)<br>
       table	(styles are different, see <a href="#data-tables">data tables</a>)
     </div>
@@ -63,7 +64,6 @@
       responsiveToggle	<br>
       slider	<br>
       sticky	<br>
-      switch	<br>
       thumbnail	
     </div>
   </li>

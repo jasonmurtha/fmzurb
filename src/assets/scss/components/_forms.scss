@@ -78,12 +78,12 @@ fieldset {
 [type="radio"] ,  
 [type="checkbox"] {
   @include element-invisible;
-  + label {
+  + label:not(.switch-paddle) {
     margin-left: 0;
     padding-top: rem-calc(3px);
     line-height: 1.6;
   }    
-  + label::before {    
+  + label:not(.switch-paddle)::before {    
     background: $white;
     border: 2px solid $fm-gray;
     content: '\2003';
@@ -96,7 +96,7 @@ fieldset {
     margin: 0 0.5em 0 0;
     text-align: center;
   }
-  &:checked + label {
+  &:checked + label:not(.switch-paddle) {
     color: $fm-green;
     &::before {
       color: $white;
@@ -126,17 +126,19 @@ fieldset {
     }
   }
 }
-[type="radio"]:checked + label::before {
+[type="radio"]:checked + label:not(.switch-paddle)::before {
     background: $fm-green;
     background: radial-gradient(ellipse at center, $fm-green 0%,$fm-green 60%,$white 60%);
 }
-[type="radio"] + label::before {
+[type="radio"] + label:not(.switch-paddle)::before {
   border-radius: 50%;  
 } 
-[type="checkbox"]:checked + label::before {
+[type="checkbox"]:checked + label:not(.switch-paddle)::before {
     content: '\2713';  
     background: $fm-green;
-}  
+}
+
+
 .outline { 
   select:not(:active):not(:focus),
   input:not(:active):not(:focus),
@@ -187,8 +189,8 @@ fieldset {
   }
   .fieldset,
   .input-group-label, 
-  [type="radio"] + label::before,
-  [type="checkbox"] + label::before {
+  [type="radio"] + label:not(.switch-paddle)::before,
+  [type="checkbox"] + label:not(.switch-paddle)::before {
     border-color: $white;
   }
   [type="radio"]:checked + label,

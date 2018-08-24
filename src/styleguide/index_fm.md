@@ -2996,6 +2996,77 @@ If a form has only a single field, you can combine the label, field, and submit 
 
 ---
 
+### Example of a toggle switch
+
+Add the `.switch` class to an element to create a switch. 
+1. Inside the switch, add an `<input type="checkbox">` with the class `.switch-input`. 
+1. Next to that, create a `<label>` with the class `.switch-paddle`. (The order **must** be `<input>` first, then `<label>`.)
+1. Add meaningful text inside the `<label>` and wrap it in the `.show-for-sr` class to visually mask the text. 
+1. Give the `<input>` a unique ID and point the `<label>` to it with the `for` attribute. (This makes the switch clickable.) 
+1. Optional Variations: 
+  - Use the classes `.tiny`, `.small`, or `.large` to change the switch from the default size.
+  - Place active and inactive text inside of a switch. The active text (`.switch-active`) only displays when the switch is on, and the inactive text (`.switch-inactive`) only displays when the switch is off.  Add `aria-hidden="true"` to these text elements.
+  - Add class `.inline-block` to the `.switch` element to display it inline with text.
+
+```html_example
+<form class="form">  
+  <div> 
+    <label>Tiny:</label>
+     <div class="switch tiny">
+      <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+      <label class="switch-paddle" for="exampleSwitch">
+        <span class="show-for-sr">Describe Action</span>
+      </label>
+    </div>
+  </div>
+
+  <label>Small:</label>
+  <div class="switch small">
+    <input class="switch-input" id="exampleSwitch2" type="checkbox" name="exampleSwitch2">
+    <label class="switch-paddle" for="exampleSwitch2">
+      <span class="show-for-sr">Describe Action</span>
+    </label>
+  </div>
+  
+  <label>Default (no size class needed):</label>
+   <div class="switch">
+    <input class="switch-input" id="exampleSwitch3" type="checkbox" name="exampleSwitch3">
+    <label class="switch-paddle" for="exampleSwitch3">
+      <span class="show-for-sr">Describe Action</span>
+    </label>
+  </div> 
+  
+  <label>Large:</label>
+   <div class="switch large">
+    <input class="switch-input" id="exampleSwitch4" type="checkbox" name="exampleSwitch4">
+    <label class="switch-paddle" for="exampleSwitch4">
+      <span class="show-for-sr">Describe Action</span>
+    </label>
+  </div> 
+
+  <label>Should we order pizza for lunch?</label>  
+  <div class="switch large">
+    <input class="switch-input" id="yes-no" type="checkbox" name="yes-no">
+    <label class="switch-paddle" for="yes-no">
+      <span class="show-for-sr">Do you like me?</span>
+      <span class="switch-active" aria-hidden="true">Yes</span>
+      <span class="switch-inactive" aria-hidden="true">No</span>
+    </label>
+  </div>
+  
+  <label for="exampleSwitch5" class="inline-block">Inline Toggle!</label>
+  <div class="switch small inline-block">
+    <input class="switch-input" id="exampleSwitch5" type="checkbox" name="exampleSwitch5">
+    <label class="switch-paddle" for="exampleSwitch5">
+      <span class="show-for-sr">Describe Action</span>
+    </label>
+  </div>
+  
+</form>
+```
+
+---
+
 ### Example on different background colors
 
 When the form appears on a darker [background color](#colors), add the class `.outline` to the form to invert the borders to white. Avoid putting forms inside containers that are red, green or orange to avoid conflicting with error/success messages and primary buttons.
@@ -3586,14 +3657,10 @@ title="Fancy word for a beetle."><img src="/images/icon-tooltip.svg" alt="tool t
 <p class="intro">Media objects are super useful components for displaying an item, usually an image, alongside some content, usually text. You could put lists, grids, or even other media objects inside.</p>
 
 A media object is a container with the class `.media-object`, and two or three sections with the class `.media-object-section`.  
-
-Media objects are one of hte few items we use in flexbox mode, so the class .main-section must be added to the section that should stretch in width to fill the available space.
-
-Each section aligns to the top by default, but individual sections can also be middle- or bottom-aligned by adding `.align-&#42;` classes on the container to align every child section at once, or individual child sections can be aligned with `.align-self-&#42;` classes.
-
-To override the width of the images in the media object, there are additional classes of `.image1-leads-blurb3`, `.image1-leads-blurb2`, and `blurb3-leads-image2`.
-
-By adding the `.stack-for-small` class, you can make your media object sections stack at small screen.
+1. Media objects are one of the few items we use in flexbox mode, so the class `.main-section` must be added to your `.media-object-section` section that should stretch in width to fill the available space.
+1. Each section aligns to the top by default, but `.align-*` (top/middle/bottom) classes can be used on the `.media-object` container to align every child section at once, or individual child sections can be aligned with `.align-self-*` (top/middle/bottom) classes.
+1. Optional: By adding the `.stack-for-small` class, you can make your media object sections stack at small screen.
+1. Optional: To override the width of the images in the media object, there are additional classes of `.image1-leads-blurb3`, `.image1-leads-blurb2`, and `blurb3-leads-image2`.
 
 ---
 
@@ -3610,7 +3677,7 @@ In the example, the first is not stacked for small sizes, but the second version
       <img src="files/ribbon.jpg" alt="Autism Ribbon" />
     </a>
   </div>
-  <div class="media-object-section">
+  <div class="media-object-section main-section">
     <h3 class="article-headline"><a href="#">Autism as an Asset in the Workplace</a></h3>
     <p class="enlarge">Reaching into an untapped source of talent.</p>
   </div>
@@ -3621,7 +3688,7 @@ In the example, the first is not stacked for small sizes, but the second version
       <img src="files/ribbon.jpg" alt="Autism Ribbon" />
     </a>
   </div>
-  <div class="media-object-section">
+  <div class="media-object-section main-section">
     <h3 class="article-headline"><a href="#">Autism as an Asset in the Workplace</a></h3>
     <p class="enlarge">Reaching into an untapped source of talent.</p>
   </div>
@@ -3638,7 +3705,7 @@ These are often used inside a list container, where each media object is an `<li
 
 ```html_example
 <div class="media-object blurb3-leads-image2 stack-for-small">
-  <div class="media-object-section">
+  <div class="media-object-section main-section">
     <div class="article-date-lg"><strong><span class="uppercase">Outlook</span></strong> | July 19, 2016</div>
     <h3 class="article-headline"><a href="#">Fun After Fifty </a></h3>
     <p>According to the common wisdom, Baby Boomers — like Peter Pan — refuse to grow older. Instead of retiring, they launch second — and third — careers. Instead of moving to seniors-oriented communities, they “age-in-place” or, even better, move into the heart of a walkable city. Human interest stories in the Sunday papers claim that 70 is the new 40 and 60 still has bad skin and trouble talking to girls. These clichés make great copy, but how accurate are they?  <a href="#">More</a></p>
@@ -3662,7 +3729,7 @@ Images inside media object with class `image1-leads-blurb2` have a maximum width
       <img src="files/post-1.jpg" alt="image description" />
     </a>
   </div>
-  <div class="media-object-section">
+  <div class="media-object-section main-section">
     <div class="article-date">May 9, 2016</div>
     <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
     <div class="article-category">Homeownership</div>
@@ -3678,7 +3745,7 @@ Images inside media object with class `image1-leads-blurb2` have a maximum width
           <img src="files/hanson-sm.jpg" alt="image description" />
         </a>
       </div>
-      <div class="media-object-section">
+      <div class="media-object-section main-section">
         <div class="article-date">May 9, 2016</div>
         <h3 class="sidebar-headline"><a href="#">Homework and a Home Purchase</a></h3>
       </div>
