@@ -10,3 +10,10 @@
     padding: rem-calc(0 18 0);
   }
 }
+.iw_viewport-wrapper {
+  > div:nth-child(n+2) { 
+    @include breakpoint(large down){
+      max-height: 99999vh;
+    }
+  }
+}
