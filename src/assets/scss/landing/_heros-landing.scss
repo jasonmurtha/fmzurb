@@ -132,7 +132,88 @@
 
 .nhm-banner-borrower {
   background-image: url("/corporate/national-homeownership-month/images/blue-diagonal-bg.png");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+}
+
+.landing-hero.sfdts-home {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_home.jpg");
+  background-position: 45% 38%;
+  @include breakpoint(medium){
+    background-position: 10% 38%;
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 34%;
+  }
+}
+.landing-hero.sfdts-mh {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_manufactured.jpg");
+  background-position: center bottom;
+  @include breakpoint(xlarge){
+    background-position: left 90%;
+  }
+  @include breakpoint(xxlarge){
+    background-position: left 83%;
+  }
+}
+
+.landing-hero.sfdts-rh {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_rural.jpg");
+  @include breakpoint(medium){
+    background-position: center 90%;
+  }
+  @include breakpoint(large){
+    background-position: center 75%;
+  }
+  @include breakpoint(xlarge){
+    background-position: center 65%;
+  }
+}
+
+.landing-hero.sfdts-ah {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_affordable.jpg");
+  background-position: center bottom;
+  @include breakpoint(medium){
+    background-position: center;
+  }
+  @include breakpoint(xlarge){
+    background-position: center 38%;
+  }
+}
+.sfdts-events {
+  text-align: center; 
+  .position-relative {  
+    min-height: 240px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(large){
+      min-height: 300px; 
+    }
+  }
+  .block.background-sheer {
+    background: none;
+    position: relative; 
+    &::before {
+      transition: background 0.25s ease-out;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+    opacity: 1;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background: rgba($black, 0.3);  
+        z-index: 200; 
+        transition: background 0.25s ease-out;             
+      }
+      .full {
+        z-index: 220; 
+      }
+    }
+  }
 }

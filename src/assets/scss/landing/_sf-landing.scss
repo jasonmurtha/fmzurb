@@ -8,6 +8,9 @@
     border-color: $white; 
     opacity: 0.4;
   }
+  .background-white hr {
+    border-color: $sapphire;
+  }
 }
 .background-foam { 
   background-color: $foam; 
@@ -15,29 +18,25 @@
 .diagonal-band {
   background-image: linear-gradient(65deg, rgba($white,0.12) 0%, rgba($white,0.12) 40%, rgba($white, 0) 40.01%);
 }
-@media screen {
-    .background-quote:before {
-        content: "\201D";
-        font-size: 8rem;
-        font-size: calc(128px + 160 * (100vw)/1180);
-        opacity: .2;
-        display: inline;
-        float: right;
-        width: .45em;
-        position: absolute;
-		top: 200px;
-		right:300px;
-        padding-left: .05em;
-        font-family: Lucida Sans,Lucida Sans Typewriter,Lucida Console,monospace;
-        line-height: .25em
-    }
+
+.background-quote::after {
+  content: "\201D";
+  font-size: rem-calc(128);
+  font-size: calc(128px + 224 * (100vw)/1180);
+  opacity: .2;
+  display: block;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0.8em;
+  font-family: Lucida Sans, Lucida Sans Typewriter, Lucida Console, monospace;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(400);
+  }
 }
 
-@media screen and (min-width: 78.75em) {
-    .background-quote:before {
-        font-size:22rem
-    }
-}
 //
 // Container Styles
 //
@@ -51,17 +50,17 @@
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
 }
 .manufactured-facts {
-  .main-section {
+  .media-object {
     min-height: rem-calc(180);
   }
 }
 .affordable-facts {
-  .main-section {
+  .media-object {
     min-height: rem-calc(220);
   }
 }
 .rural-facts {
-  .main-section {
+  .media-object {
     min-height: rem-calc(220);
   }
 }
@@ -88,6 +87,11 @@
 .accent-primary {
   color: $primary-color;
 }
+.accent-white:hover,
+.accent-white:focus,
+.accent-white:active {
+  color: $white;
+}
 
 //
 // Icons
@@ -106,6 +110,9 @@
     top: 0;
     background: transparent url("/singlefamily/duty-to-serve/images/checkbox.svg") no-repeat center center;
   } 
+}
+svg.fill-sapphire {
+  fill: $sapphire;
 }
 //
 // Template Component Overwrites
