@@ -94,11 +94,11 @@ a.connect:focus svg {
   position: relative;
   min-height: 7.75rem;
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 74rem;
   line-height: 1;
 }
 .leader-panel-nav {
-  width: 63.25rem;
+  width: 74.375rem;
   min-height: 7.25rem;
   float: left;
 }
@@ -106,6 +106,10 @@ a.connect:focus svg {
   padding: 0 0.625rem;
   width: 6.25rem;
   float: left; 
+}
+.leader-panel-item:first-child {
+  padding-left: 0;
+  width: 5.625rem;
 }
 .leader-panel-item:hover,
 .leader-panel-item:focus,
@@ -196,7 +200,7 @@ a.connect:focus svg {
     width: 26px;
     height: 26px;
   }
-  .mosaic-band {
+  .subnav-edge {
     height: 1rem;
   }
   .border-thick {
@@ -232,7 +236,7 @@ a.connect:focus svg {
     width: 30px;
     height: 30px;
   }
-  .mosaic-band {
+  .subnav-edge {
     height: 1.25rem;
   }  
   .border-thick {
@@ -242,10 +246,21 @@ a.connect:focus svg {
     background: linear-gradient(to right, rgba(16,68,119,0.64) 0%,rgba(16,68,119,0.64) 61%,rgba(0,0,0,0) 61.1%,rgba(0,0,0,0) 100%);      
   }
 }
+
 /* custom for leader-panel-band overflow */
-@media screen and (max-width: 67em) {
+@media screen and (max-width: 78.4375em) {
   .landing-band-sides-only.overflow-right {
     padding-right: 0;
+  } 
+}
+@media screen and (min-width: 78.5em)  and (max-width: 81em) {
+  .landing-band-sides-only.overflow-right {
+      padding-left: 1.875rem;
+      padding-right: 1.5rem;
+  } 
+}
+@media screen and (max-width: 78.4925em) {
+  .landing-band-sides-only.overflow-right {    
     padding-top: 1.125rem;
   }  
   .leader-panel-wrapper {
@@ -261,10 +276,7 @@ a.connect:focus svg {
     background: linear-gradient(to right, rgba(16,68,119,0) 0%, #104477 100%); 
   }
 }
-@media screen and (min-width: 64em) {
-  .leader-panel-nav {
-    width: 62.5rem;
-  }
+@media screen and (min-width: 78em) {
   .leader-panel-nav-help {
     display: none;
   }
@@ -315,7 +327,7 @@ a.connect:focus svg {
     </div>      
   </div> 
 </div>       
-<div class="mosaic-band"> </div>  
+<div class="subnav-edge"> </div>  
 
 <!--HERO IMAGE-->
 <div class="landing-hero background-primary ltw-hero">    
@@ -375,27 +387,27 @@ a.connect:focus svg {
       {{> ltw-leader-panel-8}}
       {{> ltw-leader-panel-9}}
       {{> ltw-leader-panel-10}}
+      {{> ltw-leader-panel-11}}      
+      {{> ltw-leader-panel-12}}
     </div>
   </div>
 </div>  
 <!--LEADERS NAV-->
-<div class="landing-band-sides-only background-sapphire overflow-right gutter-top gutter-bottom">
-  <div class="row-container text-center weight-normal text-static-16-18">
-    <div class="row collapse">
-      <div class="column">
-        <div class="leader-panel-wrapper clearfix" id="leader-panel-wrapper">
-          <div class="leader-panel-nav" data-tabs id="leader-panels" data-deep-link="false" data-link-class="leader-panel-item" data-panel-class="leader-panel">
-            {{> ltw-leaders-nav}}
-          </div>
+<div class="landing-band-sides-only background-sapphire overflow-right gutter-top gutter-bottom weight-normal text-static-16-18">
+  <div class="row collapse">
+    <div class="column">
+      <div class="leader-panel-wrapper clearfix" id="leader-panel-wrapper">
+        <div class="leader-panel-nav text-center" data-tabs id="leader-panels" data-deep-link="false" data-link-class="leader-panel-item" data-panel-class="leader-panel">
+          {{> ltw-leaders-nav}}
         </div>
-        <p class="text-right no-margin leader-panel-nav-help reduce uppercase gutter-right primary" style="line-height: 1;"><a id="slideLeaders" href="javascript:void(0);"><svg aria-hidden="true" style="opacity: 0.6; vertical-align: text-top;" xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 512">
+      </div>
+      <p class="text-right no-margin leader-panel-nav-help reduce uppercase gutter-right primary" style="line-height: 1;"><a id="slideLeaders" href="javascript:void(0);"><svg aria-hidden="true" style="opacity: 0.6; vertical-align: text-top;" xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 512">
 <path fill="#FFF" d="M213.7 256L213.7 256 213.7 256 380.9 81.9c4.2-4.3 4.1-11.4-0.2-15.8l-29.9-30.6c-4.3-4.4-11.3-4.5-15.5-0.2L131.1 247.9c-2.2 2.2-3.2 5.2-3 8.1 -0.1 3 0.9 5.9 3 8.1l204.2 212.7c4.2 4.3 11.2 4.2 15.5-0.2l29.9-30.6c4.3-4.4 4.4-11.5 0.2-15.8L213.7 256z"/>
 </svg> Slide for more</a></p>
-      </div>
-    </div>  
-  </div>
+    </div>
+  </div>  
 </div>
-<div class="mosaic-band"> </div>  
+<div class="subnav-edge"> </div>  
 
 <div class="background-concrete background-stripes landing-band">
   <div class="row-container text-center">
