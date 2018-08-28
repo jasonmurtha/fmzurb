@@ -12,176 +12,85 @@ navLevel2: 'subnav-mbs-data'
 <div class="row iw_row"> 
   <div class="columns iw_columns large-7"> 
     <div class="iw_component">
-      <p class="lead">For information about the files listed on this page go to <a href="/mbs/security-data/cs-general.html">Product Specific Reports File Help</a>.</p>
-       <h3 class="gutter-top"></h3>
-        <h3>Historical&nbsp;Daily New Issues</h3>
-          <p class="form_instructions">(Daily) Fixed rate and ARM pools that will settle in the requested month</p>
-            <form id="MBSPCReport1" name="MBSPCReport1" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-              <div class="callout hollow">
-                <div class="row">
-                  <div class="column">
-                    <div class="row">
-                      <div class="column medium-6 large-12 xlarge-6">
-                        <input type="hidden" id="" name="file" value="diYYMMDD.zip">
-                        <input type="hidden" id="" name="head" value="Historical Daily New Issues">                   
-                        <label for="DATE2a" class="formLabel">* Enter Date</label>                      
-                        <input type='text' id="DATE2a" name="DATE2" value="" class="formTextOne text required" placeholder="(YY/MM/DD)">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="column">
-                        <button class="button primary" type="submit">Submit</button>
-                      </div>
-                    </div>
-                  </div>                  
-                </div>
-              </div>              
-            </form>
+      <div class="row">
+        <div class="column">
+          <p class="lead">For information about the files listed on this page go to <a href="/mbs/security-data/cs-general.html">Product Specific Reports File Help</a>.</p>
           <h3 class="gutter-top"></h3>
-        <h3>Historical Daily Loan Level Fixed-Rate Disclosure</h3>
-          <p class="form_instructions">(Daily) Fixed rate pools that will settle in the requested month. (Beginning August 28, 2017 this file excludes loans for Modified/Reinstated and 75-day securities)
-          <form id="MBSPCReport2" name="MBSPCReport2" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-            <div class="callout hollow">
-                <div class="row">
-                  <div class="column">
-                    <div class="row">
-                      <div class="column medium-6 large-12 xlarge-6">
-                        <input type="hidden" id="" name="file" value="flYYMMDD.zip">
-                        <input type="hidden" id="" name="head" value="Fixed-Rate LLD">
-                        <label for="DATE2b" class="formLabel">* Enter Date</label>
-                        <input type='text' id="DATE2b" name="DATE2" value="" class="formTextOne text required" placeholder="(YY/MM/DD)">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="column">       
-                        <button class="button primary" type="submit">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </form>
-        <h3 class="gutter-top"></h3>
-        <h3>Historical Daily Loan Level ARM Disclosure</h3>
-          <p class="form_instructions">(Daily) ARM pools that will settle in the requested month. (Beginning August 28, 2017 this file includes loans for Modified/Reinstated and 75-day securities)</p>
-            <form id="MBSPCReport3" name="MBSPCReport3" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-              <div class="callout hollow">
-                <div class="row">
-                  <div class="column">
-                    <div class="row">
-                      <div class="column medium-6 large-12 xlarge-6">
-                        <input type="hidden" id="file3" name="file" value="alYYMMDD.zip">
-                        <input type="hidden" id="head2" name="head" value="ARM LLD">          
-                        <label for="DATE2c" class="formLabel">* Enter Date</label>
-                        <input type='text' id="DATE2c" name="DATE2" value="" class="formTextOne text required" placeholder="(YY/MM/DD)">
-                      </div>
-                    </div>
+            <h3>Historical Daily New Issues</h3>
+              <p>(Daily) Fixed rate and ARM pools that will settle in the requested month.</p>
+                <form id="MBSMFReport3" name="MBSMFReport3" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                  <div class="callout hollow">
                     <div class="row">
                       <div class="column">
-                        <button class="button primary" type="submit">Submit</button>
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="file3" name="file" value="mnYYMMDD.zip">
+                            <input type="hidden" id="head3" name="head" value="Historical Daily New Issues">                   
+                            <label for="DATE2a" class="formLabel">Enter Date</label>                      
+                            <input type='text' id="DATE2a" name="DATE2" value="" required placeholder="(YY/MM/DD)">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>                  
+                    </div>
+                  </div>              
+                </form>
+              <h3 class="gutter-top"></h3>
+            <h3>Multifamily Gold PC Settlement Loan Schedule</h3>
+              <p>(Monthly) Data needed to model a specific Multifamily Gold PC. Available first business day.</p>
+              <form id="MBSMFReport1" name="MBSMFReport1" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                    <div class="row">
+                      <div class="column">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="" name="file" value="cpYYMM01.zip">
+                            <input type="hidden" id="" name="head" value="Multifamily Gold PC Settlement Loan Schedule">
+                            <label for="DATE1a" class="formLabel">Enter Date</label>
+                            <input type='text' id="DATE1a" name="DATE1" value="" required placeholder="(YY/MM/DD)">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">       
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </form>
-        <h3 class="gutter-top"></h3>
-        <h3>Collapsed Pools</h3>
-          <p class="form_instructions">(Monthly) List of pools which collapsed from the previous month, available 5th Business Day</p>
-          <form id="MBSPCReport4" name="MBSPCReport4" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-            <div class="callout hollow">
-              <div class="row">
-                <div class="column">
-                  <div class="row">
-                    <div class="column medium-6 large-12 xlarge-6">
-                      <input type="hidden" id="" name="file" value="plYYMM.zip">
-                      <input type="hidden" id="" name="head" value="Collapsed Pools">            
-                      <label for="DATE1a" class="formLabel">* Enter Date</label>
-                          <input type='text' id="DATE1a" name="DATE1" value="" class="formTextOne text required" placeholder="(YY/MM)">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                      <button class="button primary" type="submit">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        <h3 class="gutter-top"></h3>
-        <h3>Paid Off Pools</h3>
-          <p class="form_instructions">(Monthly) List of pools which paid off for the current month, available 5th Business Day <b>(Beginning July 2001)</b></p>
-          <div class="callout hollow">
-            <div class="row">
-              <div class="column">
-                <form id="MBSPCReport5" name="MBSPCReport5" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">            
-                  <div class="row">
-                    <div class="column medium-6 large-12 xlarge-6">
-                      <input type="hidden" id="" name="file" value="ppYYMM05.zip">
-                      <input type="hidden" id="" name="head" value="Paid Off Pools">          
-                      <label for="DATE1b" class="formLabel">* Enter Date</label>
-                      <input type='text' id="DATE1b" name="DATE1" value="" class="formTextOne text required" placeholder="(YY/MM)">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                      <button class="button primary" type="submit">Submit</button>
+              </form>
+            <h3 class="gutter-top"></h3>
+            <h3>Updated Multifamily Gold PC Settlement Loan Schedule</h3>
+              <p>(Daily) Updated data needed to model a specific Multifamily Gold PC. Available as needed.</p>
+                <form id="MBSMFReport2" name="MBSMFReport2" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                  <div class="callout hollow">
+                    <div class="row">
+                      <div class="column">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="file2" name="file" value="cpYYMMDD.zip">
+                            <input type="hidden" id="head2" name="head" value="Updated Multifamily Gold PC Settlement Loan Schedule">          
+                            <label for="DATE2" class="formLabel">Enter Date</label>
+                            <input type='text' id="DATE2" name="DATE2" value="" required placeholder="(YY/MM/DD)">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
-            <br>
-            <div class="callout background-concrete gutter-top">
-              <div class="row">
-                <div class="column">
-                  <p class="weight-bold">To view or download pre-July 2001 reports, please enter desired date and submit request here</p>
-                  <form id="MBSPCReport6" name="MBSPCReport6" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-                    <div class="row">
-                      <div class="column medium-6 large-12 xlarge-6">                         
-                        <input type="hidden" id="" name="file" value="ppYYMM07.zip">
-                        <input type="hidden" id="" name="head" value="Paid Off Pools (pre-July 2001)">              
-                        <label for="DATE1c" class="formLabel">* Enter Date (pre-July 2001)</label>
-                        <span class="example"></span>
-                        <input type='text' id="DATE1c" name="DATE1" value="" class="formTextOne text required" placeholder="(YY/MM)">                        
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="column">
-                        <button class="button primary" type="submit">Submit</button>
-                      </div>
-                    </div> 
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>              
-        <h3 class="gutter-top"></h3>
-        <h3>Disclosure Correction Files</h3>
-          <p class="form_instructions">Pool and loan level data changes that were published after initial disclosure (posted as needed)</p>
-          <form id="MBSPCReport7" name="MBSPCReport7" action="/mbs/cgi-bin/pc_corrects.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
-            <div class="callout hollow">
-              <div class="row">
-                <div class="column">
-                  <div class="row">
-                    <div class="column medium-6 large-12 xlarge-6">
-                      <input type="hidden" id="" name="head" value="Disclosure Correction Files">
-                        <label for="DATE1d" class="formLabel">* Enter Date</label>
-                      <input type='text' id="DATE1d" name="DATE1" value="" class="formTextOne text required" placeholder="(CCYY - i.e. 2006)">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                      <button class="button primary" type="submit">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+        </div>
       </div>
     </div>
+  </div>
   <!-- Sidebar -->
   <div class="columns iw_columns large-5"> 
     <div class="iw_component">
