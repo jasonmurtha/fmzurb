@@ -1,0 +1,192 @@
+---
+title: Giant Reports
+subtitle: 
+layout: capital
+herotype: title
+grid: 2-col
+breadcrumb: [{"name":"Home", "url":"/mbs/security-data/giant-reports.html"},{"name":"PC Reports","url":"/mbs/security-data/giant-reports.html"},{"name":"Giant Reports"}]
+onload: formSetup
+navLevel1: 'section-mbs'
+navLevel2: 'subnav-mbs-data'
+---
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
+      <div class="row">
+        <div class="column">
+          <p class="lead">For information about the files listed on this page go to <a href="/mbs/html/cs_general.html?tupe=popup&amp;width=800&amp;height=600">Product Specific Reports File Help</a>.</p>
+            <h3>Giant Collateral Report</h3>
+              <p>(Monthly) Gold and 75 day Giant PC schedules, available 2nd business day.</p>
+                <form id="MBSGiantReport2" name="MBSGiantReport2" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">  
+                  <div class="callout hollow">
+                    <div class="row">
+                      <div class="column">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="file2" name="file" value="icYYMM.zip">
+                            <input type="hidden" id="head1" name="head" value="Giant Collateral Report">                   
+                            <label for="DATE1a">Enter Date</label>                      
+                            <input type='text' id="DATE1a" name="DATE1" value="" required placeholder="(YY/MM)">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              <h3 class="gutter-top"></h3>
+              <h3>Giant Collateral Report (GNMA)</h3>
+              <p>(Monthly) GNMA Giant PC schedules, available 2nd business day.</p>
+              <form id="MBSGiantReport3" name="MBSGiantReport3" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                    <div class="row">
+                      <div class="column">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="file3" name="file" value="imYYMM.zip">
+                            <input type="hidden" id="head2" name="head" value="Giant Collateral Report (GNMA)">
+                            <label for="DATE1b">Enter Date</label>
+                            <input type='text' id="DATE1b" name="DATE1" required value="" placeholder="(YY/MM)">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">       
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            <h3 class="gutter-top"></h3>
+            <h3>Stripped Giant Collateral List</h3>
+            <p>(Monthly) Available on the day after settlement.</p>
+              <form id="MBSGiantReport4" name="MBSGiantReport4" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                  <div class="row">
+                    <div class="column">
+                      <div class="row">
+                        <div class="column medium-6 large-12 xlarge-6">
+                          <input type="hidden" id="file3" name="file" value="tcYYMM.zip">
+                          <input type="hidden" id="head2" name="head" value="Giant Collateral Report">          
+                          <label for="DATE1c">Enter Date</label>
+                          <input type='text' id="DATE1c" name="DATE1" required value=""  placeholder="(YY/MM)">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="column">
+                          <button class="button primary" type="submit">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <h3 class="gutter-top"></h3>
+            <h3>GNMA Stripped Giant Collateral List</h3>
+              <p>(Monthly) Available on the day after settlement.</p>
+              <form id="MBSGiantReport5" name="MBSGiantReport5" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                  <div class="row">
+                    <div class="column">
+                      <div class="row">
+                        <div class="column medium-6 large-12 xlarge-6">
+                          <input type="hidden" id="" name="file" value="tmYYMM.zip">
+                          <input type="hidden" id="" name="head" value="GNMA Stripped Giant Collateral List">            
+                          <label for="DATE1d">Enter Date</label>
+                            <input type='text' id="DATE1d" name="DATE1" required value=""  placeholder="(YY/MM))">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="column">
+                          <button class="button primary" type="submit">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            <h3 class="gutter-top"></h3>
+            <h3>GNMA ARM Giant Collateral List</h3>
+              <p>(Monthly) Available on the day after settlement.</p>
+              <form id="MBSGiantReport6" name="MBSGiantReport6" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                  <div class="row">
+                    <div class="column">
+                      <div class="row">
+                        <div class="column medium-6 large-12 xlarge-6">
+                          <input type="hidden" id="" name="file" value="agYYMM.zip">
+                          <input type="hidden" id="" name="head" value="GNMA ARM Giant Collateral List">            
+                          <label for="DATE1d">Enter Date</label>
+                            <input type='text' id="DATE1e" name="DATE1" required value=""  placeholder="(YY/MM))">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="column">
+                          <button class="button primary" type="submit">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            <h3 class="gutter-top"></h3>
+            <h3>GNMA Giant New Issue Report</h3>
+              <p>(Monthly) Available on the day after settlement.</p>
+              <form id="MBSGiantReport7" name="MBSGiantReport7" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">      
+              <div class="callout hollow">
+                <div class="row">
+                  <div class="column">
+                    <div class="row">
+                      <div class="column medium-6 large-12 xlarge-6">
+                        <input type="hidden" id="" name="file" value="ggYYMMDD.zip">
+                        <input type="hidden" id="" name="head" value="GNMA Giant New Issue Report">       
+                        <label for="DATE1b">Enter Date</label>
+                        <input type='text' id="DATE12" name="DATE2" required value=""  placeholder="(YY/MM/DD)">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="column">
+                        <button class="button primary" type="submit">Submit</button>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div> 
+            </form>                      
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- Sidebar -->
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      <div class="tertiary-nav">
+        <h2><a href="/investors/">Security Data</a></h2> 
+        <nav>
+          <ul class="no-bullet">
+            <li><a href="#">PC Reports</a></li>
+            <li><a href="#">Index Amortization Pool Reports</a></li>
+            <li><a href="#">Giant Reports</a></li>
+            <li><a href="#">REMIC Reports</a></li>
+            <li><a href="#">Strip Reports</a></li>
+            <li><a href="#">Multifamily Reports</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="sidebar background-blue">
+        <div class="row">
+          <div class="column">
+            <h3 class="sidebar-title">Reports</h3>
+             
+          </div>
+        </div>
+      </section>     
+    </div>
+  </div>
+  <!-- Sidebar -->
+</div>

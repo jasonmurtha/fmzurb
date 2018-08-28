@@ -1,0 +1,119 @@
+---
+title: Index Amortization Reports
+subtitle: 
+layout: capital
+herotype: title
+grid: 2-col
+breadcrumb: [{"name":"Home", "url":"/mbs/security-data/index-am-reports.html"},{"name":"PC Reports","url":"/mbs/security-data/index-am-reports.html"},{"name":"Index Amortization Reports"}]
+onload: formSetup
+navLevel1: 'section-mbs'
+navLevel2: 'subnav-mbs-data'
+---
+<div class="row iw_row"> 
+  <div class="columns iw_columns large-7"> 
+    <div class="iw_component">
+      <div class="row">
+        <div class="column">
+          <p class="lead">For information about the files listed on this page go to <a href="/mbs/security-data/cs-general.html">Product Specific Reports File Help</a>.</p>
+          <h3>Monthly Index Amortization Pool<sup>SM</sup> Report (Discontinued in 2018)</h3>
+              <p>(Monthly - Includes Historical) Lists pools with mortgage maturity, coupon, year issued, etc., available 5th business day (Beginning July 2001)</p>
+              <div class="callout hollow">
+                <div class="row">
+                  <div class="column">
+                    <form id="MBSIndexAmReport1" name="MBSIndexAmReport1" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">            
+                      <div class="row">
+                        <div class="column medium-6 large-12 xlarge-6">
+                          <input type="hidden" id="file1" name="file" value="rpYYMM05.zip">
+                          <input type="hidden" id="head1" name="head" value="Monthly Index Amortization Pool Report">                   
+                          <label for="DATE1a">Enter Date</label>                      
+                          <input type='text' id="DATE1a" name="DATE1" maxlength="5" minlength="5" value="" required placeholder="(YY/MM)">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="column">
+                          <button class="button primary" type="submit">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <br>
+                <div class="callout background-concrete gutter-top">
+                  <div class="row">
+                    <div class="column">
+                      <p class="weight-bold">To view or download pre-July 2001 reports, please enter desired date and submit request here.</p>
+                      <form id="MBSIndexAmReport2" name="MBSIndexAmReport2" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">                         
+                            <input type="hidden" id="file2" name="file" value="rpYYMM01.zip">
+                            <input type="hidden" id="head2" name="head" value="Monthly Index Amortization Pool Report (pre-July 2001)">              
+                            <label for="DATE1b">Enter Date (pre-July 2001)</label>
+                            <input type='text' id="DATE1b" name="DATE1" maxlength="5" minlength="5" value="" required placeholder="(YY/MM)">                        
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div> 
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <h3 class="gutter-top"></h3>
+              <h3>Index Amortization Pool<sup>SM</sup> PC Schedule</h3>
+              <p>(Monthly) Collateral list backing a specific Index Amortization Pool<sup>SM</sup>, available as needed.</p>
+              <form id="MBSIndexAmReport3" name="MBSIndexAmReport3" action="/mbs/cgi-bin/general.pl" method="post" enctype="x-www-form-urlencoded" class="fmform" data-abide="" novalidate="">
+                <div class="callout hollow">
+                    <div class="row">
+                      <div class="column">
+                        <div class="row">
+                          <div class="column medium-6 large-12 xlarge-6">
+                            <input type="hidden" id="file3" name="file" value="####lc.zip">
+                            <input type="hidden" id="head3" name="head" value="Index Amortization Pool PC Schedule">
+                            <label for="POOLN" class="formLabel">Enter Date</label>
+                            <input type='text' id="POOLN" name="POOLN" maxlength="6" minlength="3" value="" required placeholder="e.g. A001">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column">       
+                            <button class="button primary" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Sidebar -->
+  <div class="columns iw_columns large-5"> 
+    <div class="iw_component">
+      <div class="tertiary-nav">
+        <h2><a href="/mbs/security-data/">Security Data</a></h2> 
+        <nav>
+          <ul class="no-bullet">
+            <li><a href="#">PC Reports</a></li>
+            <li><a href="#">Index Amortization Pool Reports</a></li>
+            <li><a href="#">Giant Reports</a></li>
+            <li><a href="#">REMIC Reports</a></li>
+            <li><a href="#">Strip Reports</a></li>
+            <li><a href="#">Multifamily Reports</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="sidebar background-blue">
+        <div class="row">
+          <div class="column">
+            <h3 class="sidebar-title">Reports</h3>
+             
+          </div>
+        </div>
+      </section>     
+    </div>
+  </div>
+  <!-- Sidebar -->
+</div>
