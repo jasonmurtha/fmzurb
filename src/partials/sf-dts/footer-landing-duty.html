@@ -27,3 +27,25 @@
   </div>
 </footer>
 <div class="footer-bottom-edge"> </div>
+
+<script>
+// sf dts nav routines
+function dtsNavSetup(){
+  $(window).on('changed.zf.mediaquery', function(e, nS, oS){
+    if((nS==="xlarge" || nS==="xxlarge")){
+      if ($('#nav-duty.is-mobile-expanded').length) {
+        $('#nav-duty').foundation('toggle');
+      }
+    } 
+    else if((oS==="xlarge" || oS==="xxlarge") && (nS==="small" || nS==="medium" || nS==="large")){
+      $('#nav-main').attr('aria-expanded', "false");
+    }
+  });
+  $("#nav-main").on('off.zf.toggler', function(){ 
+    if ($('#nav-duty.is-mobile-expanded').length) {
+      $('#nav-duty').foundation('toggle');
+    }
+  });
+}
+window.onload = dtsNavSetup;
+</script>

@@ -106,3 +106,31 @@ header .landing-band-sides-only,
     }
   }
 }  
+
+// mobile sticky -- no time to solve for desktop sticky
+// and foundation has it working regardless of scroll up/down 
+
+@include breakpoint(large down) {
+  .sticky-container {
+    position: relative;
+  }
+  .sticky {
+    position: relative;
+    width: 100%;
+    z-index: 200;
+    transform: translate3d(0, 0, 0);  //makes some devices run their hardware acceleration for smoother transitions
+    &.is-stuck {
+      position: fixed;
+      z-index: 205;
+      width: 100%;
+    }
+    &.is-anchored {
+      position: relative;
+      right: auto;
+      left: auto;
+    }
+    &.is-at-top {
+      top: 0;
+    }
+  }
+}

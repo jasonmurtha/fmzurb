@@ -66,6 +66,10 @@
    {
       "name": "Panini (Handlebars) Templating",
       "url" : "panini.html"
+   },
+   {
+      "name": "Foundation Sticky (js plugin)",
+      "url" : "sticky.html"
    }
   ]
 }

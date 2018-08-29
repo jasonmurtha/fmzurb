@@ -1,4 +1,4 @@
-<title<title class="hide">Styleguide: Reveal Modals</title><br>
+<title class="hide">Styleguide: Reveal Modals</title><br>
 
 # Modals
 
