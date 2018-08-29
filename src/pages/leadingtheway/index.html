@@ -79,56 +79,7 @@ a.connect:focus svg {
   0% { opacity: 0; } 
   100%{  opacity: 1; }
 }
-.leader-panel {
-  display: block;
-  -webkit-animation: fadeIn .9s;
-          animation: fadeIn .9s;
-  opacity: 1; 
-}
-.leader-panel:not(.is-active) {
-  opacity: 0;
-  display: none;  
-}
-.leader-panel-wrapper {
-  overflow: hidden;
-  position: relative;
-  min-height: 7.75rem;
-  margin: 0 auto;
-  max-width: 74rem;
-  line-height: 1;
-}
-.leader-panel-nav {
-  width: 74.375rem;
-  min-height: 7.25rem;
-  float: left;
-}
-.leader-panel-item {
-  padding: 0 0.625rem;
-  width: 6.25rem;
-  float: left; 
-}
-.leader-panel-item:first-child {
-  padding-left: 0;
-  width: 5.625rem;
-}
-.leader-panel-item:hover,
-.leader-panel-item:focus,
-.leader-panel-item[aria-selected='true'] {
-  background: transparent;
-  color: inherit;
-}
 
-.leader-panel-item.is-active img,
-.leader-panel-item a:hover img,
-.leader-panel-item a:focus img {
-  opacity: 0.3;
-}
-.leader-panel-item a {
-  padding: 0;
-}
-.leader-panel-item p {
-  margin: 0.5rem 0 0;
-}
 .orbit-controls-outside .orbit-previous, 
 .orbit-controls-outside .orbit-next {
   font-size: 1.85rem;
@@ -137,12 +88,6 @@ a.connect:focus svg {
 .orbit-controls-outside .orbit-previous:hover, 
 .orbit-controls-outside .orbit-next:hover {
   opacity: 0.8;
-}
-.leader-panel-nav-help {
-  display: block;
-  margin: 0.5rem 0 0;
-  position: relative;
-  bottom: -0.5rem;
 }
 .modal-header h2 {
   font-size: 1.625rem;
@@ -247,41 +192,6 @@ a.connect:focus svg {
   }
 }
 
-/* custom for leader-panel-band overflow */
-@media screen and (max-width: 78.4375em) {
-  .landing-band-sides-only.overflow-right {
-    padding-right: 0;
-  } 
-}
-@media screen and (min-width: 78.5em)  and (max-width: 81em) {
-  .landing-band-sides-only.overflow-right {
-      padding-left: 1.875rem;
-      padding-right: 1.5rem;
-  } 
-}
-@media screen and (max-width: 78.4925em) {
-  .landing-band-sides-only.overflow-right {    
-    padding-top: 1.125rem;
-  }  
-  .leader-panel-wrapper {
-    overflow-x: auto;
-  }
-  .landing-band-sides-only.overflow-right::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 55px;
-    background: linear-gradient(to right, rgba(16,68,119,0) 0%, #104477 100%); 
-  }
-}
-@media screen and (min-width: 78em) {
-  .leader-panel-nav-help {
-    display: none;
-  }
-}
-
 /* xlarge and up */
 @media screen and (min-width: 78.75em) {
   .orbit-controls-outside .orbit-previous, 
@@ -347,7 +257,7 @@ a.connect:focus svg {
           <div class="gutter-top gutter-bottom">
             <h3 class="no-margin text-flex-16-24 slant-for-small" style="line-height: 1.4;">Freddie Mac is #LeadingTheWay in the mortgage industry <span class="weight-light">by advancing women to leadership positions and championing women’s rights in the workplace.</span></h3>
           </div>
-          <p class="gutter-bottom no-margin hide-for-medium"><a data-open="DefineLTWmodal" aria-controls="DefineLTWmodal" href="#" class="button hollow medium">Tell me more</a></p>        
+          <p class="gutter-bottom no-margin hide-for-medium"><a data-open="DefineLTWmodal" aria-controls="DefineLTWmodal" class="button hollow medium">Tell me more</a></p>        
         </div>  
       </div>
     </div>
