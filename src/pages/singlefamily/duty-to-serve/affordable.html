@@ -69,36 +69,7 @@ footer:
                   </div>
                 </div>
               </div>
-              <div class="reveal background-sapphire" id="ahModal1" data-reveal>
-                <div class="modal-content row-container">
-                  <div class="row">
-                    <div class="column xlarge-offset-1 xlarge-10 end">
-                      <div class="modal-header">
-                        <h2>Shared Equity Programs</h2>
-                      </div>
-                      <div class="callout large background-white">
-                        <div class="callout small-to-large">                   
-                          <div class="callout background-primary horizontal-gradient-dark-left top-v-overlay">
-                            <h3 style="margin-bottom: 0.75em;">What's a Duty to Serve shared-equity homeownership program?</h3>
-                            <p class="weight-normal flex-up gutter-bottom">Shared equity homeownership is an umbrella term for programs that provide homeownership opportunities with lasting affordability, sometimes referred to as “permanently affordable homeownership programs" or homeownership programs with “lasting affordability" or “long-term affordability." These programs generally make a one-time investment to create homeownership opportunities that are affordable for purchase by a low- or moderate-income homebuyer. In return for owning a home at an affordable cost, the homeowners agree to certain restrictions including limitations on returns upon resale or limitations on conveyances of the property. In effect, homeowners “share" some of the proceeds from resale to pay the opportunity forward to the next homebuyer with low or moderate income.</p>
-                            <p class="weight-normal flex-up gutter-bottom">The majority of shared equity homeownership programs (“SEH Programs") are resale-restricted programs, meaning that they restrict the maximum price for which the home may be resold and restrict who may purchase the property to income-eligible households. Hence, buyers with low or moderate income purchase and resell homes at prices below fair market value in order to keep the home affordable.</p>
-                          </div>
-                          <br class="reduce">
-                          <p class="intro">Here&rsquo;s  how we&rsquo;re supporting shared equity programs through our Duty to Serve  initiatives:</p>
-                          <ul class="weight-bold checkbox-list">
-                            <li>Leveraging relationships with local  organizations to broaden access to homebuyer education and housing</li>
-                            <li>Develop guidelines to facilitate new  mortgage originations for properties in community land trusts and properties  with income-based resale restrictions.</li>
-                            <li>Conducting research on shared equity  programs to better understand this market and identify new opportunities to  support it</li>
-                            <li>Buying loans originated under shared  equity programs to increase liquidity </li>
-                            <li>Supporting standardization of data  collection at the transaction level</li>
-                            <li>Promoting market awareness of shared  equity programs</li>
-                          </ul>
-                        </div>
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{> affordable-modal-shared-equity}}
             </div>
             <div class="column">
               <div class="callout background-white" data-equalizer-watch="outer">
@@ -118,41 +89,7 @@ footer:
                   </div>
                 </div>
               </div>
-              <div class="reveal background-sapphire" id="ahModal2" data-reveal>
-                <div class="modal-content row-container">
-                  <div class="row">
-                    <div class="column xlarge-offset-1 xlarge-10 end">
-                      <div class="modal-header">
-                        <h2>Energy Efficiency</h2>
-                      </div>
-                      <div class="callout large background-white">
-                        <div class="callout small-to-large">
-                          <div class="callout background-primary horizontal-gradient-dark-left top-v-overlay">
-                            <h3 style="margin-bottom: 0.75em;">Energy efficiency improvements:</h3>
-                            <p class="weight-normal flex-up gutter-bottom">Energy, heating and cooling costs are the largest utility expense for most U.S. homes and can be a financial burden. Upgrading to energy-efficient features can reduce energy costs and help to preserve affordability of homeownership, especially in underserved markets where homes are older and in need of these upgrades. But, financing these improvements is also a challenge for homeowners in these markets. Under Duty to Serve, we're developing new mortgage products and enhancing current ones to make financing these energy renovations easier.</p>
-                          </div>
-                          <br class="reduce">
-                          <p class="intro">Here&rsquo;s  how we&rsquo;re supporting energy efficiency improvements: </p>
-                          <ul class="weight-bold checkbox-list">
-                            <li>Conducting research on the impact of  energy efficiency improvements on property values and loan mortgage performance  and publish our research findings in 2019. </li>
-                            <li>Developing valuation guidance and data  collection mechanisms to account for energy-efficient features</li>
-                            <li>Designing new or improved product  flexibilities </li>
-                            <li>Purchasing mortgages on properties with  energy efficiency features </li>
-                            <li>Allowing lenders to use energy efficiency  to compensate for higher debt-to-income ratios</li>
-                            <li>Permitting cash-out refinance  transactions that allow borrowers to
-                              <ul>
-                                <li>make energy efficiency improvements</li>
-                                <li>pay off existing debt obligations related to energy  efficiency improvements </li>
-                                <li>pay off property assessed clean energy (PACE) loans</li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{> affordable-modal-energy-efficiency}}
             </div>
           </div>
         </div>
@@ -168,17 +105,7 @@ footer:
     <div class="row gutter-bottom gutter-top">
       <div class="column">
         <br class="reduce show-for-xlarge">  
-        <div class="row">
-          <div class="column xlarge-offset-1 large-4"> 
-            <p class="text-flex-15-18 uppercase weight-bold accent-iceblue half-margin-bottom">Featured Video</p>
-            <h2 class="text-flex-26-42 gutter-bottom no-margin">We’re leveraging our infrastructure, expertise, resources and experience to further support the preservation of affordable housing.</h2>
-          </div>
-          <div class="column large-8 xlarge-6 end"> 
-              <div class="responsive-embed widescreen">
-              <iframe width="100%" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div> 
+        {{> affordable-videofeature }}
       </div>
     </div>     
   </div>
@@ -193,40 +120,7 @@ footer:
     <div class="row gutter-top gutter-bottom">
       <div class="column">
         <div class="gutter-top gutter-bottom">
-          <div class="orbit ease" role="region" aria-label="Housing Facts" data-orbit data-timer-delay="10000" data-automate-nav="false" data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-            <ul class="orbit-container affordable-facts">
-              <li class="orbit-slide">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-22-42 weight-bold medium-text-left no-margin">Heating and cooling account for more than half of the energy use in a typical home</p>
-                  </div>
-                </div>
-              </li>
-              <li class="orbit-slide">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-18-34 weight-bold medium-text-left no-margin">Shared equity homeowners were 10 times less likely to be in foreclosure than homeowners in the conventional market</p>
-                  </div>
-                </div>
-              </li>
-              <li class="orbit-slide">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-22-42 weight-bold medium-text-left no-margin">79 percent of community land trust borrowers are first-time home buyers</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>  
+           {{> affordable-didyouknow }}
         </div> 
       </div>
     </div>    
@@ -243,78 +137,7 @@ footer:
         <br class="reduce show-for-xlarge">
         <h2 class="text-flex-26-42 accent-sapphire">What's New</h2>
         <div class="small-to-default"></div>
-        <div class="row medium-up-2 large-up-4 text-left"  data-equalizer>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="https://groundedsolutions.org/new-report-explores-shared-equity-homeownership-funding-model/" rel="external">Shared Equity Homeownership Funding Model</a></h3>
-                <p class="flex-up accent-sapphire">Q&amp;A article with Dan Ticona, Affordable Lending Strategy and Policy Manager, Freddie Mac’s Single-Family</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" data-open="ahCard3Modal" aria-controls="ahCard3Modal">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a data-open="ahCard3Modal" aria-controls="ahCard3Modal">Why You Should Consider Affordable Housing Preservation</a></h3>
-                <p class="flex-up accent-sapphire">There are many reasons to consider shared equity programs.</p>
-              </div>
-              <div class="reveal background-sapphire" id="ahCard3Modal" data-reveal>
-                <div class="modal-content row-container">
-                  <div class="row">
-                    <div class="column xlarge-offset-1 xlarge-10 end">
-                      <div class="modal-header">
-                        <h2>Duty to Serve</h2>
-                      </div>
-                      <div class="callout large background-white">
-                        <div class="callout small-to-large">
-                        <div class="callout background-primary horizontal-gradient-dark-left top-v-overlay">
-                          <h3 style="margin-bottom: 0.75em;">Why You Should Consider Affordable Housing Preservation</h3>
-                          <p>In  addition to strengthening your commitment to help more families with very low-,  low- and moderate-income attain and sustain homeownership, here are other  reasons to consider shared equity programs.</p>
-                        </div>                        
-                          <br class="reduce">
-                          <ul class="checkbox-list">
-                            <li><strong>May help you meet your Community Reinvestment Act (CRA) mandates –</strong> based  on your CRA strategy.</li>
-                            <li><strong>Increase your affordable footprint –</strong> provides entry into a  niche market and help you strengthen your affordability goals</li>
-                            <li><strong>Expand business opportunities –</strong> These programs are  not markets that are served. If borrowers are trying to capture a new market  within affordable space, this could be something that they want to consider.</li>
-                          </ul>
-                          <p class="weight-normal flex-up gutter-bottom">Freddie  Mac will buy mortgages secured by properties subject to income-based resale  restrictions and properties in community land trusts so you will have access to  liquidity in the secondary mortgage market. Freddie Mac believes that shared  equity providers are entities that may help mitigate losses if a borrower is in  default.  <a href="https://myhomekeeper.org/view-the-public-homekeeper-national-data-hub-dashboard/" rel="external">Studies  show</a> that shared equity homeowners were 10 times  less likely to be in foreclosure than homeowners in the conventional market  across all incomes.</p>
-                        </div>
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
-                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
-                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{> affordable-whatsnew }}
       </div>
     </div>    
   </div>
@@ -349,7 +172,7 @@ footer:
                 <div class="callout large background-white">
                   <div class="callout small-to-large">
                    <p>Our Duty to Serve Single Family plan supports the preservation of housing affordability over time and, specifically, activities that support the financing of properties under shared equity programs and energy efficiency improvements.</p>
-                    {{> faqs-affordable }}
+                    {{> affordable-faqs }}
                   </div>
                 </div>
               </div>
@@ -377,7 +200,7 @@ footer:
             <p><a class="block" data-open="eventsModalMH" aria-controls="eventsModalMH"><strong>Industry Insights &amp; Conference</strong></a></p>
           </div>
         </div>
-         {{> events-modal-affordable-housing}}
+         {{> affordable-modal-events}}
         </div>
       </div>
     </div>

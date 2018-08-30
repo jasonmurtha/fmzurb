@@ -31,6 +31,13 @@
 <script>
 // sf dts nav routines
 function dtsNavSetup(){
+  $(".ribbon-rbo-section").on("mouseleave", function(){ 
+    var $t = $(".ribbon-rbo-toggle"); 
+    if($t.attr('aria-expanded') === "true"){
+      $t.find('a').blur().triggerHandler('click');
+    }
+ });
+ 
   $(window).on('changed.zf.mediaquery', function(e, nS, oS){
     if((nS==="xlarge" || nS==="xxlarge")){
       if ($('#nav-duty.is-mobile-expanded').length) {
@@ -47,5 +54,6 @@ function dtsNavSetup(){
     }
   });
 }
+
 window.onload = dtsNavSetup;
 </script>

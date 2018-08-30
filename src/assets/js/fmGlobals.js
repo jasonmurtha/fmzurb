@@ -14,7 +14,8 @@ captchaonloadCallback = function(){
   });
 },
 checkResponse = function(response){
-  $.post( "/cgi-bin/captcha/captcha.cgi", { token: response }, function( data ) {
+  var path = location.pathname.match(/\/loanlookup/) ? "/loanlookup" : "";
+  $.post(path+"/cgi-bin/captcha/captcha.cgi" , { token: response }, function( data ) {
     if(data.success){
       $("#form-submit").removeAttr('disabled');
     }

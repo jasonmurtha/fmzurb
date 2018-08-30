@@ -14,20 +14,17 @@
   .orbit-next {
     background: none;
     padding: 0;
+    color: $fm-gray;
     font-size: 1.5rem;
-    @include breakpoint(medium){
-      font-size: 2rem;
-    }
     @include breakpoint(medium){
       font-size: 2.5rem;
     }
-    @include breakpoint(xlarge){
+    @include breakpoint(medium){
       font-size: 3rem;
-    }    
-    svg { 
-      fill: $fm-gray; 
-      stroke-width: 1px;
-    }  
+    }
+    @include breakpoint(xlarge){
+      font-size: 3.5rem;
+    }     
   }
   .orbit-previous {
     left: -1.25em;
@@ -46,19 +43,19 @@
 } 
 .orbit-previous, 
 .orbit-next {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   background: rgba($black, 0.2);
   svg { 
-    fill: $white; 
-    stroke: $white;
-    stroke-width: 2px;
+    fill: currentColor; 
+    stroke: currentColor;
+    stroke-width: 10px;
     vertical-align: top;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:20;
   }  
   @include breakpoint(large) {
-    font-size: 1.5rem;
-    svg {
-      stroke-width: 1px;
-    }
+    font-size: 1.65rem;
   }
 }  
 .orbit-image { 
@@ -153,7 +150,7 @@
       transform: none;
       font-size: 1.125rem;
       svg {
-        stroke-width: 2px;
+        stroke-width: 30px;
       }
     } 
   }

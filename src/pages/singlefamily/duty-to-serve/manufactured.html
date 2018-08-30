@@ -70,33 +70,7 @@ footer:
                   </div>
                 </div>
               </div>
-              <div class="reveal background-sapphire" id="mhModal1" data-reveal>
-                <div class="modal-content row-container">
-                  <div class="row">
-                    <div class="column xlarge-offset-1 xlarge-10 end">
-                      <div class="modal-header">
-                        <h2>Duty to Serve</h2>
-                      </div>
-                      <div class="callout large background-white">
-                        <div class="callout small-to-large">
-                          <div class="callout background-primary horizontal-gradient-dark-left top-v-overlay">
-                            <h3 style="margin-bottom: 0.75em;">Real Property Manufactured Housing</h3>
-                            <p class="weight-normal flex-up gutter-bottom"><strong>DEFINITION: Real Property Manufactured Housing:</strong> These are homes where the borrower finances and owns both the land and home, and it meets all applicable real property requirements. Freddie Mac currently support financing for this type of manufactured home.</p>
-                          </div>
-                          <br class="reduce">
-                          <p class="intro">We currently support financing for real property manufactured homes, but we want to do more. Through Duty to Serve, we’re working with industry stakeholders to: </p>
-                          <ul class="weight-bold checkbox-list">
-                            <li>Purchase more loans used to finance manufactured homes titled as real property </li>
-                            <li>Enhance current products and create new offerings </li>
-                            <li>Provide consumer education to help borrowers navigate the real property market </li>
-                            <li>Expand our affordable housing vision by providing conventional loan financing with CHOICEHome<sup>SM</sup>, a new type of manufactured home</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{> manufactured-modal-real-property}}
             </div>
             <div class="column">
               <div class="callout background-white" data-equalizer-watch="outer">
@@ -116,33 +90,7 @@ footer:
                   </div>
                 </div>
               </div>
-              <div class="reveal background-sapphire" id="mhModal2" data-reveal>
-                <div class="modal-content row-container">
-                  <div class="row">
-                    <div class="column xlarge-offset-1 xlarge-10 end">
-                      <div class="modal-header">
-                        <h2>Duty to Serve</h2>
-                      </div>
-                      <div class="callout large background-white">
-                        <div class="callout small-to-large">
-                          <div class="callout background-primary horizontal-gradient-dark-left top-v-overlay">
-                            <h3 style="margin-bottom: 0.75em;">Personal Property Manufactured Housing (Chattel)</h3>
-                            <p class="weight-normal flex-up gutter-bottom"><strong>DEFINITION: Personal Property Manufactured Housing (Chattel):</strong> A manufactured home titled as personal property or chattel is when the loan used to purchase the home or refinance the home uses only the home as collateral and not the land where the home is sited. The security lien for the loan is placed on the title to the home. The homeowner may own the land, rent or lease the land on which the home is located.</p>
-                          </div>
-                          <br class="reduce">
-                          <p class="intro">We’re currently exploring opportunities to purchase personal property or chattel loans. </p>
-                          <p class="intro">Through Duty to Serve, we’re working with industry stakeholders to: </p>
-                          <ul class="weight-bold checkbox-list">
-                            <li>Develop new sustainable capabilities to buy and securitize personal property or chattel loans.</li>
-                            <li>Conducting a personal property (chattel) test and learn pilot program to better understand the market for manufactured homes titled as personal property, or chattel, and to support purchases of loans secured for these homes. </li>
-                            <li>Provide consumer education to help borrowers navigate both the personal property market.</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{> manufactured-modal-personal-property}}
             </div>
           </div>
         </div>
@@ -157,18 +105,8 @@ footer:
   <div class="row-container text-center medium-text-left"> 
     <div class="row gutter-bottom gutter-top">
       <div class="column">
-        <br class="reduce show-for-xlarge">  
-        <div class="row">
-          <div class="column xlarge-offset-1 large-4"> 
-            <p class="text-flex-15-18 uppercase weight-bold accent-iceblue half-margin-bottom">Featured Video</p>
-            <h2 class="text-flex-26-42 gutter-bottom no-margin">We’re expanding financing options for the entire manufacturing housing market.</h2>
-          </div>
-          <div class="column large-8 xlarge-6 end"> 
-              <div class="responsive-embed widescreen">
-              <iframe width="100%" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div> 
+        <br class="reduce show-for-xlarge"> 
+        {{> manufactured-videofeature }}
       </div>
     </div>     
   </div>
@@ -183,40 +121,7 @@ footer:
     <div class="row gutter-top gutter-bottom">
       <div class="column">
         <div class="gutter-top gutter-bottom">
-          <div class="orbit ease" role="region" aria-label="Housing Facts" data-orbit data-timer-delay="10000" data-automate-nav="false" data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-            <ul class="orbit-container manufactured-facts">
-              <li class="orbit-slide align-self-middle">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-22-42 weight-bold medium-text-left">Average price per square foot of a manufactured home is $49 vs $107 for site built</p>
-                  </div>
-                </div>
-              </li>
-              <li class="orbit-slide align-self-middle">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-22-42 weight-bold medium-text-left">The average sales price of a new manufactured home is $73,400</p>
-                  </div>
-                </div>
-              </li>
-              <li class="orbit-slide align-self-middle">
-                <div class="media-object stack-for-small">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border" alt="Did you know?" style="width: 276px;" src="/singlefamily/duty-to-serve/images/did_you_know_icon.svg">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle gutter-left">
-                    <p class="text-flex-22-42 weight-bold medium-text-left">Manufactured housing sector contributes almost $3 billion to GDP each year </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>  
+          {{> manufactured-didyouknow }}
         </div> 
       </div>
     </div>    
@@ -231,52 +136,7 @@ footer:
         <br class="reduce show-for-xlarge">
         <h2 class="text-flex-26-42 accent-sapphire">What's New</h2>
         <div class="small-to-default"></div>
-        <div class="row medium-up-2 large-up-4 text-left"  data-equalizer>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="video-modal widescreen-video" href="https://www.youtube.com/watch?v=2K_vbKUa5DM" data-src="https://www.youtube-nocookie.com/embed/2K_vbKUa5DM?rel=0&amp;wmode=transparent">
-                <img src="http://via.placeholder.com/350x200?text=Video+Image" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a class="video-modal" href="https://www.youtube.com/watch?v=2K_vbKUa5DM" data-src="https://www.youtube-nocookie.com/embed/2K_vbKUa5DM?rel=0&amp;wmode=transparent">Single Close Construction Conversion Loan</a></h3>
-                <p class="flex-up accent-sapphire">Experience a shorter, more efficient closing process for financing a real property manufactured home.</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
-                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
-                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="background-white" data-equalizer-watch>
-              <a class="block" href="#">
-                <img src="https://placekitten.com/350/200" alt="Img description" />
-              </a>
-              <div class="callout">
-                <h3 class="card-title weight-medium"><a href="#">Title Lorem Ipsum</a></h3>
-                <p class="flex-up accent-sapphire">Maecenas eget metus lectus. In sed est risus. Sollicitudin luctus. Cras eget</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{> manufactured-whatsnew }}
       </div>
     </div>    
   </div>
@@ -288,38 +148,7 @@ footer:
     <div class="row gutter-top gutter-bottom">
       <div class="column">
         <br class="reduce show-for-xlarge">
-        <div class="orbit ease orbit-controls-outside" role="region" aria-label="Quotes" data-orbit data-auto-play="false" data-bullets="false">
-          <ul class="orbit-container gutter-right-large gutter-left-large background-quote">
-            <li class="orbit-slide">
-              <div class="callout">
-                <p class="section-subtitle weight-black gutter-bottom">“Lorem Ipsum. Praesent non dictum magna. Mauris placerat volutpat leo a ornare. Vivamus semper, sapien vel varius scelerisque, mauris nisi volutpat dolor, ut scelerisque nunc mi sit amet tortor. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce.”</p>
-                <div class="media-object">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border avatar" alt="description" src="https://placekitten.com/96/96">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle">
-                     <p class="text-static-16-18"><span class="text-flex-18-24 weight-bold">Kitty T. Feline</span><br>
-                     Senior Vice President of <strong>Lending Meow</strong></p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="orbit-slide">
-              <div class="callout">
-                <p class="section-subtitle weight-black gutter-bottom">“Lorem Ipsum. Praesent non dictum magna. Mauris placerat volutpat leo a ornare. Vivamus semper, sapien vel varius scelerisque, mauris nisi volutpat dolor, ut scelerisque nunc mi sit amet tortor. Fusce porttitor, risus et ornare congue, justo dolor ornare nunc fusce.”</p>
-                <div class="media-object">
-                  <div class="media-object-section align-self-middle">
-                    <img class="no-border avatar" alt="description" src="https://placekitten.com/96/96">
-                  </div>
-                  <div class="media-object-section main-section align-self-middle">
-                     <p class="text-static-16-18"><span class="text-flex-18-24 weight-bold">Kitty T. Feline</span><br>
-                     Senior Vice President of <strong>Lending Meow</strong></p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        {{> manufactured-quotes}}
       </div>
     </div>     
   </div>
@@ -371,7 +200,7 @@ footer:
                 </div>
                 <div class="callout large background-white">
                   <div class="callout small-to-large">
-                     {{> faqs-manufactured }}
+                     {{> manufactured-faqs }}
                   </div>
                 </div>
               </div>
@@ -399,7 +228,7 @@ footer:
             <p><a class="block" data-open="eventsModalMH" aria-controls="eventsModalMH"><strong>Industry Insights &amp; Conference</strong></a></p>
           </div>
         </div>
-         {{> events-modal-manufactured-housing}}
+         {{> manufactured-modal-events}}
       </div>
     </div>
   </div>

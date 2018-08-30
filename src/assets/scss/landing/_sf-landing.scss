@@ -18,7 +18,19 @@
 .diagonal-band {
   background-image: linear-gradient(65deg, rgba($white,0.12) 0%, rgba($white,0.12) 40%, rgba($white, 0) 40.01%);
 }
-
+.map-hover {
+  img {
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.01);
+      transition: all 0.3s ease;
+    }
+  }
+}
 .background-quote::after {
   content: "\201D";
   font-size: rem-calc(128);
@@ -64,15 +76,28 @@
     min-height: rem-calc(220);
   }
 }
-
+.circle {
+  border-radius: 999em;
+}
 //
 // Orbit Prev/Next 
 //
-.orbit-controls-outside .orbit-previous svg, 
-.orbit-controls-outside .orbit-next svg {
-  fill: currentColor;
-  opacity: 0.25;
-  transform: scale(1.4);
+.orbit-controls-outside .orbit-previous, 
+.orbit-controls-outside .orbit-next {
+  color: $white;
+  @include breakpoint(xxlarge) {
+    font-size: 4.5em;
+  }
+  svg {
+    opacity: 0.25;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      opacity: 0.45;
+    }  
+  }
 }
 
 //

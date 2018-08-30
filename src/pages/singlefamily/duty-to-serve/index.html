@@ -44,56 +44,7 @@ footer:
         <p class="text-flex-21-28 text-center">Supporting underserved markets by financing more <strong class="weight-bold">rural and manufactured housing</strong> and <strong class="weight-bold">preserving more affordable housing</strong> for homebuyers nationwide.</p>
       </div>
       <div class="column medium-11 large-12 end">
-        <div class="row collapse large-uncollapse large-up-3 text-static-16-18">
-          <div class="column">
-            <div class="gutter-bottom show-for-large text-center">
-              <img alt="Manufactured Housing icon" src="images/D2S_ManufacturedHousing-v2.svg">
-            </div>
-            <div class="media-object collapse">
-              <div class="media-object-section hide-for-large">  
-                <img alt="Manufactured Housing icon" style="width:75px;" src="images/D2S_ManufacturedHousing-v2.svg">
-              </div>
-              <div class="media-object-section text-left large-text-center main-section">
-                <div class="callout xsmall">
-                  <h3 class="text-flex-21-28 uppercase accent-sapphire">Manufactured<br>Housing</h3>
-                  <p class="no-margin">It’s a viable source of sustainable, energy-efficient and affordable homeownership market.</p>
-                </div>
-              </div>              
-            </div>
-          </div>
-          <div class="column">
-            <div class="gutter-bottom show-for-large text-center">
-              <img alt="Rural Housing icon" src="images/D2S_RuralHousing-v2.svg">
-            </div>
-            <div class="media-object collapse">
-              <div class="media-object-section hide-for-large">  
-                <img alt="Manufactured Housing icon" style="width:75px;" src="images/D2S_RuralHousing-v2.svg">
-              </div>
-              <div class="media-object-section text-left large-text-center main-section">
-                <div class="callout xsmall">
-                  <h3 class="text-flex-21-28 uppercase accent-sapphire">Rural<br>Housing</h3>
-                  <p class="no-margin">Removing barriers and supporting innovative solutions to put qualified borrowers in rural markets on the path to homeownership. </p>
-                </div>
-              </div>              
-            </div>
-          </div>
-          <div class="column">
-            <div class="gutter-bottom show-for-large text-center">
-              <img alt="Affordable Housing icon" src="images/D2S_AffordablePreservation-v2.svg">
-            </div>
-            <div class="media-object collapse">
-              <div class="media-object-section hide-for-large">  
-                <img alt="Manufactured Housing icon" style="width:75px;" src="images/D2S_AffordablePreservation-v2.svg">
-              </div>
-              <div class="media-object-section text-left large-text-center main-section">
-                <div class="callout xsmall">
-                  <h3 class="text-flex-21-28 uppercase accent-sapphire">Affordable Housing<br>Preservation</h3>
-                  <p class="no-margin">Let’s about keep homes affordable throughout the life of the mortgage and reduce housing costs.</p>
-                </div>
-              </div>              
-            </div>
-          </div>
-        </div>   
+        {{> index-icon-row }}   
       </div>
     </div>
   </div>
@@ -104,17 +55,7 @@ footer:
     <div class="row gutter-bottom gutter-top">
       <div class="column">
         <br class="reduce show-for-xlarge">  
-        <div class="row">
-          <div class="column xlarge-offset-1 large-4 xlarge-3"> 
-            <p class="text-flex-15-18 uppercase weight-bold accent-iceblue half-margin-bottom">Featured Video</p>
-            <h2 class="text-flex-26-42 gutter-bottom no-margin">Introduction to Duty to Serve</h2>
-          </div>
-          <div class="column xlarge-offset-1 large-8 xlarge-6 end"> 
-              <div class="responsive-embed widescreen">
-              <iframe width="100%" src="https://www.youtube-nocookie.com/embed/tCg9285bJnY?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div> 
+         {{> index-videofeature }}
       </div>
     </div>     
   </div>
@@ -135,7 +76,7 @@ footer:
                 </div>
               </div>
             </a>
-            {{> events-modal-manufactured-housing}}
+            {{> manufactured-modal-events}}
             
           </div>
           <div class="column column-block">
@@ -147,7 +88,7 @@ footer:
                 </div>
               </div>
             </a>
-            {{> events-modal-affordable-housing}} 
+            {{> affordable-modal-events}} 
           </div>
           <div class="column column-block">
             <a class="block background-sheer weight-bold" data-open="eventsModalRH" aria-controls="eventsModalRH">
@@ -158,7 +99,7 @@ footer:
                 </div>
               </div>
             </a>
-            {{> events-modal-rural-housing}} 
+            {{> rural-modal-events}} 
           </div>
         </div>
         <div class="small-to-default"></div>
